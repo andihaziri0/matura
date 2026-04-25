@@ -1,0 +1,42 @@
+{
+  "name": "@matura/api",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nest start --watch",
+    "build": "nest build",
+    "start": "node dist/main.js",
+    "lint": "eslint src --max-warnings=0",
+    "typecheck": "tsc --noEmit",
+    "openapi:generate": "tsx src/openapi-generate.ts",
+    "content:import": "tsx src/modules/content/importers/cli.ts"
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.717.0",
+    "@aws-sdk/s3-request-presigner": "^3.717.0",
+    "@matura/db": "workspace:*",
+    "@matura/shared": "workspace:*",
+    "@nestjs/bullmq": "^11.0.0",
+    "@nestjs/common": "^11.0.0",
+    "@nestjs/config": "^4.0.0",
+    "@nestjs/core": "^11.0.0",
+    "@nestjs/platform-express": "^11.0.0",
+    "@nestjs/swagger": "^11.0.0",
+    "bullmq": "^5.34.6",
+    "class-transformer": "^0.5.1",
+    "class-validator": "^0.14.1",
+    "firebase-admin": "^13.0.2",
+    "nestjs-zod": "^4.3.1",
+    "reflect-metadata": "^0.2.2",
+    "rxjs": "^7.8.1",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@nestjs/cli": "^11.0.0",
+    "@nestjs/schematics": "^11.0.0",
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.10.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  }
+}

@@ -1,0 +1,68 @@
+@import 'tailwindcss';
+@import 'katex/dist/katex.min.css';
+
+@theme {
+  --font-sans: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-serif: ui-serif, 'Iowan Old Style', 'Apple Garamond', 'Palatino Linotype', serif;
+
+  --color-bg: #fafaf7;
+  --color-bg-elevated: #ffffff;
+  --color-fg: #16161a;
+  --color-fg-muted: #5b5b66;
+  --color-border: #e5e5e0;
+  --color-accent: #5b6f3a;
+  --color-accent-fg: #ffffff;
+  --color-accent-soft: #eef2e3;
+  --color-success: #2f7a4d;
+  --color-success-soft: #e3f2e9;
+  --color-danger: #b53a3a;
+  --color-danger-soft: #f6e4e4;
+}
+
+@media (prefers-color-scheme: dark) {
+  @theme {
+    --color-bg: #0e0f0d;
+    --color-bg-elevated: #16181a;
+    --color-fg: #f1efe8;
+    --color-fg-muted: #9b9ba6;
+    --color-border: #26282a;
+    --color-accent: #a4be7b;
+    --color-accent-fg: #0e0f0d;
+    --color-accent-soft: #1f2a18;
+    --color-success: #6dc28a;
+    --color-success-soft: #19271f;
+    --color-danger: #e07b7b;
+    --color-danger-soft: #2c1b1b;
+  }
+}
+
+html,
+body {
+  background-color: var(--color-bg);
+  color: var(--color-fg);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+.prose-matura {
+  line-height: 1.65;
+}
+.prose-matura h1,
+.prose-matura h2,
+.prose-matura h3 {
+  font-weight: 600;
+  margin-top: 1.2em;
+  margin-bottom: 0.5em;
+}
+.prose-matura p {
+  margin-block: 0.6em;
+}
+.prose-matura code {
+  background: color-mix(in oklab, var(--color-fg) 8%, transparent);
+  padding: 0.1em 0.35em;
+  border-radius: 4px;
+  font-size: 0.92em;
+}
+.prose-matura .katex-display {
+  margin: 0.6em 0;
+}

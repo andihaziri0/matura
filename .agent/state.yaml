@@ -1,0 +1,242 @@
+# Machine-readable mirror of docs/status.md.
+# Keep both files in sync within the same commit.
+#
+# Status values: not_started | in_progress | done | blocked
+# Item statuses: todo | in_progress | done | blocked
+
+milestone: mvp_scaffold
+milestone_state: done
+updated: 2026-04-25
+exam_window: june_yearly
+
+phases:
+  phase_1_agent_spine:
+    status: done
+    paths:
+      - AGENTS.md
+      - README.md
+      - docs/status.md
+      - .agent/state.yaml
+      - docs/product/
+      - docs/architecture/
+      - docs/architecture/decisions/
+    items:
+      agents_md: done
+      readme: done
+      status_md: done
+      state_yaml: done
+      product_docs: done
+      architecture_overview: done
+      architecture_stack: done
+      architecture_data_model: done
+      adrs_0001_to_0009: done
+
+  phase_2_monorepo_skeleton:
+    status: done
+    paths:
+      - pnpm-workspace.yaml
+      - turbo.json
+      - package.json
+      - tsconfig.base.json
+      - .nvmrc
+      - .editorconfig
+      - .gitignore
+      - .env.example
+      - .prettierrc.json
+      - eslint.config.mjs
+    items:
+      workspace_config: done
+      turbo_config: done
+      root_package_json: done
+      tooling_dotfiles: done
+      eslint_prettier: done
+
+  phase_3_local_infra:
+    status: done
+    paths:
+      - docker-compose.yml
+    items:
+      docker_compose: done
+      minio_bootstrap_bucket: done
+      pnpm_dev_infra_script: done
+
+  phase_4_db_package:
+    status: done
+    paths:
+      - packages/db/
+      - packages/db/prisma/schema.prisma
+      - packages/db/src/client.ts
+      - packages/db/src/index.ts
+      - packages/db/src/seed/
+    items:
+      prisma_init: done
+      schema_full_v1: done
+      pgvector_extension: done
+      first_migration: in_progress  # run pnpm db:migrate locally to materialise it
+      seed_harness: done
+
+  phase_5_shared_package:
+    status: done
+    paths:
+      - packages/shared/
+      - packages/shared/src/enums.ts
+      - packages/shared/src/taxonomy/matematike.ts
+      - packages/shared/src/i18n/sq.ts
+      - packages/shared/src/schemas/
+    items:
+      zod_schemas: done
+      taxonomy_matematike: done
+      i18n_sq: done
+      shared_enums: done
+
+  phase_6_api_shell:
+    status: done
+    paths:
+      - apps/api/
+      - apps/api/src/main.ts
+      - apps/api/src/app.module.ts
+      - apps/api/src/config/
+      - apps/api/src/common/prisma/
+      - apps/api/src/common/auth/
+      - apps/api/src/modules/health/
+      - apps/api/src/modules/users/
+      - apps/api/src/modules/subjects/
+      - apps/api/src/modules/questions/
+      - apps/api/src/modules/attempts/
+      - apps/api/src/modules/sessions/
+      - apps/api/src/modules/media/
+      - apps/api/src/modules/content/
+      - apps/api/src/modules/ai/
+      - apps/api/src/modules/admin/
+      - apps/api/src/openapi-generate.ts
+      - docs/features/api-shell.md
+    items:
+      bootstrap: done
+      config_module: done
+      prisma_module: done
+      firebase_auth_guard: done
+      current_user_decorator: done
+      roles_guard: done
+      openapi_swagger: done
+      health_module: done
+      module_shells: done
+    approval_gate: passed
+
+  phase_7_web_shell:
+    status: done
+    paths:
+      - apps/web/
+      - apps/web/src/app/(marketing)/
+      - apps/web/src/app/(app)/
+      - apps/web/src/app/(admin)/
+      - apps/web/src/lib/auth/auth-provider.tsx
+      - apps/web/src/lib/firebase/client.ts
+      - packages/ui/
+      - packages/ui/src/markdown.tsx
+    items:
+      bootstrap: done
+      tailwind_v4: done
+      shadcn_init: deferred  # using tailwind primitives + cn util; shadcn components added when needed
+      firebase_web_sdk: done
+      auth_provider: done
+      route_groups: done
+      owner_guard: done
+      markdown_katex_component: done
+
+  phase_8_sdk_codegen:
+    status: done
+    paths:
+      - packages/sdk/
+      - packages/sdk/src/index.ts
+      - packages/sdk/src/generated/schema.d.ts
+      - packages/sdk/openapi.json
+      - apps/web/src/lib/api/client.ts
+      - docs/features/sdk.md
+    items:
+      openapi_typescript: done
+      openapi_fetch: done
+      turbo_pipeline: done
+      create_api_client: done
+      web_consumes_sdk: in_progress  # admin pages use raw fetch until first openapi:generate run
+
+  phase_9_questions_feature:
+    status: done
+    paths:
+      - apps/api/src/modules/questions/
+      - apps/api/src/modules/media/
+      - apps/web/src/app/(admin)/admin/questions/
+      - docs/features/questions.md
+    items:
+      api_crud: done
+      api_publish: done
+      api_image_presigned_url: done
+      web_admin_list: done
+      web_admin_editor_with_preview: done
+      web_image_upload: done
+      feature_doc: done
+
+  phase_10_seed_questions:
+    status: done
+    paths:
+      - content/seed/math/questions.json
+      - packages/db/src/seed/questions.ts
+    items:
+      generate_50_questions: done
+      seed_script: done
+      idempotent_upsert: done
+    distribution:
+      kinds: { MCQ: 33, SHORT: 15, LONG: 2 }
+      difficulties: { 1: 4, 2: 19, 3: 22, 4: 5 }
+      topics: { aritmetike: 6, algjeber: 22, trigonometri: 4, gjeometri: 11, vargje: 3, kombinatorike: 3, analize: 1 }
+
+  phase_11_content_importer:
+    status: done
+    paths:
+      - apps/api/src/modules/content/importers/adapter.ts
+      - apps/api/src/modules/content/importers/legacy-json.ts
+      - apps/api/src/modules/content/importers/cli.ts
+      - apps/api/src/modules/media/s3.service.ts
+      - content/raw/math/json/
+      - content/raw/math/png/
+      - docs/features/content-import.md
+    items:
+      adapter_interface: done
+      legacy_json_adapter_stub: done
+      cli_command: done
+      r2_image_upload: done
+      feature_doc: done
+      map_legacy_question_real_shape: in_progress  # waiting on sample JSON from AkademiaAS team
+
+  phase_12_first_practice_flow:
+    status: done
+    paths:
+      - apps/api/src/modules/sessions/sessions.service.ts
+      - apps/api/src/modules/sessions/sessions.controller.ts
+      - apps/api/src/modules/attempts/attempts.service.ts
+      - apps/api/src/modules/attempts/attempts.controller.ts
+      - apps/web/src/app/(app)/practice/matematike/page.tsx
+      - apps/web/src/app/(app)/practice/matematike/practice-runner.tsx
+      - docs/features/practice.md
+    items:
+      api_practice_session: done
+      api_record_attempt: done
+      api_session_end_summary: done
+      web_practice_page: done
+      web_summary_screen: done
+      feature_doc: done
+      update_agent_state: done
+
+future_milestones:
+  v1:
+    - adaptive_practice
+    - ai_tutor_albanian
+    - readiness_score
+    - study_plan_generator
+    - leaderboards
+    - past_papers_archive
+  v2:
+    - teacher_dashboards
+    - parent_dashboards
+    - native_mobile_expo
+    - offline_mode
+    - monetization_freemium
