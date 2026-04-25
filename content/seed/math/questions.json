@@ -1,0 +1,815 @@
+[
+  {
+    "externalId": "seed-math-001",
+    "subjectSlug": "matematike",
+    "topicPath": "aritmetike.numra-real",
+    "kind": "MCQ",
+    "difficulty": 1,
+    "tracks": ["pergjithshem", "natyror", "shoqeror", "gjuhesor"],
+    "promptMd": "Sa është vlera e shprehjes $\\dfrac{3}{4} + \\dfrac{2}{3}$?",
+    "explanationMd": "Sjellim në emërues të përbashkët $12$: $\\dfrac{3}{4} = \\dfrac{9}{12}$ dhe $\\dfrac{2}{3} = \\dfrac{8}{12}$. Pra $\\dfrac{9}{12} + \\dfrac{8}{12} = \\dfrac{17}{12}$.",
+    "estimatedSec": 45,
+    "tags": ["thyesa", "veprim"],
+    "options": [
+      { "label": "$\\dfrac{5}{7}$", "isCorrect": false, "order": 0 },
+      { "label": "$\\dfrac{17}{12}$", "isCorrect": true, "order": 1 },
+      { "label": "$\\dfrac{6}{12}$", "isCorrect": false, "order": 2 },
+      { "label": "$\\dfrac{17}{7}$", "isCorrect": false, "order": 3 }
+    ]
+  },
+  {
+    "externalId": "seed-math-002",
+    "subjectSlug": "matematike",
+    "topicPath": "aritmetike.perqindje",
+    "kind": "MCQ",
+    "difficulty": 2,
+    "tracks": ["pergjithshem", "natyror", "shoqeror", "gjuhesor"],
+    "promptMd": "Çmimi i një produkti është $80$ €. Pas zbritjes prej $25\\%$, sa kushton produkti?",
+    "explanationMd": "$25\\%$ e $80$ është $\\dfrac{25}{100} \\cdot 80 = 20$. Çmimi i ri është $80 - 20 = 60$ €.",
+    "estimatedSec": 50,
+    "tags": ["perqindje", "zbritje"],
+    "options": [
+      { "label": "$55$ €", "isCorrect": false, "order": 0 },
+      { "label": "$60$ €", "isCorrect": true, "order": 1 },
+      { "label": "$65$ €", "isCorrect": false, "order": 2 },
+      { "label": "$75$ €", "isCorrect": false, "order": 3 }
+    ]
+  },
+  {
+    "externalId": "seed-math-003",
+    "subjectSlug": "matematike",
+    "topicPath": "aritmetike.fuqi-rrenje",
+    "kind": "MCQ",
+    "difficulty": 2,
+    "tracks": ["pergjithshem", "natyror", "shoqeror", "gjuhesor"],
+    "promptMd": "Sa është vlera e $\\sqrt{50} + \\sqrt{18}$?",
+    "explanationMd": "$\\sqrt{50} = \\sqrt{25 \\cdot 2} = 5\\sqrt{2}$ dhe $\\sqrt{18} = \\sqrt{9 \\cdot 2} = 3\\sqrt{2}$. Shuma është $5\\sqrt{2} + 3\\sqrt{2} = 8\\sqrt{2}$.",
+    "estimatedSec": 60,
+    "tags": ["rrenje", "thjeshtim"],
+    "options": [
+      { "label": "$\\sqrt{68}$", "isCorrect": false, "order": 0 },
+      { "label": "$8\\sqrt{2}$", "isCorrect": true, "order": 1 },
+      { "label": "$15\\sqrt{2}$", "isCorrect": false, "order": 2 },
+      { "label": "$2\\sqrt{34}$", "isCorrect": false, "order": 3 }
+    ]
+  },
+  {
+    "externalId": "seed-math-004",
+    "subjectSlug": "matematike",
+    "topicPath": "aritmetike.fuqi-rrenje",
+    "kind": "SHORT",
+    "difficulty": 2,
+    "tracks": ["pergjithshem", "natyror", "shoqeror", "gjuhesor"],
+    "promptMd": "Llogarit vlerën e $2^5 \\cdot 2^{-3}$.",
+    "correctAnswer": "4",
+    "explanationMd": "Sipas vetisë së fuqive: $2^5 \\cdot 2^{-3} = 2^{5-3} = 2^2 = 4$.",
+    "estimatedSec": 40,
+    "tags": ["fuqi", "veti"]
+  },
+  {
+    "externalId": "seed-math-005",
+    "subjectSlug": "matematike",
+    "topicPath": "aritmetike.numra-real",
+    "kind": "MCQ",
+    "difficulty": 1,
+    "tracks": ["pergjithshem", "natyror", "shoqeror", "gjuhesor"],
+    "promptMd": "Cili nga numrat e mëposhtëm është numër iracional?",
+    "explanationMd": "$\\sqrt{2}$ nuk mund të shprehet si thyesë e dy numrave të plotë, prandaj është iracional. Të tjerët janë racionalë.",
+    "estimatedSec": 30,
+    "tags": ["numra", "klasifikim"],
+    "options": [
+      { "label": "$\\dfrac{22}{7}$", "isCorrect": false, "order": 0 },
+      { "label": "$0{,}25$", "isCorrect": false, "order": 1 },
+      { "label": "$\\sqrt{2}$", "isCorrect": true, "order": 2 },
+      { "label": "$-3$", "isCorrect": false, "order": 3 }
+    ]
+  },
+  {
+    "externalId": "seed-math-006",
+    "subjectSlug": "matematike",
+    "topicPath": "aritmetike.perqindje",
+    "kind": "SHORT",
+    "difficulty": 3,
+    "tracks": ["pergjithshem", "natyror", "shoqeror", "gjuhesor"],
+    "promptMd": "Pas një rritjeje prej $20\\%$ dhe një zbritjeje prej $20\\%$, çmimi përfundimtar i një produkti është sa përqind e çmimit fillestar?",
+    "correctAnswer": "96%",
+    "explanationMd": "Le të jetë $P$ çmimi fillestar. Pas rritjes: $1{,}2P$. Pas zbritjes: $1{,}2P \\cdot 0{,}8 = 0{,}96P$. Pra çmimi përfundimtar është $96\\%$ i çmimit fillestar.",
+    "estimatedSec": 90,
+    "tags": ["perqindje", "rritje", "zbritje"]
+  },
+  {
+    "externalId": "seed-math-007",
+    "subjectSlug": "matematike",
+    "topicPath": "algjeber.shprehje",
+    "kind": "MCQ",
+    "difficulty": 2,
+    "tracks": ["pergjithshem", "natyror", "shoqeror", "gjuhesor"],
+    "promptMd": "Thjeshto shprehjen $\\dfrac{x^2 - 9}{x - 3}$ për $x \\ne 3$.",
+    "explanationMd": "Numëruesi është diferencë katrorësh: $x^2 - 9 = (x-3)(x+3)$. Pas thjeshtimit me $(x-3)$ marrim $x+3$.",
+    "estimatedSec": 60,
+    "tags": ["faktorizim", "thjeshtim"],
+    "options": [
+      { "label": "$x - 3$", "isCorrect": false, "order": 0 },
+      { "label": "$x + 3$", "isCorrect": true, "order": 1 },
+      { "label": "$x^2 + 3$", "isCorrect": false, "order": 2 },
+      { "label": "$3$", "isCorrect": false, "order": 3 }
+    ]
+  },
+  {
+    "externalId": "seed-math-008",
+    "subjectSlug": "matematike",
+    "topicPath": "algjeber.identitete",
+    "kind": "MCQ",
+    "difficulty": 2,
+    "tracks": ["pergjithshem", "natyror", "shoqeror", "gjuhesor"],
+    "promptMd": "Cila nga shprehjet është zhvillimi i $(a+b)^2$?",
+    "explanationMd": "Identiteti i njohur: $(a+b)^2 = a^2 + 2ab + b^2$.",
+    "estimatedSec": 30,
+    "tags": ["identitete"],
+    "options": [
+      { "label": "$a^2 + b^2$", "isCorrect": false, "order": 0 },
+      { "label": "$a^2 - 2ab + b^2$", "isCorrect": false, "order": 1 },
+      { "label": "$a^2 + 2ab + b^2$", "isCorrect": true, "order": 2 },
+      { "label": "$a^2 + ab + b^2$", "isCorrect": false, "order": 3 }
+    ]
+  },
+  {
+    "externalId": "seed-math-009",
+    "subjectSlug": "matematike",
+    "topicPath": "algjeber.identitete",
+    "kind": "SHORT",
+    "difficulty": 3,
+    "tracks": ["pergjithshem", "natyror", "shoqeror", "gjuhesor"],
+    "promptMd": "Faktorizoni shprehjen $x^2 - 5x + 6$.",
+    "correctAnswer": "(x-2)(x-3)",
+    "explanationMd": "Kërkojmë dy numra që plotpjesëtohen në $6$ dhe mbledhen në $-5$: ata janë $-2$ dhe $-3$. Pra $x^2 - 5x + 6 = (x-2)(x-3)$.",
+    "estimatedSec": 60,
+    "tags": ["faktorizim", "trinom"]
+  },
+  {
+    "externalId": "seed-math-010",
+    "subjectSlug": "matematike",
+    "topicPath": "algjeber.ekuacione.lineare",
+    "kind": "MCQ",
+    "difficulty": 1,
+    "tracks": ["pergjithshem", "natyror", "shoqeror", "gjuhesor"],
+    "promptMd": "Zgjidhni ekuacionin $2x + 7 = 15$.",
+    "explanationMd": "$2x = 15 - 7 = 8$, prandaj $x = 4$.",
+    "estimatedSec": 30,
+    "tags": ["ekuacion", "linear"],
+    "options": [
+      { "label": "$x = 3$", "isCorrect": false, "order": 0 },
+      { "label": "$x = 4$", "isCorrect": true, "order": 1 },
+      { "label": "$x = 8$", "isCorrect": false, "order": 2 },
+      { "label": "$x = 11$", "isCorrect": false, "order": 3 }
+    ]
+  },
+  {
+    "externalId": "seed-math-011",
+    "subjectSlug": "matematike",
+    "topicPath": "algjeber.ekuacione.lineare",
+    "kind": "MCQ",
+    "difficulty": 2,
+    "tracks": ["pergjithshem", "natyror", "shoqeror", "gjuhesor"],
+    "promptMd": "Zgjidhni ekuacionin $\\dfrac{x}{3} - \\dfrac{x-1}{2} = 1$.",
+    "explanationMd": "Shumëzojmë me $6$: $2x - 3(x-1) = 6$, pra $2x - 3x + 3 = 6$, që jep $-x = 3$, pra $x = -3$.",
+    "estimatedSec": 90,
+    "tags": ["ekuacion", "thyesa"],
+    "options": [
+      { "label": "$x = -3$", "isCorrect": true, "order": 0 },
+      { "label": "$x = 3$", "isCorrect": false, "order": 1 },
+      { "label": "$x = -1$", "isCorrect": false, "order": 2 },
+      { "label": "$x = 1$", "isCorrect": false, "order": 3 }
+    ]
+  },
+  {
+    "externalId": "seed-math-012",
+    "subjectSlug": "matematike",
+    "topicPath": "algjeber.ekuacione.lineare",
+    "kind": "SHORT",
+    "difficulty": 2,
+    "tracks": ["pergjithshem", "natyror", "shoqeror", "gjuhesor"],
+    "promptMd": "Shuma e tre numrave të njëpasnjëshëm natyrorë është $48$. Sa është numri i mesit?",
+    "correctAnswer": "16",
+    "explanationMd": "Le të jenë $n-1$, $n$, $n+1$ tre numrat. Atëherë $3n = 48$, pra $n = 16$.",
+    "estimatedSec": 60,
+    "tags": ["aplikim", "ekuacion"]
+  },
+  {
+    "externalId": "seed-math-013",
+    "subjectSlug": "matematike",
+    "topicPath": "algjeber.ekuacione.kuadratike",
+    "kind": "MCQ",
+    "difficulty": 2,
+    "tracks": ["pergjithshem", "natyror", "shoqeror", "gjuhesor"],
+    "promptMd": "Zgjidhjet e ekuacionit $x^2 - 7x + 12 = 0$ janë:",
+    "explanationMd": "Sipas formulave të Vietës: shuma e rrënjëve është $7$ dhe prodhimi $12$. Pra $x_1 = 3$ dhe $x_2 = 4$.",
+    "estimatedSec": 60,
+    "tags": ["kuadratik", "vieta"],
+    "options": [
+      { "label": "$x_1 = 2,\\ x_2 = 6$", "isCorrect": false, "order": 0 },
+      { "label": "$x_1 = 3,\\ x_2 = 4$", "isCorrect": true, "order": 1 },
+      { "label": "$x_1 = -3,\\ x_2 = -4$", "isCorrect": false, "order": 2 },
+      { "label": "$x_1 = 1,\\ x_2 = 12$", "isCorrect": false, "order": 3 }
+    ]
+  },
+  {
+    "externalId": "seed-math-014",
+    "subjectSlug": "matematike",
+    "topicPath": "algjeber.ekuacione.kuadratike",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "tracks": ["pergjithshem", "natyror", "shoqeror", "gjuhesor"],
+    "promptMd": "Sa është diskriminanti i ekuacionit $2x^2 - 4x + 1 = 0$?",
+    "explanationMd": "Diskriminanti llogaritet me $D = b^2 - 4ac$. Këtu $a=2$, $b=-4$, $c=1$, prandaj $D = 16 - 8 = 8$.",
+    "estimatedSec": 45,
+    "tags": ["diskriminant"],
+    "options": [
+      { "label": "$D = 4$", "isCorrect": false, "order": 0 },
+      { "label": "$D = 8$", "isCorrect": true, "order": 1 },
+      { "label": "$D = 16$", "isCorrect": false, "order": 2 },
+      { "label": "$D = 24$", "isCorrect": false, "order": 3 }
+    ]
+  },
+  {
+    "externalId": "seed-math-015",
+    "subjectSlug": "matematike",
+    "topicPath": "algjeber.ekuacione.kuadratike",
+    "kind": "SHORT",
+    "difficulty": 3,
+    "tracks": ["pergjithshem", "natyror", "shoqeror", "gjuhesor"],
+    "promptMd": "Nëse $x_1$ dhe $x_2$ janë rrënjët e ekuacionit $x^2 - 6x + 5 = 0$, llogarit $x_1^2 + x_2^2$.",
+    "correctAnswer": "26",
+    "explanationMd": "Sipas Vietës: $x_1+x_2 = 6$ dhe $x_1 x_2 = 5$. Atëherë $x_1^2 + x_2^2 = (x_1+x_2)^2 - 2 x_1 x_2 = 36 - 10 = 26$.",
+    "estimatedSec": 90,
+    "tags": ["vieta", "manipulim"]
+  },
+  {
+    "externalId": "seed-math-016",
+    "subjectSlug": "matematike",
+    "topicPath": "algjeber.ekuacione.kuadratike",
+    "kind": "LONG",
+    "difficulty": 4,
+    "tracks": ["pergjithshem", "natyror"],
+    "promptMd": "Për cilat vlera të parametrit $m \\in \\mathbb{R}$ ekuacioni $x^2 - 2mx + (m^2 - 4) = 0$ ka dy zgjidhje reale të ndryshme me të njëjtën shenjë?",
+    "explanationMd": "Diskriminanti: $D = 4m^2 - 4(m^2 - 4) = 16 > 0$ për çdo $m$, pra dy zgjidhje reale të ndryshme ekzistojnë gjithmonë.\n\nProdhimi i rrënjëve: $x_1 x_2 = m^2 - 4$. Që zgjidhjet të kenë të njëjtën shenjë, duhet $x_1 x_2 > 0$, pra $m^2 - 4 > 0$, që jep $m < -2$ ose $m > 2$.\n\n**Përgjigje:** $m \\in (-\\infty, -2) \\cup (2, +\\infty)$.",
+    "estimatedSec": 240,
+    "tags": ["parametër", "vieta", "shenja"]
+  },
+  {
+    "externalId": "seed-math-017",
+    "subjectSlug": "matematike",
+    "topicPath": "algjeber.inekuacione",
+    "kind": "MCQ",
+    "difficulty": 2,
+    "tracks": ["pergjithshem", "natyror", "shoqeror", "gjuhesor"],
+    "promptMd": "Bashkësia e zgjidhjeve të inekuacionit $3x - 5 \\le 7$ është:",
+    "explanationMd": "$3x \\le 12 \\Rightarrow x \\le 4$. Pra $x \\in (-\\infty, 4]$.",
+    "estimatedSec": 45,
+    "tags": ["inekuacion", "linear"],
+    "options": [
+      { "label": "$x < 4$", "isCorrect": false, "order": 0 },
+      { "label": "$x \\le 4$", "isCorrect": true, "order": 1 },
+      { "label": "$x \\ge 4$", "isCorrect": false, "order": 2 },
+      { "label": "$x > 4$", "isCorrect": false, "order": 3 }
+    ]
+  },
+  {
+    "externalId": "seed-math-018",
+    "subjectSlug": "matematike",
+    "topicPath": "algjeber.inekuacione",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "tracks": ["pergjithshem", "natyror"],
+    "promptMd": "Bashkësia e zgjidhjeve të inekuacionit $x^2 - x - 6 < 0$ është:",
+    "explanationMd": "Faktorizojmë: $x^2 - x - 6 = (x-3)(x+2)$. Inekuacioni $(x-3)(x+2) < 0$ ka zgjidhje $x \\in (-2, 3)$.",
+    "estimatedSec": 75,
+    "tags": ["inekuacion", "kuadratik"],
+    "options": [
+      { "label": "$x \\in (-2, 3)$", "isCorrect": true, "order": 0 },
+      { "label": "$x \\in (-\\infty, -2) \\cup (3, +\\infty)$", "isCorrect": false, "order": 1 },
+      { "label": "$x \\in [-2, 3]$", "isCorrect": false, "order": 2 },
+      { "label": "$x \\in (-3, 2)$", "isCorrect": false, "order": 3 }
+    ]
+  },
+  {
+    "externalId": "seed-math-019",
+    "subjectSlug": "matematike",
+    "topicPath": "algjeber.sisteme",
+    "kind": "MCQ",
+    "difficulty": 2,
+    "tracks": ["pergjithshem", "natyror", "shoqeror", "gjuhesor"],
+    "promptMd": "Zgjidhja e sistemit\n\n$$\\begin{cases} x + y = 7 \\\\ x - y = 1 \\end{cases}$$\n\nështë:",
+    "explanationMd": "Mbledhim ekuacionet: $2x = 8 \\Rightarrow x = 4$. Atëherë $y = 7 - 4 = 3$.",
+    "estimatedSec": 60,
+    "tags": ["sistem", "metoda e mbledhjes"],
+    "options": [
+      { "label": "$(x, y) = (3, 4)$", "isCorrect": false, "order": 0 },
+      { "label": "$(x, y) = (4, 3)$", "isCorrect": true, "order": 1 },
+      { "label": "$(x, y) = (5, 2)$", "isCorrect": false, "order": 2 },
+      { "label": "$(x, y) = (6, 1)$", "isCorrect": false, "order": 3 }
+    ]
+  },
+  {
+    "externalId": "seed-math-020",
+    "subjectSlug": "matematike",
+    "topicPath": "algjeber.sisteme",
+    "kind": "SHORT",
+    "difficulty": 3,
+    "tracks": ["pergjithshem", "natyror", "shoqeror"],
+    "promptMd": "Në një kafene, $2$ kafe dhe $3$ ujë kushtojnë $7$ €, ndërsa $3$ kafe dhe $2$ ujë kushtojnë $8$ €. Sa kushton një kafe?",
+    "correctAnswer": "2 €",
+    "explanationMd": "Le të jetë $k$ çmimi i një kafeje dhe $u$ çmimi i një uji.\n\n$$\\begin{cases} 2k + 3u = 7 \\\\ 3k + 2u = 8 \\end{cases}$$\n\nShumëzojmë ekuacionin e parë me $2$ dhe të dytin me $3$: $4k + 6u = 14$ dhe $9k + 6u = 24$. Zbresim: $5k = 10 \\Rightarrow k = 2$. Pra një kafe kushton $2$ €.",
+    "estimatedSec": 180,
+    "tags": ["sistem", "aplikim"]
+  },
+  {
+    "externalId": "seed-math-021",
+    "subjectSlug": "matematike",
+    "topicPath": "algjeber.funksione.lineare",
+    "kind": "MCQ",
+    "difficulty": 2,
+    "tracks": ["pergjithshem", "natyror", "shoqeror", "gjuhesor"],
+    "promptMd": "Sa është koeficienti këndor (pjerrësia) i drejtëzës $y = -3x + 5$?",
+    "explanationMd": "Në formën $y = mx + b$, koeficienti $m$ është pjerrësia. Këtu $m = -3$.",
+    "estimatedSec": 30,
+    "tags": ["funksion", "linear", "pjerrësi"],
+    "options": [
+      { "label": "$5$", "isCorrect": false, "order": 0 },
+      { "label": "$3$", "isCorrect": false, "order": 1 },
+      { "label": "$-3$", "isCorrect": true, "order": 2 },
+      { "label": "$-5$", "isCorrect": false, "order": 3 }
+    ]
+  },
+  {
+    "externalId": "seed-math-022",
+    "subjectSlug": "matematike",
+    "topicPath": "algjeber.funksione.lineare",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "tracks": ["pergjithshem", "natyror", "shoqeror", "gjuhesor"],
+    "promptMd": "Drejtëza kalon nëpër pikat $A(1, 2)$ dhe $B(3, 8)$. Cili është ekuacioni i saj?",
+    "explanationMd": "Pjerrësia $m = \\dfrac{8 - 2}{3 - 1} = 3$. Duke përdorur pikën $A$: $y - 2 = 3(x - 1) \\Rightarrow y = 3x - 1$.",
+    "estimatedSec": 75,
+    "tags": ["funksion", "linear", "ekuacion"],
+    "options": [
+      { "label": "$y = 3x + 1$", "isCorrect": false, "order": 0 },
+      { "label": "$y = 3x - 1$", "isCorrect": true, "order": 1 },
+      { "label": "$y = 2x + 1$", "isCorrect": false, "order": 2 },
+      { "label": "$y = -3x + 5$", "isCorrect": false, "order": 3 }
+    ]
+  },
+  {
+    "externalId": "seed-math-023",
+    "subjectSlug": "matematike",
+    "topicPath": "algjeber.funksione.vlerat",
+    "kind": "SHORT",
+    "difficulty": 2,
+    "tracks": ["pergjithshem", "natyror", "shoqeror", "gjuhesor"],
+    "promptMd": "Le të jetë $f(x) = 2x^2 - 3x + 1$. Sa është $f(2)$?",
+    "correctAnswer": "3",
+    "explanationMd": "$f(2) = 2 \\cdot 4 - 3 \\cdot 2 + 1 = 8 - 6 + 1 = 3$.",
+    "estimatedSec": 45,
+    "tags": ["funksion", "vlerë"]
+  },
+  {
+    "externalId": "seed-math-024",
+    "subjectSlug": "matematike",
+    "topicPath": "algjeber.funksione.kuadratike",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "tracks": ["pergjithshem", "natyror", "shoqeror", "gjuhesor"],
+    "promptMd": "Cilat janë koordinatat e kulmit të parabolës $y = x^2 - 4x + 3$?",
+    "explanationMd": "Abshisa e kulmit është $x_0 = -\\dfrac{b}{2a} = \\dfrac{4}{2} = 2$. Ordinata: $y_0 = 4 - 8 + 3 = -1$. Kulmi: $(2, -1)$.",
+    "estimatedSec": 75,
+    "tags": ["parabolë", "kulm"],
+    "options": [
+      { "label": "$(2, -1)$", "isCorrect": true, "order": 0 },
+      { "label": "$(-2, 1)$", "isCorrect": false, "order": 1 },
+      { "label": "$(2, 1)$", "isCorrect": false, "order": 2 },
+      { "label": "$(0, 3)$", "isCorrect": false, "order": 3 }
+    ]
+  },
+  {
+    "externalId": "seed-math-025",
+    "subjectSlug": "matematike",
+    "topicPath": "algjeber.funksione.kuadratike",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "tracks": ["pergjithshem", "natyror", "shoqeror", "gjuhesor"],
+    "promptMd": "Funksioni $f(x) = -2x^2 + 8x - 3$ ka vlerën:",
+    "explanationMd": "Sepse $a = -2 < 0$, funksioni ka maksimum. Maksimumi është në $x_0 = -\\dfrac{8}{2 \\cdot (-2)} = 2$. Vlera: $f(2) = -8 + 16 - 3 = 5$.",
+    "estimatedSec": 75,
+    "tags": ["parabolë", "ekstremume"],
+    "options": [
+      { "label": "minimumin $5$", "isCorrect": false, "order": 0 },
+      { "label": "maksimumin $5$", "isCorrect": true, "order": 1 },
+      { "label": "maksimumin $3$", "isCorrect": false, "order": 2 },
+      { "label": "minimumin $-3$", "isCorrect": false, "order": 3 }
+    ]
+  },
+  {
+    "externalId": "seed-math-026",
+    "subjectSlug": "matematike",
+    "topicPath": "algjeber.eksponenciale",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "tracks": ["pergjithshem", "natyror"],
+    "promptMd": "Zgjidhja e ekuacionit $2^{x+1} = 32$ është:",
+    "explanationMd": "$32 = 2^5$, prandaj $x + 1 = 5 \\Rightarrow x = 4$.",
+    "estimatedSec": 45,
+    "tags": ["eksponencial"],
+    "options": [
+      { "label": "$x = 3$", "isCorrect": false, "order": 0 },
+      { "label": "$x = 4$", "isCorrect": true, "order": 1 },
+      { "label": "$x = 5$", "isCorrect": false, "order": 2 },
+      { "label": "$x = 6$", "isCorrect": false, "order": 3 }
+    ]
+  },
+  {
+    "externalId": "seed-math-027",
+    "subjectSlug": "matematike",
+    "topicPath": "algjeber.logaritme",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "tracks": ["pergjithshem", "natyror"],
+    "promptMd": "Sa është vlera e $\\log_2 32 - \\log_2 4$?",
+    "explanationMd": "$\\log_2 32 = 5$ dhe $\\log_2 4 = 2$. Diferenca është $3$. Ose: $\\log_2 32 - \\log_2 4 = \\log_2 \\dfrac{32}{4} = \\log_2 8 = 3$.",
+    "estimatedSec": 60,
+    "tags": ["logaritëm"],
+    "options": [
+      { "label": "$2$", "isCorrect": false, "order": 0 },
+      { "label": "$3$", "isCorrect": true, "order": 1 },
+      { "label": "$5$", "isCorrect": false, "order": 2 },
+      { "label": "$8$", "isCorrect": false, "order": 3 }
+    ]
+  },
+  {
+    "externalId": "seed-math-028",
+    "subjectSlug": "matematike",
+    "topicPath": "algjeber.logaritme",
+    "kind": "SHORT",
+    "difficulty": 4,
+    "tracks": ["pergjithshem", "natyror"],
+    "promptMd": "Zgjidhni ekuacionin $\\log_3(x - 1) + \\log_3(x + 1) = 1$.",
+    "correctAnswer": "x = 2",
+    "explanationMd": "Kushti i fushës: $x > 1$. Përdorim vetinë: $\\log_3((x-1)(x+1)) = 1$, pra $x^2 - 1 = 3 \\Rightarrow x^2 = 4 \\Rightarrow x = \\pm 2$. Vetëm $x = 2$ plotëson kushtin.",
+    "estimatedSec": 120,
+    "tags": ["logaritëm", "ekuacion"]
+  },
+  {
+    "externalId": "seed-math-029",
+    "subjectSlug": "matematike",
+    "topicPath": "trigonometri.vlerat-themelore",
+    "kind": "MCQ",
+    "difficulty": 2,
+    "tracks": ["pergjithshem", "natyror"],
+    "promptMd": "Sa është vlera e $\\sin 30^\\circ + \\cos 60^\\circ$?",
+    "explanationMd": "$\\sin 30^\\circ = \\dfrac{1}{2}$ dhe $\\cos 60^\\circ = \\dfrac{1}{2}$. Shuma është $1$.",
+    "estimatedSec": 30,
+    "tags": ["trigonometri", "kënde"],
+    "options": [
+      { "label": "$\\dfrac{1}{2}$", "isCorrect": false, "order": 0 },
+      { "label": "$1$", "isCorrect": true, "order": 1 },
+      { "label": "$\\dfrac{\\sqrt{3}}{2}$", "isCorrect": false, "order": 2 },
+      { "label": "$2$", "isCorrect": false, "order": 3 }
+    ]
+  },
+  {
+    "externalId": "seed-math-030",
+    "subjectSlug": "matematike",
+    "topicPath": "trigonometri.identitete",
+    "kind": "SHORT",
+    "difficulty": 3,
+    "tracks": ["pergjithshem", "natyror"],
+    "promptMd": "Nëse $\\sin \\alpha = \\dfrac{3}{5}$ dhe $\\alpha$ ndodhet në kuadrantin e parë, sa është $\\cos \\alpha$?",
+    "correctAnswer": "4/5",
+    "explanationMd": "Nga identiteti themelor: $\\sin^2\\alpha + \\cos^2\\alpha = 1$. Pra $\\cos^2\\alpha = 1 - \\dfrac{9}{25} = \\dfrac{16}{25}$. Sepse $\\alpha$ në kuadrantin I, $\\cos\\alpha > 0$, prandaj $\\cos\\alpha = \\dfrac{4}{5}$.",
+    "estimatedSec": 75,
+    "tags": ["trigonometri", "identitet"]
+  },
+  {
+    "externalId": "seed-math-031",
+    "subjectSlug": "matematike",
+    "topicPath": "trigonometri.trekendesha",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "tracks": ["pergjithshem", "natyror"],
+    "promptMd": "Në një trekëndësh kënddrejtë me kateta $a = 3$ dhe $b = 4$, sa është $\\sin$ e këndit përballë katetës $a$?",
+    "explanationMd": "Hipotenuza është $c = \\sqrt{9 + 16} = 5$. Pra $\\sin = \\dfrac{a}{c} = \\dfrac{3}{5}$.",
+    "estimatedSec": 60,
+    "tags": ["trigonometri", "trekëndësh"],
+    "options": [
+      { "label": "$\\dfrac{3}{4}$", "isCorrect": false, "order": 0 },
+      { "label": "$\\dfrac{3}{5}$", "isCorrect": true, "order": 1 },
+      { "label": "$\\dfrac{4}{5}$", "isCorrect": false, "order": 2 },
+      { "label": "$\\dfrac{5}{3}$", "isCorrect": false, "order": 3 }
+    ]
+  },
+  {
+    "externalId": "seed-math-032",
+    "subjectSlug": "matematike",
+    "topicPath": "trigonometri.ekuacione",
+    "kind": "MCQ",
+    "difficulty": 4,
+    "tracks": ["natyror"],
+    "promptMd": "Sa zgjidhje ka ekuacioni $\\sin x = \\dfrac{1}{2}$ në intervalin $[0, 2\\pi]$?",
+    "explanationMd": "Në intervalin $[0, 2\\pi]$, $\\sin x = \\dfrac{1}{2}$ kur $x = \\dfrac{\\pi}{6}$ ose $x = \\dfrac{5\\pi}{6}$. Pra $2$ zgjidhje.",
+    "estimatedSec": 75,
+    "tags": ["trigonometri", "ekuacion"],
+    "options": [
+      { "label": "$1$", "isCorrect": false, "order": 0 },
+      { "label": "$2$", "isCorrect": true, "order": 1 },
+      { "label": "$3$", "isCorrect": false, "order": 2 },
+      { "label": "$4$", "isCorrect": false, "order": 3 }
+    ]
+  },
+  {
+    "externalId": "seed-math-033",
+    "subjectSlug": "matematike",
+    "topicPath": "gjeometri.plane.trekendesha",
+    "kind": "MCQ",
+    "difficulty": 1,
+    "tracks": ["pergjithshem", "natyror", "shoqeror", "gjuhesor"],
+    "promptMd": "Shuma e këndeve të brendshme të një trekëndëshi është:",
+    "explanationMd": "Sipas teoremës klasike, shuma e këndeve të brendshme të çdo trekëndëshi është $180^\\circ$.",
+    "estimatedSec": 20,
+    "tags": ["trekëndësh", "kënde"],
+    "options": [
+      { "label": "$90^\\circ$", "isCorrect": false, "order": 0 },
+      { "label": "$180^\\circ$", "isCorrect": true, "order": 1 },
+      { "label": "$270^\\circ$", "isCorrect": false, "order": 2 },
+      { "label": "$360^\\circ$", "isCorrect": false, "order": 3 }
+    ]
+  },
+  {
+    "externalId": "seed-math-034",
+    "subjectSlug": "matematike",
+    "topicPath": "gjeometri.plane.trekendesha",
+    "kind": "MCQ",
+    "difficulty": 2,
+    "tracks": ["pergjithshem", "natyror", "shoqeror", "gjuhesor"],
+    "promptMd": "Në një trekëndësh kënddrejtë, kateta janë $6$ cm dhe $8$ cm. Sa është gjatësia e hipotenuzës?",
+    "explanationMd": "Sipas teoremës së Pitagorës: $c = \\sqrt{6^2 + 8^2} = \\sqrt{36 + 64} = \\sqrt{100} = 10$ cm.",
+    "estimatedSec": 45,
+    "tags": ["pitagora", "trekëndësh"],
+    "options": [
+      { "label": "$10$ cm", "isCorrect": true, "order": 0 },
+      { "label": "$12$ cm", "isCorrect": false, "order": 1 },
+      { "label": "$14$ cm", "isCorrect": false, "order": 2 },
+      { "label": "$\\sqrt{14}$ cm", "isCorrect": false, "order": 3 }
+    ]
+  },
+  {
+    "externalId": "seed-math-035",
+    "subjectSlug": "matematike",
+    "topicPath": "gjeometri.plane.trekendesha",
+    "kind": "SHORT",
+    "difficulty": 2,
+    "tracks": ["pergjithshem", "natyror", "shoqeror", "gjuhesor"],
+    "promptMd": "Sa është syprina e trekëndëshit me bazë $12$ cm dhe lartësi $5$ cm?",
+    "correctAnswer": "30 cm^2",
+    "explanationMd": "Syprina e trekëndëshit: $S = \\dfrac{1}{2} \\cdot b \\cdot h = \\dfrac{1}{2} \\cdot 12 \\cdot 5 = 30$ cm².",
+    "estimatedSec": 30,
+    "tags": ["syprinë", "trekëndësh"]
+  },
+  {
+    "externalId": "seed-math-036",
+    "subjectSlug": "matematike",
+    "topicPath": "gjeometri.plane.katerkendesha",
+    "kind": "MCQ",
+    "difficulty": 2,
+    "tracks": ["pergjithshem", "natyror", "shoqeror", "gjuhesor"],
+    "promptMd": "Një katror ka perimetrin $36$ cm. Sa është syprina e tij?",
+    "explanationMd": "Brinja: $a = \\dfrac{36}{4} = 9$ cm. Syprina: $S = a^2 = 81$ cm².",
+    "estimatedSec": 45,
+    "tags": ["katror", "syprinë"],
+    "options": [
+      { "label": "$72$ cm²", "isCorrect": false, "order": 0 },
+      { "label": "$81$ cm²", "isCorrect": true, "order": 1 },
+      { "label": "$144$ cm²", "isCorrect": false, "order": 2 },
+      { "label": "$324$ cm²", "isCorrect": false, "order": 3 }
+    ]
+  },
+  {
+    "externalId": "seed-math-037",
+    "subjectSlug": "matematike",
+    "topicPath": "gjeometri.plane.rrethi",
+    "kind": "MCQ",
+    "difficulty": 2,
+    "tracks": ["pergjithshem", "natyror", "shoqeror", "gjuhesor"],
+    "promptMd": "Një rreth ka rreze $r = 5$ cm. Sa është gjatësia e tij (perimetri)?",
+    "explanationMd": "Gjatësia e rrethit: $L = 2\\pi r = 10\\pi$ cm.",
+    "estimatedSec": 30,
+    "tags": ["rreth", "perimetër"],
+    "options": [
+      { "label": "$5\\pi$ cm", "isCorrect": false, "order": 0 },
+      { "label": "$10\\pi$ cm", "isCorrect": true, "order": 1 },
+      { "label": "$25\\pi$ cm", "isCorrect": false, "order": 2 },
+      { "label": "$\\pi$ cm", "isCorrect": false, "order": 3 }
+    ]
+  },
+  {
+    "externalId": "seed-math-038",
+    "subjectSlug": "matematike",
+    "topicPath": "gjeometri.plane.rrethi",
+    "kind": "SHORT",
+    "difficulty": 3,
+    "tracks": ["pergjithshem", "natyror", "shoqeror", "gjuhesor"],
+    "promptMd": "Sa është syprina e një rrethi me diametër $14$ cm? Përgjigjja në formë të $\\pi$.",
+    "correctAnswer": "49π cm^2",
+    "explanationMd": "Rrezja $r = 7$ cm. Syprina: $S = \\pi r^2 = 49\\pi$ cm².",
+    "estimatedSec": 45,
+    "tags": ["rreth", "syprinë"]
+  },
+  {
+    "externalId": "seed-math-039",
+    "subjectSlug": "matematike",
+    "topicPath": "gjeometri.hapesinore.vellime",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "tracks": ["pergjithshem", "natyror"],
+    "promptMd": "Vëllimi i një kubi me brinjë $4$ cm është:",
+    "explanationMd": "$V = a^3 = 4^3 = 64$ cm³.",
+    "estimatedSec": 30,
+    "tags": ["kub", "vëllim"],
+    "options": [
+      { "label": "$16$ cm³", "isCorrect": false, "order": 0 },
+      { "label": "$48$ cm³", "isCorrect": false, "order": 1 },
+      { "label": "$64$ cm³", "isCorrect": true, "order": 2 },
+      { "label": "$96$ cm³", "isCorrect": false, "order": 3 }
+    ]
+  },
+  {
+    "externalId": "seed-math-040",
+    "subjectSlug": "matematike",
+    "topicPath": "gjeometri.hapesinore.vellime",
+    "kind": "SHORT",
+    "difficulty": 3,
+    "tracks": ["pergjithshem", "natyror"],
+    "promptMd": "Sa është vëllimi i një cilindri me rreze $3$ cm dhe lartësi $10$ cm? Përgjigjja në formë të $\\pi$.",
+    "correctAnswer": "90π cm^3",
+    "explanationMd": "$V = \\pi r^2 h = \\pi \\cdot 9 \\cdot 10 = 90\\pi$ cm³.",
+    "estimatedSec": 60,
+    "tags": ["cilindër", "vëllim"]
+  },
+  {
+    "externalId": "seed-math-041",
+    "subjectSlug": "matematike",
+    "topicPath": "gjeometri.hapesinore.siperfaqe",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "tracks": ["pergjithshem", "natyror"],
+    "promptMd": "Sipërfaqja totale e një kubi me brinjë $5$ cm është:",
+    "explanationMd": "Sipërfaqja totale e një kubi: $S = 6 a^2 = 6 \\cdot 25 = 150$ cm².",
+    "estimatedSec": 45,
+    "tags": ["kub", "sipërfaqe"],
+    "options": [
+      { "label": "$25$ cm²", "isCorrect": false, "order": 0 },
+      { "label": "$125$ cm²", "isCorrect": false, "order": 1 },
+      { "label": "$150$ cm²", "isCorrect": true, "order": 2 },
+      { "label": "$300$ cm²", "isCorrect": false, "order": 3 }
+    ]
+  },
+  {
+    "externalId": "seed-math-042",
+    "subjectSlug": "matematike",
+    "topicPath": "gjeometri.koordinate",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "tracks": ["pergjithshem", "natyror"],
+    "promptMd": "Sa është largësia midis pikave $A(1, 2)$ dhe $B(4, 6)$?",
+    "explanationMd": "$d(A, B) = \\sqrt{(4-1)^2 + (6-2)^2} = \\sqrt{9 + 16} = \\sqrt{25} = 5$.",
+    "estimatedSec": 60,
+    "tags": ["koordinate", "largësi"],
+    "options": [
+      { "label": "$3$", "isCorrect": false, "order": 0 },
+      { "label": "$4$", "isCorrect": false, "order": 1 },
+      { "label": "$5$", "isCorrect": true, "order": 2 },
+      { "label": "$7$", "isCorrect": false, "order": 3 }
+    ]
+  },
+  {
+    "externalId": "seed-math-043",
+    "subjectSlug": "matematike",
+    "topicPath": "gjeometri.koordinate",
+    "kind": "SHORT",
+    "difficulty": 3,
+    "tracks": ["pergjithshem", "natyror"],
+    "promptMd": "Sa janë koordinatat e pikës së mesit të segmentit me skaje $A(-2, 5)$ dhe $B(6, -1)$?",
+    "correctAnswer": "(2, 2)",
+    "explanationMd": "Pika e mesit: $M = \\left( \\dfrac{-2+6}{2}, \\dfrac{5+(-1)}{2} \\right) = (2, 2)$.",
+    "estimatedSec": 60,
+    "tags": ["koordinate", "pika e mesit"]
+  },
+  {
+    "externalId": "seed-math-044",
+    "subjectSlug": "matematike",
+    "topicPath": "vargje.aritmetike",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "tracks": ["pergjithshem", "natyror", "shoqeror"],
+    "promptMd": "Termi i dhjetë i një progresioni aritmetik me $a_1 = 4$ dhe $d = 3$ është:",
+    "explanationMd": "$a_n = a_1 + (n-1)d$, pra $a_{10} = 4 + 9 \\cdot 3 = 4 + 27 = 31$.",
+    "estimatedSec": 45,
+    "tags": ["varg", "progresion aritmetik"],
+    "options": [
+      { "label": "$28$", "isCorrect": false, "order": 0 },
+      { "label": "$30$", "isCorrect": false, "order": 1 },
+      { "label": "$31$", "isCorrect": true, "order": 2 },
+      { "label": "$34$", "isCorrect": false, "order": 3 }
+    ]
+  },
+  {
+    "externalId": "seed-math-045",
+    "subjectSlug": "matematike",
+    "topicPath": "vargje.aritmetike",
+    "kind": "SHORT",
+    "difficulty": 3,
+    "tracks": ["pergjithshem", "natyror", "shoqeror"],
+    "promptMd": "Sa është shuma e $20$ termave të parë të progresionit aritmetik $2, 5, 8, 11, \\ldots$?",
+    "correctAnswer": "610",
+    "explanationMd": "$a_1 = 2$, $d = 3$, $a_{20} = 2 + 19 \\cdot 3 = 59$. Shuma: $S_{20} = \\dfrac{20}{2}(a_1 + a_{20}) = 10 \\cdot 61 = 610$.",
+    "estimatedSec": 90,
+    "tags": ["progresion aritmetik", "shumë"]
+  },
+  {
+    "externalId": "seed-math-046",
+    "subjectSlug": "matematike",
+    "topicPath": "vargje.gjeometrike",
+    "kind": "MCQ",
+    "difficulty": 4,
+    "tracks": ["pergjithshem", "natyror"],
+    "promptMd": "Në një progresion gjeometrik $a_1 = 3$ dhe $q = 2$. Sa është $a_5$?",
+    "explanationMd": "$a_n = a_1 \\cdot q^{n-1}$, pra $a_5 = 3 \\cdot 2^4 = 3 \\cdot 16 = 48$.",
+    "estimatedSec": 45,
+    "tags": ["progresion gjeometrik"],
+    "options": [
+      { "label": "$24$", "isCorrect": false, "order": 0 },
+      { "label": "$30$", "isCorrect": false, "order": 1 },
+      { "label": "$48$", "isCorrect": true, "order": 2 },
+      { "label": "$96$", "isCorrect": false, "order": 3 }
+    ]
+  },
+  {
+    "externalId": "seed-math-047",
+    "subjectSlug": "matematike",
+    "topicPath": "kombinatorike.permutacione",
+    "kind": "MCQ",
+    "difficulty": 2,
+    "tracks": ["pergjithshem", "natyror", "shoqeror"],
+    "promptMd": "Në sa mënyra mund të rreshtohen $5$ libra të ndryshëm në një raft?",
+    "explanationMd": "Numri i permutacioneve: $5! = 5 \\cdot 4 \\cdot 3 \\cdot 2 \\cdot 1 = 120$.",
+    "estimatedSec": 30,
+    "tags": ["permutacione", "faktorial"],
+    "options": [
+      { "label": "$25$", "isCorrect": false, "order": 0 },
+      { "label": "$60$", "isCorrect": false, "order": 1 },
+      { "label": "$120$", "isCorrect": true, "order": 2 },
+      { "label": "$720$", "isCorrect": false, "order": 3 }
+    ]
+  },
+  {
+    "externalId": "seed-math-048",
+    "subjectSlug": "matematike",
+    "topicPath": "kombinatorike.probabilitet",
+    "kind": "MCQ",
+    "difficulty": 2,
+    "tracks": ["pergjithshem", "natyror", "shoqeror"],
+    "promptMd": "Hidhet një zar i rregullt. Sa është probabiliteti që të bjerë numër çift?",
+    "explanationMd": "Numrat çift në zar janë $\\{2, 4, 6\\}$, pra $3$ raste të favorshme nga $6$ të mundshme. $P = \\dfrac{3}{6} = \\dfrac{1}{2}$.",
+    "estimatedSec": 30,
+    "tags": ["probabilitet"],
+    "options": [
+      { "label": "$\\dfrac{1}{6}$", "isCorrect": false, "order": 0 },
+      { "label": "$\\dfrac{1}{3}$", "isCorrect": false, "order": 1 },
+      { "label": "$\\dfrac{1}{2}$", "isCorrect": true, "order": 2 },
+      { "label": "$\\dfrac{2}{3}$", "isCorrect": false, "order": 3 }
+    ]
+  },
+  {
+    "externalId": "seed-math-049",
+    "subjectSlug": "matematike",
+    "topicPath": "kombinatorike.probabilitet",
+    "kind": "SHORT",
+    "difficulty": 3,
+    "tracks": ["pergjithshem", "natyror", "shoqeror"],
+    "promptMd": "Në një kuti ka $4$ topa të kuq dhe $6$ topa të kaltër. Tërhiqet një top rastësisht. Sa është probabiliteti që topi të jetë i kuq?",
+    "correctAnswer": "2/5",
+    "explanationMd": "Numri total i topave: $10$. Probabiliteti: $P = \\dfrac{4}{10} = \\dfrac{2}{5}$.",
+    "estimatedSec": 30,
+    "tags": ["probabilitet"]
+  },
+  {
+    "externalId": "seed-math-050",
+    "subjectSlug": "matematike",
+    "topicPath": "analize.derivate",
+    "kind": "LONG",
+    "difficulty": 4,
+    "tracks": ["natyror"],
+    "promptMd": "Le të jetë funksioni $f(x) = x^3 - 6x^2 + 9x + 1$.\n\n**a)** Gjeni derivatin $f'(x)$.\n\n**b)** Gjeni pikat ku funksioni ka ekstremume lokale.\n\n**c)** Klasifikoni secilin ekstremum (maksimum ose minimum).",
+    "explanationMd": "**a)** $f'(x) = 3x^2 - 12x + 9 = 3(x^2 - 4x + 3) = 3(x-1)(x-3)$.\n\n**b)** $f'(x) = 0 \\Rightarrow x = 1$ ose $x = 3$.\n\n**c)** Studiojmë shenjën e $f'$:\n- Për $x < 1$: $f'(x) > 0$ (rritës).\n- Për $1 < x < 3$: $f'(x) < 0$ (zbritës).\n- Për $x > 3$: $f'(x) > 0$ (rritës).\n\nPra në $x = 1$ kemi **maksimum lokal**: $f(1) = 1 - 6 + 9 + 1 = 5$.\nNë $x = 3$ kemi **minimum lokal**: $f(3) = 27 - 54 + 27 + 1 = 1$.",
+    "estimatedSec": 300,
+    "tags": ["derivat", "ekstremume"]
+  }
+]

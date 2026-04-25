@@ -1,0 +1,28 @@
+{
+  "name": "@matura/shared",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "exports": {
+    ".": "./src/index.ts",
+    "./enums": "./src/enums.ts",
+    "./taxonomy/matematike": "./src/taxonomy/matematike.ts",
+    "./i18n/sq": "./src/i18n/sq.ts",
+    "./schemas/question": "./src/schemas/question.ts",
+    "./schemas/user": "./src/schemas/user.ts",
+    "./schemas/attempt": "./src/schemas/attempt.ts",
+    "./schemas/session": "./src/schemas/session.ts"
+  },
+  "scripts": {
+    "lint": "eslint src --max-warnings=0",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.2"
+  }
+}

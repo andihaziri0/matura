@@ -1,0 +1,82 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "ui": "stream",
+  "globalDependencies": [".env", ".env.example", "tsconfig.base.json"],
+  "globalEnv": [
+    "NODE_ENV",
+    "DATABASE_URL",
+    "REDIS_URL",
+    "S3_ENDPOINT",
+    "S3_REGION",
+    "S3_ACCESS_KEY_ID",
+    "S3_SECRET_ACCESS_KEY",
+    "S3_BUCKET",
+    "S3_FORCE_PATH_STYLE",
+    "S3_PUBLIC_BASE_URL",
+    "FIREBASE_SERVICE_ACCOUNT_BASE64",
+    "FIREBASE_SERVICE_ACCOUNT_PATH",
+    "API_PORT",
+    "WEB_ORIGIN",
+    "NEXT_PUBLIC_API_URL",
+    "NEXT_PUBLIC_FIREBASE_API_KEY",
+    "NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN",
+    "NEXT_PUBLIC_FIREBASE_PROJECT_ID",
+    "NEXT_PUBLIC_FIREBASE_APP_ID"
+  ],
+  "tasks": {
+    "build": {
+      "dependsOn": ["^build"],
+      "inputs": [
+        "src/**",
+        "prisma/**",
+        "next.config.*",
+        "tsconfig*.json",
+        "package.json",
+        "tailwind.config.*",
+        "postcss.config.*"
+      ],
+      "outputs": ["dist/**", ".next/**", "!.next/cache/**", "build/**"]
+    },
+    "dev": {
+      "cache": false,
+      "persistent": true
+    },
+    "lint": {
+      "inputs": ["src/**", "tsconfig*.json", ".eslintrc*", "eslint.config.*"]
+    },
+    "typecheck": {
+      "dependsOn": ["^build"],
+      "inputs": ["src/**", "tsconfig*.json", "package.json"]
+    },
+    "db:generate": {
+      "cache": false,
+      "inputs": ["prisma/schema.prisma"]
+    },
+    "db:migrate": {
+      "cache": false,
+      "persistent": false
+    },
+    "db:seed": {
+      "cache": false,
+      "persistent": false,
+      "dependsOn": ["@matura/db#db:generate"]
+    },
+    "db:reset": {
+      "cache": false,
+      "persistent": false
+    },
+    "openapi:generate": {
+      "cache": false,
+      "outputs": ["openapi.json"]
+    },
+    "sdk:build": {
+      "dependsOn": ["@matura/api#openapi:generate"],
+      "inputs": ["openapi.json", "src/**", "tsconfig*.json"],
+      "outputs": ["dist/**", "src/generated/**"]
+    },
+    "content:import": {
+      "cache": false,
+      "persistent": false
+    }
+  }
+}

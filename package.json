@@ -1,0 +1,44 @@
+{
+  "name": "matura",
+  "private": true,
+  "version": "0.0.0",
+  "description": "Matura AkademiaAS — exam prep app for Kosovo 12th-grade students",
+  "packageManager": "pnpm@9.15.0",
+  "engines": {
+    "node": ">=22.0.0",
+    "pnpm": ">=9.0.0"
+  },
+  "scripts": {
+    "dev": "turbo run dev --parallel",
+    "dev:api": "turbo run dev --filter=@matura/api",
+    "dev:web": "turbo run dev --filter=@matura/web",
+    "dev:infra": "docker compose --env-file .env up -d",
+    "dev:infra:down": "docker compose --env-file .env down",
+    "dev:infra:logs": "docker compose --env-file .env logs -f",
+    "build": "turbo run build",
+    "lint": "turbo run lint",
+    "typecheck": "turbo run typecheck",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "db:generate": "turbo run db:generate --filter=@matura/db",
+    "db:migrate": "pnpm --filter @matura/db db:migrate",
+    "db:reset": "pnpm --filter @matura/db db:reset",
+    "db:seed": "pnpm --filter @matura/db db:seed",
+    "db:studio": "pnpm --filter @matura/db db:studio",
+    "openapi:generate": "turbo run openapi:generate --filter=@matura/api",
+    "sdk:build": "turbo run sdk:build --filter=@matura/sdk",
+    "content:import": "pnpm --filter @matura/api content:import",
+    "seed:questions": "pnpm --filter @matura/db seed:questions",
+    "clean": "turbo run clean && rimraf node_modules"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.17.0",
+    "@types/node": "^22.10.0",
+    "eslint": "^9.17.0",
+    "prettier": "^3.4.2",
+    "rimraf": "^6.0.1",
+    "turbo": "^2.3.3",
+    "typescript": "^5.7.2",
+    "typescript-eslint": "^8.18.0"
+  }
+}
