@@ -81,6 +81,7 @@ export const legacyJsonAdapter: ContentAdapter = {
         hints: mapped.hints ?? [],
         tags: mapped.tags ?? [],
         estimatedSec: mapped.estimatedSec ?? 60,
+        status: mapped.status ?? 'DRAFT',
         options: mapped.options ?? [],
         images,
       };
