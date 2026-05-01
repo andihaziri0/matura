@@ -2,22 +2,47 @@
   "name": "@matura/shared",
   "version": "0.0.0",
   "private": true,
-  "type": "module",
-  "main": "./src/index.ts",
-  "types": "./src/index.ts",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "exports": {
-    ".": "./src/index.ts",
-    "./enums": "./src/enums.ts",
-    "./taxonomy/matematike": "./src/taxonomy/matematike.ts",
-    "./i18n/sq": "./src/i18n/sq.ts",
-    "./schemas/question": "./src/schemas/question.ts",
-    "./schemas/user": "./src/schemas/user.ts",
-    "./schemas/attempt": "./src/schemas/attempt.ts",
-    "./schemas/session": "./src/schemas/session.ts"
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./enums": {
+      "types": "./dist/enums.d.ts",
+      "default": "./dist/enums.js"
+    },
+    "./taxonomy/matematike": {
+      "types": "./dist/taxonomy/matematike.d.ts",
+      "default": "./dist/taxonomy/matematike.js"
+    },
+    "./i18n/sq": {
+      "types": "./dist/i18n/sq.d.ts",
+      "default": "./dist/i18n/sq.js"
+    },
+    "./schemas/question": {
+      "types": "./dist/schemas/question.d.ts",
+      "default": "./dist/schemas/question.js"
+    },
+    "./schemas/user": {
+      "types": "./dist/schemas/user.d.ts",
+      "default": "./dist/schemas/user.js"
+    },
+    "./schemas/attempt": {
+      "types": "./dist/schemas/attempt.d.ts",
+      "default": "./dist/schemas/attempt.js"
+    },
+    "./schemas/session": {
+      "types": "./dist/schemas/session.d.ts",
+      "default": "./dist/schemas/session.js"
+    }
   },
   "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "dev": "tsc -p tsconfig.json --watch --preserveWatchOutput",
     "lint": "eslint src --max-warnings=0",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc -p tsconfig.json --noEmit"
   },
   "dependencies": {
     "zod": "^3.24.1"

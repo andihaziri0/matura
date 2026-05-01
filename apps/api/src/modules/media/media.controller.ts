@@ -39,8 +39,8 @@ export class MediaController {
 }
 
 function guessExtension(contentType: string, filename: string): string {
-  const m = filename.match(/(\.[a-zA-Z0-9]+)$/);
-  if (m) return m[1].toLowerCase();
+  const ext = filename.match(/(\.[a-zA-Z0-9]+)$/)?.[1];
+  if (ext) return ext.toLowerCase();
   if (contentType === 'image/png') return '.png';
   if (contentType === 'image/jpeg' || contentType === 'image/jpg') return '.jpg';
   if (contentType === 'image/webp') return '.webp';
