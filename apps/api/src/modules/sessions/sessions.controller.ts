@@ -1,4 +1,4 @@
-import { Body, Controller, Param, Post, UsePipes } from '@nestjs/common';
+import { Body, Controller, Param, Post } from '@nestjs/common';
 import { ApiBearerAuth, ApiOkResponse, ApiTags } from '@nestjs/swagger';
 import { ZodValidationPipe } from 'nestjs-zod';
 import {
@@ -19,14 +19,16 @@ export class SessionsController {
   @ApiOkResponse({
     description: 'Start a practice session and receive a randomised set of published questions.',
   })
-  @UsePipes(new ZodValidationPipe(StartPracticeSessionInputSchema))
-  startPractice(@CurrentUser() user: User, @Body() input: StartPracticeSessionInput) {
-    return this.service.startPractice(user.id, input);
+  startPractice(
+    @CurrentUser() user: User,
+    @Body(new ZodValidationPipe(StartPracticeSessionInputSchema)) input: StartPracticeSessionInput,
+  ) {
+    return this.service.startPractice(user, input);
   }
 
   @Post(':id/end')
   @ApiOkResponse({ description: 'End a session and compute its summary.' })
   end(@CurrentUser() user: User, @Param('id') id: string) {
-    return this.service.end(user.id, id);
+    return this.service.end(user, id);
   }
 }
