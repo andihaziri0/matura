@@ -56,16 +56,17 @@ export class QuestionsController {
   @Post()
   @Roles('OWNER')
   @UseGuards(RolesGuard)
-  @UsePipes(new ZodValidationPipe(CreateQuestionInputSchema))
-  create(@CurrentUser() user: User, @Body() input: CreateQuestionInput) {
+  create(
+    @CurrentUser() user: User,
+    @Body(new ZodValidationPipe(CreateQuestionInputSchema)) input: CreateQuestionInput,
+  ) {
     return this.service.create(user.id, input);
   }
 
   @Patch(':id')
   @Roles('OWNER')
   @UseGuards(RolesGuard)
-  @UsePipes(new ZodValidationPipe(UpdateQuestionInputSchema))
-  update(@Param('id') id: string, @Body() input: UpdateQuestionInput) {
+  update(@Param('id') id: string, @Body(new ZodValidationPipe(UpdateQuestionInputSchema)) input: UpdateQuestionInput) {
     return this.service.update(id, input);
   }
 
@@ -73,8 +74,7 @@ export class QuestionsController {
   @Roles('OWNER')
   @UseGuards(RolesGuard)
   @HttpCode(200)
-  @UsePipes(new ZodValidationPipe(SetStatusBody))
-  setStatus(@Param('id') id: string, @Body() body: z.infer<typeof SetStatusBody>) {
+  setStatus(@Param('id') id: string, @Body(new ZodValidationPipe(SetStatusBody)) body: z.infer<typeof SetStatusBody>) {
     return this.service.setStatus(id, body.status);
   }
 

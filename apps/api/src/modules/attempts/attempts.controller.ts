@@ -1,4 +1,4 @@
-import { Body, Controller, Post, UsePipes } from '@nestjs/common';
+import { Body, Controller, Post } from '@nestjs/common';
 import { ApiBearerAuth, ApiOkResponse, ApiTags } from '@nestjs/swagger';
 import { ZodValidationPipe } from 'nestjs-zod';
 import { CurrentUser } from '../../common/auth/current-user.decorator';
@@ -14,8 +14,10 @@ export class AttemptsController {
 
   @Post()
   @ApiOkResponse({ description: 'Record an attempt and return the evaluation + explanation.' })
-  @UsePipes(new ZodValidationPipe(RecordAttemptInputSchema))
-  record(@CurrentUser() user: User, @Body() input: RecordAttemptInput) {
+  record(
+    @CurrentUser() user: User,
+    @Body(new ZodValidationPipe(RecordAttemptInputSchema)) input: RecordAttemptInput,
+  ) {
     return this.service.record(user.id, input);
   }
 }

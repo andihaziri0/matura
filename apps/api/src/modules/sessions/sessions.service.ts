@@ -1,4 +1,5 @@
 import { Injectable, NotFoundException, ForbiddenException } from '@nestjs/common';
+import type { User } from '@matura/db';
 import { PrismaService } from '../../common/prisma/prisma.service';
 import type { StartPracticeSessionInput } from '@matura/shared';
 
@@ -11,7 +12,8 @@ export class SessionsService {
    * Sensitive fields (`correctAnswer`, `explanationMd`, `option.isCorrect`)
    * are stripped — the client only sees them after recording an attempt.
    */
-  async startPractice(userId: string, input: StartPracticeSessionInput) {
+  async startPractice(user: User, input: StartPracticeSessionInput) {
+    const userId = user.id;
     const where = {
       subjectSlug: input.subjectSlug,
       status: 'PUBLISHED' as const,
@@ -83,7 +85,8 @@ export class SessionsService {
     return { session, questions };
   }
 
-  async end(userId: string, sessionId: string) {
+  async end(user: User, sessionId: string) {
+    const userId = user.id;
     const session = await this.prisma.session.findUnique({
       where: { id: sessionId },
       include: { attempts: { include: { question: true } } },

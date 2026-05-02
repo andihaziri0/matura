@@ -1,7 +1,6 @@
 import { Body, Controller, Get, Patch } from '@nestjs/common';
 import { ApiBearerAuth, ApiOkResponse, ApiTags } from '@nestjs/swagger';
 import { ZodValidationPipe } from 'nestjs-zod';
-import { UsePipes } from '@nestjs/common';
 import { CurrentUser } from '../../common/auth/current-user.decorator';
 import { PrismaService } from '../../common/prisma/prisma.service';
 import type { User } from '@matura/db';
@@ -20,10 +19,9 @@ export class UsersController {
   }
 
   @Patch('me')
-  @UsePipes(new ZodValidationPipe(UpdateProfileInputSchema))
   async updateMe(
     @CurrentUser() user: User,
-    @Body() input: UpdateProfileInput,
+    @Body(new ZodValidationPipe(UpdateProfileInputSchema)) input: UpdateProfileInput,
   ): Promise<User> {
     return this.prisma.user.update({
       where: { id: user.id },
