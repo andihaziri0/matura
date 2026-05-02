@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
-import { useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { useAuth } from '@/lib/auth/auth-provider';
 import { Sq } from '@matura/shared';
 
@@ -10,7 +10,7 @@ export default function AppLayout({
   children,
 }: {
   children: React.ReactNode;
-}): JSX.Element {
+}): React.ReactElement {
   const { loading, firebaseUser, profile, signOut } = useAuth();
   const router = useRouter();
 

@@ -1,6 +1,6 @@
 'use client';
 
-import { createContext, useCallback, useContext, useEffect, useMemo, useState } from 'react';
+import React, { createContext, useCallback, useContext, useEffect, useMemo, useState } from 'react';
 import {
   GoogleAuthProvider,
   onIdTokenChanged,
@@ -27,7 +27,7 @@ interface AuthState {
 
 const AuthContext = createContext<AuthState | null>(null);
 
-export function AuthProvider({ children }: { children: React.ReactNode }): JSX.Element {
+export function AuthProvider({ children }: { children: React.ReactNode }): React.ReactElement {
   const [firebaseUser, setFirebaseUser] = useState<FirebaseUser | null>(null);
   const [profile, setProfile] = useState<PublicUser | null>(null);
   const [loading, setLoading] = useState(true);

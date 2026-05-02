@@ -1,3 +1,4 @@
+import React from 'react';
 import Link from 'next/link';
 import { Sq } from '@matura/shared';
 
@@ -5,7 +6,7 @@ export default function MarketingLayout({
   children,
 }: {
   children: React.ReactNode;
-}): JSX.Element {
+}): React.ReactElement {
   return (
     <div className="min-h-screen flex flex-col">
       <header className="border-b border-[var(--color-border)]">

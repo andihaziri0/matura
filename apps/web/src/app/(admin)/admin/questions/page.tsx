@@ -1,8 +1,9 @@
+import React from 'react';
 import Link from 'next/link';
 import { Sq } from '@matura/shared';
 import { QuestionsList } from './questions-list';
 
-export default function AdminQuestionsPage(): JSX.Element {
+export default function AdminQuestionsPage(): React.ReactElement {
   return (
     <section>
       <div className="flex items-center justify-between">

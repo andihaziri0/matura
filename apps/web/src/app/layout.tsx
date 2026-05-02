@@ -1,3 +1,4 @@
+import React from 'react';
 import type { Metadata } from 'next';
 import './globals.css';
 import { AuthProvider } from '@/lib/auth/auth-provider';
@@ -12,7 +13,7 @@ export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
-}): JSX.Element {
+}): React.ReactElement {
   return (
     <html lang="sq">
       <body>

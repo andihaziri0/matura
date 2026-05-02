@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { Markdown } from '@matura/ui';
 import {
@@ -59,7 +59,7 @@ interface QuestionResponse {
   images: { id: string; r2Key: string; alt: string; order: number; role: 'INLINE' | 'FIGURE' | 'FULL_QUESTION' }[];
 }
 
-export function QuestionEditor({ mode, id }: Props): JSX.Element {
+export function QuestionEditor({ mode, id }: Props): React.ReactElement {
   const router = useRouter();
   const { getIdToken } = useAuth();
   const [draft, setDraft] = useState<CreateQuestionInput>(DEFAULT);
@@ -371,7 +371,7 @@ function Field({
 }: {
   label: string;
   children: React.ReactNode;
-}): JSX.Element {
+}): React.ReactElement {
   return (
     <label className="block">
       <span className="text-sm text-[var(--color-fg-muted)]">{label}</span>

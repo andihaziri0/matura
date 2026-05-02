@@ -1,6 +1,6 @@
 'use client';
 
-import { useCallback, useEffect, useMemo, useState } from 'react';
+import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import Link from 'next/link';
 import { Markdown } from '@matura/ui';
 import { Sq } from '@matura/shared';
@@ -63,7 +63,7 @@ type Phase =
   | { kind: 'feedback'; payload: PracticePayload; index: number; record: AttemptRecord }
   | { kind: 'summary'; summary: SessionSummary; records: AttemptRecord[] };
 
-export function PracticeRunner(): JSX.Element {
+export function PracticeRunner(): React.ReactElement {
   const { getIdToken } = useAuth();
   const [phase, setPhase] = useState<Phase>({ kind: 'loading' });
   const [records, setRecords] = useState<AttemptRecord[]>([]);
@@ -109,6 +109,7 @@ export function PracticeRunner(): JSX.Element {
     if (!pendingAnswer.trim()) return;
 
     const q = phase.payload.questions[phase.index];
+    if (!q) return;
     const token = await getIdToken();
     const timeMs = Date.now() - questionStartedAt;
     try {
@@ -196,6 +197,9 @@ export function PracticeRunner(): JSX.Element {
 
   const total = phase.payload.questions.length;
   const q = phase.payload.questions[phase.index];
+  if (!q) {
+    return <CenteredMessage>{Sq.sq.common.loading}</CenteredMessage>;
+  }
 
   return (
     <section className="mx-auto max-w-3xl px-6 py-10">
@@ -235,7 +239,7 @@ export function PracticeRunner(): JSX.Element {
   );
 }
 
-function ProgressBar({ current, total }: { current: number; total: number }): JSX.Element {
+function ProgressBar({ current, total }: { current: number; total: number }): React.ReactElement {
   const pct = Math.min(100, Math.round((current / total) * 100));
   return (
     <div>
@@ -262,7 +266,7 @@ function Answering({
   value: string;
   onChange: (v: string) => void;
   onSubmit: () => void;
-}): JSX.Element {
+}): React.ReactElement {
   if (q.kind === 'MCQ') {
     return (
       <div className="flex flex-col gap-2">
@@ -327,7 +331,7 @@ function SubmitButton({
 }: {
   disabled: boolean;
   onClick: () => void;
-}): JSX.Element {
+}): React.ReactElement {
   return (
     <button
       type="button"
@@ -350,7 +354,7 @@ function Feedback({
   q: PracticeQuestion;
   onNext: () => void;
   isLast: boolean;
-}): JSX.Element {
+}): React.ReactElement {
   const correctOption =
     q.kind === 'MCQ' && record.result.correctAnswer
       ? q.options.find((o) => o.id === record.result.correctAnswer)
@@ -413,7 +417,7 @@ function SummaryScreen({
   summary: SessionSummary;
   records: AttemptRecord[];
   onRestart: () => Promise<void> | void;
-}): JSX.Element {
+}): React.ReactElement {
   const minutes = Math.floor(summary.durationMs / 60000);
   const seconds = Math.floor((summary.durationMs % 60000) / 1000);
   const pct = summary.total === 0 ? 0 : Math.round((summary.correct / summary.total) * 100);
@@ -509,7 +513,7 @@ function Stat({
   label: string;
   value: string;
   hint?: string;
-}): JSX.Element {
+}): React.ReactElement {
   return (
     <div className="rounded-lg border border-[var(--color-border)] p-4">
       <div className="text-xs uppercase tracking-wide text-[var(--color-fg-muted)]">{label}</div>
@@ -519,15 +523,14 @@ function Stat({
   );
 }
 
-function ImageBlock({ r2Key, alt }: { r2Key: string; alt: string }): JSX.Element {
+function ImageBlock({ r2Key, alt }: { r2Key: string; alt: string }): React.ReactElement {
   const publicBase = process.env.NEXT_PUBLIC_R2_PUBLIC_URL ?? 'http://localhost:9000/matura-content';
   const src = useMemo(() => `${publicBase.replace(/\/$/, '')}/${r2Key}`, [publicBase, r2Key]);
   return (
-    // eslint-disable-next-line @next/next/no-img-element
     <img src={src} alt={alt} className="w-full rounded border border-[var(--color-border)]" />
   );
 }
 
-function CenteredMessage({ children }: { children: React.ReactNode }): JSX.Element {
+function CenteredMessage({ children }: { children: React.ReactNode }): React.ReactElement {
   return <section className="mx-auto max-w-2xl px-6 py-16 text-center">{children}</section>;
 }
