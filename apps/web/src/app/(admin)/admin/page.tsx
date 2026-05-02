@@ -1,7 +1,8 @@
+import React from 'react';
 import Link from 'next/link';
 import { Sq } from '@matura/shared';
 
-export default function AdminHomePage(): JSX.Element {
+export default function AdminHomePage(): React.ReactElement {
   return (
     <section>
       <h1 className="text-2xl font-semibold">{Sq.sq.admin.title}</h1>

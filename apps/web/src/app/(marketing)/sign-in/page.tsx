@@ -1,12 +1,12 @@
 'use client';
 
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { useAuth } from '@/lib/auth/auth-provider';
 import { Sq } from '@matura/shared';
 
-export default function SignInPage(): JSX.Element {
+export default function SignInPage(): React.ReactElement {
   const router = useRouter();
   const { signInWithEmail, signInWithGoogle } = useAuth();
   const [email, setEmail] = useState('');

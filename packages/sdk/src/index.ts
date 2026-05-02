@@ -24,7 +24,7 @@ export interface CreateApiClientOptions {
 export function createApiClient(options: CreateApiClientOptions = {}): ApiClient {
   const baseUrl =
     options.baseUrl ??
-    (typeof process !== 'undefined' && process.env?.NEXT_PUBLIC_API_URL) ??
+    (typeof process !== 'undefined' ? process.env?.NEXT_PUBLIC_API_URL : undefined) ??
     'http://localhost:4000';
 
   const client = createClient<paths>({

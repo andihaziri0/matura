@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useAuth } from '@/lib/auth/auth-provider';
 import { Sq } from '@matura/shared';
 
@@ -15,7 +15,7 @@ interface Item {
   kind: 'MCQ' | 'SHORT' | 'LONG';
 }
 
-export function QuestionsList(): JSX.Element {
+export function QuestionsList(): React.ReactElement {
   const { getIdToken } = useAuth();
   const [items, setItems] = useState<Item[] | null>(null);
   const [error, setError] = useState<string | null>(null);

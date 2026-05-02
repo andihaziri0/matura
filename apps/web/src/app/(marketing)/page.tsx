@@ -1,7 +1,8 @@
+import React from 'react';
 import Link from 'next/link';
 import { Sq } from '@matura/shared';
 
-export default function HomePage(): JSX.Element {
+export default function HomePage(): React.ReactElement {
   return (
     <section className="mx-auto max-w-3xl px-6 py-24 text-center">
       <h1 className="text-4xl sm:text-5xl font-semibold tracking-tight">{Sq.sq.app.name}</h1>

@@ -1,3 +1,4 @@
+import React from 'react';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import remarkMath from 'remark-math';
@@ -15,7 +16,7 @@ export interface MarkdownProps {
  * The host app must import KaTeX styles once (e.g. in the root layout):
  *   import 'katex/dist/katex.min.css';
  */
-export function Markdown({ content, className }: MarkdownProps): JSX.Element {
+export function Markdown({ content, className }: MarkdownProps): React.ReactElement {
   return (
     <div className={className}>
       <ReactMarkdown

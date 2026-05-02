@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useAuth } from '@/lib/auth/auth-provider';
 import { Sq } from '@matura/shared';
 
@@ -11,7 +11,7 @@ interface Metrics {
   newUsersLast7d: number;
 }
 
-export default function AdminMetricsPage(): JSX.Element {
+export default function AdminMetricsPage(): React.ReactElement {
   const { getIdToken } = useAuth();
   const [metrics, setMetrics] = useState<Metrics | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -61,7 +61,7 @@ export default function AdminMetricsPage(): JSX.Element {
   );
 }
 
-function Stat({ label, value }: { label: string; value: string | number }): JSX.Element {
+function Stat({ label, value }: { label: string; value: string | number }): React.ReactElement {
   return (
     <div className="rounded-lg border border-[var(--color-border)] p-4">
       <div className="text-sm text-[var(--color-fg-muted)]">{label}</div>

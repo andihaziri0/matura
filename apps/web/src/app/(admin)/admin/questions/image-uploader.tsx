@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { useAuth } from '@/lib/auth/auth-provider';
 import { Sq, type CreateQuestionInput } from '@matura/shared';
 
@@ -11,7 +11,7 @@ interface Props {
   onChange: (next: Image[]) => void;
 }
 
-export function ImageUploader({ images, onChange }: Props): JSX.Element {
+export function ImageUploader({ images, onChange }: Props): React.ReactElement {
   const { getIdToken } = useAuth();
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
