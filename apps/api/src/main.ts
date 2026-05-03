@@ -1,20 +1,52 @@
 import 'reflect-metadata';
 import { NestFactory } from '@nestjs/core';
 import { ValidationPipe, Logger } from '@nestjs/common';
+import type { CustomOrigin } from '@nestjs/common/interfaces/external/cors-options.interface';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 import { AppModule } from './app.module';
 import { AppConfigService } from './config/app-config.service';
 import { ZodValidationPipe } from 'nestjs-zod';
+
+/** Dev-only: browsers treat localhost vs 127.0.0.1 as different origins. */
+function expandDevCorsOrigins(primary: string): string[] {
+  const set = new Set<string>([primary]);
+  try {
+    const u = new URL(primary);
+    const swap =
+      u.hostname === 'localhost' ? '127.0.0.1' : u.hostname === '127.0.0.1' ? 'localhost' : null;
+    if (swap) {
+      const hostPort = u.port ? `${swap}:${u.port}` : swap;
+      set.add(`${u.protocol}//${hostPort}`);
+    }
+  } catch {
+    // invalid WEB_ORIGIN — keep single entry
+  }
+  return [...set];
+}
 
 async function bootstrap(): Promise<void> {
   const app = await NestFactory.create(AppModule, { bufferLogs: true });
   const logger = new Logger('Bootstrap');
   const config = app.get(AppConfigService);
 
+  const corsAllowed =
+    config.isDevelopment ? expandDevCorsOrigins(config.webOrigin) : [config.webOrigin];
+
+  const dynamicOrigin: CustomOrigin = (origin, callback) => {
+    if (!origin) {
+      callback(null, true);
+      return;
+    }
+    callback(null, corsAllowed.includes(origin));
+  };
+
   app.enableCors({
-    origin: config.webOrigin,
+    origin: corsAllowed.length === 1 ? corsAllowed[0] : dynamicOrigin,
     credentials: true,
+    allowedHeaders: ['Authorization', 'Content-Type', 'Accept'],
   });
+
+  logger.log(`CORS allowed origin(s): ${corsAllowed.join(', ')}`);
 
   app.useGlobalPipes(new ZodValidationPipe());
   app.useGlobalPipes(

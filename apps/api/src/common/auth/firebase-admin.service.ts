@@ -33,6 +33,11 @@ export class FirebaseAdminService implements OnModuleInit {
     return this.app?.auth() ?? null;
   }
 
+  /**
+   * Verifies the Firebase ID token. The Admin SDK may perform outbound HTTPS calls
+   * to Google (e.g. certificate / JWKS fetch); network or firewall issues can stall
+   * without throwing — callers should enforce a timeout (see FirebaseAuthGuard).
+   */
   async verifyIdToken(token: string): Promise<admin.auth.DecodedIdToken> {
     if (!this.auth) {
       throw new Error('Firebase Admin not initialized');

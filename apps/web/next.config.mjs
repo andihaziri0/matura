@@ -2,6 +2,20 @@
 const nextConfig = {
   reactStrictMode: true,
   transpilePackages: ['@matura/shared', '@matura/sdk', '@matura/ui'],
+  // COOP `same-origin-allow-popups`: Google Sign-In popup + cross-window checks (e.g. window.closed).
+  async headers() {
+    return [
+      {
+        source: '/:path*',
+        headers: [
+          {
+            key: 'Cross-Origin-Opener-Policy',
+            value: 'same-origin-allow-popups',
+          },
+        ],
+      },
+    ];
+  },
   experimental: {
     typedRoutes: true,
   },

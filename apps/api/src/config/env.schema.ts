@@ -3,7 +3,11 @@ import { z } from 'zod';
 export const EnvSchema = z.object({
   NODE_ENV: z.enum(['development', 'production', 'test']).default('development'),
   API_PORT: z.coerce.number().int().positive().default(4000),
-  WEB_ORIGIN: z.string().url().default('http://localhost:3000'),
+  WEB_ORIGIN: z
+    .string()
+    .url()
+    .default('http://localhost:3000')
+    .transform((s) => s.trim().replace(/\/+$/, '')),
 
   DATABASE_URL: z.string().url(),
   REDIS_URL: z.string().url().default('redis://localhost:6379'),

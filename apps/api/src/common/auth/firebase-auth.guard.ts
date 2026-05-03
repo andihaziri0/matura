@@ -19,6 +19,8 @@ declare module 'express' {
   }
 }
 
+const VERIFY_ID_TOKEN_TIMEOUT_MS = 8_000;
+
 @Injectable()
 export class FirebaseAuthGuard implements CanActivate {
   private readonly logger = new Logger(FirebaseAuthGuard.name);
@@ -44,9 +46,23 @@ export class FirebaseAuthGuard implements CanActivate {
 
     let decoded: Awaited<ReturnType<FirebaseAdminService['verifyIdToken']>>;
     try {
-      decoded = await this.firebase.verifyIdToken(token);
+      this.logger.log('[Guard] calling verifyIdToken...');
+      decoded = await Promise.race([
+        this.firebase.verifyIdToken(token),
+        new Promise<never>((_, reject) =>
+          setTimeout(
+            () => reject(new Error('verifyIdToken timeout')),
+            VERIFY_ID_TOKEN_TIMEOUT_MS,
+          ),
+        ),
+      ]);
+      this.logger.log(`[Guard] verified: ${decoded.uid}`);
     } catch (err) {
-      this.logger.debug(`Token verification failed: ${(err as Error).message}`);
+      const message = err instanceof Error ? err.message : String(err);
+      this.logger.debug(`Token verification failed: ${message}`);
+      if (message === 'verifyIdToken timeout') {
+        throw new UnauthorizedException('Token verification timed out');
+      }
       throw new UnauthorizedException('Invalid or expired token');
     }
 

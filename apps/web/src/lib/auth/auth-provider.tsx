@@ -27,6 +27,9 @@ interface AuthState {
 
 const AuthContext = createContext<AuthState | null>(null);
 
+/** Avoid hanging forever when API/CORS/network stalls (fetch may never settle). */
+const PROFILE_FETCH_TIMEOUT_MS = 15_000;
+
 export function AuthProvider({ children }: { children: React.ReactNode }): React.ReactElement {
   const [firebaseUser, setFirebaseUser] = useState<FirebaseUser | null>(null);
   const [profile, setProfile] = useState<PublicUser | null>(null);
@@ -41,16 +44,25 @@ export function AuthProvider({ children }: { children: React.ReactNode }): React
   }, []);
 
   const fetchProfile = useCallback(async (): Promise<void> => {
-    const token = await getIdToken();
+    let token: string | null;
+    try {
+      token = await getIdToken();
+    } catch {
+      setProfile(null);
+      return;
+    }
     if (!token) {
       setProfile(null);
       return;
     }
+    const apiBase = process.env.NEXT_PUBLIC_API_URL ?? 'http://localhost:4000';
+    const controller = new AbortController();
+    const timeoutId = window.setTimeout(() => controller.abort(), PROFILE_FETCH_TIMEOUT_MS);
     try {
-      const apiBase = process.env.NEXT_PUBLIC_API_URL ?? 'http://localhost:4000';
       const res = await fetch(`${apiBase}/api/users/me`, {
         headers: { Authorization: `Bearer ${token}` },
         cache: 'no-store',
+        signal: controller.signal,
       });
       if (!res.ok) {
         setProfile(null);
@@ -60,6 +72,8 @@ export function AuthProvider({ children }: { children: React.ReactNode }): React
       setProfile(data);
     } catch {
       setProfile(null);
+    } finally {
+      window.clearTimeout(timeoutId);
     }
   }, [getIdToken]);
 
@@ -71,12 +85,15 @@ export function AuthProvider({ children }: { children: React.ReactNode }): React
     const auth = getFirebaseAuth();
     const unsub = onIdTokenChanged(auth, async (user) => {
       setFirebaseUser(user);
-      if (user) {
-        await fetchProfile();
-      } else {
-        setProfile(null);
+      try {
+        if (user) {
+          await fetchProfile();
+        } else {
+          setProfile(null);
+        }
+      } finally {
+        setLoading(false);
       }
-      setLoading(false);
     });
     return () => unsub();
   }, [fetchProfile]);
