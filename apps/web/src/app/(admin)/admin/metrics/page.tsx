@@ -6,7 +6,7 @@ import { Sq } from '@matura/shared';
 
 interface Metrics {
   users: number;
-  questions: { total: number; published: number };
+  questions: { total: number; published: number; withFullQuestionImage: number };
   attempts: { total: number; last7d: number };
   newUsersLast7d: number;
 }
@@ -46,8 +46,8 @@ export default function AdminMetricsPage(): React.ReactElement {
     return (
       <section>
         <h1 className="text-2xl sm:text-3xl font-bold tracking-tight">{Sq.sq.admin.metrics.title}</h1>
-        <div className="mt-6 grid grid-cols-2 sm:grid-cols-4 gap-4">
-          {[0, 1, 2, 3].map((i) => (
+        <div className="mt-6 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
+          {[0, 1, 2, 3, 4].map((i) => (
             <div
               key={i}
               className="rounded-xl border border-[var(--color-border)] bg-[var(--color-bg-elevated)] p-5 animate-pulse h-24"
@@ -60,12 +60,16 @@ export default function AdminMetricsPage(): React.ReactElement {
   return (
     <section>
       <h1 className="text-2xl sm:text-3xl font-bold tracking-tight">{Sq.sq.admin.metrics.title}</h1>
-      <div className="mt-6 grid grid-cols-2 sm:grid-cols-4 gap-4">
+      <div className="mt-6 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
         <Stat label={Sq.sq.admin.metrics.users} value={metrics.users} />
         <Stat label={Sq.sq.admin.metrics.newUsersLast7d} value={metrics.newUsersLast7d} />
         <Stat
           label={Sq.sq.admin.metrics.questions}
           value={`${metrics.questions.published} / ${metrics.questions.total}`}
+        />
+        <Stat
+          label={Sq.sq.admin.metrics.questionsFullScan}
+          value={metrics.questions.withFullQuestionImage}
         />
         <Stat label={Sq.sq.admin.metrics.attemptsLast7d} value={metrics.attempts.last7d} />
       </div>

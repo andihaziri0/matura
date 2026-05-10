@@ -45,6 +45,10 @@ RUN pnpm install --frozen-lockfile \
       --filter @matura/shared \
       --filter @matura/db
 
+# Question seed JSON (matura-foto batches, bank, etj.) — needed for
+# `pnpm --filter @matura/db db:seed` nga shell në Railway me të njëtin imazh.
+COPY content/seed ./content/seed
+
 # Source.
 COPY apps/api/src ./apps/api/src
 COPY packages/shared/src ./packages/shared/src

@@ -16,7 +16,7 @@ export class AdminController {
   @ApiOkResponse({ description: 'High-level counts for the admin dashboard.' })
   async metrics(): Promise<{
     users: number;
-    questions: { total: number; published: number };
+    questions: { total: number; published: number; withFullQuestionImage: number };
     attempts: { total: number; last7d: number };
     newUsersLast7d: number;
   }> {
@@ -27,6 +27,7 @@ export class AdminController {
       users,
       totalQuestions,
       publishedQuestions,
+      withFullQuestionImage,
       totalAttempts,
       attempts7d,
       newUsers7d,
@@ -34,6 +35,9 @@ export class AdminController {
       this.prisma.user.count(),
       this.prisma.question.count(),
       this.prisma.question.count({ where: { status: 'PUBLISHED' } }),
+      this.prisma.question.count({
+        where: { images: { some: { role: 'FULL_QUESTION' } } },
+      }),
       this.prisma.attempt.count(),
       this.prisma.attempt.count({ where: { createdAt: { gte: sevenDaysAgo } } }),
       this.prisma.user.count({ where: { createdAt: { gte: sevenDaysAgo } } }),
@@ -41,7 +45,11 @@ export class AdminController {
 
     return {
       users,
-      questions: { total: totalQuestions, published: publishedQuestions },
+      questions: {
+        total: totalQuestions,
+        published: publishedQuestions,
+        withFullQuestionImage,
+      },
       attempts: { total: totalAttempts, last7d: attempts7d },
       newUsersLast7d: newUsers7d,
     };

@@ -165,6 +165,8 @@ export const sq = {
       title: 'Metrikat',
       users: 'Përdoruesit',
       questions: 'Pyetjet',
+      questionsFullScan:
+        'Pyetje me foto të plotë (FULL_QUESTION)',
       attemptsLast7d: 'Përpjekje (7 ditë)',
       newUsersLast7d: 'Përdorues të rinj (7 ditë)',
     },
