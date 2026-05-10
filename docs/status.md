@@ -94,6 +94,8 @@ The goal of this milestone is a runnable repo with one end-to-end feature (Matem
 - [x] `content/seed/math/questions.json` with 50 questions
 - [x] Spread: 33 MCQ / 15 SHORT / 2 LONG; difficulty 4×1 / 19×2 / 22×3 / 5×4
 - [x] `pnpm seed:questions` upserts idempotently by stable external id
+- [x] Bulk import: `content/seed/math/akademiaas-bank.json` — 515 MCQs from the AkademiaAS authoring tool (485 PUBLISHED, 30 DRAFT marked `requires-figure` until images land in R2). Loader prefers the hand-curated `questions.json` on duplicate `externalId`. Build script: `scripts/akademiaas-bank/build-seed.mjs` (re-run when AkademiaAS exports a refreshed bank). Distribution: 20 topicPaths covering aritmetikë, algjebër, trigonometri, gjeometri, vargje, analizë, kombinatorikë, statistikë, gjeometri analitike, matrica
+- [x] First seed of prod Neon DB on 2026-05-10: 565 questions upserted, smoke-tested via `/practice/matematike` on Vercel
 
 ### Phase 11 — Content importer stub
 

@@ -184,15 +184,46 @@ phases:
     status: done
     paths:
       - content/seed/math/questions.json
+      - content/seed/math/akademiaas-bank.json
       - packages/db/src/seed/questions.ts
+      - scripts/akademiaas-bank/source.data.mjs
+      - scripts/akademiaas-bank/build-seed.mjs
     items:
       generate_50_questions: done
       seed_script: done
       idempotent_upsert: done
+      akademiaas_bank_import: done       # 515 MCQs from AkademiaAS authoring tool, 2026-05-10
+      akademiaas_bank_seeded_to_prod: done  # first seed of Neon prod, 565 total questions
     distribution:
-      kinds: { MCQ: 33, SHORT: 15, LONG: 2 }
-      difficulties: { 1: 4, 2: 19, 3: 22, 4: 5 }
-      topics: { aritmetike: 6, algjeber: 22, trigonometri: 4, gjeometri: 11, vargje: 3, kombinatorike: 3, analize: 1 }
+      curated_50:
+        kinds: { MCQ: 33, SHORT: 15, LONG: 2 }
+        difficulties: { 1: 4, 2: 19, 3: 22, 4: 5 }
+        topics: { aritmetike: 6, algjeber: 22, trigonometri: 4, gjeometri: 11, vargje: 3, kombinatorike: 3, analize: 1 }
+      akademiaas_bank_515:
+        kinds: { MCQ: 515 }
+        status: { PUBLISHED: 485, DRAFT: 30 }   # 30 DRAFT = referenced figure not yet in R2
+        sources: { foto: 350, gjeneruar: 165 }
+        topics:
+          aritmetike.numra-real: 55
+          aritmetike.fuqi-rrenje: 27
+          aritmetike.logjike: 23
+          algjeber.polinome: 25
+          algjeber.ekuacione.lineare: 24
+          algjeber.ekuacione.kuadratike: 22
+          algjeber.numra-komplekse: 19
+          algjeber.funksione.kuadratike: 18
+          algjeber.eksponenciale-logaritme: 32
+          algjeber.matrica: 9
+          trigonometri.identitete: 30
+          vargje.aritmetike-gjeometrike: 21
+          analize.limite: 22
+          analize.derivate: 28
+          gjeometri.plane: 43
+          gjeometri.vektore: 14
+          gjeometri.analitike: 35
+          statistike.deskriptive: 24
+          kombinatorike.kombinime: 20
+          kombinatorike.probabilitet: 24
 
   phase_11_content_importer:
     status: done

@@ -6,7 +6,14 @@ import { prisma } from '../client.js';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
-const SEED_FILE = resolve(__dirname, '../../../../content/seed/math/questions.json');
+// Order matters: later files win on duplicate externalId. The hand-curated
+// `questions.json` is the source of truth for canonical phrasing, so it
+// loads last. The bulk import from AkademiaAS loads first and acts as the
+// large-but-overwritable baseline.
+const SEED_FILES = [
+  resolve(__dirname, '../../../../content/seed/math/akademiaas-bank.json'),
+  resolve(__dirname, '../../../../content/seed/math/questions.json'),
+];
 const SEED_USER_EMAIL = 'seed@akademiaas.com';
 const SEED_USER_FIREBASE_UID = '__seed__';
 
@@ -58,13 +65,38 @@ async function ensureSeedAuthor(): Promise<string> {
 }
 
 export async function seedQuestions(): Promise<void> {
-  if (!existsSync(SEED_FILE)) {
-    console.warn(`[seed:questions] no seed file at ${SEED_FILE} — skipping`);
+  const questions: SeedQuestion[] = [];
+  const seenIds = new Set<string>();
+  for (const file of SEED_FILES) {
+    if (!existsSync(file)) {
+      console.warn(`[seed:questions] no seed file at ${file} — skipping`);
+      continue;
+    }
+    const raw = readFileSync(file, 'utf-8');
+    const parsed = JSON.parse(raw) as SeedQuestion[];
+    let added = 0;
+    let replaced = 0;
+    for (const q of parsed) {
+      if (seenIds.has(q.externalId)) {
+        // Later file wins; drop the earlier copy from the queue.
+        const idx = questions.findIndex((x) => x.externalId === q.externalId);
+        if (idx >= 0) questions.splice(idx, 1);
+        replaced += 1;
+      }
+      seenIds.add(q.externalId);
+      questions.push(q);
+      added += 1;
+    }
+    console.log(
+      `[seed:questions] loaded ${added} from ${file.split('/').slice(-3).join('/')}` +
+        (replaced > 0 ? ` (${replaced} overrode earlier files)` : ''),
+    );
+  }
+  if (questions.length === 0) {
+    console.warn('[seed:questions] no questions to seed');
     return;
   }
 
-  const raw = readFileSync(SEED_FILE, 'utf-8');
-  const questions = JSON.parse(raw) as SeedQuestion[];
   const authorId = await ensureSeedAuthor();
 
   let upserted = 0;
