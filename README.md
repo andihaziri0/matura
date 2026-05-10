@@ -8,7 +8,7 @@ Built and operated by [AkademiaAS](https://akademiaas.com) — a private course 
 
 ## Status
 
-Current milestone: **MVP scaffold**. See [`docs/status.md`](docs/status.md) for the live tracker.
+**Production deploy** është në vijim (web live në `matura.akademiaas.com`); gjurmuesi i detajuar: [`docs/status.md`](docs/status.md) dhe [`.agent/state.yaml`](.agent/state.yaml). MVP scaffold në kod është i mbyllur; shtesa së fundmi: **ushtrim & bankë me pyetje që kanë figurë** (`hasImages`, paketa `matura-foto`, skripti `attach:matura-foto-images`).
 
 ## Stack at a glance
 

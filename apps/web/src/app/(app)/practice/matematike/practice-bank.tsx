@@ -40,6 +40,7 @@ export interface PracticeBankProps {
   topicPath: string | undefined;
   source: PracticeBankSourceFilter;
   search: string;
+  imagesOnly: boolean;
   examMode: boolean;
 }
 
@@ -47,6 +48,7 @@ export function PracticeBank({
   topicPath,
   source,
   search,
+  imagesOnly,
   examMode,
 }: PracticeBankProps): React.ReactElement {
   const [items, setItems] = useState<BankQuestion[]>([]);
@@ -63,13 +65,14 @@ export function PracticeBank({
       p.set('status', 'PUBLISHED');
       p.set('limit', String(limit));
       if (topicPath) p.set('topicPath', topicPath);
-      if (source === 'foto') p.set('tag', 'source:foto');
+      if (source === 'foto') p.set('tag', 'source:foto-matura');
       if (source === 'gjeneruar') p.set('tag', 'source:gjeneruar');
+      if (imagesOnly) p.set('hasImages', 'true');
       if (search.length > 0) p.set('search', search);
       if (cursor) p.set('cursor', cursor);
       return p;
     },
-    [topicPath, source, search],
+    [topicPath, source, search, imagesOnly],
   );
 
   useEffect(() => {

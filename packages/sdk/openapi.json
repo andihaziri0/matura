@@ -1,10 +1,310 @@
 {
   "openapi": "3.0.0",
+  "paths": {
+    "/api/health/live": {
+      "get": {
+        "operationId": "HealthController_live",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Liveness probe"
+          }
+        },
+        "tags": [
+          "health"
+        ]
+      }
+    },
+    "/api/health/ready": {
+      "get": {
+        "operationId": "HealthController_ready",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Readiness probe — verifies DB connectivity"
+          }
+        },
+        "tags": [
+          "health"
+        ]
+      }
+    },
+    "/api/users/me": {
+      "get": {
+        "operationId": "UsersController_me",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Returns the authenticated user profile."
+          }
+        },
+        "security": [
+          {
+            "firebase": []
+          }
+        ],
+        "tags": [
+          "users"
+        ]
+      },
+      "patch": {
+        "operationId": "UsersController_updateMe",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "firebase": []
+          }
+        ],
+        "tags": [
+          "users"
+        ]
+      }
+    },
+    "/api/subjects": {
+      "get": {
+        "operationId": "SubjectsController_list",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "List all subjects in display order."
+          }
+        },
+        "security": [
+          {
+            "firebase": []
+          }
+        ],
+        "tags": [
+          "subjects"
+        ]
+      }
+    },
+    "/api/questions": {
+      "get": {
+        "operationId": "QuestionsController_list",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "List questions with filters and cursor pagination."
+          }
+        },
+        "security": [
+          {
+            "firebase": []
+          }
+        ],
+        "tags": [
+          "questions"
+        ]
+      },
+      "post": {
+        "operationId": "QuestionsController_create",
+        "parameters": [],
+        "responses": {
+          "201": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "firebase": []
+          }
+        ],
+        "tags": [
+          "questions"
+        ]
+      }
+    },
+    "/api/questions/{id}": {
+      "get": {
+        "operationId": "QuestionsController_getById",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Get a single question with options and images."
+          }
+        },
+        "security": [
+          {
+            "firebase": []
+          }
+        ],
+        "tags": [
+          "questions"
+        ]
+      },
+      "patch": {
+        "operationId": "QuestionsController_update",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "firebase": []
+          }
+        ],
+        "tags": [
+          "questions"
+        ]
+      },
+      "delete": {
+        "operationId": "QuestionsController_delete",
+        "parameters": [],
+        "responses": {
+          "204": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "firebase": []
+          }
+        ],
+        "tags": [
+          "questions"
+        ]
+      }
+    },
+    "/api/questions/{id}/status": {
+      "post": {
+        "operationId": "QuestionsController_setStatus",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "firebase": []
+          }
+        ],
+        "tags": [
+          "questions"
+        ]
+      }
+    },
+    "/api/attempts": {
+      "post": {
+        "operationId": "AttemptsController_record",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Record an attempt and return the evaluation + explanation."
+          }
+        },
+        "security": [
+          {
+            "firebase": []
+          }
+        ],
+        "tags": [
+          "attempts"
+        ]
+      }
+    },
+    "/api/sessions/practice": {
+      "post": {
+        "operationId": "SessionsController_startPractice",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Start a practice session and receive a randomised set of published questions."
+          }
+        },
+        "security": [
+          {
+            "firebase": []
+          }
+        ],
+        "tags": [
+          "sessions"
+        ]
+      }
+    },
+    "/api/sessions/{id}/end": {
+      "post": {
+        "operationId": "SessionsController_end",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "End a session and compute its summary."
+          }
+        },
+        "security": [
+          {
+            "firebase": []
+          }
+        ],
+        "tags": [
+          "sessions"
+        ]
+      }
+    },
+    "/api/media/presign-image": {
+      "post": {
+        "operationId": "MediaController_presignImage",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Issue a presigned PUT URL for a question image."
+          }
+        },
+        "security": [
+          {
+            "firebase": []
+          }
+        ],
+        "tags": [
+          "media"
+        ]
+      }
+    },
+    "/api/admin/metrics": {
+      "get": {
+        "operationId": "AdminController_metrics",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "High-level counts for the admin dashboard."
+          }
+        },
+        "security": [
+          {
+            "firebase": []
+          }
+        ],
+        "tags": [
+          "admin"
+        ]
+      }
+    }
+  },
   "info": {
     "title": "Matura AkademiaAS API",
-    "description": "Placeholder spec — regenerated by `pnpm openapi:generate` once the API can boot.",
-    "version": "0.0.0"
+    "description": "Internal API for the Matura AkademiaAS exam-prep app.",
+    "version": "0.0.0",
+    "contact": {}
   },
-  "paths": {},
-  "components": {}
+  "tags": [],
+  "servers": [],
+  "components": {
+    "securitySchemes": {
+      "firebase": {
+        "scheme": "bearer",
+        "bearerFormat": "JWT",
+        "type": "http",
+        "description": "Firebase ID token"
+      }
+    },
+    "schemas": {}
+  }
 }

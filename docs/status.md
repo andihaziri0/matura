@@ -1,7 +1,7 @@
 # Project status
 
-_Last updated: 2026-05-10 (evening — prod web on custom domain)_
-_Current milestone: **Production deploy** — core path **live**; polish & hardening remain_
+_Last updated: 2026-05-10 — shtesa «ushtrim & bankë me foto»; milestone prod i njëjtë_
+_Current milestone: **Production deploy** — produkti bazë **live** (`matura.akademiaas.com`); opsione të reja praktike + lista «me figurë» në kod_
 _Exam target window: June each year (Kosovo Testi i Maturës)_
 
 ## Legend
@@ -117,6 +117,30 @@ The goal of this milestone is a runnable repo with one end-to-end feature (Matem
 - [x] `docs/features/practice.md`
 - [x] Update `AGENTS.md` + this file + `.agent/state.yaml`
 
+### Phase 13 — Ushtrim & bankë: pyetje me foto (maturë)
+
+- [x] **Të dhëna:** `content/seed/math/matura-foto.json` — fusha `images[]` me `r2Key` deterministik (`questions/matura-foto/IMG_*.png`); `pnpm seed:questions` krijon `QuestionImage` në DB
+- [x] **Skript:** `pnpm --filter @matura/db attach:matura-foto-images` — ngarkon PNG nga `content/matura-fotot/` në S3/MinIO dhe lidh rreshtat në DB (`--dry-run`, `--skip-upload`, `--write-json`)
+- [x] **API:** `POST /api/sessions/practice` — body opsionale `hasImages`, `tag` (Zod + `SessionsService` me filtra Prisma, jo raw SQL të pasigurt)
+- [x] **API:** listimi i pyetjeve kishte tashmë `hasImages`; burimi «foto» në bankë përdor tag-un e saktë `source:foto-matura`
+- [x] **Web:** checkbox «Vetëm pyetje me foto» në ekranin e nisjes së sesionit; mesazh i veçantë kur nuk ka përputhje
+- [x] **Web:** bankë — checkbox «Vetëm pyetje që kanë figurë» + filtri i burimit i përafruar me JSON-in e maturës
+- [x] **i18n:** çelësat në `packages/shared/src/i18n/sq.ts`
+- [x] **OpenAPI:** `apps/api/src/openapi-generate.ts` — lexon `.env` nga rrënja dhe forcon URL të fiktivë për DB/S3 gjatë gjenerimit (pa lidhje reale), që `pnpm openapi:generate` të mos thyhet nga `DATABASE_URL` jo-standard
+- [x] `docs/features/practice.md` — seksioni «Pyetje me foto»
+- [ ] **Opsionale / prod:** ngarko objektet PNG në R2 prod (`attach:matura-foto-images` ose presign nga admin) që figurat të hapen për maturantët në ambientin publik
+
+---
+
+## Ku jemi tani (përmbledhje)
+
+| Zona | Gjendje |
+|------|--------|
+| **Kodi** | MVP scaffold **i mbyllur**; **Phase 13** (filtro me foto) **e ship-uar** në repo |
+| **Prod** | Web + API **live**; banka Matematikë me ~565 pyetje të seed-uara (snapshot 2026-05-10) |
+| **Figurat** | Meta + `QuestionImage` vijnë nga seed-i; **skedarët në R2 prod** janë hap i mbetur për pronarin (ose lokal: MinIO + skripti) |
+| **Deploy milestone** | **Phase D4–D7** ende me artikuj `owner_todo` (rotacion sekretesh, R2 prod, Sentry, etj.) — shih më poshtë |
+
 ---
 
 ## Milestone status: MVP scaffold — **DONE**
@@ -213,7 +237,8 @@ Topology, decisions, and rejected alternatives are locked in
 - [x] Deploy web → reachable at **`https://matura.akademiaas.com`**; auth + API calls working (CORS + `NEXT_PUBLIC_API_URL`)
 - [ ] Owner creates one prod question end-to-end (image upload → publish via R2) — still a good checklist item
 - [x] Practice session against prod (`/practice/matematike`) — verified with 565 seeded questions (2026-05-10)
-- [~] Update `docs/status.md` + `.agent/state.yaml` — this revision (2026-05-10); **milestone not fully closed** until credential rotation, optional `api.matura`, Sentry/Uptime, dedicated Firebase prod decision
+- [x] **Pas deploy-it:** Phase 13 në kod — sesioni me `hasImages`, bankë me figurë + tag `source:foto-matura` (2026-05-10)
+- [x] Update `docs/status.md` + `.agent/state.yaml` — **2026-05-10** (Phase 13 + «Ku jemi tani»); **milestone prod** ende **jo** i mbyllur formalisht deri në rotacion sekretesh, R2 figurat në prod sipas nevojës, `api.matura` opsionale, Sentry/Uptime, Firebase prod të dedikuar
 
 ### Production snapshot (2026-05-10)
 

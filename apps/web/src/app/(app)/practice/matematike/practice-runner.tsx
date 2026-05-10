@@ -80,7 +80,7 @@ type Phase =
   | { kind: 'pick' }
   | { kind: 'loading' }
   | { kind: 'error'; message: string }
-  | { kind: 'empty' }
+  | { kind: 'empty'; imagesOnly?: boolean }
   | { kind: 'answering'; payload: PracticePayload; index: number }
   | { kind: 'feedback'; payload: PracticePayload; index: number; record: AttemptRecord }
   | { kind: 'summary'; summary: SessionSummary; records: AttemptRecord[] };
@@ -91,6 +91,7 @@ export function PracticeRunner(): React.ReactElement {
   const [topicPathFilter, setTopicPathFilter] = useState<string | undefined>(undefined);
   const [sessionQuestionCount, setSessionQuestionCount] = useState(10);
   const [sessionExamMode, setSessionExamMode] = useState(false);
+  const [sessionOnlyWithImages, setSessionOnlyWithImages] = useState(false);
   const [revealedFeedback, setRevealedFeedback] = useState<Record<number, boolean>>({});
   const [records, setRecords] = useState<AttemptRecord[]>([]);
   const [questionStartedAt, setQuestionStartedAt] = useState<number>(() => Date.now());
@@ -114,6 +115,7 @@ export function PracticeRunner(): React.ReactElement {
             subjectSlug: 'matematike',
             count: sessionQuestionCount,
             ...(topicPath ? { topicPath } : {}),
+            ...(sessionOnlyWithImages ? { hasImages: true } : {}),
           }),
         });
         if (!res.ok) {
@@ -122,7 +124,7 @@ export function PracticeRunner(): React.ReactElement {
         }
         const payload = (await res.json()) as PracticePayload;
         if (payload.questions.length === 0) {
-          setPhase({ kind: 'empty' });
+          setPhase({ kind: 'empty', imagesOnly: sessionOnlyWithImages });
           return;
         }
         setPhase({ kind: 'answering', payload, index: 0 });
@@ -131,7 +133,7 @@ export function PracticeRunner(): React.ReactElement {
         setPhase({ kind: 'error', message: Sq.sq.errors.network });
       }
     },
-    [getIdToken, sessionQuestionCount],
+    [getIdToken, sessionQuestionCount, sessionOnlyWithImages],
   );
 
   const postCurrentAnswerOrSkip = useCallback(async () => {
@@ -305,6 +307,18 @@ export function PracticeRunner(): React.ReactElement {
             <label className="mt-4 flex min-h-[48px] cursor-pointer items-center gap-3 text-sm text-[var(--color-fg)] sm:min-h-0">
               <input
                 type="checkbox"
+                checked={sessionOnlyWithImages}
+                onChange={(e) => setSessionOnlyWithImages(e.target.checked)}
+                className="h-5 w-5 shrink-0 rounded border-[var(--color-border)]"
+              />
+              <span className="text-base leading-snug sm:text-sm">{Sq.sq.practice.sessionOnlyWithImages}</span>
+            </label>
+            <p className="mt-1 text-xs text-[var(--color-fg-muted)] sm:max-w-xl">
+              {Sq.sq.practice.sessionOnlyWithImagesHint}
+            </p>
+            <label className="mt-4 flex min-h-[48px] cursor-pointer items-center gap-3 text-sm text-[var(--color-fg)] sm:min-h-0">
+              <input
+                type="checkbox"
                 checked={sessionExamMode}
                 onChange={(e) => setSessionExamMode(e.target.checked)}
                 className="h-5 w-5 shrink-0 rounded border-[var(--color-border)]"
@@ -351,7 +365,7 @@ export function PracticeRunner(): React.ReactElement {
   if (phase.kind === 'empty') {
     return (
         <CenteredMessage>
-          <p>{Sq.sq.practice.noQuestions}</p>
+          <p>{phase.imagesOnly ? Sq.sq.practice.noQuestionsWithImages : Sq.sq.practice.noQuestions}</p>
           <button
             type="button"
             onClick={() => setPhase({ kind: 'pick' })}

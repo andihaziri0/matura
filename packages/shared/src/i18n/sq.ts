@@ -101,6 +101,13 @@ export const sq = {
     examModeHintSession:
       'Kur është e ndezur: pas përgjigjes, hap rezultatin dhe shpjegimin me buton.',
     examModeRevealPrompt: 'Kliko butonin për të parë nëse është saktë dhe shpjegimin.',
+    sessionOnlyWithImages: 'Vetëm pyetje me foto',
+    sessionOnlyWithImagesHint:
+      'Pyetjet që kanë figurë të ngarkuar në bankë (jo vetëm tekst me referencë te fotoja).',
+    noQuestionsWithImages:
+      'Ende nuk ka pyetje me foto që përputhen me këto filtra. Provo pa këtë opsion ose zgjidh “të gjitha kapitujt”.',
+    bankImagesOnly: 'Vetëm pyetje që kanë figurë',
+    bankImagesOnlyHint: 'Filon vetëm rreshtat me imazh të ruajtur në sistemin e skedarëve.',
     sessionSize: 'Sa pyetje njëherësh',
     questionsCount10: '10 pyetje',
     questionsCount25: '25 pyetje (afërsisht si në provim)',

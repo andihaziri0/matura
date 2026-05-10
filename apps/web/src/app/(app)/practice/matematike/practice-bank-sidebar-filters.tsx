@@ -12,6 +12,8 @@ interface PracticeBankSidebarFiltersProps {
   onSource: (source: PracticeBankSourceFilter) => void;
   searchDraft: string;
   onSearchDraft: (value: string) => void;
+  imagesOnly: boolean;
+  onImagesOnly: (value: boolean) => void;
   examMode: boolean;
   onExamMode: (value: boolean) => void;
 }
@@ -26,6 +28,8 @@ export function PracticeBankSidebarFilters({
   onSource,
   searchDraft,
   onSearchDraft,
+  imagesOnly,
+  onImagesOnly,
   examMode,
   onExamMode,
 }: PracticeBankSidebarFiltersProps): React.ReactElement {
@@ -59,6 +63,19 @@ export function PracticeBankSidebarFilters({
           <option value="gjeneruar">{Sq.sq.practice.sourceGjeneruar}</option>
         </select>
       </label>
+
+      <label className="flex min-h-[48px] w-full cursor-pointer items-start gap-3 text-sm md:min-h-0">
+        <input
+          type="checkbox"
+          checked={imagesOnly}
+          onChange={(e) => onImagesOnly(e.target.checked)}
+          className="mt-0.5 h-5 w-5 shrink-0 rounded border-[var(--color-border)]"
+        />
+        <span className="text-base leading-snug text-[var(--color-fg)] md:text-sm">
+          {Sq.sq.practice.bankImagesOnly}
+        </span>
+      </label>
+      <p className="text-xs leading-relaxed text-[var(--color-fg-muted)]">{Sq.sq.practice.bankImagesOnlyHint}</p>
 
       <label className="block w-full min-w-0 text-sm">
         <span className="font-medium text-[var(--color-fg)]">{Sq.sq.common.search}</span>

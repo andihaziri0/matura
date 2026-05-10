@@ -3,6 +3,14 @@ import type { User } from '@matura/db';
 import { PrismaService } from '../../common/prisma/prisma.service';
 import type { StartPracticeSessionInput } from '@matura/shared';
 
+function shuffleInPlace<T>(arr: T[]): T[] {
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [arr[i], arr[j]] = [arr[j]!, arr[i]!];
+  }
+  return arr;
+}
+
 @Injectable()
 export class SessionsService {
   constructor(private readonly prisma: PrismaService) {}
@@ -18,7 +26,9 @@ export class SessionsService {
       subjectSlug: input.subjectSlug,
       status: 'PUBLISHED' as const,
       ...(input.topicPath && { topicPath: { startsWith: input.topicPath } }),
-      ...(input.difficulty && { difficulty: input.difficulty }),
+      ...(input.difficulty != null && { difficulty: input.difficulty }),
+      ...(input.hasImages === true && { images: { some: {} } }),
+      ...(input.tag && { tags: { has: input.tag } }),
     };
 
     const total = await this.prisma.question.count({ where });
@@ -29,23 +39,21 @@ export class SessionsService {
       return { session, questions: [] };
     }
 
-    const ids = await this.prisma.$queryRawUnsafe<Array<{ id: string }>>(
-      `SELECT id FROM "Question" WHERE "subjectSlug" = $1 AND "status" = 'PUBLISHED'
-        ${input.topicPath ? `AND "topicPath" LIKE $2 || '%'` : ''}
-        ${input.difficulty ? (input.topicPath ? `AND "difficulty" = $3` : `AND "difficulty" = $2`) : ''}
-       ORDER BY random() LIMIT ${input.count}`,
-      ...([input.subjectSlug, input.topicPath, input.difficulty].filter(
-        (v) => v !== undefined,
-      ) as unknown[]),
-    );
+    const candidates = await this.prisma.question.findMany({
+      where,
+      select: { id: true },
+    });
+    const ids = shuffleInPlace(candidates.map((c) => c.id)).slice(0, input.count);
 
+    const idOrder = new Map(ids.map((id, i) => [id, i]));
     const rows = await this.prisma.question.findMany({
-      where: { id: { in: ids.map((r) => r.id) } },
+      where: { id: { in: ids } },
       include: {
         options: { orderBy: { order: 'asc' } },
         images: { orderBy: { order: 'asc' } },
       },
     });
+    rows.sort((a, b) => (idOrder.get(a.id) ?? 0) - (idOrder.get(b.id) ?? 0));
 
     const session = await this.prisma.session.create({
       data: {

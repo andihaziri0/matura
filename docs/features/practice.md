@@ -8,7 +8,8 @@ reaches a summary screen with per-topic accuracy.
 
 ```
 sign-in (Firebase) → /practice/matematike
-   POST /api/sessions/practice  (body: { subjectSlug: 'matematike', count: 10 })
+   POST /api/sessions/practice  (body: { subjectSlug: 'matematike', count: 10,
+       hasImages?: boolean, tag?: string })
        → { session, questions[] }   (questions sanitised: no answer/explanation)
    per question:
        POST /api/attempts        (body: { questionId, sessionId, answer, timeMs })
@@ -22,7 +23,7 @@ sign-in (Firebase) → /practice/matematike
 
 | Method | Path | Module | Notes |
 |---|---|---|---|
-| POST | `/api/sessions/practice` | `SessionsModule` | Random N `PUBLISHED` questions (`ORDER BY random()` then materialised). Strips `correctAnswer`, `explanationMd`, and `option.isCorrect`. |
+| POST | `/api/sessions/practice` | `SessionsModule` | Random N `PUBLISHED` questions (in-memory shuffle). Optional `hasImages` (only rows with `QuestionImage`) and `tag` (exact tag match). Strips answers. |
 | POST | `/api/attempts` | `AttemptsModule` | Records the attempt, evaluates correctness server-side, returns canonical answer + explanation. |
 | POST | `/api/sessions/:id/end` | `SessionsModule` | Stamps `endedAt`, returns score + per-topic breakdown. Forbidden if the caller is not the session owner. |
 
@@ -73,6 +74,18 @@ should be migrated to `getApiClient()` from `@/lib/api/client.ts`.)
   `http://localhost:9000/matura-content` for MinIO; update via env in
   staging/production.
 - `count` is capped at 50 server-side (Zod schema).
+
+## Pyetje me foto (maturë)
+
+- Rreshtat `images` në `content/seed/math/matura-foto.json` (me `r2Key` të
+  deterministik, p.sh. `questions/matura-foto/IMG_7422.png`) hidhen në DB nga
+  `pnpm seed:questions` bashkë me `QuestionImage`.
+- Për të ngarkuar skedarët PNG në MinIO/R2 sipas të njëjtit kyç si në prod:
+  `pnpm --filter @matura/db attach:matura-foto-images` (kërkon `DATABASE_URL`
+  dhe variablat `S3_*` si te API). Opsione: `--dry-run`, `--skip-upload`
+  (vetëm DB), `--write-json` (përditëson skedarin e seed-it me `images[]`).
+- Në UI, sesioni i ushtrimit mund të kërkojë `hasImages: true`; banka e
+  pyetjeve mund të filtrojë njësoj (`hasImages` në listimin).
 
 ## Known follow-ups (future plans, not this MVP)
 

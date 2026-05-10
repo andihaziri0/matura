@@ -17,6 +17,10 @@ export const StartPracticeSessionInputSchema = z.object({
   count: z.number().int().min(1).max(50).default(10),
   topicPath: z.string().min(1).optional(),
   difficulty: z.number().int().min(1).max(5).optional(),
+  /** When true, only questions that have at least one QuestionImage row. */
+  hasImages: z.boolean().optional(),
+  /** Restrict to questions whose `tags` array contains this exact string. */
+  tag: z.string().min(1).optional(),
 });
 export type StartPracticeSessionInput = z.infer<typeof StartPracticeSessionInputSchema>;
 

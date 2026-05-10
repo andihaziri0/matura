@@ -5,7 +5,7 @@
 # Item statuses: todo | in_progress | done | blocked
 
 milestone: production_deploy
-milestone_state: in_progress  # core prod path live; rotation, observability, optional api.matura, formal milestone close remain
+milestone_state: in_progress  # core prod path live; rotation, R2 assets prod, observability, optional api.matura, formal milestone close remain
 updated: 2026-05-10
 exam_window: june_yearly
 
@@ -262,6 +262,33 @@ phases:
       feature_doc: done
       update_agent_state: done
 
+  phase_13_practice_matura_foto:
+    status: done
+    note: "Shipped in repo 2026-05-10; R2 prod upload for PNGs remains owner ops when figures should render in prod."
+    paths:
+      - content/seed/math/matura-foto.json
+      - content/matura-fotot/
+      - packages/db/src/seed/attach-matura-foto-images.ts
+      - packages/db/package.json
+      - packages/shared/src/schemas/session.ts
+      - packages/shared/src/i18n/sq.ts
+      - apps/api/src/modules/sessions/sessions.service.ts
+      - apps/api/src/openapi-generate.ts
+      - apps/web/src/app/(app)/practice/matematike/practice-runner.tsx
+      - apps/web/src/app/(app)/practice/matematike/practice-bank.tsx
+      - apps/web/src/app/(app)/practice/matematike/practice-bank-sidebar-filters.tsx
+      - apps/web/src/app/(app)/practice/matematike/practice-matematike-shell.tsx
+      - docs/features/practice.md
+    items:
+      seed_matura_foto_json_images: done
+      attach_matura_foto_images_script: done
+      api_start_practice_has_images_tag: done
+      web_session_checkbox_images_only: done
+      web_bank_has_images_toggle_and_tag_fix: done
+      i18n_sq_practice_foto_strings: done
+      openapi_generate_bootstrap_env: done
+      prod_r2_png_upload: owner_todo
+
 production_deploy:
   status: in_progress
   adr: docs/architecture/decisions/0010-deploy-topology.md
@@ -374,7 +401,8 @@ production_deploy:
         custom_domain_web: done
         e2e_question_authoring_in_prod: owner_todo  # image → R2 → publish
         e2e_practice_session_in_prod: done
-        docs_status_sync: done  # 2026-05-10
+        docs_status_sync: done  # 2026-05-10 — Phase 13 + summary table in status.md
+        phase_13_matura_foto_in_repo: done  # PNGs in prod R2: owner_todo if figures must render publicly
 
 future_milestones:
   v1:

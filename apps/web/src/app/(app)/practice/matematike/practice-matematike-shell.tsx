@@ -17,6 +17,7 @@ export function PracticeMatematikeShell(): React.ReactElement {
   const [bankSource, setBankSource] = useState<PracticeBankSourceFilter>('all');
   const [bankSearchDraft, setBankSearchDraft] = useState('');
   const [bankSearch, setBankSearch] = useState('');
+  const [bankImagesOnly, setBankImagesOnly] = useState(false);
   const [bankExamMode, setBankExamMode] = useState(false);
 
   useEffect(() => {
@@ -77,6 +78,8 @@ export function PracticeMatematikeShell(): React.ReactElement {
                 onSource={setBankSource}
                 searchDraft={bankSearchDraft}
                 onSearchDraft={setBankSearchDraft}
+                imagesOnly={bankImagesOnly}
+                onImagesOnly={setBankImagesOnly}
                 examMode={bankExamMode}
                 onExamMode={setBankExamMode}
               />
@@ -91,6 +94,7 @@ export function PracticeMatematikeShell(): React.ReactElement {
               topicPath={bankTopicPath}
               source={bankSource}
               search={bankSearch}
+              imagesOnly={bankImagesOnly}
               examMode={bankExamMode}
             />
           )}

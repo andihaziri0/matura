@@ -4,6 +4,8 @@ This document defines what is in scope **for the current milestone** and, more i
 
 When in doubt, do less.
 
+> **Gjendja aktuale (2026-05):** milestone operacional kryesor është **production deploy** (shih [`docs/status.md`](../status.md)). Dokumenti më poshtë përshkruan kufijtë origjinalë të MVP; funksione të reja që nuk i kundërshtojnë (p.sh. filtri «vetëm me foto» në praktikë) konsiderohen në përputhje me vizionin e ngushtë të produktit.
+
 ---
 
 ## Current milestone: MVP scaffold
@@ -36,9 +38,10 @@ A runnable repo with one end-to-end vertical slice.
 - Publish / unpublish.
 
 **First feature — practice**
-- `/practice/matematike` page, fetches 10 random PUBLISHED questions.
+- `/practice/matematike` page, fetches 10 random PUBLISHED questions (ose filtër opsional: vetëm pyetje me `QuestionImage` / figurë në R2).
 - Instant per-question feedback with explanation.
 - Records attempts so we can later compute progress.
+- Bankë pyetjesh me filtra (burim, kërkim, «vetëm me figurë») në të njëjtën faqe, tab së veçantë.
 
 **Seed content**
 - 50 Matematikë questions in `content/seed/math/questions.json`, idempotently upserted.
