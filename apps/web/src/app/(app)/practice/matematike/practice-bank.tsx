@@ -141,14 +141,14 @@ export function PracticeBank(): React.ReactElement {
 
   return (
     <>
-      <section className="relative z-1 mx-auto max-w-3xl px-4 sm:px-6 py-6 sm:py-8">
+      <section className="relative z-1 mx-auto w-full max-w-3xl px-3 sm:px-6 py-6 sm:py-8">
         <p className="text-sm text-[var(--color-fg-muted)]">{Sq.sq.practice.bankIntro}</p>
 
-        <div className="mt-4 flex flex-col gap-3 rounded-xl border border-[var(--color-border)] bg-[var(--color-bg-elevated)] p-4 shadow-sm sm:flex-row sm:flex-wrap sm:items-end">
-          <label className="block min-w-[200px] flex-1 text-sm">
+        <div className="mt-4 flex w-full min-w-0 flex-col gap-3 rounded-xl border border-[var(--color-border)] bg-[var(--color-bg-elevated)] p-4 shadow-sm sm:flex-row sm:flex-wrap sm:items-end">
+          <label className="block w-full min-w-0 flex-1 text-sm sm:min-w-[200px]">
             <span className="font-medium text-[var(--color-fg)]">{Sq.sq.practice.chooseChapter}</span>
             <select
-              className="mt-1 w-full rounded-lg border border-[var(--color-border)] bg-[var(--color-bg)] px-3 py-2 text-sm"
+              className="mt-1 box-border w-full min-h-[48px] min-w-0 appearance-auto rounded-lg border border-[var(--color-border)] bg-[var(--color-bg)] px-3 py-3 pr-9 text-base sm:min-h-0 sm:py-2 sm:text-sm"
               value={topicPath ?? ''}
               onChange={(e) => setTopicPath(e.target.value === '' ? undefined : e.target.value)}
             >
@@ -160,10 +160,10 @@ export function PracticeBank(): React.ReactElement {
               ))}
             </select>
           </label>
-          <label className="block min-w-[200px] flex-1 text-sm">
+          <label className="block w-full min-w-0 flex-1 text-sm sm:min-w-[200px]">
             <span className="font-medium text-[var(--color-fg)]">{Sq.sq.question.source}</span>
             <select
-              className="mt-1 w-full rounded-lg border border-[var(--color-border)] bg-[var(--color-bg)] px-3 py-2 text-sm"
+              className="mt-1 box-border w-full min-h-[48px] min-w-0 appearance-auto rounded-lg border border-[var(--color-border)] bg-[var(--color-bg)] px-3 py-3 pr-9 text-base sm:min-h-0 sm:py-2 sm:text-sm"
               value={source}
               onChange={(e) => setSource(e.target.value as 'all' | 'foto' | 'gjeneruar')}
             >
@@ -172,24 +172,24 @@ export function PracticeBank(): React.ReactElement {
               <option value="gjeneruar">{Sq.sq.practice.sourceGjeneruar}</option>
             </select>
           </label>
-          <label className="block min-w-[200px] flex-[2] text-sm">
+          <label className="block w-full min-w-0 flex-[1_1_100%] text-sm sm:min-w-[200px] sm:flex-[2]">
             <span className="font-medium text-[var(--color-fg)]">{Sq.sq.common.search}</span>
             <input
               type="search"
               value={searchDraft}
               onChange={(e) => setSearchDraft(e.target.value)}
               placeholder={Sq.sq.practice.bankSearchPlaceholder}
-              className="mt-1 w-full rounded-lg border border-[var(--color-border)] bg-[var(--color-bg)] px-3 py-2 text-sm"
+              className="mt-1 box-border w-full min-h-[48px] min-w-0 rounded-lg border border-[var(--color-border)] bg-[var(--color-bg)] px-3 py-3 text-base sm:min-h-0 sm:py-2 sm:text-sm"
             />
           </label>
-          <label className="flex cursor-pointer items-center gap-2 text-sm">
+          <label className="flex min-h-[48px] w-full cursor-pointer items-center gap-3 text-sm sm:min-h-0 sm:w-auto sm:min-w-[200px]">
             <input
               type="checkbox"
               checked={examMode}
               onChange={(e) => setExamMode(e.target.checked)}
-              className="rounded border-[var(--color-border)]"
+              className="h-5 w-5 shrink-0 rounded border-[var(--color-border)]"
             />
-            <span>{Sq.sq.practice.examMode}</span>
+            <span className="text-base leading-snug sm:text-sm">{Sq.sq.practice.examMode}</span>
           </label>
         </div>
         <p className="mt-2 text-xs text-[var(--color-fg-muted)]">{Sq.sq.practice.examModeHintBank}</p>

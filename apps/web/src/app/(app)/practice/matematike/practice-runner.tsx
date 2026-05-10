@@ -269,15 +269,15 @@ export function PracticeRunner(): React.ReactElement {
 
   if (phase.kind === 'pick') {
     return (
-      <section className="relative z-1 mx-auto max-w-3xl px-4 sm:px-6 py-8 sm:py-10">
-          <div className="rounded-xl border border-[var(--color-border)] bg-[var(--color-bg-elevated)] p-5 sm:p-6 shadow-sm">
+      <section className="relative z-1 mx-auto w-full max-w-3xl px-3 sm:px-6 py-8 sm:py-10">
+          <div className="w-full min-w-0 rounded-xl border border-[var(--color-border)] bg-[var(--color-bg-elevated)] p-4 shadow-sm sm:p-6">
             <label className="block text-sm font-medium text-[var(--color-fg)]" htmlFor="practice-chapter">
               {Sq.sq.practice.chooseChapter}
             </label>
             <p className="mt-1 text-sm text-[var(--color-fg-muted)]">{Sq.sq.practice.chapterHint}</p>
             <select
               id="practice-chapter"
-              className="mt-3 w-full max-w-xl rounded-lg border border-[var(--color-border)] bg-[var(--color-bg)] px-3 py-2.5 text-sm text-[var(--color-fg)]"
+              className="mt-3 box-border w-full min-h-[48px] min-w-0 appearance-auto rounded-lg border border-[var(--color-border)] bg-[var(--color-bg)] px-3 py-3 pr-9 text-base text-[var(--color-fg)] sm:min-h-0 sm:py-2.5 sm:text-sm"
               value={topicPathFilter ?? ''}
               onChange={(e) =>
                 setTopicPathFilter(e.target.value === '' ? undefined : e.target.value)
@@ -295,28 +295,28 @@ export function PracticeRunner(): React.ReactElement {
             </label>
             <select
               id="practice-size"
-              className="mt-1 w-full max-w-xl rounded-lg border border-[var(--color-border)] bg-[var(--color-bg)] px-3 py-2.5 text-sm text-[var(--color-fg)]"
+              className="mt-1 box-border w-full min-h-[48px] min-w-0 appearance-auto rounded-lg border border-[var(--color-border)] bg-[var(--color-bg)] px-3 py-3 pr-9 text-base text-[var(--color-fg)] sm:min-h-0 sm:py-2.5 sm:text-sm"
               value={sessionQuestionCount}
               onChange={(e) => setSessionQuestionCount(Number(e.target.value))}
             >
               <option value={10}>{Sq.sq.practice.questionsCount10}</option>
               <option value={25}>{Sq.sq.practice.questionsCount25}</option>
             </select>
-            <label className="mt-4 flex cursor-pointer items-center gap-2 text-sm text-[var(--color-fg)]">
+            <label className="mt-4 flex min-h-[48px] cursor-pointer items-center gap-3 text-sm text-[var(--color-fg)] sm:min-h-0">
               <input
                 type="checkbox"
                 checked={sessionExamMode}
                 onChange={(e) => setSessionExamMode(e.target.checked)}
-                className="rounded border-[var(--color-border)]"
+                className="h-5 w-5 shrink-0 rounded border-[var(--color-border)]"
               />
-              <span>{Sq.sq.practice.sessionExamMode}</span>
+              <span className="text-base leading-snug sm:text-sm">{Sq.sq.practice.sessionExamMode}</span>
             </label>
-            <p className="mt-1 max-w-xl text-xs text-[var(--color-fg-muted)]">
+            <p className="mt-1 text-xs text-[var(--color-fg-muted)] sm:max-w-xl">
               {Sq.sq.practice.examModeHintSession}
             </p>
             <button
               type="button"
-              className="mt-6 w-full max-w-xl rounded-lg bg-[var(--color-brand)] px-4 py-3 text-sm font-semibold text-[var(--color-brand-fg)] shadow-md transition hover:bg-[var(--color-brand-strong)] sm:w-auto"
+              className="mt-6 w-full min-h-[48px] rounded-lg bg-[var(--color-brand)] px-4 py-3.5 text-base font-semibold text-[var(--color-brand-fg)] shadow-md transition hover:bg-[var(--color-brand-strong)] sm:w-auto sm:py-3 sm:text-sm"
               onClick={() => void startSession(topicPathFilter)}
             >
               {Sq.sq.practice.start}
