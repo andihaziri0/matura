@@ -31,8 +31,8 @@
   --color-danger: #c0392b;
   --color-danger-soft: #fbe6e2;
 
-  /* Effects */
-  --shadow-brand: 0 10px 30px -10px color-mix(in oklab, var(--color-brand) 45%, transparent);
+  /* Effects (srgb: wider mobile Safari support than oklab) */
+  --shadow-brand: 0 10px 30px -10px color-mix(in srgb, var(--color-brand) 45%, transparent);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -69,13 +69,13 @@ body {
 }
 
 ::selection {
-  background: color-mix(in oklab, var(--color-brand) 25%, transparent);
+  background: color-mix(in srgb, var(--color-brand) 25%, transparent);
   color: var(--color-fg);
 }
 
 /* Subtle, brand-tinted focus ring everywhere */
 :where(button, [role='button'], a, input, select, textarea):focus-visible {
-  outline: 2px solid color-mix(in oklab, var(--color-brand) 70%, transparent);
+  outline: 2px solid color-mix(in srgb, var(--color-brand) 70%, transparent);
   outline-offset: 2px;
   border-radius: 6px;
 }
@@ -94,7 +94,7 @@ body {
   margin-block: 0.6em;
 }
 .prose-matura code {
-  background: color-mix(in oklab, var(--color-fg) 8%, transparent);
+  background: color-mix(in srgb, var(--color-fg) 8%, transparent);
   padding: 0.1em 0.35em;
   border-radius: 4px;
   font-size: 0.92em;

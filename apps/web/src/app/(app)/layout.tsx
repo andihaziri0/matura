@@ -29,7 +29,7 @@ export default function AppLayout({
     <div className="min-h-screen flex flex-col bg-[var(--color-bg)]">
       <header className="sticky top-0 z-30 border-b border-[var(--color-border)] bg-[var(--color-bg-elevated)]/85 backdrop-blur supports-[backdrop-filter]:bg-[var(--color-bg-elevated)]/70">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 h-16 flex items-center justify-between gap-4">
-          <Logo size="sm" href="/practice/matematike" />
+          <Logo size="sm" href="/" />
 
           <nav className="flex items-center gap-1 sm:gap-2 text-sm">
             <NavLink href="/practice/matematike">{Sq.sq.nav.practice}</NavLink>

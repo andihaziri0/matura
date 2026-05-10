@@ -1,6 +1,9 @@
+'use client';
+
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/cn';
 
 type LogoSize = 'sm' | 'md' | 'lg';
@@ -34,6 +37,13 @@ export function Logo({
   priority = false,
 }: LogoProps): React.ReactElement {
   const { px, cls } = sizes[size];
+  const pathname = usePathname();
+
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    if (!href || pathname !== href) return;
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
 
   const mark = (
     <span className={cn('inline-flex items-center gap-2.5', className)}>
@@ -65,6 +75,7 @@ export function Logo({
   return (
     <Link
       href={href}
+      onClick={handleClick}
       className="inline-flex items-center rounded-md outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-brand)]/60"
       aria-label="AkademiaAS — Ballina"
     >
