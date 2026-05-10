@@ -38,7 +38,7 @@ function parseDotenvContent(text: string): Record<string, string> {
  * Server-only — uses injected env plus optional repo-root `.env` fallback (cwd `apps/web`).
  */
 export function getPublicStorageOrigin(): string | undefined {
-  let b =
+  const b =
     normalizePublicStorageBase(process.env.S3_PUBLIC_BASE_URL) ??
     normalizePublicStorageBase(process.env.NEXT_PUBLIC_R2_PUBLIC_URL);
   if (b) return b;
