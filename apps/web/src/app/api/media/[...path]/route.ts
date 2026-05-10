@@ -35,7 +35,16 @@ export async function GET(
   });
 
   if (!upstream.ok) {
-    return new Response('Upstream error', { status: upstream.status === 404 ? 404 : 502 });
+    const status = upstream.status;
+    let detail = `Upstream HTTP ${status}`;
+    if (status === 403 || status === 401) {
+      detail +=
+        ' — access denied (bucket private, or wrong public URL; check R2 public access / S3_PUBLIC_BASE_URL).';
+    } else if (status === 404) {
+      detail +=
+        ' — object not at this URL (fix S3_PUBLIC_BASE_URL or upload PNG to this key in R2).';
+    }
+    return new Response(detail, { status: status === 404 ? 404 : 502 });
   }
 
   const body = upstream.body;
