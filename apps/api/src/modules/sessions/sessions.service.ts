@@ -1,6 +1,6 @@
 import { Injectable, NotFoundException, ForbiddenException } from '@nestjs/common';
 import type { User } from '@matura/db';
-import { PrismaService } from '../../common/prisma/prisma.service';
+import { type PrismaService } from '../../common/prisma/prisma.service';
 import type { StartPracticeSessionInput } from '@matura/shared';
 
 @Injectable()

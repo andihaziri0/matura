@@ -1,3 +1,5 @@
+import { withSentryConfig } from '@sentry/nextjs';
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
@@ -9,6 +11,7 @@ const nextConfig = {
     remotePatterns: [
       { protocol: 'http', hostname: 'localhost' },
       { protocol: 'https', hostname: '**.r2.cloudflarestorage.com' },
+      { protocol: 'https', hostname: '**.r2.dev' },
       { protocol: 'https', hostname: '**.akademiaas.com' },
     ],
   },
@@ -27,4 +30,24 @@ const nextConfig = {
   },
 };
 
-export default nextConfig;
+// Wrap with Sentry. When SENTRY_AUTH_TOKEN / SENTRY_ORG / SENTRY_PROJECT are
+// missing (local dev, CI), source-map upload is silently skipped — the runtime
+// SDK still works. `silent: !process.env.CI` keeps the build log clean locally.
+export default withSentryConfig(nextConfig, {
+  org: process.env.SENTRY_ORG,
+  project: process.env.SENTRY_PROJECT,
+  authToken: process.env.SENTRY_AUTH_TOKEN,
+  silent: !process.env.CI,
+
+  // Don't generate the Sentry tunnel route; we don't proxy events through our
+  // own domain. If ad-blockers become a problem we can revisit.
+  tunnelRoute: undefined,
+
+  // Hide source maps from the public bundle but still upload them to Sentry.
+  hideSourceMaps: true,
+
+  // Auto-instrument Vercel cron monitors when added.
+  webpack: {
+    automaticVercelMonitors: true,
+  },
+});

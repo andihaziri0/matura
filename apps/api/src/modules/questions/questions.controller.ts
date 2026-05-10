@@ -27,7 +27,7 @@ import { CurrentUser } from '../../common/auth/current-user.decorator';
 import { Roles } from '../../common/auth/roles.decorator';
 import { RolesGuard } from '../../common/auth/roles.guard';
 import { Public } from '../../common/auth/public.decorator';
-import { QuestionsService } from './questions.service';
+import { type QuestionsService } from './questions.service';
 import type { User } from '@matura/db';
 
 const SetStatusBody = z.object({ status: QuestionStatusSchema });

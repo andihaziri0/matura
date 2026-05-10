@@ -9,6 +9,7 @@
     ".": "./src/index.ts"
   },
   "scripts": {
+    "build": "openapi-typescript ./openapi.json -o ./src/generated/schema.d.ts",
     "sdk:build": "openapi-typescript ./openapi.json -o ./src/generated/schema.d.ts",
     "lint": "eslint src --max-warnings=0",
     "typecheck": "tsc --noEmit"

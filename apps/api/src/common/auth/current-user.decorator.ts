@@ -1,4 +1,4 @@
-import { createParamDecorator, ExecutionContext, UnauthorizedException } from '@nestjs/common';
+import { createParamDecorator, type ExecutionContext, UnauthorizedException } from '@nestjs/common';
 import type { Request } from 'express';
 import type { User } from '@matura/db';
 

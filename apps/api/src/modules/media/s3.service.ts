@@ -1,8 +1,8 @@
-import { Injectable, Logger, OnModuleInit } from '@nestjs/common';
+import { Injectable, Logger, type OnModuleInit } from '@nestjs/common';
 import { S3Client, PutObjectCommand } from '@aws-sdk/client-s3';
 import { getSignedUrl } from '@aws-sdk/s3-request-presigner';
 import { readFile } from 'node:fs/promises';
-import { AppConfigService } from '../../config/app-config.service';
+import { type AppConfigService } from '../../config/app-config.service';
 
 @Injectable()
 export class S3Service implements OnModuleInit {

@@ -1,3 +1,7 @@
+// Sentry must be imported FIRST, before anything else, so its OpenTelemetry
+// instrumentation is in place when @nestjs/* loads. No-ops without SENTRY_DSN.
+import './instrument';
+
 import 'reflect-metadata';
 import { NestFactory } from '@nestjs/core';
 import { ValidationPipe, Logger } from '@nestjs/common';
@@ -12,7 +16,7 @@ async function bootstrap(): Promise<void> {
   const config = app.get(AppConfigService);
 
   app.enableCors({
-    origin: config.webOrigin,
+    origin: config.webOrigins,
     credentials: true,
   });
 
@@ -45,7 +49,7 @@ async function bootstrap(): Promise<void> {
 }
 
 bootstrap().catch((err) => {
-  // eslint-disable-next-line no-console
+   
   console.error(err);
   process.exit(1);
 });

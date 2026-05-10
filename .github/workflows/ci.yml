@@ -1,0 +1,112 @@
+name: CI
+
+# Runs on every PR and on every push to main.
+# Vercel + Railway run their own deploy pipelines; this workflow is purely
+# a quality gate (lint, typecheck, prisma validate, openapi drift).
+#
+# Cost target: < 3 minutes per run.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+# Cancel any in-progress run for the same branch when a new commit lands.
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  ci:
+    name: lint + typecheck + prisma validate + openapi drift
+    runs-on: ubuntu-latest
+
+    # Postgres with pgvector — required so booting Nest in `openapi:generate`
+    # can establish a $connect against a real database.
+    services:
+      postgres:
+        image: pgvector/pgvector:pg16
+        env:
+          POSTGRES_USER: matura
+          POSTGRES_PASSWORD: matura
+          POSTGRES_DB: matura
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U matura -d matura"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 10
+
+    env:
+      NODE_ENV: test
+      # Matches the docker-compose.yml local default; the CI service container
+      # uses the same credentials so .env is unnecessary.
+      DATABASE_URL: postgresql://matura:matura@localhost:5432/matura?schema=public
+      # No Redis service — the BullMQ module is currently a stub, not imported
+      # by AppModule. If/when a queue module starts initializing on boot, add
+      # a redis service container here.
+      REDIS_URL: redis://localhost:6379
+      # S3 / MinIO is not connected on app init either; dummy values pass the
+      # Zod env schema and the SDK never connects until an actual upload.
+      S3_ENDPOINT: http://localhost:9000
+      S3_REGION: auto
+      S3_ACCESS_KEY_ID: ci
+      S3_SECRET_ACCESS_KEY: ci-secret
+      S3_BUCKET: matura-content
+      S3_FORCE_PATH_STYLE: 'true'
+      S3_PUBLIC_BASE_URL: http://localhost:9000/matura-content
+      WEB_ORIGIN: http://localhost:3000
+      API_PORT: '4000'
+      # Firebase Admin gracefully no-ops when no service account is configured
+      # (logs a warning, refuses to verify tokens). Fine for openapi:generate.
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9.15.0
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Generate Prisma client
+        run: pnpm --filter @matura/db db:generate
+
+      - name: Build internal packages (shared, db, sdk)
+        run: |
+          pnpm --filter @matura/shared build
+          pnpm --filter @matura/db build
+          pnpm --filter @matura/sdk build
+
+      - name: Lint
+        run: pnpm lint
+
+      - name: Typecheck
+        run: pnpm typecheck
+
+      - name: Prisma schema validate
+        run: pnpm --filter @matura/db exec prisma validate
+
+      - name: Apply migrations to CI DB
+        run: pnpm --filter @matura/db db:migrate:deploy
+
+      - name: Regenerate OpenAPI spec
+        run: pnpm --filter @matura/api openapi:generate
+
+      - name: Drift check — packages/sdk/openapi.json
+        run: |
+          if ! git diff --exit-code packages/sdk/openapi.json; then
+            echo "::error::OpenAPI spec is out of date. Run 'pnpm openapi:generate' locally and commit the updated packages/sdk/openapi.json."
+            git diff packages/sdk/openapi.json | head -100
+            exit 1
+          fi

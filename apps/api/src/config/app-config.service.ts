@@ -1,20 +1,26 @@
 import { Injectable } from '@nestjs/common';
-import { loadEnv, type Env } from './env.schema';
+import { loadEnv, parseWebOrigins, type Env } from './env.schema';
 
 @Injectable()
 export class AppConfigService {
   private readonly env: Env;
+  private readonly _webOrigins: Array<string | RegExp>;
 
   constructor() {
     this.env = loadEnv();
+    this._webOrigins = parseWebOrigins(this.env.WEB_ORIGIN);
   }
 
   get port(): number {
     return this.env.API_PORT;
   }
 
-  get webOrigin(): string {
-    return this.env.WEB_ORIGIN;
+  /**
+   * Parsed WEB_ORIGIN entries. May contain exact strings and wildcard regexes
+   * (see env.schema.ts). Pass directly to Nest's `enableCors({ origin })`.
+   */
+  get webOrigins(): Array<string | RegExp> {
+    return this._webOrigins;
   }
 
   get isProduction(): boolean {

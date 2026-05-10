@@ -18,7 +18,7 @@
 import { readFileSync, existsSync } from 'node:fs';
 import { basename, resolve } from 'node:path';
 import type { CreateQuestionInput } from '@matura/shared';
-import type { ContentAdapter, ImportedQuestion, ImporterContext } from './adapter';
+import type { ContentAdapter, ImportedQuestion } from './adapter';
 
 /** Heuristic: legacy file shapes we tolerate. Extend as the team's format evolves. */
 interface LegacyQuestionShape extends Partial<CreateQuestionInput> {

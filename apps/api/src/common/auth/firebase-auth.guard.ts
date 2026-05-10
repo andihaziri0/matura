@@ -1,14 +1,14 @@
 import {
-  CanActivate,
-  ExecutionContext,
+  type CanActivate,
+  type ExecutionContext,
   Injectable,
   Logger,
   UnauthorizedException,
 } from '@nestjs/common';
-import { Reflector } from '@nestjs/core';
+import { type Reflector } from '@nestjs/core';
 import type { Request } from 'express';
-import { FirebaseAdminService } from './firebase-admin.service';
-import { PrismaService } from '../prisma/prisma.service';
+import { type FirebaseAdminService } from './firebase-admin.service';
+import { type PrismaService } from '../prisma/prisma.service';
 import { IS_PUBLIC_KEY } from './public.decorator';
 import type { User } from '@matura/db';
 

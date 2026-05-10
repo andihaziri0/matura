@@ -1,0 +1,61 @@
+# Build context excludes for Docker builds.
+# Mirrors .gitignore where it makes sense, plus a few extras specific to image size.
+
+# Dependencies (always reinstalled inside the build stage)
+node_modules
+**/node_modules
+.pnpm-store
+
+# Build outputs (rebuilt inside the image)
+dist
+**/dist
+build
+**/build
+.next
+**/.next
+out
+**/out
+.turbo
+**/.turbo
+*.tsbuildinfo
+**/*.tsbuildinfo
+
+# Generated artifacts that we re-generate inside the image
+generated
+**/generated
+.prisma
+**/.prisma
+packages/sdk/src/generated
+
+# Environment files — never bake secrets into images.
+# .env.example is the only one we'd ship and it doesn't contain secrets,
+# but the image doesn't need it either.
+.env
+.env.*
+**/.env
+**/.env.*
+
+# Local infra state
+docker-data
+.docker
+
+# Editor / OS
+.vscode
+.idea
+.DS_Store
+*.log
+
+# Git + CI metadata (image runs the built artifact, doesn't need history)
+.git
+.github
+
+# Tests / docs / content not needed at runtime
+docs
+content/raw
+
+# Apps/packages we don't ship in the API image.
+# The Dockerfile only COPYs what it needs, but excluding these makes the build
+# context smaller (faster `docker build` send-context phase).
+apps/web
+packages/sdk
+packages/ui

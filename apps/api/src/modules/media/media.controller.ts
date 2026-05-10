@@ -9,7 +9,7 @@ import {
 } from '@matura/shared';
 import { Roles } from '../../common/auth/roles.decorator';
 import { RolesGuard } from '../../common/auth/roles.guard';
-import { S3Service } from './s3.service';
+import { type S3Service } from './s3.service';
 
 @ApiTags('media')
 @ApiBearerAuth('firebase')

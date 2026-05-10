@@ -4,7 +4,7 @@ import { ZodValidationPipe } from 'nestjs-zod';
 import { CurrentUser } from '../../common/auth/current-user.decorator';
 import { RecordAttemptInputSchema, type RecordAttemptInput } from '@matura/shared';
 import type { User } from '@matura/db';
-import { AttemptsService } from './attempts.service';
+import { type AttemptsService } from './attempts.service';
 
 @ApiTags('attempts')
 @ApiBearerAuth('firebase')

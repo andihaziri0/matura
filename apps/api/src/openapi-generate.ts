@@ -31,14 +31,14 @@ async function main(): Promise<void> {
 
   mkdirSync(dirname(OUT), { recursive: true });
   writeFileSync(OUT, JSON.stringify(document, null, 2), 'utf-8');
-  // eslint-disable-next-line no-console
+   
   console.log(`[openapi] wrote ${OUT}`);
 
   await app.close();
 }
 
 main().catch((err) => {
-  // eslint-disable-next-line no-console
+   
   console.error(err);
   process.exit(1);
 });

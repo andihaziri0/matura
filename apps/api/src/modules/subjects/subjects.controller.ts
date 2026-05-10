@@ -1,6 +1,6 @@
 import { Controller, Get } from '@nestjs/common';
 import { ApiBearerAuth, ApiOkResponse, ApiTags } from '@nestjs/swagger';
-import { PrismaService } from '../../common/prisma/prisma.service';
+import { type PrismaService } from '../../common/prisma/prisma.service';
 import { Public } from '../../common/auth/public.decorator';
 
 @ApiTags('subjects')

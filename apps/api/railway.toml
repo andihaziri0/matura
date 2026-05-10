@@ -1,0 +1,26 @@
+# Railway config for apps/api.
+#
+# Place this file in apps/api/, set the service's "Root Directory" in Railway
+# to apps/api, and Railway will auto-discover this file. The Dockerfile
+# itself uses the monorepo root as build context (see ADR-0010 + the
+# Dockerfile header), which Railway handles correctly when "Root Directory"
+# is the API folder and dockerfilePath points back up to it.
+
+[build]
+builder = "DOCKERFILE"
+dockerfilePath = "../../apps/api/Dockerfile"
+
+[deploy]
+startCommand = ""               # uses Dockerfile CMD
+restartPolicyType = "ON_FAILURE"
+restartPolicyMaxRetries = 3
+
+# Railway pings this on every deploy. /api/health/ready returns 200 once the
+# DB connection is open. Migration failures during boot will keep this 5xx
+# and Railway will roll back the deploy.
+healthcheckPath = "/api/health/ready"
+healthcheckTimeout = 30
+
+# Number of replicas. Stays at 1 — see ADR-0010 (boot-time migrations are only
+# safe at single-instance scale).
+numReplicas = 1

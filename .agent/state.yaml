@@ -4,10 +4,15 @@
 # Status values: not_started | in_progress | done | blocked
 # Item statuses: todo | in_progress | done | blocked
 
-milestone: mvp_scaffold
-milestone_state: done
-updated: 2026-04-25
+milestone: production_deploy
+milestone_state: in_progress
+updated: 2026-05-10
 exam_window: june_yearly
+
+previous_milestones:
+  mvp_scaffold:
+    state: done
+    completed: 2026-04-25
 
 phases:
   phase_1_agent_spine:
@@ -225,6 +230,106 @@ phases:
       web_summary_screen: done
       feature_doc: done
       update_agent_state: done
+
+production_deploy:
+  status: in_progress
+  adr: docs/architecture/decisions/0010-deploy-topology.md
+  topology:
+    web_host: vercel
+    api_host: railway
+    db_host: neon
+    db_region: eu-central-1
+    files_host: cloudflare_r2
+    files_region: weur
+    redis_host: upstash
+    redis_region: eu-central-1
+    auth: firebase
+    error_tracking: sentry
+  domains:
+    web: matura.akademiaas.com
+    api: api.matura.akademiaas.com
+  environments:
+    - production
+    - preview  # per-PR Vercel + Neon branch DB; shared Railway preview API
+  secrets_strategy: platform_native  # Vercel + Railway dashboards; no Doppler
+  phases:
+    d1_plan_and_decisions:
+      status: done
+      items:
+        adr_0010: done
+        status_md_milestone_added: done
+        state_yaml_milestone_added: done
+        owner_review: done                # implicit "please continue" 2026-05-10
+    d2_api_container_and_railway:
+      status: done
+      items:
+        api_dockerfile: done
+        api_dockerignore: done            # at repo root (build context root)
+        prisma_migrate_on_boot: done
+        railway_health_check: done        # /api/health/ready, healthcheckTimeout=30
+        local_docker_smoke: deferred      # owner has no Docker locally; exercised in D7
+        railway_config_file: done
+        prod_env_validation: done         # Neon URL + sslmode=require accepted
+        cors_allowlist: done              # comma-separated + wildcard support
+        port_env_fallback: done           # PORT -> API_PORT (Railway convention)
+    d3_web_on_vercel:
+      status: in_progress
+      items:
+        vercel_json: done                  # apps/web/vercel.json with security headers + fra1 region
+        sdk_build_alias: done              # packages/sdk/package.json now has "build" script
+        turbo_sdk_build_override: done     # @matura/sdk#build inputs/outputs in turbo.json
+        document_vercel_settings: in_d4    # documented in runbook (Phase D4)
+        next_public_env_schema: deferred   # current ?? '' fallbacks are good enough for MVP
+        next_config_image_domains: done    # **.r2.dev added
+        firebase_prod_web_config: in_d7    # verified at first deploy
+        local_build_chain_verified: done   # turbo run build --filter=@matura/web... succeeded
+    d4_provisioning_runbook_and_secrets:
+      status: in_progress  # docs done; owner-action items still pending
+      items:
+        deploy_runbook_md: done             # docs/operations/deploy.md
+        env_production_example: done
+        cloudflare_r2_bucket: owner_todo
+        firebase_prod_project: owner_todo
+        github_branch_protection: deferred_to_post_d7  # owner chose 2026-05-10
+        vercel_project: owner_todo
+        railway_project: owner_todo
+        neon_pgvector_verified: owner_todo
+        dns_subdomains: owner_todo
+        sentry_projects: in_d6              # provisioning lives in D6 now
+        rotate_leaked_neon_password: deferred_to_post_d7  # owner chose 2026-05-10 to ship first, rotate after
+        rotate_leaked_upstash_token: deferred_to_post_d7  # owner chose 2026-05-10 to ship first, rotate after
+    d5_ci_cd:
+      status: in_progress
+      items:
+        ci_workflow: done                       # .github/workflows/ci.yml
+        openapi_drift_check: done               # in ci.yml
+        concurrency_cancel_in_progress: done
+        vercel_github_integration: owner_todo   # set up during runbook Section 4
+        railway_github_integration: owner_todo  # set up during runbook Section 5
+        neon_github_integration_pr_branches: owner_todo
+        require_ci_pass_to_merge: owner_todo    # branch protection in GitHub settings
+    d6_observability:
+      status: in_progress
+      items:
+        sentry_api_sdk_wired: done           # @sentry/nestjs 10.52.0, instrument.ts, SentryModule, SentryGlobalFilter
+        sentry_web_sdk_wired: done           # @sentry/nextjs 10.52.0, withSentryConfig, instrumentation files
+        sentry_env_gated_noop: done          # all init paths skip without DSN
+        sentry_org_provisioned: owner_todo   # EU region
+        sentry_project_matura_api: owner_todo
+        sentry_project_matura_web: owner_todo
+        sentry_dsns_in_railway: owner_todo
+        sentry_dsns_in_vercel: owner_todo
+        sentry_source_maps_token: owner_todo
+        uptime_monitor: owner_todo
+        operations_runbook_post_deploy: todo  # written after first real deploy
+    d7_first_deploy:
+      status: not_started
+      items:
+        api_deploy_smoke: todo
+        web_deploy_smoke: todo
+        e2e_question_authoring_in_prod: todo
+        e2e_practice_session_in_prod: todo
+        update_docs_done: todo
 
 future_milestones:
   v1:
