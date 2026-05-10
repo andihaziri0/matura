@@ -3,7 +3,6 @@
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import { Markdown } from '@matura/ui';
 import { MatematikeChapters, MathTaxonomy, Sq } from '@matura/shared';
-import { PracticeMatematikeHeader } from './practice-matematike-header';
 
 const API_BASE = process.env.NEXT_PUBLIC_API_URL ?? 'http://localhost:4000';
 const MCQ_LETTERS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
@@ -142,7 +141,6 @@ export function PracticeBank(): React.ReactElement {
 
   return (
     <>
-      <PracticeMatematikeHeader />
       <section className="relative z-1 mx-auto max-w-3xl px-4 sm:px-6 py-6 sm:py-8">
         <p className="text-sm text-[var(--color-fg-muted)]">{Sq.sq.practice.bankIntro}</p>
 

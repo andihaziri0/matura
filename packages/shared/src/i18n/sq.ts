@@ -86,6 +86,7 @@ export const sq = {
     navNext: 'Tjetër',
     tabSession: 'Ushtro me radhë',
     tabBank: 'Shfleto pyetjet',
+    sidebarNavLabel: 'Menyja',
     bankIntro:
       'Këtu i sheh të gjitha pyetjet. Mund të zgjedhësh kapitullin, burimin ose të kërkosh me fjalë.',
     bankSearchPlaceholder: 'Kërko në pyetje…',

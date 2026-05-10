@@ -5,7 +5,6 @@ import Link from 'next/link';
 import { Markdown } from '@matura/ui';
 import { MatematikeChapters, MathTaxonomy, Sq } from '@matura/shared';
 import { useAuth } from '@/lib/auth/auth-provider';
-import { PracticeMatematikeHeader } from './practice-matematike-header';
 
 const API_BASE = process.env.NEXT_PUBLIC_API_URL ?? 'http://localhost:4000';
 
@@ -270,9 +269,7 @@ export function PracticeRunner(): React.ReactElement {
 
   if (phase.kind === 'pick') {
     return (
-      <>
-        <PracticeMatematikeHeader />
-        <section className="relative z-1 mx-auto max-w-3xl px-4 sm:px-6 py-8 sm:py-10">
+      <section className="relative z-1 mx-auto max-w-3xl px-4 sm:px-6 py-8 sm:py-10">
           <div className="rounded-xl border border-[var(--color-border)] bg-[var(--color-bg-elevated)] p-5 sm:p-6 shadow-sm">
             <label className="block text-sm font-medium text-[var(--color-fg)]" htmlFor="practice-chapter">
               {Sq.sq.practice.chooseChapter}
@@ -331,22 +328,14 @@ export function PracticeRunner(): React.ReactElement {
             </Link>
           </p>
         </section>
-      </>
     );
   }
 
   if (phase.kind === 'loading') {
-    return (
-      <>
-        <PracticeMatematikeHeader />
-        <CenteredMessage>{Sq.sq.common.loading}</CenteredMessage>
-      </>
-    );
+    return <CenteredMessage>{Sq.sq.common.loading}</CenteredMessage>;
   }
   if (phase.kind === 'error') {
     return (
-      <>
-        <PracticeMatematikeHeader />
         <CenteredMessage>
           <p className="text-[var(--color-danger)]">{phase.message}</p>
           <button
@@ -357,13 +346,10 @@ export function PracticeRunner(): React.ReactElement {
             {Sq.sq.practice.repeat}
           </button>
         </CenteredMessage>
-      </>
     );
   }
   if (phase.kind === 'empty') {
     return (
-      <>
-        <PracticeMatematikeHeader />
         <CenteredMessage>
           <p>{Sq.sq.practice.noQuestions}</p>
           <button
@@ -377,36 +363,25 @@ export function PracticeRunner(): React.ReactElement {
             {Sq.sq.common.back}
           </Link>
         </CenteredMessage>
-      </>
     );
   }
   if (phase.kind === 'summary') {
     return (
-      <>
-        <PracticeMatematikeHeader />
         <SummaryScreen
           summary={phase.summary}
           records={phase.records}
           onRestart={() => void startSession(topicPathFilter)}
         />
-      </>
     );
   }
 
   const total = phase.payload.questions.length;
   const q = phase.payload.questions[phase.index];
   if (!q) {
-    return (
-      <>
-        <PracticeMatematikeHeader />
-        <CenteredMessage>{Sq.sq.common.loading}</CenteredMessage>
-      </>
-    );
+    return <CenteredMessage>{Sq.sq.common.loading}</CenteredMessage>;
   }
 
   return (
-    <>
-      <PracticeMatematikeHeader />
       <section className="relative z-1 mx-auto max-w-3xl px-4 sm:px-6 py-8 sm:py-10">
         <SubjectPill label={Sq.sq.subjects.matematike} />
         <div className="mt-4">
@@ -468,7 +443,6 @@ export function PracticeRunner(): React.ReactElement {
           </div>
         </div>
       </section>
-    </>
   );
 }
 
