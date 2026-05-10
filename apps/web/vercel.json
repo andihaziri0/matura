@@ -1,19 +1,10 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "framework": "nextjs",
-
-  "//1": "Build runs from this directory (apps/web). The cd .. && turbo dance",
-  "//2": "is required because Turbo pipelines must execute from the repo root.",
   "buildCommand": "cd ../.. && pnpm turbo run build --filter=@matura/web...",
   "installCommand": "cd ../.. && pnpm install --frozen-lockfile",
-
   "outputDirectory": ".next",
-
-  "//3": "Pin serverless functions (auth callbacks, image optimization) to fra1.",
-  "//4": "Static + edge content is served globally regardless.",
   "regions": ["fra1"],
-
-  "//5": "Headers tightened a bit beyond Vercel defaults; nothing user-facing changes.",
   "headers": [
     {
       "source": "/(.*)",
