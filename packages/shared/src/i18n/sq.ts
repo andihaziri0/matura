@@ -120,7 +120,7 @@ export const sq = {
     bankEmpty: 'Nuk u gjet asnjë pyetje me këto filtra.',
     bankLoadedCount: 'pyetje të ngarkuara',
     bankFullScanCaption: 'Fleta e provimit (foto e plotë)',
-    bankTranscriptToggle: 'Teksti i transkriptuar (opsional)',
+    bankTranscriptCaption: 'Teksti i transkriptuar',
     close: 'Mbyll',
     galleryPrev: 'Fotoja e mëparshme',
     galleryNext: 'Fotoja tjetër',

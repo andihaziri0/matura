@@ -828,14 +828,14 @@ function QuestionPracticeBody({
       )}
       <div className="prose-matura mt-3 max-w-none">
         {hasScan ? (
-          <details className="rounded-lg border border-[var(--color-border)] bg-[var(--color-bg)] px-3 py-2">
-            <summary className="cursor-pointer text-sm font-medium text-[var(--color-fg)]">
-              {Sq.sq.practice.bankTranscriptToggle}
-            </summary>
-            <div className="mt-2">
+          <div className="rounded-lg border border-[var(--color-border)] bg-[var(--color-bg)] px-3 py-2 not-prose">
+            <p className="text-xs font-medium uppercase tracking-wide text-[var(--color-fg-muted)]">
+              {Sq.sq.practice.bankTranscriptCaption}
+            </p>
+            <div className="mt-2 prose-matura max-w-none text-[var(--color-fg)]">
               <Markdown content={q.promptMd} />
             </div>
-          </details>
+          </div>
         ) : (
           <Markdown content={q.promptMd} />
         )}

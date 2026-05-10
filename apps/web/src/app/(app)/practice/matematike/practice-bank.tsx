@@ -256,14 +256,14 @@ function QuestionScanOrPrompt({ q }: { q: BankQuestion }): React.ReactElement {
       )}
       <div className="mt-3">
         {hasScan ? (
-          <details className="rounded-lg border border-[var(--color-border)] bg-[var(--color-bg)] px-3 py-2">
-            <summary className="cursor-pointer text-sm font-medium text-[var(--color-fg)]">
-              {Sq.sq.practice.bankTranscriptToggle}
-            </summary>
+          <div className="rounded-lg border border-[var(--color-border)] bg-[var(--color-bg)] px-3 py-2">
+            <p className="text-xs font-medium uppercase tracking-wide text-[var(--color-fg-muted)]">
+              {Sq.sq.practice.bankTranscriptCaption}
+            </p>
             <div className="mt-2 text-[var(--color-fg)]">
               <Markdown content={q.promptMd} />
             </div>
-          </details>
+          </div>
         ) : (
           <Markdown content={q.promptMd} />
         )}
@@ -417,7 +417,7 @@ function Lightbox({
         className="absolute inset-0 bg-[rgba(15,15,35,0.88)]"
         onClick={onClose}
       />
-      <div className="relative z-10 flex max-h-[96vh] max-w-full items-center gap-1">
+      <div className="relative z-10 flex max-h-[96vh] w-full max-w-[min(100%,1180px)] items-center justify-center gap-2 sm:gap-3">
         <button
           type="button"
           aria-label={Sq.sq.practice.galleryPrev}
@@ -426,20 +426,23 @@ function Lightbox({
             e.stopPropagation();
             onPrev();
           }}
-          className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[var(--color-brand)] text-xl text-white disabled:opacity-40"
+          className="relative z-30 flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[var(--color-brand)] text-xl text-white shadow-lg disabled:pointer-events-none disabled:opacity-40 sm:h-14 sm:w-14"
         >
           ‹
         </button>
-        <div className="flex min-w-0 flex-col items-center">
+        <div className="relative z-10 flex min-h-0 min-w-0 max-w-[calc(100%-7rem)] flex-1 flex-col items-center sm:max-w-[calc(100%-8.5rem)]">
           <img
             src={s.src}
             alt={s.alt}
-            className="max-h-[85vh] max-w-[min(100%,1100px)] rounded-lg object-contain shadow-2xl"
+            className="max-h-[85vh] w-full max-w-full rounded-lg object-contain shadow-2xl"
           />
           <button
             type="button"
-            onClick={onClose}
-            className="absolute right-2 top-2 flex h-10 w-10 items-center justify-center rounded-full bg-white text-xl shadow-md"
+            onClick={(e) => {
+              e.stopPropagation();
+              onClose();
+            }}
+            className="absolute right-1 top-1 z-30 flex h-10 w-10 items-center justify-center rounded-full bg-white text-xl shadow-md"
           >
             ×
           </button>
@@ -452,7 +455,7 @@ function Lightbox({
             e.stopPropagation();
             onNext();
           }}
-          className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[var(--color-brand)] text-xl text-white disabled:opacity-40"
+          className="relative z-30 flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[var(--color-brand)] text-xl text-white shadow-lg disabled:pointer-events-none disabled:opacity-40 sm:h-14 sm:w-14"
         >
           ›
         </button>
