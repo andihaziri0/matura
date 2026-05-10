@@ -5,7 +5,7 @@ import {
   Logger,
   UnauthorizedException,
 } from '@nestjs/common';
-import { type Reflector } from '@nestjs/core';
+import { Reflector } from '@nestjs/core';
 import type { Request } from 'express';
 import { FirebaseAdminService } from './firebase-admin.service';
 import { PrismaService } from '../prisma/prisma.service';

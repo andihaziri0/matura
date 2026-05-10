@@ -1,5 +1,5 @@
 import { type CanActivate, type ExecutionContext, ForbiddenException, Injectable } from '@nestjs/common';
-import { type Reflector } from '@nestjs/core';
+import { Reflector } from '@nestjs/core';
 import type { Request } from 'express';
 import type { Role } from '@matura/db';
 import { ROLES_KEY } from './roles.decorator';
