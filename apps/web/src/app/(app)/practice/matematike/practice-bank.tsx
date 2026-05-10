@@ -62,7 +62,7 @@ export function PracticeBank({
     (cursor: string | null, limit: number) => {
       const p = new URLSearchParams();
       p.set('subjectSlug', 'matematike');
-      p.set('status', 'PUBLISHED');
+      p.set('includeReview', 'true');
       p.set('limit', String(limit));
       if (topicPath) p.set('topicPath', topicPath);
       if (source === 'foto') p.set('tag', 'source:foto-matura');
@@ -120,7 +120,7 @@ export function PracticeBank({
     void (async () => {
       const p = new URLSearchParams();
       p.set('subjectSlug', 'matematike');
-      p.set('status', 'PUBLISHED');
+      p.set('includeReview', 'true');
       p.set('hasImages', 'true');
       p.set('limit', '40');
       const res = await fetch(`${API_BASE}/api/questions?${p.toString()}`);

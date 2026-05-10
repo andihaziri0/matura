@@ -12,10 +12,17 @@ export class QuestionsService {
   constructor(private readonly prisma: PrismaService) {}
 
   async list(query: ListQuestionsQuery) {
+    const statusWhere: Pick<Prisma.QuestionWhereInput, 'status'> =
+      query.includeReview === true
+        ? { status: { in: ['PUBLISHED', 'REVIEW'] } }
+        : query.status
+          ? { status: query.status }
+          : {};
+
     const where: Prisma.QuestionWhereInput = {
+      ...statusWhere,
       ...(query.subjectSlug && { subjectSlug: query.subjectSlug }),
       ...(query.topicPath && { topicPath: { startsWith: query.topicPath } }),
-      ...(query.status && { status: query.status }),
       ...(query.difficulty && { difficulty: query.difficulty }),
       ...(query.tag && { tags: { has: query.tag } }),
       ...(query.hasImages === true && { images: { some: {} } }),

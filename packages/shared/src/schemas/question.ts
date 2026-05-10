@@ -139,6 +139,20 @@ export const ListQuestionsQuerySchema = z.object({
     },
     z.boolean().optional(),
   ),
+  /**
+   * When true, returns questions with status PUBLISHED or REVIEW (excludes DRAFT).
+   * Useful for the public practice bank while foto-sourced items are still in REVIEW.
+   * If set, overrides `status`.
+   */
+  includeReview: z.preprocess(
+    (val) => {
+      if (val === undefined || val === '') return undefined;
+      if (val === true || val === 'true') return true;
+      if (val === false || val === 'false') return false;
+      return undefined;
+    },
+    z.boolean().optional(),
+  ),
   cursor: z.string().cuid().optional(),
   limit: z.coerce.number().int().min(1).max(100).default(20),
 });
