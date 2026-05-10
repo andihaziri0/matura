@@ -12,6 +12,11 @@ export interface MathTopic {
 
 export const TOPICS: readonly MathTopic[] = [
   // Aritmetikë & numra realë
+  {
+    path: 'aritmetike.logjike',
+    nameSq: 'Logjikë matematike & bashkësi',
+    tracks: ['pergjithshem', 'natyror', 'shoqeror', 'gjuhesor'],
+  },
   { path: 'aritmetike.numra-real', nameSq: 'Numrat realë', tracks: ['pergjithshem', 'natyror', 'shoqeror', 'gjuhesor'] },
   { path: 'aritmetike.fuqi-rrenje', nameSq: 'Fuqitë dhe rrënjët', tracks: ['pergjithshem', 'natyror', 'shoqeror', 'gjuhesor'] },
   { path: 'aritmetike.perqindje', nameSq: 'Përqindja', tracks: ['pergjithshem', 'natyror', 'shoqeror', 'gjuhesor'] },
@@ -25,6 +30,18 @@ export const TOPICS: readonly MathTopic[] = [
   { path: 'algjeber.sisteme', nameSq: 'Sisteme ekuacionesh', tracks: ['pergjithshem', 'natyror', 'shoqeror', 'gjuhesor'] },
   { path: 'algjeber.eksponenciale', nameSq: 'Ekuacione eksponenciale', tracks: ['pergjithshem', 'natyror'] },
   { path: 'algjeber.logaritme', nameSq: 'Logaritme', tracks: ['pergjithshem', 'natyror'] },
+  {
+    path: 'algjeber.eksponenciale-logaritme',
+    nameSq: 'Eksponenciale & logaritme',
+    tracks: ['pergjithshem', 'natyror'],
+  },
+  { path: 'algjeber.polinome', nameSq: 'Polinomët', tracks: ['pergjithshem', 'natyror', 'shoqeror', 'gjuhesor'] },
+  {
+    path: 'algjeber.numra-komplekse',
+    nameSq: 'Numrat kompleksë',
+    tracks: ['pergjithshem', 'natyror', 'shoqeror', 'gjuhesor'],
+  },
+  { path: 'algjeber.matrica', nameSq: 'Matricë & determinantë', tracks: ['pergjithshem', 'natyror'] },
 
   // Funksione
   { path: 'algjeber.funksione.vlerat', nameSq: 'Vlerat e funksionit', tracks: ['pergjithshem', 'natyror', 'shoqeror', 'gjuhesor'] },
@@ -40,6 +57,13 @@ export const TOPICS: readonly MathTopic[] = [
   { path: 'trigonometri.trekendesha', nameSq: 'Zgjidhja e trekëndëshave', tracks: ['pergjithshem', 'natyror'] },
 
   // Gjeometri
+  {
+    path: 'gjeometri.plane',
+    nameSq: 'Gjeometri në plan',
+    tracks: ['pergjithshem', 'natyror', 'shoqeror', 'gjuhesor'],
+  },
+  { path: 'gjeometri.vektore', nameSq: 'Vektorë', tracks: ['pergjithshem', 'natyror'] },
+  { path: 'gjeometri.analitike', nameSq: 'Gjeometri analitike', tracks: ['pergjithshem', 'natyror'] },
   { path: 'gjeometri.plane.trekendesha', nameSq: 'Trekëndëshat', tracks: ['pergjithshem', 'natyror', 'shoqeror', 'gjuhesor'] },
   { path: 'gjeometri.plane.katerkendesha', nameSq: 'Katërkëndëshat', tracks: ['pergjithshem', 'natyror', 'shoqeror', 'gjuhesor'] },
   { path: 'gjeometri.plane.rrethi', nameSq: 'Rrethi', tracks: ['pergjithshem', 'natyror', 'shoqeror', 'gjuhesor'] },
@@ -50,10 +74,27 @@ export const TOPICS: readonly MathTopic[] = [
   // Vargje & progresione
   { path: 'vargje.aritmetike', nameSq: 'Progresione aritmetike', tracks: ['pergjithshem', 'natyror', 'shoqeror'] },
   { path: 'vargje.gjeometrike', nameSq: 'Progresione gjeometrike', tracks: ['pergjithshem', 'natyror', 'shoqeror'] },
+  {
+    path: 'vargje.aritmetike-gjeometrike',
+    nameSq: 'Vargje (aritmetike & gjeometrike)',
+    tracks: ['pergjithshem', 'natyror', 'shoqeror'],
+  },
 
   // Kombinatorikë & probabilitet
   { path: 'kombinatorike.permutacione', nameSq: 'Permutacione, kombinime', tracks: ['pergjithshem', 'natyror', 'shoqeror'] },
+  {
+    path: 'kombinatorike.kombinime',
+    nameSq: 'Kombinatorikë',
+    tracks: ['pergjithshem', 'natyror', 'shoqeror'],
+  },
   { path: 'kombinatorike.probabilitet', nameSq: 'Probabilitet', tracks: ['pergjithshem', 'natyror', 'shoqeror'] },
+
+  // Statistikë
+  {
+    path: 'statistike.deskriptive',
+    nameSq: 'Statistikë përshkruese',
+    tracks: ['pergjithshem', 'natyror', 'shoqeror'],
+  },
 
   // Analizë (vetëm natyror)
   { path: 'analize.derivate', nameSq: 'Derivatet', tracks: ['natyror'] },

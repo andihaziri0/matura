@@ -75,6 +75,13 @@ export const sq = {
     timeSpent: 'Koha e shpenzuar',
     repeat: 'Përsërit',
     noQuestions: 'Nuk ka pyetje të disponueshme.',
+    chooseChapter: 'Kapitulli',
+    allChapters: 'Të gjitha kapitujt',
+    chapterHint:
+      'Zgjidh një kapitull për të ushtruar vetëm atë pjesë, ose të gjitha për përzierje nga e gjithë banka.',
+    matematikeHeaderTitle: 'Matematikë — ushtrime',
+    matematikeHeaderSubtitle: 'Pyetje sipas kapitujve të programit të Maturës',
+    pickChapterAgain: 'Zgjidh kapitull tjetër',
   },
   subjects: {
     matematike: 'Matematikë',

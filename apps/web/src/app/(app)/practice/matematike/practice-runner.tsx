@@ -1,12 +1,22 @@
 'use client';
 
-import React, { useCallback, useEffect, useMemo, useState } from 'react';
+import React, { useCallback, useMemo, useState } from 'react';
 import Link from 'next/link';
 import { Markdown } from '@matura/ui';
-import { Sq } from '@matura/shared';
+import { MatematikeChapters, MathTaxonomy, Sq } from '@matura/shared';
 import { useAuth } from '@/lib/auth/auth-provider';
 
 const API_BASE = process.env.NEXT_PUBLIC_API_URL ?? 'http://localhost:4000';
+
+const MCQ_LETTERS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+
+function topicDisplay(path: string): string {
+  return MathTaxonomy.topicLabel(path) ?? path;
+}
+
+function mcqLetter(sortIndex: number): string {
+  return MCQ_LETTERS[sortIndex] ?? String(sortIndex + 1);
+}
 
 type QuestionKind = 'MCQ' | 'SHORT' | 'LONG';
 
@@ -56,6 +66,7 @@ interface AttemptRecord {
 }
 
 type Phase =
+  | { kind: 'pick' }
   | { kind: 'loading' }
   | { kind: 'error'; message: string }
   | { kind: 'empty' }
@@ -65,44 +76,48 @@ type Phase =
 
 export function PracticeRunner(): React.ReactElement {
   const { getIdToken } = useAuth();
-  const [phase, setPhase] = useState<Phase>({ kind: 'loading' });
+  const [phase, setPhase] = useState<Phase>({ kind: 'pick' });
+  const [topicPathFilter, setTopicPathFilter] = useState<string | undefined>(undefined);
   const [records, setRecords] = useState<AttemptRecord[]>([]);
   const [questionStartedAt, setQuestionStartedAt] = useState<number>(() => Date.now());
   const [pendingAnswer, setPendingAnswer] = useState<string>('');
 
-  const start = useCallback(async () => {
-    setPhase({ kind: 'loading' });
-    setRecords([]);
-    setPendingAnswer('');
-    try {
-      const token = await getIdToken();
-      const res = await fetch(`${API_BASE}/api/sessions/practice`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          ...(token ? { Authorization: `Bearer ${token}` } : {}),
-        },
-        body: JSON.stringify({ subjectSlug: 'matematike', count: 10 }),
-      });
-      if (!res.ok) {
-        setPhase({ kind: 'error', message: Sq.sq.errors.unknown });
-        return;
+  const startSession = useCallback(
+    async (topicPath: string | undefined) => {
+      setPhase({ kind: 'loading' });
+      setRecords([]);
+      setPendingAnswer('');
+      try {
+        const token = await getIdToken();
+        const res = await fetch(`${API_BASE}/api/sessions/practice`, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            ...(token ? { Authorization: `Bearer ${token}` } : {}),
+          },
+          body: JSON.stringify({
+            subjectSlug: 'matematike',
+            count: 10,
+            ...(topicPath ? { topicPath } : {}),
+          }),
+        });
+        if (!res.ok) {
+          setPhase({ kind: 'error', message: Sq.sq.errors.unknown });
+          return;
+        }
+        const payload = (await res.json()) as PracticePayload;
+        if (payload.questions.length === 0) {
+          setPhase({ kind: 'empty' });
+          return;
+        }
+        setPhase({ kind: 'answering', payload, index: 0 });
+        setQuestionStartedAt(Date.now());
+      } catch {
+        setPhase({ kind: 'error', message: Sq.sq.errors.network });
       }
-      const payload = (await res.json()) as PracticePayload;
-      if (payload.questions.length === 0) {
-        setPhase({ kind: 'empty' });
-        return;
-      }
-      setPhase({ kind: 'answering', payload, index: 0 });
-      setQuestionStartedAt(Date.now());
-    } catch {
-      setPhase({ kind: 'error', message: Sq.sq.errors.network });
-    }
-  }, [getIdToken]);
-
-  useEffect(() => {
-    void start();
-  }, [start]);
+    },
+    [getIdToken],
+  );
 
   const submit = useCallback(async () => {
     if (phase.kind !== 'answering') return;
@@ -168,77 +183,181 @@ export function PracticeRunner(): React.ReactElement {
     }
   }, [phase, records, getIdToken]);
 
+  if (phase.kind === 'pick') {
+    return (
+      <>
+        <PracticeMatematikeHeader />
+        <section className="relative z-1 mx-auto max-w-3xl px-4 sm:px-6 py-8 sm:py-10">
+          <div className="rounded-xl border border-[var(--color-border)] bg-[var(--color-bg-elevated)] p-5 sm:p-6 shadow-sm">
+            <label className="block text-sm font-medium text-[var(--color-fg)]" htmlFor="practice-chapter">
+              {Sq.sq.practice.chooseChapter}
+            </label>
+            <p className="mt-1 text-sm text-[var(--color-fg-muted)]">{Sq.sq.practice.chapterHint}</p>
+            <select
+              id="practice-chapter"
+              className="mt-3 w-full max-w-xl rounded-lg border border-[var(--color-border)] bg-[var(--color-bg)] px-3 py-2.5 text-sm text-[var(--color-fg)]"
+              value={topicPathFilter ?? ''}
+              onChange={(e) =>
+                setTopicPathFilter(e.target.value === '' ? undefined : e.target.value)
+              }
+            >
+              <option value="">{Sq.sq.practice.allChapters}</option>
+              {MatematikeChapters.MATEMATIKE_PRACTICE_CHAPTERS.map((c) => (
+                <option key={c.id} value={c.topicPath}>
+                  {c.nameSq}
+                </option>
+              ))}
+            </select>
+            <button
+              type="button"
+              className="mt-6 w-full max-w-xl rounded-lg bg-[var(--color-brand)] px-4 py-3 text-sm font-semibold text-[var(--color-brand-fg)] shadow-md transition hover:bg-[var(--color-brand-strong)] sm:w-auto"
+              onClick={() => void startSession(topicPathFilter)}
+            >
+              {Sq.sq.practice.start}
+            </button>
+          </div>
+          <p className="mt-6 text-center">
+            <Link href="/" className="text-sm text-[var(--color-brand)] underline">
+              {Sq.sq.common.back}
+            </Link>
+          </p>
+        </section>
+      </>
+    );
+  }
+
   if (phase.kind === 'loading') {
-    return <CenteredMessage>{Sq.sq.common.loading}</CenteredMessage>;
+    return (
+      <>
+        <PracticeMatematikeHeader />
+        <CenteredMessage>{Sq.sq.common.loading}</CenteredMessage>
+      </>
+    );
   }
   if (phase.kind === 'error') {
     return (
-      <CenteredMessage>
-        <p className="text-[var(--color-danger)]">{phase.message}</p>
-        <button type="button" onClick={() => void start()} className="mt-4 underline">
-          {Sq.sq.practice.repeat}
-        </button>
-      </CenteredMessage>
+      <>
+        <PracticeMatematikeHeader />
+        <CenteredMessage>
+          <p className="text-[var(--color-danger)]">{phase.message}</p>
+          <button
+            type="button"
+            onClick={() => void startSession(topicPathFilter)}
+            className="mt-4 underline"
+          >
+            {Sq.sq.practice.repeat}
+          </button>
+        </CenteredMessage>
+      </>
     );
   }
   if (phase.kind === 'empty') {
     return (
-      <CenteredMessage>
-        <p>{Sq.sq.practice.noQuestions}</p>
-        <Link href="/" className="mt-4 underline">
-          {Sq.sq.common.back}
-        </Link>
-      </CenteredMessage>
+      <>
+        <PracticeMatematikeHeader />
+        <CenteredMessage>
+          <p>{Sq.sq.practice.noQuestions}</p>
+          <button
+            type="button"
+            onClick={() => setPhase({ kind: 'pick' })}
+            className="mt-4 block w-full text-[var(--color-brand)] underline"
+          >
+            {Sq.sq.practice.pickChapterAgain}
+          </button>
+          <Link href="/" className="mt-2 inline-block underline">
+            {Sq.sq.common.back}
+          </Link>
+        </CenteredMessage>
+      </>
     );
   }
   if (phase.kind === 'summary') {
-    return <SummaryScreen summary={phase.summary} records={phase.records} onRestart={start} />;
+    return (
+      <>
+        <PracticeMatematikeHeader />
+        <SummaryScreen
+          summary={phase.summary}
+          records={phase.records}
+          onRestart={() => void startSession(topicPathFilter)}
+        />
+      </>
+    );
   }
 
   const total = phase.payload.questions.length;
   const q = phase.payload.questions[phase.index];
   if (!q) {
-    return <CenteredMessage>{Sq.sq.common.loading}</CenteredMessage>;
+    return (
+      <>
+        <PracticeMatematikeHeader />
+        <CenteredMessage>{Sq.sq.common.loading}</CenteredMessage>
+      </>
+    );
   }
 
   return (
-    <section className="mx-auto max-w-3xl px-4 sm:px-6 py-8 sm:py-10">
-      <SubjectPill label={Sq.sq.subjects.matematike} />
-      <div className="mt-4">
-        <ProgressBar current={phase.index + (phase.kind === 'feedback' ? 1 : 0)} total={total} />
-      </div>
-
-      <div className="mt-6 rounded-xl border border-[var(--color-border)] bg-[var(--color-bg-elevated)] p-5 sm:p-6 shadow-sm">
-        <div className="text-xs uppercase tracking-wide text-[var(--color-fg-muted)]">
-          {q.topicPath} • {Sq.sq.question.difficulty}: {q.difficulty} • {Sq.sq.kind[q.kind]}
+    <>
+      <PracticeMatematikeHeader />
+      <section className="relative z-1 mx-auto max-w-3xl px-4 sm:px-6 py-8 sm:py-10">
+        <SubjectPill label={Sq.sq.subjects.matematike} />
+        <div className="mt-4">
+          <ProgressBar current={phase.index + (phase.kind === 'feedback' ? 1 : 0)} total={total} />
         </div>
 
-        <div className="prose-matura mt-3 max-w-none">
-          <Markdown content={q.promptMd} />
-        </div>
-
-        {q.images.length > 0 && (
-          <div className="mt-4 grid gap-3 md:grid-cols-2">
-            {q.images.map((img) => (
-              <ImageBlock key={img.id} r2Key={img.r2Key} alt={img.alt} />
-            ))}
+        <div className="mt-6 rounded-xl border border-[var(--color-border)] bg-[var(--color-bg-elevated)] p-5 sm:p-6 shadow-sm">
+          <div className="text-xs uppercase tracking-wide text-[var(--color-fg-muted)]">
+            {topicDisplay(q.topicPath)} • {Sq.sq.question.difficulty}: {q.difficulty} •{' '}
+            {Sq.sq.kind[q.kind]}
           </div>
-        )}
 
-        <div className="mt-6">
-          {phase.kind === 'answering' ? (
-            <Answering
-              q={q}
-              value={pendingAnswer}
-              onChange={setPendingAnswer}
-              onSubmit={() => void submit()}
-            />
-          ) : (
-            <Feedback record={phase.record} q={q} onNext={() => void next()} isLast={phase.index === total - 1} />
+          <div className="prose-matura mt-3 max-w-none">
+            <Markdown content={q.promptMd} />
+          </div>
+
+          {q.images.length > 0 && (
+            <div className="mt-4 grid gap-3 md:grid-cols-2">
+              {q.images.map((img) => (
+                <ImageBlock key={img.id} r2Key={img.r2Key} alt={img.alt} />
+              ))}
+            </div>
           )}
+
+          <div className="mt-6">
+            {phase.kind === 'answering' ? (
+              <Answering
+                q={q}
+                value={pendingAnswer}
+                onChange={setPendingAnswer}
+                onSubmit={() => void submit()}
+              />
+            ) : (
+              <Feedback
+                record={phase.record}
+                q={q}
+                onNext={() => void next()}
+                isLast={phase.index === total - 1}
+              />
+            )}
+          </div>
+        </div>
+      </section>
+    </>
+  );
+}
+
+function PracticeMatematikeHeader(): React.ReactElement {
+  return (
+    <header className="sticky top-0 z-20 shadow-[0_2px_14px_rgba(46,46,140,0.2)]">
+      <div className="bg-gradient-to-br from-[#2E2E8C] via-[#1e1f6e] to-[#4545b8] px-4 py-5 sm:px-8 sm:py-6 text-white">
+        <div className="mx-auto max-w-3xl">
+          <h1 className="text-lg font-bold tracking-wide sm:text-xl">
+            {Sq.sq.practice.matematikeHeaderTitle}
+          </h1>
+          <p className="mt-1 max-w-2xl text-sm text-white/90">{Sq.sq.practice.matematikeHeaderSubtitle}</p>
+          <p className="mt-0.5 text-xs text-white/80">{Sq.sq.app.brandTagline}</p>
         </div>
       </div>
-    </section>
+    </header>
   );
 }
 
@@ -283,26 +402,37 @@ function Answering({
   onSubmit: () => void;
 }): React.ReactElement {
   if (q.kind === 'MCQ') {
+    const sorted = [...q.options].sort((a, b) => a.order - b.order);
     return (
       <div className="flex flex-col gap-2">
-        {q.options.map((o) => (
+        {sorted.map((o, idx) => (
           <label
             key={o.id}
-            className={`flex items-start gap-3 rounded-lg border-2 px-4 py-3 cursor-pointer transition ${
+            className={`flex cursor-pointer items-start gap-3 rounded-lg border-2 px-4 py-3 transition ${
               value === o.id
                 ? 'border-[var(--color-brand)] bg-[var(--color-brand-soft)]'
                 : 'border-[var(--color-border)] hover:border-[var(--color-brand)]/40 hover:bg-[var(--color-bg)]'
             }`}
           >
+            <span
+              className={`mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-full text-xs font-semibold ${
+                value === o.id
+                  ? 'bg-[var(--color-brand)] text-[var(--color-brand-fg)]'
+                  : 'bg-[var(--color-brand-soft)] text-[var(--color-brand)]'
+              }`}
+              aria-hidden
+            >
+              {mcqLetter(idx)}
+            </span>
             <input
               type="radio"
               name={`mcq-${q.id}`}
               value={o.id}
               checked={value === o.id}
               onChange={() => onChange(o.id)}
-              className="mt-1"
+              className="sr-only"
             />
-            <div className="prose-matura max-w-none flex-1">
+            <div className="prose-matura min-w-0 flex-1">
               <Markdown content={o.label} />
             </div>
           </label>
@@ -438,8 +568,8 @@ function SummaryScreen({
   const pct = summary.total === 0 ? 0 : Math.round((summary.correct / summary.total) * 100);
 
   return (
-    <section className="mx-auto max-w-3xl px-6 py-10">
-      <h1 className="text-3xl font-semibold">{Sq.sq.practice.summaryTitle}</h1>
+    <section className="relative z-1 mx-auto max-w-3xl px-4 sm:px-6 py-10">
+      <h1 className="text-2xl font-semibold sm:text-3xl">{Sq.sq.practice.summaryTitle}</h1>
 
       <div className="mt-6 grid gap-4 md:grid-cols-3">
         <Stat label={Sq.sq.practice.score} value={`${summary.correct} / ${summary.total}`} hint={`${pct}%`} />
@@ -458,9 +588,9 @@ function SummaryScreen({
           </h2>
           <ul className="mt-2 divide-y divide-[var(--color-border)] rounded-lg border border-[var(--color-border)]">
             {summary.perTopic.map((t) => (
-              <li key={t.topicPath} className="flex items-center justify-between p-3 text-sm">
-                <span className="font-mono text-xs">{t.topicPath}</span>
-                <span>
+              <li key={t.topicPath} className="flex items-center justify-between gap-3 p-3 text-sm">
+                <span className="min-w-0 text-[var(--color-fg)]">{topicDisplay(t.topicPath)}</span>
+                <span className="shrink-0">
                   {t.correct} / {t.total}
                 </span>
               </li>
@@ -479,9 +609,9 @@ function SummaryScreen({
               key={r.question.id}
               className="rounded-lg border border-[var(--color-border)] p-4"
             >
-              <div className="flex items-center justify-between text-sm">
-                <span className="font-mono text-xs text-[var(--color-fg-muted)]">
-                  #{i + 1} • {r.question.topicPath}
+              <div className="flex flex-wrap items-center justify-between gap-2 text-sm">
+                <span className="text-[var(--color-fg-muted)]">
+                  #{i + 1} • {topicDisplay(r.question.topicPath)}
                 </span>
                 <span
                   className={
@@ -501,7 +631,7 @@ function SummaryScreen({
         </ol>
       </div>
 
-      <div className="mt-8 flex gap-3">
+      <div className="mt-8 flex flex-wrap gap-3">
         <button
           type="button"
           onClick={() => void onRestart()}
@@ -547,5 +677,9 @@ function ImageBlock({ r2Key, alt }: { r2Key: string; alt: string }): React.React
 }
 
 function CenteredMessage({ children }: { children: React.ReactNode }): React.ReactElement {
-  return <section className="mx-auto max-w-2xl px-6 py-16 text-center">{children}</section>;
+  return (
+    <section className="relative z-1 mx-auto max-w-2xl px-4 py-16 text-center sm:px-6">
+      {children}
+    </section>
+  );
 }

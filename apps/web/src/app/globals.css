@@ -13,9 +13,9 @@
   --color-fg-muted: #535774;
   --color-border: #e2e3ec;
 
-  /* AkademiaAS brand (logo navy) */
-  --color-brand: #1f2585;
-  --color-brand-strong: #171b6d;
+  /* AkademiaAS brand — legacy bank navy */
+  --color-brand: #2e2e8c;
+  --color-brand-strong: #1e1f6e;
   --color-brand-soft: #e7e8f7;
   --color-brand-fg: #ffffff;
 
@@ -42,8 +42,8 @@
     --color-fg-muted: #9aa0c2;
     --color-border: #262a45;
 
-    --color-brand: #5a63d6;
-    --color-brand-strong: #7780ec;
+    --color-brand: #6b6fd4;
+    --color-brand-strong: #5458b8;
     --color-brand-soft: #1c2148;
     --color-brand-fg: #0a0c1f;
 
