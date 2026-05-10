@@ -1,7 +1,7 @@
 import { Injectable, Logger, type OnModuleInit } from '@nestjs/common';
 import { readFileSync } from 'node:fs';
 import * as admin from 'firebase-admin';
-import { type AppConfigService } from '../../config/app-config.service';
+import { AppConfigService } from '../../config/app-config.service';
 
 @Injectable()
 export class FirebaseAdminService implements OnModuleInit {

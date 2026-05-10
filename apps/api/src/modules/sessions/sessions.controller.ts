@@ -7,7 +7,7 @@ import {
 } from '@matura/shared';
 import { CurrentUser } from '../../common/auth/current-user.decorator';
 import type { User } from '@matura/db';
-import { type SessionsService } from './sessions.service';
+import { SessionsService } from './sessions.service';
 
 @ApiTags('sessions')
 @ApiBearerAuth('firebase')

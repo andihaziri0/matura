@@ -2,7 +2,7 @@ import { Body, Controller, Get, Patch } from '@nestjs/common';
 import { ApiBearerAuth, ApiOkResponse, ApiTags } from '@nestjs/swagger';
 import { ZodValidationPipe } from 'nestjs-zod';
 import { CurrentUser } from '../../common/auth/current-user.decorator';
-import { type PrismaService } from '../../common/prisma/prisma.service';
+import { PrismaService } from '../../common/prisma/prisma.service';
 import type { User } from '@matura/db';
 import { UpdateProfileInputSchema, type UpdateProfileInput } from '@matura/shared';
 

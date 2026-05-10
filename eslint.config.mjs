@@ -35,4 +35,20 @@ export default tseslint.config(
       ],
     },
   },
+  // NestJS uses `reflect-metadata` to discover constructor parameter types at
+  // runtime for dependency injection. If a class is imported with `import type`
+  // (or `import { type Foo }`), it gets erased at compile time and DI breaks
+  // with "Nest can't resolve dependencies of X" at boot. The
+  // `consistent-type-imports` rule autofixes class imports into type-only
+  // imports because it can't see the decorator-driven runtime usage, so we
+  // disable it for the API.
+  //
+  // Same applies anywhere else we use class-based DI with reflect-metadata
+  // (e.g. future TypeORM/typedi/inversify code).
+  {
+    files: ['apps/api/**/*.ts'],
+    rules: {
+      '@typescript-eslint/consistent-type-imports': 'off',
+    },
+  },
 );
