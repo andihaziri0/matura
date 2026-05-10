@@ -2,7 +2,8 @@
 
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import { Markdown } from '@matura/ui';
-import { MatematikeChapters, MathTaxonomy, Sq } from '@matura/shared';
+import { MathTaxonomy, Sq } from '@matura/shared';
+import type { PracticeBankSourceFilter } from './practice-bank-sidebar-filters';
 
 const API_BASE = process.env.NEXT_PUBLIC_API_URL ?? 'http://localhost:4000';
 const MCQ_LETTERS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
@@ -35,23 +36,25 @@ interface BankQuestion {
   images: Array<{ id: string; r2Key: string; alt: string; order: number }>;
 }
 
-export function PracticeBank(): React.ReactElement {
-  const [topicPath, setTopicPath] = useState<string | undefined>(undefined);
-  const [source, setSource] = useState<'all' | 'foto' | 'gjeneruar'>('all');
-  const [searchDraft, setSearchDraft] = useState('');
-  const [search, setSearch] = useState('');
-  const [examMode, setExamMode] = useState(false);
+export interface PracticeBankProps {
+  topicPath: string | undefined;
+  source: PracticeBankSourceFilter;
+  search: string;
+  examMode: boolean;
+}
+
+export function PracticeBank({
+  topicPath,
+  source,
+  search,
+  examMode,
+}: PracticeBankProps): React.ReactElement {
   const [items, setItems] = useState<BankQuestion[]>([]);
   const [nextCursor, setNextCursor] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
   const [gallery, setGallery] = useState<BankQuestion[]>([]);
   const [showScrollTop, setShowScrollTop] = useState(false);
   const [lbIndex, setLbIndex] = useState<number | null>(null);
-
-  useEffect(() => {
-    const t = window.setTimeout(() => setSearch(searchDraft.trim()), 320);
-    return () => window.clearTimeout(t);
-  }, [searchDraft]);
 
   const buildListParams = useCallback(
     (cursor: string | null, limit: number) => {
@@ -143,56 +146,6 @@ export function PracticeBank(): React.ReactElement {
     <>
       <section className="relative z-1 mx-auto w-full max-w-3xl px-3 sm:px-6 py-6 sm:py-8">
         <p className="text-sm text-[var(--color-fg-muted)]">{Sq.sq.practice.bankIntro}</p>
-
-        <div className="mt-4 flex w-full min-w-0 flex-col gap-3 rounded-xl border border-[var(--color-border)] bg-[var(--color-bg-elevated)] p-4 shadow-sm sm:flex-row sm:flex-wrap sm:items-end">
-          <label className="block w-full min-w-0 flex-1 text-sm sm:min-w-[200px]">
-            <span className="font-medium text-[var(--color-fg)]">{Sq.sq.practice.chooseChapter}</span>
-            <select
-              className="mt-1 box-border w-full min-h-[48px] min-w-0 appearance-auto rounded-lg border border-[var(--color-border)] bg-[var(--color-bg)] px-3 py-3 pr-9 text-base sm:min-h-0 sm:py-2 sm:text-sm"
-              value={topicPath ?? ''}
-              onChange={(e) => setTopicPath(e.target.value === '' ? undefined : e.target.value)}
-            >
-              <option value="">{Sq.sq.practice.allChapters}</option>
-              {MatematikeChapters.MATEMATIKE_PRACTICE_CHAPTERS.map((c) => (
-                <option key={c.id} value={c.topicPath}>
-                  {c.nameSq}
-                </option>
-              ))}
-            </select>
-          </label>
-          <label className="block w-full min-w-0 flex-1 text-sm sm:min-w-[200px]">
-            <span className="font-medium text-[var(--color-fg)]">{Sq.sq.question.source}</span>
-            <select
-              className="mt-1 box-border w-full min-h-[48px] min-w-0 appearance-auto rounded-lg border border-[var(--color-border)] bg-[var(--color-bg)] px-3 py-3 pr-9 text-base sm:min-h-0 sm:py-2 sm:text-sm"
-              value={source}
-              onChange={(e) => setSource(e.target.value as 'all' | 'foto' | 'gjeneruar')}
-            >
-              <option value="all">{Sq.sq.practice.sourceAll}</option>
-              <option value="foto">{Sq.sq.practice.sourceFoto}</option>
-              <option value="gjeneruar">{Sq.sq.practice.sourceGjeneruar}</option>
-            </select>
-          </label>
-          <label className="block w-full min-w-0 flex-[1_1_100%] text-sm sm:min-w-[200px] sm:flex-[2]">
-            <span className="font-medium text-[var(--color-fg)]">{Sq.sq.common.search}</span>
-            <input
-              type="search"
-              value={searchDraft}
-              onChange={(e) => setSearchDraft(e.target.value)}
-              placeholder={Sq.sq.practice.bankSearchPlaceholder}
-              className="mt-1 box-border w-full min-h-[48px] min-w-0 rounded-lg border border-[var(--color-border)] bg-[var(--color-bg)] px-3 py-3 text-base sm:min-h-0 sm:py-2 sm:text-sm"
-            />
-          </label>
-          <label className="flex min-h-[48px] w-full cursor-pointer items-center gap-3 text-sm sm:min-h-0 sm:w-auto sm:min-w-[200px]">
-            <input
-              type="checkbox"
-              checked={examMode}
-              onChange={(e) => setExamMode(e.target.checked)}
-              className="h-5 w-5 shrink-0 rounded border-[var(--color-border)]"
-            />
-            <span className="text-base leading-snug sm:text-sm">{Sq.sq.practice.examMode}</span>
-          </label>
-        </div>
-        <p className="mt-2 text-xs text-[var(--color-fg-muted)]">{Sq.sq.practice.examModeHintBank}</p>
 
         <p className="mt-4 text-sm text-[var(--color-fg-muted)]">
           {items.length} {Sq.sq.practice.bankLoadedCount}

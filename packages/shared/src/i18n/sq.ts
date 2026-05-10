@@ -87,8 +87,9 @@ export const sq = {
     tabSession: 'Ushtro me radhë',
     tabBank: 'Shfleto pyetjet',
     sidebarNavLabel: 'Menyja',
+    bankSidebarFiltersTitle: 'Kërko & filtro',
     bankIntro:
-      'Këtu i sheh të gjitha pyetjet. Mund të zgjedhësh kapitullin, burimin ose të kërkosh me fjalë.',
+      'Lista e pyetjeve më poshtë — e filtruar sipas zgjedhjeve në panelin majtas (sipër në telefon).',
     bankSearchPlaceholder: 'Kërko në pyetje…',
     sourceAll: 'Të gjitha',
     sourceFoto: 'Nga testet (me foto)',
