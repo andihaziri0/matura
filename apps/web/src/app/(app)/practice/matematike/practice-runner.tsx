@@ -43,7 +43,7 @@ interface PracticeQuestion {
   hints: string[];
   estimatedSec: number;
   options: PracticeOption[];
-  images: Array<{ id: string; r2Key: string; alt: string }>;
+  images: Array<{ id: string; r2Key: string; alt: string; role?: 'INLINE' | 'FIGURE' | 'FULL_QUESTION' }>;
 }
 
 interface PracticePayload {
@@ -115,7 +115,7 @@ export function PracticeRunner(): React.ReactElement {
             subjectSlug: 'matematike',
             count: sessionQuestionCount,
             ...(topicPath ? { topicPath } : {}),
-            ...(sessionOnlyWithImages ? { hasImages: true } : {}),
+            ...(sessionOnlyWithImages ? { hasImages: true, includeReview: true } : {}),
           }),
         });
         if (!res.ok) {
@@ -420,17 +420,7 @@ export function PracticeRunner(): React.ReactElement {
             {Sq.sq.kind[q.kind]}
           </div>
 
-          <div className="prose-matura mt-3 max-w-none">
-            <Markdown content={q.promptMd} />
-          </div>
-
-          {q.images.length > 0 && (
-            <div className="mt-4 grid gap-3 md:grid-cols-2">
-              {q.images.map((img) => (
-                <ImageBlock key={img.id} r2Key={img.r2Key} alt={img.alt} />
-              ))}
-            </div>
-          )}
+          <QuestionPracticeBody q={q} />
 
           <div className="mt-6">
             {phase.kind === 'answering' ? (
@@ -751,9 +741,7 @@ function SummaryScreen({
                   {r.result.isCorrect ? Sq.sq.practice.correct : Sq.sq.practice.incorrect}
                 </span>
               </div>
-              <div className="prose-matura mt-2 max-w-none">
-                <Markdown content={r.question.promptMd} />
-              </div>
+              <QuestionPracticeBody q={r.question} compactSummary />
             </li>
           ))}
         </ol>
@@ -796,12 +784,90 @@ function Stat({
   );
 }
 
-function ImageBlock({ r2Key, alt }: { r2Key: string; alt: string }): React.ReactElement {
+function QuestionPracticeBody({
+  q,
+  compactSummary = false,
+}: {
+  q: PracticeQuestion;
+  compactSummary?: boolean;
+}): React.ReactElement {
+  const full = q.images.filter((i) => i.role === 'FULL_QUESTION');
+  const other = q.images.filter((i) => i.role !== 'FULL_QUESTION');
+  const hasScan = full.length > 0;
+
+  if (compactSummary) {
+    return (
+      <div className="mt-2">
+        {hasScan ? (
+          <div className="flex gap-2 overflow-x-auto pb-1">
+            {full.map((img) => (
+              <ImageBlock key={img.id} r2Key={img.r2Key} alt={img.alt} variant="thumb" />
+            ))}
+          </div>
+        ) : (
+          <div className="prose-matura max-w-none text-sm line-clamp-3">
+            <Markdown content={q.promptMd} />
+          </div>
+        )}
+      </div>
+    );
+  }
+
+  return (
+    <>
+      {hasScan && (
+        <div className="mt-3 space-y-3">
+          <p className="text-xs font-medium uppercase tracking-wide text-[var(--color-fg-muted)]">
+            {Sq.sq.practice.bankFullScanCaption}
+          </p>
+          {full.map((img) => (
+            <ImageBlock key={img.id} r2Key={img.r2Key} alt={img.alt} variant="hero" />
+          ))}
+        </div>
+      )}
+      <div className="prose-matura mt-3 max-w-none">
+        {hasScan ? (
+          <details className="rounded-lg border border-[var(--color-border)] bg-[var(--color-bg)] px-3 py-2">
+            <summary className="cursor-pointer text-sm font-medium text-[var(--color-fg)]">
+              {Sq.sq.practice.bankTranscriptToggle}
+            </summary>
+            <div className="mt-2">
+              <Markdown content={q.promptMd} />
+            </div>
+          </details>
+        ) : (
+          <Markdown content={q.promptMd} />
+        )}
+      </div>
+      {other.length > 0 && (
+        <div className="mt-4 grid gap-3 md:grid-cols-2">
+          {other.map((img) => (
+            <ImageBlock key={img.id} r2Key={img.r2Key} alt={img.alt} variant="inline" />
+          ))}
+        </div>
+      )}
+    </>
+  );
+}
+
+function ImageBlock({
+  r2Key,
+  alt,
+  variant = 'inline',
+}: {
+  r2Key: string;
+  alt: string;
+  variant?: 'hero' | 'inline' | 'thumb';
+}): React.ReactElement {
   const publicBase = process.env.NEXT_PUBLIC_R2_PUBLIC_URL ?? 'http://localhost:9000/matura-content';
   const src = useMemo(() => `${publicBase.replace(/\/$/, '')}/${r2Key}`, [publicBase, r2Key]);
-  return (
-    <img src={src} alt={alt} className="w-full rounded border border-[var(--color-border)]" />
-  );
+  const cls =
+    variant === 'hero'
+      ? 'w-full rounded-lg border border-[var(--color-border)] bg-black/[0.04] object-contain max-h-[min(85vh,1400px)]'
+      : variant === 'thumb'
+        ? 'h-28 w-40 shrink-0 rounded border border-[var(--color-border)] object-cover object-top'
+        : 'w-full rounded border border-[var(--color-border)]';
+  return <img src={src} alt={alt} className={cls} />;
 }
 
 function CenteredMessage({ children }: { children: React.ReactNode }): React.ReactElement {

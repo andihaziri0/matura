@@ -22,12 +22,17 @@ export class SessionsService {
    */
   async startPractice(user: User, input: StartPracticeSessionInput) {
     const userId = user.id;
+    const statusWhere =
+      input.includeReview === true
+        ? { status: { in: ['PUBLISHED', 'REVIEW'] as const } }
+        : { status: 'PUBLISHED' as const };
+
     const where = {
       subjectSlug: input.subjectSlug,
-      status: 'PUBLISHED' as const,
+      ...statusWhere,
       ...(input.topicPath && { topicPath: { startsWith: input.topicPath } }),
       ...(input.difficulty != null && { difficulty: input.difficulty }),
-      ...(input.hasImages === true && { images: { some: {} } }),
+      ...(input.hasImages === true && { images: { some: { role: 'FULL_QUESTION' } } }),
       ...(input.tag && { tags: { has: input.tag } }),
     };
 

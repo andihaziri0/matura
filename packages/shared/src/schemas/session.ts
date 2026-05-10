@@ -17,8 +17,12 @@ export const StartPracticeSessionInputSchema = z.object({
   count: z.number().int().min(1).max(50).default(10),
   topicPath: z.string().min(1).optional(),
   difficulty: z.number().int().min(1).max(5).optional(),
-  /** When true, only questions that have at least one QuestionImage row. */
+  /** When true, only questions with a FULL_QUESTION scan (whole page photo), not only diagrams. */
   hasImages: z.boolean().optional(),
+  /**
+   * When true, allow PUBLISHED and REVIEW (excludes DRAFT). Use with hasImages so foto-seeded rows still in REVIEW can run.
+   */
+  includeReview: z.boolean().optional(),
   /** Restrict to questions whose `tags` array contains this exact string. */
   tag: z.string().min(1).optional(),
 });

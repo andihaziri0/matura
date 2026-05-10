@@ -26,6 +26,9 @@ export class QuestionsService {
       ...(query.difficulty && { difficulty: query.difficulty }),
       ...(query.tag && { tags: { has: query.tag } }),
       ...(query.hasImages === true && { images: { some: {} } }),
+      ...(query.fullQuestionImage === true && {
+        images: { some: { role: 'FULL_QUESTION' } },
+      }),
       ...(query.search && {
         OR: [
           { promptMd: { contains: query.search, mode: 'insensitive' } },

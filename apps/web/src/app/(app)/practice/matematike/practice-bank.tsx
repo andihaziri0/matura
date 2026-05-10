@@ -24,6 +24,8 @@ interface BankOption {
   isCorrect: boolean;
 }
 
+type ImageRole = 'INLINE' | 'FIGURE' | 'FULL_QUESTION';
+
 interface BankQuestion {
   id: string;
   topicPath: string;
@@ -33,7 +35,7 @@ interface BankQuestion {
   correctAnswer: string | null;
   explanationMd: string;
   options: BankOption[];
-  images: Array<{ id: string; r2Key: string; alt: string; order: number }>;
+  images: Array<{ id: string; r2Key: string; alt: string; order: number; role?: ImageRole }>;
 }
 
 export interface PracticeBankProps {
@@ -67,7 +69,7 @@ export function PracticeBank({
       if (topicPath) p.set('topicPath', topicPath);
       if (source === 'foto') p.set('tag', 'source:foto-matura');
       if (source === 'gjeneruar') p.set('tag', 'source:gjeneruar');
-      if (imagesOnly) p.set('hasImages', 'true');
+      if (imagesOnly) p.set('fullQuestionImage', 'true');
       if (search.length > 0) p.set('search', search);
       if (cursor) p.set('cursor', cursor);
       return p;
@@ -121,7 +123,7 @@ export function PracticeBank({
       const p = new URLSearchParams();
       p.set('subjectSlug', 'matematike');
       p.set('includeReview', 'true');
-      p.set('hasImages', 'true');
+      p.set('fullQuestionImage', 'true');
       p.set('limit', '40');
       const res = await fetch(`${API_BASE}/api/questions?${p.toString()}`);
       if (!res.ok) return;
@@ -139,7 +141,9 @@ export function PracticeBank({
   const gallerySlides = useMemo(() => {
     const slides: Array<{ key: string; src: string; alt: string }> = [];
     for (const q of gallery) {
-      const img = q.images[0];
+      const img =
+        q.images.find((i) => i.role === 'FULL_QUESTION') ??
+        q.images[0];
       if (img) slides.push({ key: `${q.id}-${img.id}`, src: imagePublicUrl(img.r2Key), alt: img.alt });
     }
     return slides;
@@ -225,6 +229,71 @@ export function PracticeBank({
   );
 }
 
+function QuestionScanOrPrompt({
+  q,
+  imagePublicUrl,
+}: {
+  q: BankQuestion;
+  imagePublicUrl: (r2Key: string) => string;
+}): React.ReactElement {
+  const fullScan = q.images.filter((i) => i.role === 'FULL_QUESTION');
+  const other = q.images.filter((i) => i.role !== 'FULL_QUESTION');
+  const hasScan = fullScan.length > 0;
+
+  return (
+    <>
+      {hasScan && (
+        <figure className="mt-3 space-y-2">
+          <figcaption className="text-xs font-medium uppercase tracking-wide text-[var(--color-fg-muted)]">
+            {Sq.sq.practice.bankFullScanCaption}
+          </figcaption>
+          {fullScan.map((img) => (
+            <a
+              key={img.id}
+              href={imagePublicUrl(img.r2Key)}
+              target="_blank"
+              rel="noreferrer"
+              className="block outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-brand)]"
+            >
+              <img
+                src={imagePublicUrl(img.r2Key)}
+                alt={img.alt}
+                className="w-full rounded-lg border border-[var(--color-border)] bg-black/[0.04] object-contain max-h-[min(88vh,1600px)]"
+              />
+            </a>
+          ))}
+        </figure>
+      )}
+      <div className="mt-3">
+        {hasScan ? (
+          <details className="rounded-lg border border-[var(--color-border)] bg-[var(--color-bg)] px-3 py-2">
+            <summary className="cursor-pointer text-sm font-medium text-[var(--color-fg)]">
+              {Sq.sq.practice.bankTranscriptToggle}
+            </summary>
+            <div className="mt-2 text-[var(--color-fg)]">
+              <Markdown content={q.promptMd} />
+            </div>
+          </details>
+        ) : (
+          <Markdown content={q.promptMd} />
+        )}
+      </div>
+      {other.length > 0 && (
+        <div className="mt-3 grid gap-2 sm:grid-cols-2">
+          {other.map((img) => (
+            <img
+              key={img.id}
+              src={imagePublicUrl(img.r2Key)}
+              alt={img.alt}
+              className="w-full rounded-lg border border-[var(--color-border)] object-contain"
+            />
+          ))}
+        </div>
+      )}
+    </>
+  );
+}
+
 function BankCard({
   q,
   index,
@@ -252,9 +321,7 @@ function BankCard({
           </span>
           <span>{topicDisplay(q.topicPath)}</span>
         </div>
-        <div className="prose-matura mt-3 max-w-none">
-          <Markdown content={q.promptMd} />
-        </div>
+        <QuestionScanOrPrompt q={q} imagePublicUrl={imagePublicUrl} />
         {!revealed ? (
           <button
             type="button"
@@ -284,9 +351,7 @@ function BankCard({
         </span>
         <span>{topicDisplay(q.topicPath)}</span>
       </div>
-      <div className="prose-matura mt-3 max-w-none">
-        <Markdown content={q.promptMd} />
-      </div>
+      <QuestionScanOrPrompt q={q} imagePublicUrl={imagePublicUrl} />
       <div className="mt-4 flex flex-col gap-2">
         {sorted.map((o, idx) => {
           const letter = MCQ_LETTERS[idx] ?? String(idx + 1);

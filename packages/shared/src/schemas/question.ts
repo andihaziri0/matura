@@ -140,6 +140,19 @@ export const ListQuestionsQuerySchema = z.object({
     z.boolean().optional(),
   ),
   /**
+   * When true, only rows with an image whose `role` is FULL_QUESTION (whole page scan),
+   * not only FIGURE/INLINE diagrams inside the item text.
+   */
+  fullQuestionImage: z.preprocess(
+    (val) => {
+      if (val === undefined || val === '') return undefined;
+      if (val === true || val === 'true') return true;
+      if (val === false || val === 'false') return false;
+      return undefined;
+    },
+    z.boolean().optional(),
+  ),
+  /**
    * When true, returns questions with status PUBLISHED or REVIEW (excludes DRAFT).
    * Useful for the public practice bank while foto-sourced items are still in REVIEW.
    * If set, overrides `status`.
