@@ -1,7 +1,11 @@
 import { getPublicStorageOrigin } from '@/server/public-storage-origin';
+import { contentTypeFromMagic } from '@/lib/binary-image-content-type';
 
 /** Only relay keys under this prefix (matches `QuestionImage.r2Key` in seed). */
 const ALLOW_PREFIX = 'questions/';
+
+/** Buffer full body only under this size so we can sniff MIME (fixes wrong R2 Content-Type). */
+const MAX_BODY_TO_BUFFER = 12 * 1024 * 1024;
 
 export async function GET(
   _request: Request,
@@ -47,18 +51,33 @@ export async function GET(
     return new Response(detail, { status: status === 404 ? 404 : 502 });
   }
 
-  const body = upstream.body;
-  if (!body) {
+  const cacheControl =
+    'public, max-age=86400, s-maxage=86400, stale-while-revalidate=3600';
+
+  const lenRaw = upstream.headers.get('content-length');
+  const len = lenRaw ? parseInt(lenRaw, 10) : NaN;
+  const bodyStream = upstream.body;
+  if (!bodyStream) {
     return new Response('Empty', { status: 502 });
   }
 
-  const ct = upstream.headers.get('content-type') ?? 'application/octet-stream';
+  if (!Number.isNaN(len) && len > MAX_BODY_TO_BUFFER) {
+    const ct = upstream.headers.get('content-type') ?? 'application/octet-stream';
+    return new Response(bodyStream, {
+      status: 200,
+      headers: { 'Content-Type': ct, 'Cache-Control': cacheControl },
+    });
+  }
 
-  return new Response(body, {
+  const buf = await upstream.arrayBuffer();
+  const sniffed = contentTypeFromMagic(new Uint8Array(buf));
+  const ct =
+    sniffed ??
+    upstream.headers.get('content-type')?.split(';')[0]?.trim() ??
+    'application/octet-stream';
+
+  return new Response(buf, {
     status: 200,
-    headers: {
-      'Content-Type': ct,
-      'Cache-Control': 'public, max-age=86400, s-maxage=86400, stale-while-revalidate=3600',
-    },
+    headers: { 'Content-Type': ct, 'Cache-Control': cacheControl },
   });
 }
