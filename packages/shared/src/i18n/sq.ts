@@ -103,7 +103,7 @@ export const sq = {
     examModeRevealPrompt: 'Kliko butonin për të parë nëse është saktë dhe shpjegimin.',
     sessionOnlyWithImages: 'Vetëm pyetje me foto të plotë të provimit',
     sessionOnlyWithImagesHint:
-      'Ushtrime ku pyetja paraqitet si skanim i faqes së testit (FULL_QUESTION), jo vetëm figura te teksti.',
+      'Ushtrime ku pyetja paraqitet si skanim i faqes së testit (FULL_QUESTION), jo vetëm figura te teksti. Me këtë opsion, pyetjet zgjidhen nga të gjithë kapitujt (kapërcehet kapitulli sipër), që të ketë gjithmonë kandidatë foto.',
     noQuestionsWithImages:
       'Ende nuk ka pyetje të tilla që përputhen me këto filtra (ose foto nuk janë ngarkuar në server). Provo pa filtrin ose «të gjitha kapitujt».',
     bankImagesOnly: 'Vetëm pyetje me foto të plotë të provimit',

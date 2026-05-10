@@ -1,6 +1,7 @@
 import { Injectable, NotFoundException, ForbiddenException } from '@nestjs/common';
-import type { User } from '@matura/db';
+import type { Prisma, User } from '@matura/db';
 import { PrismaService } from '../../common/prisma/prisma.service';
+import { practiceChapterTopicWhere } from '../../common/prisma/practice-topic-where';
 import type { StartPracticeSessionInput } from '@matura/shared';
 
 function shuffleInPlace<T>(arr: T[]): T[] {
@@ -22,15 +23,15 @@ export class SessionsService {
    */
   async startPractice(user: User, input: StartPracticeSessionInput) {
     const userId = user.id;
-    const statusWhere =
+    const statusFilter: Pick<Prisma.QuestionWhereInput, 'status'> =
       input.includeReview === true
-        ? { status: { in: ['PUBLISHED', 'REVIEW'] as const } }
-        : { status: 'PUBLISHED' as const };
+        ? { status: { in: ['PUBLISHED', 'REVIEW'] } }
+        : { status: 'PUBLISHED' };
 
-    const where = {
+    const where: Prisma.QuestionWhereInput = {
       subjectSlug: input.subjectSlug,
-      ...statusWhere,
-      ...(input.topicPath && { topicPath: { startsWith: input.topicPath } }),
+      ...statusFilter,
+      ...(input.topicPath && practiceChapterTopicWhere(input.topicPath)),
       ...(input.difficulty != null && { difficulty: input.difficulty }),
       ...(input.hasImages === true && { images: { some: { role: 'FULL_QUESTION' } } }),
       ...(input.tag && { tags: { has: input.tag } }),

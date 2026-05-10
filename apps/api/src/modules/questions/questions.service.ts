@@ -1,5 +1,6 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
 import { PrismaService } from '../../common/prisma/prisma.service';
+import { practiceChapterTopicWhere } from '../../common/prisma/practice-topic-where';
 import type {
   CreateQuestionInput,
   ListQuestionsQuery,
@@ -19,22 +20,29 @@ export class QuestionsService {
           ? { status: query.status }
           : {};
 
+    const andTopicSearch: Prisma.QuestionWhereInput[] = [];
+    if (query.topicPath) {
+      andTopicSearch.push(practiceChapterTopicWhere(query.topicPath));
+    }
+    if (query.search) {
+      andTopicSearch.push({
+        OR: [
+          { promptMd: { contains: query.search, mode: 'insensitive' } },
+          { tags: { has: query.search } },
+        ],
+      });
+    }
+
     const where: Prisma.QuestionWhereInput = {
       ...statusWhere,
       ...(query.subjectSlug && { subjectSlug: query.subjectSlug }),
-      ...(query.topicPath && { topicPath: { startsWith: query.topicPath } }),
       ...(query.difficulty && { difficulty: query.difficulty }),
       ...(query.tag && { tags: { has: query.tag } }),
       ...(query.hasImages === true && { images: { some: {} } }),
       ...(query.fullQuestionImage === true && {
         images: { some: { role: 'FULL_QUESTION' } },
       }),
-      ...(query.search && {
-        OR: [
-          { promptMd: { contains: query.search, mode: 'insensitive' } },
-          { tags: { has: query.search } },
-        ],
-      }),
+      ...(andTopicSearch.length > 0 ? { AND: andTopicSearch } : {}),
     };
 
     const items = await this.prisma.question.findMany({

@@ -114,7 +114,7 @@ export function PracticeRunner(): React.ReactElement {
           body: JSON.stringify({
             subjectSlug: 'matematike',
             count: sessionQuestionCount,
-            ...(topicPath ? { topicPath } : {}),
+            ...(!sessionOnlyWithImages && topicPath ? { topicPath } : {}),
             ...(sessionOnlyWithImages ? { hasImages: true, includeReview: true } : {}),
           }),
         });
