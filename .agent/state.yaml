@@ -5,7 +5,7 @@
 # Item statuses: todo | in_progress | done | blocked
 
 milestone: production_deploy
-milestone_state: in_progress
+milestone_state: in_progress  # core prod path live; rotation, observability, optional api.matura, formal milestone close remain
 updated: 2026-05-10
 exam_window: june_yearly
 
@@ -241,7 +241,7 @@ phases:
       cli_command: done
       r2_image_upload: done
       feature_doc: done
-      map_legacy_question_real_shape: in_progress  # waiting on sample JSON from AkademiaAS team
+      map_legacy_question_real_shape: superseded_by_seed_pipeline  # akademiaas-bank.json + build-seed.mjs; API CLI mapLegacyQuestion optional
 
   phase_12_first_practice_flow:
     status: done
@@ -277,8 +277,16 @@ production_deploy:
     auth: firebase
     error_tracking: sentry
   domains:
-    web: matura.akademiaas.com
-    api: api.matura.akademiaas.com
+    web: https://matura.akademiaas.com
+    api_canonical_dns: https://api.matura.akademiaas.com   # ADR target; not provisioned yet
+    api_public: railway_default_hostname  # HTTPS *.up.railway.app — works in prod; custom CNAME optional
+
+  production_snapshot_2026_05_10:
+    web: vercel_fra1_custom_domain_cloudflare_dns
+    api: railway_eu_https
+    db: neon_eu_565_matematike_questions
+    redis: upstash
+    dns_zone: cloudflare_akademiaas_com
   environments:
     - production
     - preview  # per-PR Vercel + Neon branch DB; shared Railway preview API
@@ -297,48 +305,53 @@ production_deploy:
         api_dockerfile: done
         api_dockerignore: done            # at repo root (build context root)
         prisma_migrate_on_boot: done
-        railway_health_check: done        # /api/health/ready, healthcheckTimeout=30
+        railway_health_check: done        # /api/health/ready, healthcheckTimeout=120
         local_docker_smoke: deferred      # owner has no Docker locally; exercised in D7
         railway_config_file: done
         prod_env_validation: done         # Neon URL + sslmode=require accepted
         cors_allowlist: done              # comma-separated + wildcard support
         port_env_fallback: done           # PORT -> API_PORT (Railway convention)
     d3_web_on_vercel:
+      status: done
+      items:
+        vercel_json: done
+        sdk_build_alias: done
+        turbo_sdk_build_override: done
+        document_vercel_settings: done    # runbook Phase D4
+        next_public_env_schema: deferred
+        next_config_image_domains: done
+        firebase_prod_web_config: deferred  # dedicated prod project still runbook Section 2
+        local_build_chain_verified: done
+        custom_domain_matura_akademiaas: done  # 2026-05-10, Cloudflare CNAME DNS-only per Vercel
+        next_public_api_url_points_railway: done
+    d4_provisioning_runbook_and_secrets:
       status: in_progress
       items:
-        vercel_json: done                  # apps/web/vercel.json with security headers + fra1 region
-        sdk_build_alias: done              # packages/sdk/package.json now has "build" script
-        turbo_sdk_build_override: done     # @matura/sdk#build inputs/outputs in turbo.json
-        document_vercel_settings: in_d4    # documented in runbook (Phase D4)
-        next_public_env_schema: deferred   # current ?? '' fallbacks are good enough for MVP
-        next_config_image_domains: done    # **.r2.dev added
-        firebase_prod_web_config: in_d7    # verified at first deploy
-        local_build_chain_verified: done   # turbo run build --filter=@matura/web... succeeded
-    d4_provisioning_runbook_and_secrets:
-      status: in_progress  # docs done; owner-action items still pending
-      items:
-        deploy_runbook_md: done             # docs/operations/deploy.md
+        deploy_runbook_md: done
         env_production_example: done
         cloudflare_r2_bucket: owner_todo
         firebase_prod_project: owner_todo
-        github_branch_protection: deferred_to_post_d7  # owner chose 2026-05-10
-        vercel_project: owner_todo
-        railway_project: owner_todo
+        github_branch_protection: deferred_to_post_d7
+        vercel_project: done              # 2026-05-10
+        railway_project: done             # 2026-05-10
         neon_pgvector_verified: owner_todo
-        dns_subdomains: owner_todo
-        sentry_projects: in_d6              # provisioning lives in D6 now
-        rotate_leaked_neon_password: deferred_to_post_d7  # owner chose 2026-05-10 to ship first, rotate after
-        rotate_leaked_upstash_token: deferred_to_post_d7  # owner chose 2026-05-10 to ship first, rotate after
+        dns_matura_web: done              # Cloudflare → Vercel
+        dns_api_subdomain: optional_deferred  # api.matura on Railway — nice-to-have
+        cloudflare_zone_akademiaas: done  # domain on Cloudflare 2026-05-10
+        sentry_projects: in_d6
+        rotate_leaked_neon_password: deferred_post_launch
+        rotate_leaked_upstash_token: deferred_post_launch
+        web_origin_includes_custom_domain: done  # Railway WEB_ORIGIN 2026-05-10
     d5_ci_cd:
       status: in_progress
       items:
-        ci_workflow: done                       # .github/workflows/ci.yml
-        openapi_drift_check: done               # in ci.yml
+        ci_workflow: done
+        openapi_drift_check: done
         concurrency_cancel_in_progress: done
-        vercel_github_integration: owner_todo   # set up during runbook Section 4
-        railway_github_integration: owner_todo  # set up during runbook Section 5
+        vercel_github_integration: done     # prod tracking main 2026-05-10
+        railway_github_integration: done
         neon_github_integration_pr_branches: owner_todo
-        require_ci_pass_to_merge: owner_todo    # branch protection in GitHub settings
+        require_ci_pass_to_merge: owner_todo
     d6_observability:
       status: in_progress
       items:
@@ -354,13 +367,14 @@ production_deploy:
         uptime_monitor: owner_todo
         operations_runbook_post_deploy: todo  # written after first real deploy
     d7_first_deploy:
-      status: not_started
+      status: in_progress  # user-facing prod works; formal close pending rotation + observability + optional api.matura
       items:
-        api_deploy_smoke: todo
-        web_deploy_smoke: todo
-        e2e_question_authoring_in_prod: todo
-        e2e_practice_session_in_prod: todo
-        update_docs_done: todo
+        api_deploy_smoke: done
+        web_deploy_smoke: done
+        custom_domain_web: done
+        e2e_question_authoring_in_prod: owner_todo  # image → R2 → publish
+        e2e_practice_session_in_prod: done
+        docs_status_sync: done  # 2026-05-10
 
 future_milestones:
   v1:

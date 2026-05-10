@@ -7,6 +7,7 @@
 A web application for Kosovo 12th-grade students preparing for **Testi i Maturës** (the state matura exam). Built by `AkademiaAS` (a private course teaching Math + programming).
 
 - Public MVP target: practice Matematikë questions with instant feedback and Albanian explanations. **The MVP scaffold milestone is done — see `docs/status.md`.**
+- **Production deploy (2026-05-10):** web at **`https://matura.akademiaas.com`** (Vercel), API on Railway (HTTPS), DB on Neon with **565** seeded Matematikë questions. Optional `api.matura` subdomain + credential rotation + Sentry still on the checklist in `docs/status.md`.
 - Long-term: adaptive practice, AI tutor (Albanian), mock past papers, study plan generator, all subjects + tracks.
 
 ## Where to look first

@@ -1,7 +1,7 @@
 # Project status
 
-_Last updated: 2026-05-10_
-_Current milestone: **Production deploy**_
+_Last updated: 2026-05-10 (evening — prod web on custom domain)_
+_Current milestone: **Production deploy** — core path **live**; polish & hardening remain_
 _Exam target window: June each year (Kosovo Testi i Maturës)_
 
 ## Legend
@@ -105,7 +105,7 @@ The goal of this milestone is a runnable repo with one end-to-end feature (Matem
 - [x] Reads `content/raw/math/json` + `content/raw/math/png`
 - [x] Uploads images to R2/MinIO via `S3Service.putObjectFromFile`, writes Questions as `DRAFT`
 - [x] `docs/features/content-import.md` with adapter extension guide
-- [~] `mapLegacyQuestion` TODO until real JSON sample is shared
+- [~] `mapLegacyQuestion` in API CLI still generic; bulk Matematikë content ships via `akademiaas-bank.json` + `build-seed.mjs` (real shape now in repo)
 
 ### Phase 12 — First practice flow
 
@@ -162,9 +162,11 @@ Topology, decisions, and rejected alternatives are locked in
 - [x] `next.config.mjs` updated: image `remotePatterns` now includes `**.r2.dev` for Cloudflare R2 public URLs
 - [x] **Build chain verified locally**: `turbo run build --filter=@matura/web...` produces a clean `.next` (3 tasks, ~16s)
 - [x] Bonus: `@matura/sdk` now has a regular `build` script (aliases `sdk:build`) so turbo's normal cascade picks it up — no special-case install-then-codegen-then-build dance for Vercel
-- [~] `NEXT_PUBLIC_*` env schema validation — deferred; current `?? ''` fallbacks are sufficient for MVP, but should be tightened with a Zod check before Phase D7 if any prod env miss is silent
-- [ ] Verify Firebase prod web config keys (`NEXT_PUBLIC_FIREBASE_*`) work with the prod project — exercised in Phase D7
-- [ ] Document Vercel project settings (Root Directory, Node version) in the runbook — done in Phase D4
+- [x] **Custom domain live**: `https://matura.akademiaas.com` — DNS on Cloudflare (`matura` → Vercel project CNAME, **DNS only** / gray cloud so Vercel validates; avoid orange-cloud proxy until deliberately re-tested)
+- [x] `NEXT_PUBLIC_API_URL` points at Railway API hostname (see Phase D7); app + practice verified from custom domain
+- [~] `NEXT_PUBLIC_*` env schema validation — deferred; current `?? ''` fallbacks are sufficient for MVP
+- [~] Dedicated **Firebase prod** project vs dev keys — still follow runbook Section 2 when cutting over; current prod smoke uses configured Firebase project
+- [x] Document Vercel project settings (Root Directory, Node version) in the runbook — Phase D4
 
 ### Phase D4 — Provisioning runbook & secrets
 
@@ -174,10 +176,12 @@ Topology, decisions, and rejected alternatives are locked in
 - [ ] **Owner action**: Provision Cloudflare R2 bucket (`matura-content` in WEUR) + access keys (Section 1)
 - [ ] **Owner action**: Provision Firebase **prod** project + web config + service account JSON (Section 2)
 - [~] **Owner action**: Add branch protection on `main` (Section 3) — **deferred** to post-D7. Will be set up after first deploy succeeds, when the CI status check name is known and stable.
-- [ ] **Owner action**: Provision Vercel project, link to GitHub repo, configure env vars + custom domain (Section 4)
-- [ ] **Owner action**: Provision Railway project, link to GitHub repo, configure env vars + custom domain (Section 5)
-- [ ] **Owner action**: Verify Neon `pgvector` extension is enabled (Section 6)
-- [ ] **Owner action**: DNS records for `matura.akademiaas.com` and `api.matura.akademiaas.com` (Section 9)
+- [x] **Owner action**: Vercel project linked to GitHub, env vars set, custom domain **`matura.akademiaas.com`** connected (2026-05-10)
+- [x] **Owner action**: Railway API service live, env vars set; **`WEB_ORIGIN`** includes `https://matura.akademiaas.com` for CORS (2026-05-10)
+- [ ] **Owner action**: Verify Neon `pgvector` extension is enabled (Section 6) — still confirm in Neon SQL console
+- [x] DNS: **`matura.akademiaas.com`** on Cloudflare → Vercel (2026-05-10)
+- [ ] DNS (optional): **`api.matura.akademiaas.com`** on Railway — deferred; API reachable via default `*.up.railway.app` URL (no perf concern)
+- [ ] **Owner action**: Cloudflare R2 prod bucket + keys per runbook if not already wired to Railway
 
 ### Phase D5 — CI/CD via GitHub Actions
 
@@ -185,8 +189,8 @@ Topology, decisions, and rejected alternatives are locked in
 - [x] CI uses a `pgvector/pgvector:pg16` service container (matches local docker-compose); no Redis needed because BullMQ isn't imported yet
 - [x] Concurrency control: in-progress runs cancel when a new commit lands on the same branch
 - [x] Drift check fails the build if `pnpm openapi:generate` produces a different `packages/sdk/openapi.json` than what's committed
-- [ ] **Owner action**: enable Vercel auto-deploy on `main` (Section 4 in runbook — already covered)
-- [ ] **Owner action**: enable Railway auto-deploy on `main` (Section 5 in runbook — already covered)
+- [x] **Owner action**: Vercel auto-deploy on `main` (assumed active — prod deploys track `main`)
+- [x] **Owner action**: Railway auto-deploy on `main` (assumed active — API live)
 - [ ] **Owner action**: install the Neon GitHub integration so PRs get auto-branched DBs (Section 4.10 — to be added to runbook before first PR after deploy)
 - [ ] **Owner action**: in GitHub branch protection settings (Section 3), require the CI status check `lint + typecheck + prisma validate + openapi drift` to pass before merge
 
@@ -205,13 +209,24 @@ Topology, decisions, and rejected alternatives are locked in
 
 ### Phase D7 — First real deploy & smoke test
 
-- [ ] Deploy API → confirm `/health/ready` returns 200 in prod
-- [ ] Deploy web → confirm sign-in works against prod Firebase
-- [ ] Owner creates one prod question end-to-end (image upload → publish)
-- [ ] One full practice session against prod
-- [ ] Update `AGENTS.md`, `docs/status.md`, `.agent/state.yaml` to mark milestone done
+- [x] Deploy API → `/api/health/ready` returns 200 in prod (Railway)
+- [x] Deploy web → reachable at **`https://matura.akademiaas.com`**; auth + API calls working (CORS + `NEXT_PUBLIC_API_URL`)
+- [ ] Owner creates one prod question end-to-end (image upload → publish via R2) — still a good checklist item
+- [x] Practice session against prod (`/practice/matematike`) — verified with 565 seeded questions (2026-05-10)
+- [~] Update `docs/status.md` + `.agent/state.yaml` — this revision (2026-05-10); **milestone not fully closed** until credential rotation, optional `api.matura`, Sentry/Uptime, dedicated Firebase prod decision
+
+### Production snapshot (2026-05-10)
+
+| Layer | Status |
+|-------|--------|
+| Web | `https://matura.akademiaas.com` (Vercel, Cloudflare DNS) |
+| API | Railway default hostname (HTTPS); custom **`api.matura`** not required for launch |
+| DB | Neon `neondb` (EU); 565 Matematikë questions seeded |
+| Redis | Upstash (per Railway env) |
+| DNS zone | `akademiaas.com` on Cloudflare (domain active) |
 
 ---
+
 
 ## Future milestones (NOT in scope of current work)
 
@@ -227,3 +242,4 @@ These exist only so contributors don't accidentally start them. Each becomes its
 ## Known issues
 
 - **Security debt** (deferred by owner 2026-05-10): Neon DB password and Upstash Redis token were exposed in agent chat on 2026-05-10. Owner chose to ship the first deploy with the exposed creds and rotate immediately after Phase D7 succeeds. Treat both as compromised until rotation is confirmed in `docs/operations/deploy.md` Rotation log.
+- **Prod domain**: Ensure Firebase **Authorized domains** includes `matura.akademiaas.com` if sign-in failed before adding it.
