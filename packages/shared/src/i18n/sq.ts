@@ -7,6 +7,31 @@ export const sq = {
   app: {
     name: 'AkademiaAS Maturë',
     tagline: 'Përgatitu për Testin e Maturës',
+    brand: 'AkademiaAS',
+    brandTagline: 'Qendra e zhvillimit edukativ',
+  },
+  marketing: {
+    heroEyebrow: 'Përgatitje për Testin e Maturës',
+    heroTitle: 'Përgatitu për Maturë me besim.',
+    heroSubtitle:
+      'Ushtro me pyetje të zgjedhura, merr shpjegime në shqip dhe ndërto rutinën tënde të përditshme — të gjitha në një vend.',
+    ctaStart: 'Fillo me Matematikë',
+    ctaSignIn: 'Hyr në llogari',
+    featuresTitle: 'Pse AkademiaAS?',
+    featuresSubtitle: 'Mjetet që të nevojiten për të dalë i përgatitur në provimin e Maturës.',
+    feature1Title: 'Pyetje të zgjedhura',
+    feature1Body:
+      'Bankë pyetjesh e ndërtuar nga ekipi i AkademiaAS — sipas programit zyrtar të Maturës.',
+    feature2Title: 'Reagim i menjëhershëm',
+    feature2Body:
+      'Pas çdo përgjigjeje merr shpjegimin hap-pas-hapi në shqip, që të kuptosh ku gabove.',
+    feature3Title: 'Sipas drejtimit tënd',
+    feature3Body:
+      'Përmbajtje e ndarë sipas drejtimit (i përgjithshëm, natyror, shoqëror, gjuhësor) dhe nivelit të vështirësisë.',
+    finalCtaTitle: 'Gati për të filluar?',
+    finalCtaBody: 'Krijo një llogari falas dhe nis ushtrimin e parë sot.',
+    footerAbout: 'AkademiaAS është qendër private e zhvillimit edukativ në Kosovë.',
+    footerRights: 'Të gjitha të drejtat e rezervuara.',
   },
   nav: {
     home: 'Ballina',
@@ -28,6 +53,9 @@ export const sq = {
     haveAccount: 'Keni llogari?',
     noAccount: 'Nuk keni llogari?',
     invalidCredentials: 'Email ose fjalëkalim i pasaktë.',
+    emailPlaceholder: 'ti@shembull.com',
+    passwordHint: 'të paktën 6 karaktere',
+    orDivider: 'ose',
   },
   practice: {
     title: 'Ushtrime',

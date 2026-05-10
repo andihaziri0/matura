@@ -202,10 +202,13 @@ export function PracticeRunner(): React.ReactElement {
   }
 
   return (
-    <section className="mx-auto max-w-3xl px-6 py-10">
-      <ProgressBar current={phase.index + (phase.kind === 'feedback' ? 1 : 0)} total={total} />
+    <section className="mx-auto max-w-3xl px-4 sm:px-6 py-8 sm:py-10">
+      <SubjectPill label={Sq.sq.subjects.matematike} />
+      <div className="mt-4">
+        <ProgressBar current={phase.index + (phase.kind === 'feedback' ? 1 : 0)} total={total} />
+      </div>
 
-      <div className="mt-6 rounded-xl border border-[var(--color-border)] bg-[var(--color-bg-elevated)] p-6">
+      <div className="mt-6 rounded-xl border border-[var(--color-border)] bg-[var(--color-bg-elevated)] p-5 sm:p-6 shadow-sm">
         <div className="text-xs uppercase tracking-wide text-[var(--color-fg-muted)]">
           {q.topicPath} • {Sq.sq.question.difficulty}: {q.difficulty} • {Sq.sq.kind[q.kind]}
         </div>
@@ -244,15 +247,27 @@ function ProgressBar({ current, total }: { current: number; total: number }): Re
   return (
     <div>
       <div className="flex items-center justify-between text-sm text-[var(--color-fg-muted)]">
-        <span>
+        <span className="font-medium">
           {current} / {total}
         </span>
         <span>{pct}%</span>
       </div>
-      <div className="mt-1 h-1.5 w-full overflow-hidden rounded bg-[var(--color-border)]">
-        <div className="h-full bg-[var(--color-accent)]" style={{ width: `${pct}%` }} />
+      <div className="mt-2 h-2 w-full overflow-hidden rounded-full bg-[var(--color-border)]">
+        <div
+          className="h-full rounded-full bg-[var(--color-brand)] transition-[width] duration-300 ease-out"
+          style={{ width: `${pct}%` }}
+        />
       </div>
     </div>
+  );
+}
+
+function SubjectPill({ label }: { label: string }): React.ReactElement {
+  return (
+    <span className="inline-flex items-center gap-2 rounded-full bg-[var(--color-brand-soft)] px-3 py-1 text-xs font-semibold uppercase tracking-wide text-[var(--color-brand)]">
+      <span className="h-1.5 w-1.5 rounded-full bg-[var(--color-brand)]" />
+      {label}
+    </span>
   );
 }
 
@@ -273,10 +288,10 @@ function Answering({
         {q.options.map((o) => (
           <label
             key={o.id}
-            className={`flex items-start gap-3 rounded-lg border px-4 py-3 cursor-pointer transition ${
+            className={`flex items-start gap-3 rounded-lg border-2 px-4 py-3 cursor-pointer transition ${
               value === o.id
-                ? 'border-[var(--color-accent)] bg-[var(--color-accent-soft)]'
-                : 'border-[var(--color-border)] hover:border-[var(--color-fg-muted)]'
+                ? 'border-[var(--color-brand)] bg-[var(--color-brand-soft)]'
+                : 'border-[var(--color-border)] hover:border-[var(--color-brand)]/40 hover:bg-[var(--color-bg)]'
             }`}
           >
             <input
@@ -308,7 +323,7 @@ function Answering({
           type="text"
           value={value}
           onChange={(e) => onChange(e.target.value)}
-          className="rounded-md border border-[var(--color-border)] bg-transparent px-3 py-2"
+          className="rounded-md border border-[var(--color-border)] bg-[var(--color-bg)] px-3 py-2.5 text-sm transition focus:border-[var(--color-brand)] focus:outline-none focus:ring-2 focus:ring-[var(--color-brand)]/30"
           autoFocus
         />
       ) : (
@@ -317,7 +332,7 @@ function Answering({
           value={value}
           onChange={(e) => onChange(e.target.value)}
           rows={6}
-          className="rounded-md border border-[var(--color-border)] bg-transparent px-3 py-2"
+          className="rounded-md border border-[var(--color-border)] bg-[var(--color-bg)] px-3 py-2.5 text-sm transition focus:border-[var(--color-brand)] focus:outline-none focus:ring-2 focus:ring-[var(--color-brand)]/30"
         />
       )}
       <SubmitButton disabled={!value.trim()} onClick={onSubmit} />
@@ -337,7 +352,7 @@ function SubmitButton({
       type="button"
       disabled={disabled}
       onClick={onClick}
-      className="mt-2 self-end rounded-md bg-[var(--color-accent)] px-4 py-2 text-sm font-medium text-[var(--color-accent-fg)] disabled:opacity-50"
+      className="mt-2 self-end rounded-md bg-[var(--color-brand)] px-4 py-2 text-sm font-semibold text-[var(--color-brand-fg)] shadow-sm transition hover:bg-[var(--color-brand-strong)] disabled:cursor-not-allowed disabled:opacity-50"
     >
       {Sq.sq.practice.submit}
     </button>
@@ -401,7 +416,7 @@ function Feedback({
       <button
         type="button"
         onClick={onNext}
-        className="self-end rounded-md bg-[var(--color-accent)] px-4 py-2 text-sm font-medium text-[var(--color-accent-fg)]"
+        className="self-end rounded-md bg-[var(--color-brand)] px-4 py-2 text-sm font-semibold text-[var(--color-brand-fg)] shadow-sm transition hover:bg-[var(--color-brand-strong)]"
       >
         {isLast ? Sq.sq.practice.finish : Sq.sq.practice.next}
       </button>
@@ -490,7 +505,7 @@ function SummaryScreen({
         <button
           type="button"
           onClick={() => void onRestart()}
-          className="rounded-md bg-[var(--color-accent)] px-4 py-2 text-sm font-medium text-[var(--color-accent-fg)]"
+          className="rounded-md bg-[var(--color-brand)] px-4 py-2 text-sm font-semibold text-[var(--color-brand-fg)] shadow-sm transition hover:bg-[var(--color-brand-strong)]"
         >
           {Sq.sq.practice.repeat}
         </button>

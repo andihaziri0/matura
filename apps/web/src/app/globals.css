@@ -2,35 +2,57 @@
 @import 'katex/dist/katex.min.css';
 
 @theme {
-  --font-sans: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-sans:
+    var(--font-jakarta), ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
   --font-serif: ui-serif, 'Iowan Old Style', 'Apple Garamond', 'Palatino Linotype', serif;
 
-  --color-bg: #fafaf7;
+  /* Surfaces */
+  --color-bg: #f6f7fb;
   --color-bg-elevated: #ffffff;
-  --color-fg: #16161a;
-  --color-fg-muted: #5b5b66;
-  --color-border: #e5e5e0;
-  --color-accent: #5b6f3a;
-  --color-accent-fg: #ffffff;
-  --color-accent-soft: #eef2e3;
-  --color-success: #2f7a4d;
-  --color-success-soft: #e3f2e9;
-  --color-danger: #b53a3a;
-  --color-danger-soft: #f6e4e4;
+  --color-fg: #101126;
+  --color-fg-muted: #535774;
+  --color-border: #e2e3ec;
+
+  /* AkademiaAS brand (logo navy) */
+  --color-brand: #1f2585;
+  --color-brand-strong: #171b6d;
+  --color-brand-soft: #e7e8f7;
+  --color-brand-fg: #ffffff;
+
+  /* Accent aliases (kept for token-driven components) */
+  --color-accent: var(--color-brand);
+  --color-accent-fg: var(--color-brand-fg);
+  --color-accent-soft: var(--color-brand-soft);
+
+  /* Status */
+  --color-success: #1f7a52;
+  --color-success-soft: #e2f1ea;
+  --color-danger: #c0392b;
+  --color-danger-soft: #fbe6e2;
+
+  /* Effects */
+  --shadow-brand: 0 10px 30px -10px color-mix(in oklab, var(--color-brand) 45%, transparent);
 }
 
 @media (prefers-color-scheme: dark) {
   @theme {
-    --color-bg: #0e0f0d;
-    --color-bg-elevated: #16181a;
-    --color-fg: #f1efe8;
-    --color-fg-muted: #9b9ba6;
-    --color-border: #26282a;
-    --color-accent: #a4be7b;
-    --color-accent-fg: #0e0f0d;
-    --color-accent-soft: #1f2a18;
-    --color-success: #6dc28a;
-    --color-success-soft: #19271f;
+    --color-bg: #0a0c1f;
+    --color-bg-elevated: #13162e;
+    --color-fg: #eef0fb;
+    --color-fg-muted: #9aa0c2;
+    --color-border: #262a45;
+
+    --color-brand: #5a63d6;
+    --color-brand-strong: #7780ec;
+    --color-brand-soft: #1c2148;
+    --color-brand-fg: #0a0c1f;
+
+    --color-accent: var(--color-brand);
+    --color-accent-fg: var(--color-brand-fg);
+    --color-accent-soft: var(--color-brand-soft);
+
+    --color-success: #5dc488;
+    --color-success-soft: #16291f;
     --color-danger: #e07b7b;
     --color-danger-soft: #2c1b1b;
   }
@@ -42,6 +64,19 @@ body {
   color: var(--color-fg);
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: color-mix(in oklab, var(--color-brand) 25%, transparent);
+  color: var(--color-fg);
+}
+
+/* Subtle, brand-tinted focus ring everywhere */
+:where(button, [role='button'], a, input, select, textarea):focus-visible {
+  outline: 2px solid color-mix(in oklab, var(--color-brand) 70%, transparent);
+  outline-offset: 2px;
+  border-radius: 6px;
 }
 
 .prose-matura {

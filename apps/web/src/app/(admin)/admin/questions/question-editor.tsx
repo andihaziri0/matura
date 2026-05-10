@@ -164,14 +164,21 @@ export function QuestionEditor({ mode, id }: Props): React.ReactElement {
     }
   }
 
-  if (!loaded) return <p>{Sq.sq.common.loading}</p>;
+  if (!loaded) return <p className="text-[var(--color-fg-muted)]">{Sq.sq.common.loading}</p>;
 
   return (
     <section className="grid grid-cols-1 lg:grid-cols-2 gap-6">
       <div className="space-y-4">
-        <h1 className="text-2xl font-semibold">
-          {mode === 'create' ? Sq.sq.admin.questions.new : Sq.sq.admin.questions.edit}
-        </h1>
+        <div className="flex items-center gap-3">
+          <h1 className="text-2xl sm:text-3xl font-bold tracking-tight">
+            {mode === 'create' ? Sq.sq.admin.questions.new : Sq.sq.admin.questions.edit}
+          </h1>
+          {mode === 'edit' && (
+            <span className="inline-flex items-center rounded-full bg-[var(--color-brand-soft)] px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-[var(--color-brand)]">
+              {Sq.sq.status[draft.status]}
+            </span>
+          )}
+        </div>
 
         <div className="grid grid-cols-2 gap-3">
           <Field label={Sq.sq.question.topic}>
@@ -317,22 +324,26 @@ export function QuestionEditor({ mode, id }: Props): React.ReactElement {
           onChange={(images) => setDraft({ ...draft, images })}
         />
 
-        {error && <p className="text-sm text-[var(--color-danger)]">{error}</p>}
+        {error && (
+          <p className="rounded-md border border-[var(--color-danger)]/30 bg-[var(--color-danger-soft)] px-3 py-2 text-sm text-[var(--color-danger)]">
+            {error}
+          </p>
+        )}
 
-        <div className="flex gap-2">
+        <div className="flex gap-2 pt-2">
           <button
             type="button"
             disabled={saving}
             onClick={save}
-            className="rounded-md bg-[var(--color-accent)] px-4 py-2 text-[var(--color-accent-fg)] disabled:opacity-50"
+            className="rounded-md bg-[var(--color-brand)] px-4 py-2 text-sm font-semibold text-[var(--color-brand-fg)] shadow-sm transition hover:bg-[var(--color-brand-strong)] disabled:cursor-not-allowed disabled:opacity-50"
           >
-            {Sq.sq.admin.questions.saveDraft}
+            {saving ? Sq.sq.common.loading : Sq.sq.admin.questions.saveDraft}
           </button>
           {mode === 'edit' && draft.status !== 'PUBLISHED' && (
             <button
               type="button"
               onClick={publish}
-              className="rounded-md border border-[var(--color-border)] px-4 py-2 hover:bg-[var(--color-bg-elevated)]"
+              className="rounded-md border border-[var(--color-brand)]/30 bg-[var(--color-bg-elevated)] px-4 py-2 text-sm font-semibold text-[var(--color-brand)] transition hover:bg-[var(--color-brand-soft)]"
             >
               {Sq.sq.admin.questions.publish}
             </button>

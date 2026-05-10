@@ -36,26 +36,38 @@ export default function AdminMetricsPage(): React.ReactElement {
     })();
   }, [getIdToken]);
 
-  if (error) return <p className="text-[var(--color-danger)]">{error}</p>;
-  if (!metrics) return <p>{Sq.sq.common.loading}</p>;
+  if (error)
+    return (
+      <p className="rounded-md border border-[var(--color-danger)]/30 bg-[var(--color-danger-soft)] px-3 py-2 text-sm text-[var(--color-danger)]">
+        {error}
+      </p>
+    );
+  if (!metrics)
+    return (
+      <section>
+        <h1 className="text-2xl sm:text-3xl font-bold tracking-tight">{Sq.sq.admin.metrics.title}</h1>
+        <div className="mt-6 grid grid-cols-2 sm:grid-cols-4 gap-4">
+          {[0, 1, 2, 3].map((i) => (
+            <div
+              key={i}
+              className="rounded-xl border border-[var(--color-border)] bg-[var(--color-bg-elevated)] p-5 animate-pulse h-24"
+            />
+          ))}
+        </div>
+      </section>
+    );
 
   return (
     <section>
-      <h1 className="text-2xl font-semibold">{Sq.sq.admin.metrics.title}</h1>
+      <h1 className="text-2xl sm:text-3xl font-bold tracking-tight">{Sq.sq.admin.metrics.title}</h1>
       <div className="mt-6 grid grid-cols-2 sm:grid-cols-4 gap-4">
         <Stat label={Sq.sq.admin.metrics.users} value={metrics.users} />
-        <Stat
-          label={Sq.sq.admin.metrics.newUsersLast7d}
-          value={metrics.newUsersLast7d}
-        />
+        <Stat label={Sq.sq.admin.metrics.newUsersLast7d} value={metrics.newUsersLast7d} />
         <Stat
           label={Sq.sq.admin.metrics.questions}
           value={`${metrics.questions.published} / ${metrics.questions.total}`}
         />
-        <Stat
-          label={Sq.sq.admin.metrics.attemptsLast7d}
-          value={metrics.attempts.last7d}
-        />
+        <Stat label={Sq.sq.admin.metrics.attemptsLast7d} value={metrics.attempts.last7d} />
       </div>
     </section>
   );
@@ -63,9 +75,13 @@ export default function AdminMetricsPage(): React.ReactElement {
 
 function Stat({ label, value }: { label: string; value: string | number }): React.ReactElement {
   return (
-    <div className="rounded-lg border border-[var(--color-border)] p-4">
-      <div className="text-sm text-[var(--color-fg-muted)]">{label}</div>
-      <div className="mt-1 text-2xl font-semibold">{value}</div>
+    <div className="rounded-xl border border-[var(--color-border)] bg-[var(--color-bg-elevated)] p-5 shadow-sm">
+      <div className="text-xs uppercase tracking-wide font-semibold text-[var(--color-fg-muted)]">
+        {label}
+      </div>
+      <div className="mt-2 text-2xl sm:text-3xl font-bold tracking-tight text-[var(--color-brand)]">
+        {value}
+      </div>
     </div>
   );
 }
