@@ -1,0 +1,3230 @@
+[
+  {
+    "externalId": "matura-foto-IMG_7552-n57",
+    "subjectSlug": "matematike",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "source": "Testi i Maturës (foto origjinale): Forma B, Matematikë; content/matura-fotot/IMG_7552.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "topicPath": "algjeber.polinome",
+    "promptMd": "Në figurë është paraqitur grafiku i funksionit $f(x) = x^3 - x$. Cili nga pohimet vijues është i saktë?",
+    "explanationMd": "Për $x \\in (-1,0) \\cup (1,+\\infty)$ vlen $f(x) > 0$. Për $x \\in (0,1)$ funksioni zbrit ($f'(x)=3x^2-1 < 0$). Zërat janë $-1,0,1$. Opsioni i saktë përmbledh vetëm intervalin e pozitivitetit.",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7552"
+    ],
+    "options": [
+      {
+        "label": "Funksioni është pozitiv për $x \\in (-1, 0) \\cup (1, +\\infty)$",
+        "isCorrect": true,
+        "order": 0
+      },
+      {
+        "label": "Funksioni është rritës për $x \\in (0, +\\infty)$",
+        "isCorrect": false,
+        "order": 1
+      },
+      {
+        "label": "Funksioni në $x = \\dfrac{3}{2}$ ka vlerën $3$",
+        "isCorrect": false,
+        "order": 2
+      },
+      {
+        "label": "Funksioni ka saktësisht dy zero $x = -1$, $x = 1$",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7552.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7552-n58",
+    "subjectSlug": "matematike",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "source": "Testi i Maturës (foto origjinale): Forma B, Matematikë; content/matura-fotot/IMG_7552.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "topicPath": "aritmetike.perqindje",
+    "promptMd": "Nga $90$ pyetjet e një testi kandidati është përgjigjur saktë në $54$ prej tyre. Sa përqind ishte i saktë kandidati?",
+    "explanationMd": "$\\dfrac{54}{90} = 0{,}6$, pra $60\\%$.",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7552"
+    ],
+    "options": [
+      {
+        "label": "$55\\%$",
+        "isCorrect": false,
+        "order": 0
+      },
+      {
+        "label": "$60\\%$",
+        "isCorrect": true,
+        "order": 1
+      },
+      {
+        "label": "$65\\%$",
+        "isCorrect": false,
+        "order": 2
+      },
+      {
+        "label": "$70\\%$",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7552.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7552-n59",
+    "subjectSlug": "matematike",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "source": "Testi i Maturës (foto origjinale): Forma B, Matematikë; content/matura-fotot/IMG_7552.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "topicPath": "algjeber.funksione.kuadratike",
+    "promptMd": "Në figurë është paraqitur grafiku i një funksioni kuadratik $f(x) = ax^2 + bx + c$. Sa është vlera e koeficientit $c$?",
+    "explanationMd": "Boshti $Oy$ pret grafikun në $(0,3)$, pra $f(0)=c=3$.",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7552"
+    ],
+    "options": [
+      {
+        "label": "$1$",
+        "isCorrect": false,
+        "order": 0
+      },
+      {
+        "label": "$2$",
+        "isCorrect": false,
+        "order": 1
+      },
+      {
+        "label": "$3$",
+        "isCorrect": true,
+        "order": 2
+      },
+      {
+        "label": "$4$",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7552.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7552-n60",
+    "subjectSlug": "matematike",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "source": "Testi i Maturës (foto origjinale): Forma B, Matematikë; content/matura-fotot/IMG_7552.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "topicPath": "gjeometri.vektore",
+    "promptMd": "Janë dhënë vektorët $\\vec{a} = 5\\vec{i} + 2\\vec{j}$ dhe $\\vec{b} = 2\\vec{i} - 4\\vec{j}$. Sa është gjatësia e vektorit $\\vec{a} - \\vec{b}$?",
+    "explanationMd": "$\\vec{a}-\\vec{b} = 3\\vec{i} + 6\\vec{j}$, gjatësia $\\sqrt{9+36} = 3\\sqrt{5}$.",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7552"
+    ],
+    "options": [
+      {
+        "label": "$\\sqrt{13}$",
+        "isCorrect": false,
+        "order": 0
+      },
+      {
+        "label": "$\\sqrt{85}$",
+        "isCorrect": false,
+        "order": 1
+      },
+      {
+        "label": "$4\\sqrt{10}$",
+        "isCorrect": false,
+        "order": 2
+      },
+      {
+        "label": "$3\\sqrt{5}$",
+        "isCorrect": true,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7552.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7552-n61",
+    "subjectSlug": "matematike",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "source": "Testi i Maturës (foto origjinale): Forma B, Matematikë; content/matura-fotot/IMG_7552.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "topicPath": "algjeber.logaritme",
+    "promptMd": "Nëse $\\log_a x = s$ dhe $\\log_a y^2 = t$, sa është $\\log_a \\dfrac{\\sqrt{x}}{y}$?",
+    "explanationMd": "$\\log_a y = \\dfrac{t}{2}$, pra $\\dfrac{1}{2}s - \\dfrac{t}{2} = \\dfrac{s-t}{2}$.",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7552"
+    ],
+    "options": [
+      {
+        "label": "$\\dfrac{s - t}{2}$",
+        "isCorrect": true,
+        "order": 0
+      },
+      {
+        "label": "$s + \\dfrac{t}{2}$",
+        "isCorrect": false,
+        "order": 1
+      },
+      {
+        "label": "$t - \\dfrac{s}{2}$",
+        "isCorrect": false,
+        "order": 2
+      },
+      {
+        "label": "$s - \\dfrac{t}{2}$",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7552.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7553-n51",
+    "subjectSlug": "matematike",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "year": 2020,
+    "source": "Testi i Maturës (foto origjinale): Forma A, Matematikë, Gusht 2020; content/matura-fotot/IMG_7553.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "topicPath": "algjeber.funksione.eksponenciale",
+    "promptMd": "Të thjeshtohet shprehja $\\dfrac{3^{x-1} \\cdot 9^{y-1}}{3^{x+y}}$?",
+    "explanationMd": "$9^{y-1}=3^{2y-2}$, eksponenti total në numërues është $x+2y-3$; zbritja me $3^{x+y}$ jep $3^{y-3} = \\dfrac{3^y}{27}$.",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7553"
+    ],
+    "options": [
+      {
+        "label": "$\\dfrac{3^y}{27}$",
+        "isCorrect": true,
+        "order": 0
+      },
+      {
+        "label": "$\\dfrac{3^{y-1}}{27}$",
+        "isCorrect": false,
+        "order": 1
+      },
+      {
+        "label": "$\\dfrac{3^{y-2}}{27}$",
+        "isCorrect": false,
+        "order": 2
+      },
+      {
+        "label": "$9$",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7553.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7553-n52",
+    "subjectSlug": "matematike",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "year": 2020,
+    "source": "Testi i Maturës (foto origjinale): Forma A, Matematikë, Gusht 2020; content/matura-fotot/IMG_7553.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "topicPath": "algjeber.polinome",
+    "promptMd": "Është dhënë funksioni $f(x) = 2x^2 + 3x$. Caktoni $f(x-3)$.",
+    "explanationMd": "$f(x-3)=2(x-3)^2+3(x-3)=2x^2-12x+18+3x-9=2x^2-9x+9$.",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7553"
+    ],
+    "options": [
+      {
+        "label": "$2x^2 - 9x + 9$",
+        "isCorrect": true,
+        "order": 0
+      },
+      {
+        "label": "$2x^2 + 3x - 27$",
+        "isCorrect": false,
+        "order": 1
+      },
+      {
+        "label": "$6(x-3)^2$",
+        "isCorrect": false,
+        "order": 2
+      },
+      {
+        "label": "$2x^2 - 9x + 18$",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7553.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7553-n53",
+    "subjectSlug": "matematike",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "year": 2020,
+    "source": "Testi i Maturës (foto origjinale): Forma A, Matematikë, Gusht 2020; content/matura-fotot/IMG_7553.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "topicPath": "aritmetike.logjike",
+    "promptMd": "Me $p$: «Leka është i lumtur», $q$: «Leka luan kitarë», $r$: «Troi është i lumtur», cila formulë përfaqëson «Nëse Leka është i lumtur dhe luan kitarë, atëherë Troi nuk është i lumtur»?",
+    "explanationMd": "Ky është $(p \\land q) \\implies \\neg r$.",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7553"
+    ],
+    "options": [
+      {
+        "label": "$\\neg r \\lor p \\land q$",
+        "isCorrect": false,
+        "order": 0
+      },
+      {
+        "label": "$p \\land q \\implies \\neg r$",
+        "isCorrect": true,
+        "order": 1
+      },
+      {
+        "label": "$\\neg r \\implies p \\land q$",
+        "isCorrect": false,
+        "order": 2
+      },
+      {
+        "label": "$p \\lor q \\land \\neg r$",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7553.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7553-n54",
+    "subjectSlug": "matematike",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "year": 2020,
+    "source": "Testi i Maturës (foto origjinale): Forma A, Matematikë, Gusht 2020; content/matura-fotot/IMG_7553.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "topicPath": "aritmetike.numra-real",
+    "promptMd": "Le të jetë $\\ast$ një veprim binar në $\\mathbb{Z}$ me $a \\ast b = a + a \\cdot b$. Caktoni $2 \\ast 3$.",
+    "explanationMd": "$2 \\ast 3 = 2 + 2\\cdot 3 = 8$.",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7553"
+    ],
+    "options": [
+      {
+        "label": "$8$",
+        "isCorrect": true,
+        "order": 0
+      },
+      {
+        "label": "$6$",
+        "isCorrect": false,
+        "order": 1
+      },
+      {
+        "label": "$7$",
+        "isCorrect": false,
+        "order": 2
+      },
+      {
+        "label": "$5$",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7553.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7554-n55",
+    "subjectSlug": "matematike",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "year": 2020,
+    "source": "Testi i Maturës (foto origjinale): Forma A, Matematikë, Gusht 2020; content/matura-fotot/IMG_7554.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "topicPath": "vargje.aritmetike",
+    "promptMd": "Një kopshtar mbolli lule në rreshta: në rreshtin e parë $171$, në të dytin $163$, në të tretin $155$, …, në të fundit $19$ (model i njëjtë). Sa rreshta ka?",
+    "explanationMd": "Progresion aritmetik me $d=-8$: $171+(n-1)(-8)=19 \\Rightarrow n=20$.",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7554"
+    ],
+    "options": [
+      {
+        "label": "$9$",
+        "isCorrect": false,
+        "order": 0
+      },
+      {
+        "label": "$15$",
+        "isCorrect": false,
+        "order": 1
+      },
+      {
+        "label": "$18$",
+        "isCorrect": false,
+        "order": 2
+      },
+      {
+        "label": "$20$",
+        "isCorrect": true,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7554.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7554-n56",
+    "subjectSlug": "matematike",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "year": 2020,
+    "source": "Testi i Maturës (foto origjinale): Forma A, Matematikë, Gusht 2020; content/matura-fotot/IMG_7554.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "topicPath": "statistike.deskriptive",
+    "promptMd": "Rea ka $70$ dhe $75$ pikë në dy teste matematike. Me sa pikë të paktën në testin e tretë mesatarja është $\\ge 60$?",
+    "explanationMd": "$\\dfrac{70+75+x}{3}\\ge 60 \\Rightarrow x\\ge 35$.",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7554"
+    ],
+    "options": [
+      {
+        "label": "Të paktën $35$ pikë",
+        "isCorrect": true,
+        "order": 0
+      },
+      {
+        "label": "Të paktën $47{,}5$ pikë",
+        "isCorrect": false,
+        "order": 1
+      },
+      {
+        "label": "Të paktën $48$ pikë",
+        "isCorrect": false,
+        "order": 2
+      },
+      {
+        "label": "Të paktën $25$ pikë",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7554.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7554-n57",
+    "subjectSlug": "matematike",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "year": 2020,
+    "source": "Testi i Maturës (foto origjinale): Forma A, Matematikë, Gusht 2020; content/matura-fotot/IMG_7554.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "topicPath": "algjeber.eksponenciale",
+    "promptMd": "Një substancë dekajo sipas $A = 270 \\cdot 3^{-0{,}5t}$ ($A$ në gramë, $t$ në muaj). Sa gramë substancë mbetet pas $4$ muajsh?",
+    "explanationMd": "$A(4)=270\\cdot 3^{-2}=30$ gramë.",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7554"
+    ],
+    "options": [
+      {
+        "label": "$28$",
+        "isCorrect": false,
+        "order": 0
+      },
+      {
+        "label": "$30$",
+        "isCorrect": true,
+        "order": 1
+      },
+      {
+        "label": "$32$",
+        "isCorrect": false,
+        "order": 2
+      },
+      {
+        "label": "$35$",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7554.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7554-n58",
+    "subjectSlug": "matematike",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "year": 2020,
+    "source": "Testi i Maturës (foto origjinale): Forma A, Matematikë, Gusht 2020; content/matura-fotot/IMG_7554.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "topicPath": "algjeber.ekuacione.lineare",
+    "promptMd": "Tarifa fikse $15$ €; $0{,}10$ € për kWh. Në maj pagesa totale $64$ €. Sa kWh është konsumi?",
+    "explanationMd": "$(64-15)/0{,}10 = 490$ kWh.",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7554"
+    ],
+    "options": [
+      {
+        "label": "$790$",
+        "isCorrect": false,
+        "order": 0
+      },
+      {
+        "label": "$590$",
+        "isCorrect": false,
+        "order": 1
+      },
+      {
+        "label": "$490$",
+        "isCorrect": true,
+        "order": 2
+      },
+      {
+        "label": "$430$",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7554.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7554-n59",
+    "subjectSlug": "matematike",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "year": 2020,
+    "source": "Testi i Maturës (foto origjinale): Forma A, Matematikë, Gusht 2020; content/matura-fotot/IMG_7554.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "topicPath": "algjeber.funksione.vlerat",
+    "promptMd": "Në figurë, nëse $f(x) = -2$, sa është $x$?",
+    "explanationMd": "Nga grafiku, segmenti me $y=-2$ përfshin pikën e mbushur në $x=-1$.",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7554"
+    ],
+    "options": [
+      {
+        "label": "$-3$",
+        "isCorrect": false,
+        "order": 0
+      },
+      {
+        "label": "$-1$",
+        "isCorrect": true,
+        "order": 1
+      },
+      {
+        "label": "$-4$",
+        "isCorrect": false,
+        "order": 2
+      },
+      {
+        "label": "$0$",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7554.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7555-n60",
+    "subjectSlug": "matematike",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "year": 2020,
+    "source": "Testi i Maturës (foto origjinale): Forma A, Matematikë, Gusht 2020; content/matura-fotot/IMG_7555.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "topicPath": "kombinatorike.permutacione",
+    "promptMd": "Tri vajza dhe dy djem duan të ulen në $5$ vende me radhë, me vajzat bashkë dhe djemtë bashkë. Në sa mënyra?",
+    "explanationMd": "Dy blloqe (V&D): $2!\\cdot 3!\\cdot 2!=24$.",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7555"
+    ],
+    "options": [
+      {
+        "label": "$2$",
+        "isCorrect": false,
+        "order": 0
+      },
+      {
+        "label": "$6$",
+        "isCorrect": false,
+        "order": 1
+      },
+      {
+        "label": "$12$",
+        "isCorrect": false,
+        "order": 2
+      },
+      {
+        "label": "$24$",
+        "isCorrect": true,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7555.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7555-n61",
+    "subjectSlug": "matematike",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "year": 2020,
+    "source": "Testi i Maturës (foto origjinale): Forma A, Matematikë, Gusht 2020; content/matura-fotot/IMG_7555.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "topicPath": "gjeometri.plane",
+    "promptMd": "Brenda secilës figure është dhënë formula e sipërfaqes; njëra është gabim. E cila figura?",
+    "explanationMd": "Për rreth me rreze $r$, sipërfaqja nuk është $2\\pi r$ (kjo është gjatësia).",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7555"
+    ],
+    "options": [
+      {
+        "label": "Fig. 1.",
+        "isCorrect": true,
+        "order": 0
+      },
+      {
+        "label": "Fig. 2.",
+        "isCorrect": false,
+        "order": 1
+      },
+      {
+        "label": "Fig. 3.",
+        "isCorrect": false,
+        "order": 2
+      },
+      {
+        "label": "Fig. 4.",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7555.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7555-n62",
+    "subjectSlug": "matematike",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "year": 2020,
+    "source": "Testi i Maturës (foto origjinale): Forma A, Matematikë, Gusht 2020; content/matura-fotot/IMG_7555.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "topicPath": "gjeometri.plane.katerkendesha",
+    "promptMd": "Me brendësi drejtkëndëshi me brinjë $a$ dhe $b$, korniza e ngjyrosur ka gjerësi $2$ në çdo anë. Sipërfaqja e ngjyrosur?",
+    "explanationMd": "$(a+4)(b+4) - ab$.",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7555"
+    ],
+    "options": [
+      {
+        "label": "$S = (a + 4) \\cdot (b + 4) - ab$",
+        "isCorrect": true,
+        "order": 0
+      },
+      {
+        "label": "$S = (a + 4) \\cdot (b + 4) + ab$",
+        "isCorrect": false,
+        "order": 1
+      },
+      {
+        "label": "$S = (a - 4) \\cdot (b + 4) - ab$",
+        "isCorrect": false,
+        "order": 2
+      },
+      {
+        "label": "$S = (a + 4) \\cdot (b - 4) + ab$",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7555.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7555-n63",
+    "subjectSlug": "matematike",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "year": 2020,
+    "source": "Testi i Maturës (foto origjinale): Forma A, Matematikë, Gusht 2020; content/matura-fotot/IMG_7555.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "topicPath": "gjeometri.analitike",
+    "promptMd": "Çka përfaqëson $3x^2 + 12y + 1 = 0$?",
+    "explanationMd": "Formë parabole (një variablë në katror, tjetra e parë).",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7555"
+    ],
+    "options": [
+      {
+        "label": "Një drejtëzë",
+        "isCorrect": false,
+        "order": 0
+      },
+      {
+        "label": "Një rreth",
+        "isCorrect": false,
+        "order": 1
+      },
+      {
+        "label": "Një hiperbolë",
+        "isCorrect": false,
+        "order": 2
+      },
+      {
+        "label": "Një parabolë",
+        "isCorrect": true,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7555.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7555-n64",
+    "subjectSlug": "matematike",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "year": 2020,
+    "source": "Testi i Maturës (foto origjinale): Forma A, Matematikë, Gusht 2020; content/matura-fotot/IMG_7555.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "topicPath": "gjeometri.analitike",
+    "promptMd": "$AB$ është diametër i rrethit me qendër $Q(2,-3)$. Nëse $B(1,4)$, caktoni $A$.",
+    "explanationMd": "Q është mesatarja: $A = (2\\cdot 2 - 1, 2\\cdot(-3)-4) = (3,-10)$.",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7555"
+    ],
+    "options": [
+      {
+        "label": "$A(3, -10)$",
+        "isCorrect": true,
+        "order": 0
+      },
+      {
+        "label": "$A(9, -1)$",
+        "isCorrect": false,
+        "order": 1
+      },
+      {
+        "label": "$A(-3, -10)$",
+        "isCorrect": false,
+        "order": 2
+      },
+      {
+        "label": "$A(4, 4)$",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7555.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7556-n65",
+    "subjectSlug": "matematike",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "year": 2020,
+    "source": "Testi i Maturës (foto origjinale): Forma A, Matematikë, Gusht 2020; content/matura-fotot/IMG_7556.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "topicPath": "gjeometri.plane.trekendesha",
+    "promptMd": "Në trekëndëshin $ABC$ vlen $\\overline{BC} = 4$ dhe $\\overline{AC} = 8 - \\overline{AB}$ (barazimet e trekëndëshit vlejnë). Cili përfundim për $\\overline{AB}$ është i saktë?",
+    "explanationMd": "Shëno $\\overline{AB}=c$. Atëherë $\\overline{AC}=8-c$. Nga inekuacionet e trekëndëshit: $c+4>8-c$, $c+(8-c)>4$, $4+(8-c)>c$, që japin $2<c<6$.",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7556"
+    ],
+    "options": [
+      {
+        "label": "$1 < \\overline{AB} < 4$",
+        "isCorrect": false,
+        "order": 0
+      },
+      {
+        "label": "$2 < \\overline{AB} < 6$",
+        "isCorrect": true,
+        "order": 1
+      },
+      {
+        "label": "$1 < \\overline{AB} < 3$",
+        "isCorrect": false,
+        "order": 2
+      },
+      {
+        "label": "$2 < \\overline{AB} < 7$",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7556.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7556-n66",
+    "subjectSlug": "matematike",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "year": 2020,
+    "source": "Testi i Maturës (foto origjinale): Forma A, Matematikë, Gusht 2020; content/matura-fotot/IMG_7556.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "topicPath": "aritmetike.numra-real",
+    "promptMd": "Njehsoni $|x| - 2|y - x| + 3|1 - y|$ për $x=-2$, $y=5$.",
+    "explanationMd": "$2 - 2\\cdot7 + 3\\cdot4 = 0$.",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7556"
+    ],
+    "options": [
+      {
+        "label": "$0$",
+        "isCorrect": true,
+        "order": 0
+      },
+      {
+        "label": "$1$",
+        "isCorrect": false,
+        "order": 1
+      },
+      {
+        "label": "$2$",
+        "isCorrect": false,
+        "order": 2
+      },
+      {
+        "label": "$3$",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7556.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7556-n67",
+    "subjectSlug": "matematike",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "year": 2020,
+    "source": "Testi i Maturës (foto origjinale): Forma A, Matematikë, Gusht 2020; content/matura-fotot/IMG_7556.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "topicPath": "gjeometri.plane.trekendesha",
+    "promptMd": "Në figurë, sa është $|AC|$?",
+    "explanationMd": "Me koordinata, $C(5,5)$, $A(0,0)$, distanca $5\\sqrt{2}$.",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7556"
+    ],
+    "options": [
+      {
+        "label": "$2\\sqrt{2}$",
+        "isCorrect": false,
+        "order": 0
+      },
+      {
+        "label": "$5\\sqrt{2}$",
+        "isCorrect": true,
+        "order": 1
+      },
+      {
+        "label": "$5\\sqrt{5}$",
+        "isCorrect": false,
+        "order": 2
+      },
+      {
+        "label": "$2\\sqrt{5}$",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7556.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7556-n68",
+    "subjectSlug": "matematike",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "year": 2020,
+    "source": "Testi i Maturës (foto origjinale): Forma A, Matematikë, Gusht 2020; content/matura-fotot/IMG_7556.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "topicPath": "algjeber.numra-komplekse",
+    "promptMd": "Caktoni $z$ nëse $3z - \\bar{z} = 2 + i$.",
+    "explanationMd": "Shkruaj $z=a+bi$: $2a + 4bi = 2+i$, pra $a=1$, $b=\\frac{1}{4}$.",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7556"
+    ],
+    "options": [
+      {
+        "label": "$z = \\dfrac{1}{4} + i$",
+        "isCorrect": false,
+        "order": 0
+      },
+      {
+        "label": "$z = 1 + 2i$",
+        "isCorrect": false,
+        "order": 1
+      },
+      {
+        "label": "$z = 1 + \\dfrac{1}{4} i$",
+        "isCorrect": true,
+        "order": 2
+      },
+      {
+        "label": "$z = 1 - \\dfrac{1}{4} i$",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7556.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7556-n69",
+    "subjectSlug": "matematike",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "year": 2020,
+    "source": "Testi i Maturës (foto origjinale): Forma A, Matematikë, Gusht 2020; content/matura-fotot/IMG_7556.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "topicPath": "gjeometri.plane.katerkendesha",
+    "promptMd": "Trapezoid me baza $8\\ \\text{cm}$ dhe $6\\ \\text{cm}$, lartësi $4\\ \\text{cm}$. Sipërfaqja?",
+    "explanationMd": "$\\dfrac{8+6}{2}\\cdot 4 = 28$.",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7556"
+    ],
+    "options": [
+      {
+        "label": "$S = 32\\ \\text{cm}^2$",
+        "isCorrect": false,
+        "order": 0
+      },
+      {
+        "label": "$S = 28\\ \\text{cm}^2$",
+        "isCorrect": true,
+        "order": 1
+      },
+      {
+        "label": "$S = 24\\ \\text{cm}^2$",
+        "isCorrect": false,
+        "order": 2
+      },
+      {
+        "label": "$S = 40\\ \\text{cm}^2$",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7556.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7556-n70",
+    "subjectSlug": "matematike",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "year": 2020,
+    "source": "Testi i Maturës (foto origjinale): Forma A, Matematikë, Gusht 2020; content/matura-fotot/IMG_7556.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "topicPath": "gjeometri.plane.rrethi",
+    "promptMd": "Sektor rrethor me rreze $60\\ \\text{cm}$ dhe kënd qendror $60^\\circ$. Sipërfaqja?",
+    "explanationMd": "$\\dfrac{1}{6}\\pi r^2 = 600\\pi$.",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7556"
+    ],
+    "options": [
+      {
+        "label": "$200\\pi\\ \\text{cm}^2$",
+        "isCorrect": false,
+        "order": 0
+      },
+      {
+        "label": "$400\\pi\\ \\text{cm}^2$",
+        "isCorrect": false,
+        "order": 1
+      },
+      {
+        "label": "$600\\pi\\ \\text{cm}^2$",
+        "isCorrect": true,
+        "order": 2
+      },
+      {
+        "label": "$800\\pi\\ \\text{cm}^2$",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7556.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7557-n71",
+    "subjectSlug": "matematike",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "year": 2020,
+    "source": "Testi i Maturës (foto origjinale): Forma A, Matematikë, Gusht 2020; content/matura-fotot/IMG_7557.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "topicPath": "gjeometri.vektore",
+    "promptMd": "Në figurë, pentagon i mbyllur me anëve vektorët $\\vec{AB},\\ldots,\\vec{EA}$. Cili pohim është i saktë?",
+    "explanationMd": "Shuma e vektorëve përgjatë konturit të mbyllur është $\\vec{0}$.",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7557"
+    ],
+    "options": [
+      {
+        "label": "$\\vec{AB}$ dhe $\\vec{DE}$ janë të kundërtë",
+        "isCorrect": false,
+        "order": 0
+      },
+      {
+        "label": "$\\vec{AB} + \\vec{BC} = \\vec{AD}$",
+        "isCorrect": false,
+        "order": 1
+      },
+      {
+        "label": "$\\vec{AB} + \\cdots + \\vec{EA} = 5\\vec{AB}$",
+        "isCorrect": false,
+        "order": 2
+      },
+      {
+        "label": "$\\vec{AB} + \\vec{BC} + \\vec{CD} + \\vec{DE} + \\vec{EA} = \\vec{0}$",
+        "isCorrect": true,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7557.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7557-n72",
+    "subjectSlug": "matematike",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "year": 2020,
+    "source": "Testi i Maturës (foto origjinale): Forma A, Matematikë, Gusht 2020; content/matura-fotot/IMG_7557.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "topicPath": "gjeometri.plane.trekendesha",
+    "promptMd": "Hija e pemës është $BC=20\\ \\text{m}$; shkopi $PQ=1{,}4\\ \\text{m}$ me hije $1\\ \\text{m}$. Sa është lartësia e pemës?",
+    "explanationMd": "Te të ngjashmit: $h/20 = 1{,}4/1$, pra $h=28\\ \\text{m}$.",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7557"
+    ],
+    "options": [
+      {
+        "label": "$24\\ \\text{m}$",
+        "isCorrect": false,
+        "order": 0
+      },
+      {
+        "label": "$26\\ \\text{m}$",
+        "isCorrect": false,
+        "order": 1
+      },
+      {
+        "label": "$28\\ \\text{m}$",
+        "isCorrect": true,
+        "order": 2
+      },
+      {
+        "label": "$30\\ \\text{m}$",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7557.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7557-n73",
+    "subjectSlug": "matematike",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "year": 2020,
+    "source": "Testi i Maturës (foto origjinale): Forma A, Matematikë, Gusht 2020; content/matura-fotot/IMG_7557.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "topicPath": "statistike.deskriptive",
+    "promptMd": "Shpërndarja e notave (tabela në foto). Cili relacion për modë / mesën / medianë është i saktë?",
+    "explanationMd": "Moda dhe mediana janë të dyja $3$.",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7557"
+    ],
+    "options": [
+      {
+        "label": "Moda = Mediana",
+        "isCorrect": true,
+        "order": 0
+      },
+      {
+        "label": "Moda < Mediana < Mesatarja",
+        "isCorrect": false,
+        "order": 1
+      },
+      {
+        "label": "Moda < Mesatarja < Mediana",
+        "isCorrect": false,
+        "order": 2
+      },
+      {
+        "label": "Mesatarja < Mediana < Moda",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7557.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7557-n74",
+    "subjectSlug": "matematike",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "year": 2020,
+    "source": "Testi i Maturës (foto origjinale): Forma A, Matematikë, Gusht 2020; content/matura-fotot/IMG_7557.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "topicPath": "kombinatorike.probabilitet",
+    "promptMd": "Hedhje zari: sa është probabiliteti që të mos dalë as $4$ as $5$?",
+    "explanationMd": "$4$ raste të favorshme nga $6$: $P=\\dfrac{2}{3}$.",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7557"
+    ],
+    "options": [
+      {
+        "label": "$\\dfrac{1}{6}$",
+        "isCorrect": false,
+        "order": 0
+      },
+      {
+        "label": "$\\dfrac{5}{6}$",
+        "isCorrect": false,
+        "order": 1
+      },
+      {
+        "label": "$\\dfrac{2}{3}$",
+        "isCorrect": true,
+        "order": 2
+      },
+      {
+        "label": "$\\dfrac{1}{3}$",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7557.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7557-n75",
+    "subjectSlug": "matematike",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "year": 2020,
+    "source": "Testi i Maturës (foto origjinale): Forma A, Matematikë, Gusht 2020; content/matura-fotot/IMG_7557.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "topicPath": "kombinatorike.probabilitet",
+    "promptMd": "$60$ topa (të kuq, të bardhë, të zinj). Sigurimi i një të kuqi kërkon të paktën $36$ nxjerrje; i një të zi $40$. Sa të bardhë?",
+    "explanationMd": "Në skenarët e «worst-case»: $W+B=35$, $R+W=39$ $\\Rightarrow$ $W=14$.",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7557"
+    ],
+    "options": [
+      {
+        "label": "$12$",
+        "isCorrect": false,
+        "order": 0
+      },
+      {
+        "label": "$13$",
+        "isCorrect": false,
+        "order": 1
+      },
+      {
+        "label": "$14$",
+        "isCorrect": true,
+        "order": 2
+      },
+      {
+        "label": "$15$",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7557.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7558-n51",
+    "subjectSlug": "matematike",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "year": 2023,
+    "source": "Testi i Maturës (foto origjinale): Forma A, Matematikë–Natyror, Qershor 2023; content/matura-fotot/IMG_7558.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "topicPath": "aritmetike.numra-real",
+    "promptMd": "Nëse $x+3$ është çift, cili është tek?",
+    "explanationMd": "$x$ tek $\\Rightarrow$ $2x+5$ tek.",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7558"
+    ],
+    "options": [
+      {
+        "label": "$2x+5$",
+        "isCorrect": true,
+        "order": 0
+      },
+      {
+        "label": "$2x-2$",
+        "isCorrect": false,
+        "order": 1
+      },
+      {
+        "label": "$x-3$",
+        "isCorrect": false,
+        "order": 2
+      },
+      {
+        "label": "$3x+1$",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7558.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7558-n52",
+    "subjectSlug": "matematike",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "year": 2023,
+    "source": "Testi i Maturës (foto origjinale): Forma A, Matematikë–Natyror, Qershor 2023; content/matura-fotot/IMG_7558.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "topicPath": "algjeber.inekuacione",
+    "promptMd": "Baza e trekëndëshit është $5\\ \\text{cm}$ më e madhe se lartësia; shuma e bazës dhe lartësisë $\\ge 32$. Cili inekuacion përfaqëson?",
+    "explanationMd": "Me lartësinë $a$, baza $a+5$: $a+(a+5)\\ge 32$.",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7558"
+    ],
+    "options": [
+      {
+        "label": "$a + (a + 5) \\le 32$",
+        "isCorrect": false,
+        "order": 0
+      },
+      {
+        "label": "$a - (a + 5) \\le 32$",
+        "isCorrect": false,
+        "order": 1
+      },
+      {
+        "label": "$a + (a + 5) \\ge 32$",
+        "isCorrect": true,
+        "order": 2
+      },
+      {
+        "label": "$a \\cdot (a + 5) \\ge 32$",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7558.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7558-n53",
+    "subjectSlug": "matematike",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "year": 2023,
+    "source": "Testi i Maturës (foto origjinale): Forma A, Matematikë–Natyror, Qershor 2023; content/matura-fotot/IMG_7558.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "topicPath": "algjeber.shprehje",
+    "promptMd": "Nëse $a+2b=5$ dhe $c=3$, sa është $a + 2\\bigl(b - \\dfrac{1}{2} + \\dfrac{1}{6}c\\bigr)$?",
+    "explanationMd": "Zëvendëso: $a+2b -1 + \\dfrac{c}{3} = 5 -1 +1 = 5$.",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7558"
+    ],
+    "options": [
+      {
+        "label": "$4$",
+        "isCorrect": false,
+        "order": 0
+      },
+      {
+        "label": "$5$",
+        "isCorrect": true,
+        "order": 1
+      },
+      {
+        "label": "$\\dfrac{1}{3}$",
+        "isCorrect": false,
+        "order": 2
+      },
+      {
+        "label": "$\\dfrac{1}{6}$",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7558.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7558-n54",
+    "subjectSlug": "matematike",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "year": 2023,
+    "source": "Testi i Maturës (foto origjinale): Forma A, Matematikë–Natyror, Qershor 2023; content/matura-fotot/IMG_7558.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "topicPath": "algjeber.funksione.lineare",
+    "promptMd": "$x$ fadroma, $2$ lapsa; fadroma $1{,}20$ €, laps $0{,}50$ €. Çmimi total?",
+    "explanationMd": "$y = 1{,}2x + 2\\cdot 0{,}5 = 1{,}2x+1$.",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7558"
+    ],
+    "options": [
+      {
+        "label": "$y = 0{,}2x + 1$",
+        "isCorrect": false,
+        "order": 0
+      },
+      {
+        "label": "$y = x + 2$",
+        "isCorrect": false,
+        "order": 1
+      },
+      {
+        "label": "$y = 1{,}2x + 1$",
+        "isCorrect": true,
+        "order": 2
+      },
+      {
+        "label": "$y = 0{,}5x + 1$",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7558.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7558-n55",
+    "subjectSlug": "matematike",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "year": 2023,
+    "source": "Testi i Maturës (foto origjinale): Forma A, Matematikë–Natyror, Qershor 2023; content/matura-fotot/IMG_7558.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "topicPath": "algjeber.identitete",
+    "promptMd": "Të thjeshtohet $\\dfrac{x^2 - 4x + 4}{x^3 - 8} : \\dfrac{1}{x^2 + 2x + 4}$, $x \\ne 2$.",
+    "explanationMd": "Shkrundhja $(x-2)^2/((x-2)(x^2+2x+4)) \\cdot (x^2+2x+4) = x-2$.",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7558"
+    ],
+    "options": [
+      {
+        "label": "$x-2$",
+        "isCorrect": true,
+        "order": 0
+      },
+      {
+        "label": "$x+2$",
+        "isCorrect": false,
+        "order": 1
+      },
+      {
+        "label": "$x-4$",
+        "isCorrect": false,
+        "order": 2
+      },
+      {
+        "label": "$x+4$",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7558.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7558-n56",
+    "subjectSlug": "matematike",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "year": 2023,
+    "source": "Testi i Maturës (foto origjinale): Forma A, Matematikë–Natyror, Qershor 2023; content/matura-fotot/IMG_7558.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "topicPath": "algjeber.ekuacione.kuadratike",
+    "promptMd": "$-1$ dhe $3$ janë zero të $f(x)=ax^2+bx+1$, $a\\ne 0$. Sa është $f(-3)$?",
+    "explanationMd": "$f(x)=-\\frac{1}{3}(x+1)(x-3)$, vlerëso në $-3$: $-4$.",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7558"
+    ],
+    "options": [
+      {
+        "label": "$-16$",
+        "isCorrect": false,
+        "order": 0
+      },
+      {
+        "label": "$-4$",
+        "isCorrect": true,
+        "order": 1
+      },
+      {
+        "label": "$0$",
+        "isCorrect": false,
+        "order": 2
+      },
+      {
+        "label": "$12$",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7558.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7559-n57",
+    "subjectSlug": "matematike",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "year": 2023,
+    "source": "Testi i Maturës (foto origjinale): Forma A, Matematikë–Natyror, Qershor 2023; content/matura-fotot/IMG_7559.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "topicPath": "algjeber.funksione.lineare",
+    "promptMd": "Tabela e pikave (në foto) jep hapa $5,6,7,\\ldots$ pika. Shprehja për hapin $n$-të?",
+    "explanationMd": "Term i natyrshëm $n$: pikë $n+4$.",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7559"
+    ],
+    "options": [
+      {
+        "label": "$4n+1$",
+        "isCorrect": false,
+        "order": 0
+      },
+      {
+        "label": "$6n-1$",
+        "isCorrect": false,
+        "order": 1
+      },
+      {
+        "label": "$3n+2$",
+        "isCorrect": false,
+        "order": 2
+      },
+      {
+        "label": "$n+4$",
+        "isCorrect": true,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7559.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7559-n58",
+    "subjectSlug": "matematike",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "year": 2023,
+    "source": "Testi i Maturës (foto origjinale): Forma A, Matematikë–Natyror, Qershor 2023; content/matura-fotot/IMG_7559.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "topicPath": "kombinatorike.probabilitet",
+    "promptMd": "Raporti i sferave të kuqe ndaj të verdha $7:5$. Probabiliteti të nxjerrësh të kuqe?",
+    "explanationMd": "$\\dfrac{7}{7+5}=\\dfrac{7}{12}$.",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7559"
+    ],
+    "options": [
+      {
+        "label": "$5/7$",
+        "isCorrect": false,
+        "order": 0
+      },
+      {
+        "label": "$5/12$",
+        "isCorrect": false,
+        "order": 1
+      },
+      {
+        "label": "$7/12$",
+        "isCorrect": true,
+        "order": 2
+      },
+      {
+        "label": "$1/2$",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7559.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7559-n59",
+    "subjectSlug": "matematike",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "year": 2023,
+    "source": "Testi i Maturës (foto origjinale): Forma A, Matematikë–Natyror, Qershor 2023; content/matura-fotot/IMG_7559.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "topicPath": "gjeometri.analitike",
+    "promptMd": "Drejtëzë përmes $P(2,5)$ paralele me $Ox$?",
+    "explanationMd": "$y=5$.",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7559"
+    ],
+    "options": [
+      {
+        "label": "$y=2$",
+        "isCorrect": false,
+        "order": 0
+      },
+      {
+        "label": "$y=5$",
+        "isCorrect": true,
+        "order": 1
+      },
+      {
+        "label": "$y=5-x$",
+        "isCorrect": false,
+        "order": 2
+      },
+      {
+        "label": "$y=2x$",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7559.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7559-n60",
+    "subjectSlug": "matematike",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "year": 2023,
+    "source": "Testi i Maturës (foto origjinale): Forma A, Matematikë–Natyror, Qershor 2023; content/matura-fotot/IMG_7559.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "topicPath": "gjeometri.analitike",
+    "promptMd": "$A(-3,-2)$ dhe $B(5,2)$ janë në një diametër (figurë). Ekuacioni i rrethit?",
+    "explanationMd": "Qendra mesatare $(1,0)$, $r^2=20$: $(x-1)^2+y^2=20$.",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7559"
+    ],
+    "options": [
+      {
+        "label": "$(x-1)^2 + y^2 = 20$",
+        "isCorrect": true,
+        "order": 0
+      },
+      {
+        "label": "$(x+1)^2 + y^2 = 20$",
+        "isCorrect": false,
+        "order": 1
+      },
+      {
+        "label": "$x^2 + (y-1)^2 = 20$",
+        "isCorrect": false,
+        "order": 2
+      },
+      {
+        "label": "$x^2 + (y+1)^2 = 20$",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7559.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7559-n61",
+    "subjectSlug": "matematike",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "year": 2023,
+    "source": "Testi i Maturës (foto origjinale): Forma A, Matematikë–Natyror, Qershor 2023; content/matura-fotot/IMG_7559.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "topicPath": "algjeber.numra-komplekse",
+    "promptMd": "Caktoni $z$ nëse $(2+i)z = 1+3i$.",
+    "explanationMd": "$z = \\dfrac{(1+3i)(2-i)}{5} = 1+i$.",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7559"
+    ],
+    "options": [
+      {
+        "label": "$1-i$",
+        "isCorrect": false,
+        "order": 0
+      },
+      {
+        "label": "$2+i$",
+        "isCorrect": false,
+        "order": 1
+      },
+      {
+        "label": "$1+2i$",
+        "isCorrect": false,
+        "order": 2
+      },
+      {
+        "label": "$1+i$",
+        "isCorrect": true,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7559.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7560-n62",
+    "subjectSlug": "matematike",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "year": 2023,
+    "source": "Testi i Maturës (foto origjinale): Forma A, Matematikë–Natyror, Qershor 2023; content/matura-fotot/IMG_7560.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "topicPath": "vargje.aritmetike",
+    "promptMd": "Për vargun $a_n = 5 - 2n$, $n\\ge 1$. Cili pohim është i saktë?",
+    "explanationMd": "Progresion aritmetik me $d=-2$.",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7560"
+    ],
+    "options": [
+      {
+        "label": "Varg aritmetik me $d=-2$",
+        "isCorrect": true,
+        "order": 0
+      },
+      {
+        "label": "Varg aritmetik me $d=2$",
+        "isCorrect": false,
+        "order": 1
+      },
+      {
+        "label": "Varg gjeometrik me $q=\\frac{1}{2}$",
+        "isCorrect": false,
+        "order": 2
+      },
+      {
+        "label": "Varg gjeometrik me $q=-\\frac{1}{2}$",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7560.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7560-n63",
+    "subjectSlug": "matematike",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "year": 2023,
+    "source": "Testi i Maturës (foto origjinale): Forma A, Matematikë–Natyror, Qershor 2023; content/matura-fotot/IMG_7560.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "topicPath": "algjeber.funksione.eksponenciale",
+    "promptMd": "Cili grafik i figurës i përgjigjet $f(x)=3^x-1$?",
+    "explanationMd": "$f(0)=0$, $f(1)=2$ — përkon me $y_3$ në skicë.",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7560"
+    ],
+    "options": [
+      {
+        "label": "$y_1$",
+        "isCorrect": false,
+        "order": 0
+      },
+      {
+        "label": "$y_2$",
+        "isCorrect": false,
+        "order": 1
+      },
+      {
+        "label": "$y_3$",
+        "isCorrect": true,
+        "order": 2
+      },
+      {
+        "label": "$y_4$",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7560.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7560-n64",
+    "subjectSlug": "matematike",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "year": 2023,
+    "source": "Testi i Maturës (foto origjinale): Forma A, Matematikë–Natyror, Qershor 2023; content/matura-fotot/IMG_7560.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "topicPath": "algjeber.funksione.eksponenciale",
+    "promptMd": "Bakteret dyfishohen çdo $15$ h; fillojnë me $100$. Kush është $N(t)$ pas $t$ orësh?",
+    "explanationMd": "$N(t)=100\\cdot 2^{t/15}$.",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7560"
+    ],
+    "options": [
+      {
+        "label": "$N(t) = 100 \\cdot 2^{15t}$",
+        "isCorrect": false,
+        "order": 0
+      },
+      {
+        "label": "$N(t) = 100 \\cdot 2^{t/15}$",
+        "isCorrect": true,
+        "order": 1
+      },
+      {
+        "label": "$N(t) = 15 \\cdot 2^{100/t}$",
+        "isCorrect": false,
+        "order": 2
+      },
+      {
+        "label": "$N(t) = 15 \\cdot 2^{t/100}$",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7560.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7560-n65",
+    "subjectSlug": "matematike",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "year": 2023,
+    "source": "Testi i Maturës (foto origjinale): Forma A, Matematikë–Natyror, Qershor 2023; content/matura-fotot/IMG_7560.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "topicPath": "algjeber.funksione.kuadratike",
+    "promptMd": "Kulmi i $y = 3x^2 + 12x + 8$?",
+    "explanationMd": "Kulmi në $x=-2$, $y=-4$.",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7560"
+    ],
+    "options": [
+      {
+        "label": "$K(2,4)$",
+        "isCorrect": false,
+        "order": 0
+      },
+      {
+        "label": "$K(-2,4)$",
+        "isCorrect": false,
+        "order": 1
+      },
+      {
+        "label": "$K(2,-4)$",
+        "isCorrect": false,
+        "order": 2
+      },
+      {
+        "label": "$K(-2,-4)$",
+        "isCorrect": true,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7560.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7561-n66",
+    "subjectSlug": "matematike",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "year": 2023,
+    "source": "Testi i Maturës (foto origjinale): Forma A, Matematikë–Natyror, Qershor 2023; content/matura-fotot/IMG_7561.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "topicPath": "gjeometri.vektore",
+    "promptMd": "Me $\\vec{a}=\\vec{i}+2\\vec{j}$, $\\vec{b}=2\\vec{i}-\\vec{j}$, $\\vec{c}=-3\\vec{i}+4\\vec{j}$, sa është $k$ për $\\vec{a}+k\\vec{b}=\\vec{c}$?",
+    "explanationMd": "Sistem linear jep $k=-2$.",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7561"
+    ],
+    "options": [
+      {
+        "label": "$-2$",
+        "isCorrect": true,
+        "order": 0
+      },
+      {
+        "label": "$-1$",
+        "isCorrect": false,
+        "order": 1
+      },
+      {
+        "label": "$1$",
+        "isCorrect": false,
+        "order": 2
+      },
+      {
+        "label": "$2$",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7561.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7561-n67",
+    "subjectSlug": "matematike",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "year": 2023,
+    "source": "Testi i Maturës (foto origjinale): Forma A, Matematikë–Natyror, Qershor 2023; content/matura-fotot/IMG_7561.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "topicPath": "gjeometri.plane.trekendesha",
+    "promptMd": "Në figurë $PQ \\parallel RS$. Caktoni $TP$ nga shënimet mbi segmentet.",
+    "explanationMd": "Teoremi i Thalesit / të ngjashmit jep $TP=20$.",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7561"
+    ],
+    "options": [
+      {
+        "label": "$18$",
+        "isCorrect": false,
+        "order": 0
+      },
+      {
+        "label": "$20$",
+        "isCorrect": true,
+        "order": 1
+      },
+      {
+        "label": "$22$",
+        "isCorrect": false,
+        "order": 2
+      },
+      {
+        "label": "$25$",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7561.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7561-n68",
+    "subjectSlug": "matematike",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "year": 2023,
+    "source": "Testi i Maturës (foto origjinale): Forma A, Matematikë–Natyror, Qershor 2023; content/matura-fotot/IMG_7561.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "topicPath": "algjeber.inekuacione",
+    "promptMd": "Në boshtin e figurës është shprehur $|x-4|\\le 5$; skaji i djathtë është $k$. Sa është $k$?",
+    "explanationMd": "Zgjidhja është $[-1,9]$, pra $k=9$.",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7561"
+    ],
+    "options": [
+      {
+        "label": "$1$",
+        "isCorrect": false,
+        "order": 0
+      },
+      {
+        "label": "$4$",
+        "isCorrect": false,
+        "order": 1
+      },
+      {
+        "label": "$5$",
+        "isCorrect": false,
+        "order": 2
+      },
+      {
+        "label": "$9$",
+        "isCorrect": true,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7561.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7561-n69",
+    "subjectSlug": "matematike",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "year": 2023,
+    "source": "Testi i Maturës (foto origjinale): Forma A, Matematikë–Natyror, Qershor 2023; content/matura-fotot/IMG_7561.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "topicPath": "trigonometri.vlerat-themelore",
+    "promptMd": "Nëse $a=\\sin 80^\\circ$, $b=\\cos 80^\\circ$, $c=\\cos 100^\\circ$, cila barazim i radhitjes është e saktë?",
+    "explanationMd": "$c<0<b<a$, pra $c<b<a$.",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7561"
+    ],
+    "options": [
+      {
+        "label": "$a<b<c$",
+        "isCorrect": false,
+        "order": 0
+      },
+      {
+        "label": "$c<b<a$",
+        "isCorrect": true,
+        "order": 1
+      },
+      {
+        "label": "$a<c<b$",
+        "isCorrect": false,
+        "order": 2
+      },
+      {
+        "label": "$b<c<a$",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7561.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7561-n70",
+    "subjectSlug": "matematike",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "year": 2023,
+    "source": "Testi i Maturës (foto origjinale): Forma A, Matematikë–Natyror, Qershor 2023; content/matura-fotot/IMG_7561.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "topicPath": "trigonometri.trekendesha",
+    "promptMd": "Në figurë, $AC=9\\ \\text{m}$, $BC=15\\ \\text{m}$, $\\widehat{ACB}=120^\\circ$. $AB$?",
+    "explanationMd": "Teorema e kosinusit: $AB^2 = 81+225+135=441$, $AB=21$.",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7561"
+    ],
+    "options": [
+      {
+        "label": "$15\\ \\text{m}$",
+        "isCorrect": false,
+        "order": 0
+      },
+      {
+        "label": "$18\\ \\text{m}$",
+        "isCorrect": false,
+        "order": 1
+      },
+      {
+        "label": "$21\\ \\text{m}$",
+        "isCorrect": true,
+        "order": 2
+      },
+      {
+        "label": "$24\\ \\text{m}$",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7561.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7562-n71",
+    "subjectSlug": "matematike",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "year": 2023,
+    "source": "Testi i Maturës (foto origjinale): Forma A, Matematikë–Natyror, Qershor 2023; content/matura-fotot/IMG_7562.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "topicPath": "statistike.deskriptive",
+    "promptMd": "Le të jetë $x$ natyror. Mediana e $1+x$, $2+5x$, $2+3x$, $1$, $1+3x$ është $19$. Sa është $x$?",
+    "explanationMd": "Renditur me $x$ natyror, mediana $1+3x=19 \\Rightarrow x=6$.",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7562"
+    ],
+    "options": [
+      {
+        "label": "$6$",
+        "isCorrect": true,
+        "order": 0
+      },
+      {
+        "label": "$3$",
+        "isCorrect": false,
+        "order": 1
+      },
+      {
+        "label": "$4$",
+        "isCorrect": false,
+        "order": 2
+      },
+      {
+        "label": "$2$",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7562.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7562-n72",
+    "subjectSlug": "matematike",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "year": 2023,
+    "source": "Testi i Maturës (foto origjinale): Forma A, Matematikë–Natyror, Qershor 2023; content/matura-fotot/IMG_7562.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "topicPath": "gjeometri.hapesinore.vellime",
+    "promptMd": "Cilindër me diametër $6\\ \\text{dm}$ përmban $270$ litra ujë. Lartësia e përafërt?",
+    "explanationMd": "$H = 270/(\\pi \\cdot 3^2)=30/\\pi \\approx 9{,}6\\ \\text{dm}$.",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7562"
+    ],
+    "options": [
+      {
+        "label": "$7{,}4\\ \\text{dm}$",
+        "isCorrect": false,
+        "order": 0
+      },
+      {
+        "label": "$8{,}5\\ \\text{dm}$",
+        "isCorrect": false,
+        "order": 1
+      },
+      {
+        "label": "$9{,}6\\ \\text{dm}$",
+        "isCorrect": true,
+        "order": 2
+      },
+      {
+        "label": "$10{,}7\\ \\text{dm}$",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7562.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7562-n73",
+    "subjectSlug": "matematike",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "year": 2023,
+    "source": "Testi i Maturës (foto origjinale): Forma A, Matematikë–Natyror, Qershor 2023; content/matura-fotot/IMG_7562.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "topicPath": "kombinatorike.probabilitet",
+    "promptMd": "Nga tabela e shifrave të fundit ($100$ numra), sa është probabiliteti që shifra e fundit të jetë e plotëpjesëtueshme me $3$?",
+    "explanationMd": "Frekuencat për $0,3,6,9$ jepin $38/100=0{,}38$.",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7562"
+    ],
+    "options": [
+      {
+        "label": "$0{,}28$",
+        "isCorrect": false,
+        "order": 0
+      },
+      {
+        "label": "$0{,}31$",
+        "isCorrect": false,
+        "order": 1
+      },
+      {
+        "label": "$0{,}35$",
+        "isCorrect": false,
+        "order": 2
+      },
+      {
+        "label": "$0{,}38$",
+        "isCorrect": true,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7562.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7562-n74",
+    "subjectSlug": "matematike",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "year": 2023,
+    "source": "Testi i Maturës (foto origjinale): Forma A, Matematikë–Natyror, Qershor 2023; content/matura-fotot/IMG_7562.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "topicPath": "analize.limite",
+    "promptMd": "Sa është $\\displaystyle \\lim_{x \\to 1} \\frac{x-1}{3x^2-3}$?",
+    "explanationMd": "Thjeshto: $\\dfrac{1}{3(x+1)} \\to \\dfrac{1}{6}$.",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7562"
+    ],
+    "options": [
+      {
+        "label": "$0$",
+        "isCorrect": false,
+        "order": 0
+      },
+      {
+        "label": "$\\dfrac{1}{3}$",
+        "isCorrect": false,
+        "order": 1
+      },
+      {
+        "label": "$\\dfrac{1}{6}$",
+        "isCorrect": true,
+        "order": 2
+      },
+      {
+        "label": "$1$",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7562.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7562-n75",
+    "subjectSlug": "matematike",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "year": 2023,
+    "source": "Testi i Maturës (foto origjinale): Forma A, Matematikë–Natyror, Qershor 2023; content/matura-fotot/IMG_7562.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "topicPath": "analize.derivate",
+    "promptMd": "Derivati i $f(x)=\\dfrac{x}{2x+1}$ në $x_0=-1$?",
+    "explanationMd": "$f'(x)=1/(2x+1)^2$, pra $f'(-1)=1$.",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7562"
+    ],
+    "options": [
+      {
+        "label": "$-1$",
+        "isCorrect": false,
+        "order": 0
+      },
+      {
+        "label": "$-\\dfrac{1}{4}$",
+        "isCorrect": false,
+        "order": 1
+      },
+      {
+        "label": "$\\dfrac{1}{4}$",
+        "isCorrect": false,
+        "order": 2
+      },
+      {
+        "label": "$1$",
+        "isCorrect": true,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7562.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7563-n51",
+    "subjectSlug": "matematike",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "year": 2023,
+    "source": "Testi i Maturës (foto origjinale): Forma A, Matematikë–Shoqëror, Qershor 2023; content/matura-fotot/IMG_7563.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "topicPath": "algjeber.funksione.lineare",
+    "promptMd": "$(1{,}20$ € fadroma, $0{,}50$ € laps) Bleni $x$ fadroma dhe $2$ lapsa. Funksioni i çmimit total?",
+    "explanationMd": "$y=1{,}2x+1$.",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7563"
+    ],
+    "options": [
+      {
+        "label": "$y = 1{,}2x + 1$",
+        "isCorrect": true,
+        "order": 0
+      },
+      {
+        "label": "$y = 0{,}5x + 1$",
+        "isCorrect": false,
+        "order": 1
+      },
+      {
+        "label": "$y = x + 2$",
+        "isCorrect": false,
+        "order": 2
+      },
+      {
+        "label": "$y = 0{,}2x + 1$",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7563.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7563-n52",
+    "subjectSlug": "matematike",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "year": 2023,
+    "source": "Testi i Maturës (foto origjinale): Forma A, Matematikë–Shoqëror, Qershor 2023; content/matura-fotot/IMG_7563.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "topicPath": "gjeometri.analitike",
+    "promptMd": "Drejtëzë përmes $P(2,5)$ paralele me $Ox$?",
+    "explanationMd": "$y=5$.",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7563"
+    ],
+    "options": [
+      {
+        "label": "$y = 2 - x$",
+        "isCorrect": false,
+        "order": 0
+      },
+      {
+        "label": "$y = 5 - x$",
+        "isCorrect": false,
+        "order": 1
+      },
+      {
+        "label": "$y = 5$",
+        "isCorrect": true,
+        "order": 2
+      },
+      {
+        "label": "$y = 2$",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7563.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7563-n53",
+    "subjectSlug": "matematike",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "year": 2023,
+    "source": "Testi i Maturës (foto origjinale): Forma A, Matematikë–Shoqëror, Qershor 2023; content/matura-fotot/IMG_7563.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "topicPath": "vargje.aritmetike",
+    "promptMd": "$a_n = 5 - 2n$, $n\\ge 1$. Pohimi i saktë?",
+    "explanationMd": "Progresion aritmetik me $d=-2$.",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7563"
+    ],
+    "options": [
+      {
+        "label": "Varg gjeometrik me $q=\\frac{1}{2}$",
+        "isCorrect": false,
+        "order": 0
+      },
+      {
+        "label": "Varg aritmetik me $d=-2$",
+        "isCorrect": true,
+        "order": 1
+      },
+      {
+        "label": "Varg aritmetik me $d=2$",
+        "isCorrect": false,
+        "order": 2
+      },
+      {
+        "label": "Varg gjeometrik me $q=-\\frac{1}{2}$",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7563.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7563-n54",
+    "subjectSlug": "matematike",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "year": 2023,
+    "source": "Testi i Maturës (foto origjinale): Forma A, Matematikë–Shoqëror, Qershor 2023; content/matura-fotot/IMG_7563.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "topicPath": "algjeber.funksione.eksponenciale",
+    "promptMd": "Baktere dyfishohen çdo $15$ h nga $100$. $N(t)$ pas $t$ orëve?",
+    "explanationMd": "$N(t)=100\\cdot 2^{t/15}$.",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7563"
+    ],
+    "options": [
+      {
+        "label": "$N(t) = 15 \\cdot 2^{t/100}$",
+        "isCorrect": false,
+        "order": 0
+      },
+      {
+        "label": "$N(t) = 100 \\cdot 2^{15t}$",
+        "isCorrect": false,
+        "order": 1
+      },
+      {
+        "label": "$N(t) = 100 \\cdot 2^{t/15}$",
+        "isCorrect": true,
+        "order": 2
+      },
+      {
+        "label": "$N(t) = 15 \\cdot 2^{100t}$",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7563.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7563-n55",
+    "subjectSlug": "matematike",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "year": 2023,
+    "source": "Testi i Maturës (foto origjinale): Forma A, Matematikë–Shoqëror, Qershor 2023; content/matura-fotot/IMG_7563.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "topicPath": "algjeber.funksione.kuadratike",
+    "promptMd": "Kulmi i $y = 3x^2 + 12x + 8$?",
+    "explanationMd": "$K(-2,-4)$.",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7563"
+    ],
+    "options": [
+      {
+        "label": "$K(-2,-4)$",
+        "isCorrect": true,
+        "order": 0
+      },
+      {
+        "label": "$K(-2,4)$",
+        "isCorrect": false,
+        "order": 1
+      },
+      {
+        "label": "$K(2,4)$",
+        "isCorrect": false,
+        "order": 2
+      },
+      {
+        "label": "$K(2,-4)$",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7563.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7563-n56",
+    "subjectSlug": "matematike",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "year": 2023,
+    "source": "Testi i Maturës (foto origjinale): Forma A, Matematikë–Shoqëror, Qershor 2023; content/matura-fotot/IMG_7563.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "topicPath": "trigonometri.vlerat-themelore",
+    "promptMd": "$a=\\sin 80^\\circ$, $b=\\cos 80^\\circ$, $c=\\cos 100^\\circ$. Barazimi i radhitjes?",
+    "explanationMd": "$c<b<a$.",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7563"
+    ],
+    "options": [
+      {
+        "label": "$a<b<c$",
+        "isCorrect": false,
+        "order": 0
+      },
+      {
+        "label": "$c<b<a$",
+        "isCorrect": true,
+        "order": 1
+      },
+      {
+        "label": "$a<c<b$",
+        "isCorrect": false,
+        "order": 2
+      },
+      {
+        "label": "$b<c<a$",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7563.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  }
+]

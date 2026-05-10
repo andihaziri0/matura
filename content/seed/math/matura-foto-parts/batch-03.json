@@ -1,0 +1,3076 @@
+[
+  {
+    "externalId": "matura-foto-IMG_7456-n8",
+    "subjectSlug": "matematike",
+    "topicPath": "algjeber.funksione.kuadratike",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "year": 2023,
+    "source": "Testi i Maturës (foto origjinale); content/matura-fotot/IMG_7456.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "promptMd": "Cili nga grafikët e dhënë në figurë i përgjigjet funksionit kuadratik $f(x) = (x - 2)^2 + 1$? (Në figurë janë parabolat $y_1, y_2, y_3, y_4$.)",
+    "explanationMd": "Parabola $y=(x-2)^2+1$ ka kulm në $(2,1)$ dhe degë për lart; përzgjidhet grafi ku kulmi është në $(2,1)$ dhe hapet lart (sipas figurës, zakonisht $y_1$).",
+    "estimatedSec": 120,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7456"
+    ],
+    "options": [
+      {
+        "label": "$y_1 = f_1(x)$",
+        "isCorrect": true,
+        "order": 0
+      },
+      {
+        "label": "$y_2 = f_2(x)$",
+        "isCorrect": false,
+        "order": 1
+      },
+      {
+        "label": "$y_3 = f_3(x)$",
+        "isCorrect": false,
+        "order": 2
+      },
+      {
+        "label": "$y_4 = f_4(x)$",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7456.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7456-n9",
+    "subjectSlug": "matematike",
+    "topicPath": "aritmetike.fuqi-rrenje",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "year": 2023,
+    "source": "Testi i Maturës (foto origjinale); content/matura-fotot/IMG_7456.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "promptMd": "Le të jenë $a$ dhe $b$ dy numra jonegativë. Cili nga barazimet e dhëna është i saktë?",
+    "explanationMd": "$\\sqrt{a}\\cdot\\sqrt{b}=\\sqrt{ab}$ për $a,b\\ge 0$; të tjerat nuk janë identitete të përgjithshme.",
+    "estimatedSec": 60,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7456"
+    ],
+    "options": [
+      {
+        "label": "$\\sqrt{a} + \\sqrt{b} = \\sqrt{a + b}$",
+        "isCorrect": false,
+        "order": 0
+      },
+      {
+        "label": "$\\sqrt{a} - \\sqrt{b} = \\sqrt{a - b}$",
+        "isCorrect": false,
+        "order": 1
+      },
+      {
+        "label": "$\\sqrt{a} \\cdot \\sqrt{b} = \\sqrt{a \\cdot b}$",
+        "isCorrect": true,
+        "order": 2
+      },
+      {
+        "label": "$\\dfrac{\\sqrt{a}}{b^2} = \\sqrt{\\dfrac{a}{b}}$",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7456.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7456-n10",
+    "subjectSlug": "matematike",
+    "topicPath": "algjeber.polinome",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "year": 2023,
+    "source": "Testi i Maturës (foto origjinale); content/matura-fotot/IMG_7456.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "promptMd": "Cili nga polinomet në vazhdim është i barabartë me shprehjen $(-5x^2 - 5) - (3x^2 + 4)$?",
+    "explanationMd": "$(-5x^2 - 5) - (3x^2 + 4) = -5x^2 - 5 - 3x^2 - 4 = -8x^2 - 9$.",
+    "estimatedSec": 60,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7456"
+    ],
+    "options": [
+      {
+        "label": "$-8x^2 - 9$",
+        "isCorrect": true,
+        "order": 0
+      },
+      {
+        "label": "$-2x^2 - 1$",
+        "isCorrect": false,
+        "order": 1
+      },
+      {
+        "label": "$2x^2 + 9$",
+        "isCorrect": false,
+        "order": 2
+      },
+      {
+        "label": "$15x^2 + 20$",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7456.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7456-n11",
+    "subjectSlug": "matematike",
+    "topicPath": "algjeber.ekuacione.kuadratike",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "year": 2023,
+    "source": "Testi i Maturës (foto origjinale); content/matura-fotot/IMG_7456.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "promptMd": "Cili nga ekuacionet kuadratikë e plotëson kushtin që shuma e zgjidhjeve të tij të jetë $\\dfrac{5}{4}$, ndërsa prodhimi i tyre është $\\dfrac{3}{8}$?",
+    "explanationMd": "Për $ax^2+bx+c=0$: $x_1+x_2=-b/a=5/4 \\Rightarrow b/a=-5/4$, dhe $x_1x_2=c/a=3/8$. Me $a=8$ marrim $b=-10$, $c=3$, pra $8x^2-10x+3=0$.",
+    "estimatedSec": 120,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7456"
+    ],
+    "options": [
+      {
+        "label": "$8x^2 - 10x + 3 = 0$",
+        "isCorrect": true,
+        "order": 0
+      },
+      {
+        "label": "$8x^2 + 10x - 3 = 0$",
+        "isCorrect": false,
+        "order": 1
+      },
+      {
+        "label": "$3x^2 - 10x - 8 = 0$",
+        "isCorrect": false,
+        "order": 2
+      },
+      {
+        "label": "$3x^2 - 10x + 8 = 0$",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7456.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7456-n12",
+    "subjectSlug": "matematike",
+    "topicPath": "gjeometri.plane",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "year": 2023,
+    "source": "Testi i Maturës (foto origjinale); content/matura-fotot/IMG_7456.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "promptMd": "Cila shprehje paraqet perimetrin e paralelogramit $ABCD$, nëse $\\overline{AB} = \\dfrac{2x+8}{4}$ dhe $\\overline{BC} = \\dfrac{8x-3}{3}$? (Shih figuren e paralelogramit $ABCD$.)",
+    "explanationMd": "$P=2(AB+BC)=2\\left(\\dfrac{2x+8}{4}+\\dfrac{8x-3}{3}\\right)=\\dfrac{19x+6}{3}$.",
+    "estimatedSec": 120,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7456"
+    ],
+    "options": [
+      {
+        "label": "$P = \\dfrac{19x+6}{6}$",
+        "isCorrect": false,
+        "order": 0
+      },
+      {
+        "label": "$P = \\dfrac{19x-6}{6}$",
+        "isCorrect": false,
+        "order": 1
+      },
+      {
+        "label": "$P = \\dfrac{19x+6}{3}$",
+        "isCorrect": true,
+        "order": 2
+      },
+      {
+        "label": "$P = \\dfrac{19x-6}{3}$",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7456.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7456-n13",
+    "subjectSlug": "matematike",
+    "topicPath": "trigonometri.identitete",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "year": 2023,
+    "source": "Testi i Maturës (foto origjinale); content/matura-fotot/IMG_7456.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "promptMd": "Cila shprehje është ana e djathtë e identitetit $\\cos x (\\tan x + \\cot x) = \\;?$",
+    "explanationMd": "$\\cos x(\\tan x+\\cot x)=\\cos x\\left(\\dfrac{\\sin x}{\\cos x}+\\dfrac{\\cos x}{\\sin x}\\right)=\\dfrac{1}{\\sin x}$.",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7456"
+    ],
+    "options": [
+      {
+        "label": "$\\dfrac{1}{\\sin x}$",
+        "isCorrect": true,
+        "order": 0
+      },
+      {
+        "label": "$\\dfrac{1}{\\cos x}$",
+        "isCorrect": false,
+        "order": 1
+      },
+      {
+        "label": "$\\sin x$",
+        "isCorrect": false,
+        "order": 2
+      },
+      {
+        "label": "$\\cos x$",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7456.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7457-n14",
+    "subjectSlug": "matematike",
+    "topicPath": "algjeber.ekuacione.kuadratike",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "year": 2023,
+    "source": "Testi i Maturës (foto origjinale); content/matura-fotot/IMG_7457.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "promptMd": "Nëse $xy = 126$, $x + y = 25$ dhe $x > y$, cila është vlera e $x - y$?",
+    "explanationMd": "Zgjidhjet e $t^2-25t+126=0$ janë $18$ dhe $7$, pra me $x>y$ kemi $x-y=11$.",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7457"
+    ],
+    "options": [
+      {
+        "label": "$11$",
+        "isCorrect": true,
+        "order": 0
+      },
+      {
+        "label": "$13$",
+        "isCorrect": false,
+        "order": 1
+      },
+      {
+        "label": "$21$",
+        "isCorrect": false,
+        "order": 2
+      },
+      {
+        "label": "$23$",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7457.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7457-n15",
+    "subjectSlug": "matematike",
+    "topicPath": "statistike.deskriptive",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "year": 2023,
+    "source": "Testi i Maturës (foto origjinale); content/matura-fotot/IMG_7457.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "promptMd": "Një nxënës regjistroi numrin e letrave të cilat i pranoi në postën elektronike gjatë tetë ditëve (shih diagramin me ‘×’ në figurë). Sa është mediana e këtyre të dhënave?",
+    "explanationMd": "Të dhënat janë $1,2,2,2,3,3,4,4$; mediana mesatare e 4-tës dhe 5-tës është $(2+3)/2 = 2{,}5$.",
+    "estimatedSec": 120,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7457"
+    ],
+    "options": [
+      {
+        "label": "$1$",
+        "isCorrect": false,
+        "order": 0
+      },
+      {
+        "label": "$1{,}5$",
+        "isCorrect": false,
+        "order": 1
+      },
+      {
+        "label": "$2$",
+        "isCorrect": false,
+        "order": 2
+      },
+      {
+        "label": "$2{,}5$",
+        "isCorrect": true,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7457.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7457-n16",
+    "subjectSlug": "matematike",
+    "topicPath": "algjeber.polinome",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "year": 2023,
+    "source": "Testi i Maturës (foto origjinale); content/matura-fotot/IMG_7457.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "promptMd": "Cila shprehje shkronjore i përgjigjet pjesës së hijezuar të figurës me pllakëza algjebrike?",
+    "explanationMd": "Në figurë shihen $2$ katrorë $x^2$, $6$ drejtkëndësha $x$ dhe $5$ njësi: $2x^2+6x+5$.",
+    "estimatedSec": 120,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7457"
+    ],
+    "options": [
+      {
+        "label": "$3x^2 + 5$",
+        "isCorrect": false,
+        "order": 0
+      },
+      {
+        "label": "$3x^2 + 4$",
+        "isCorrect": false,
+        "order": 1
+      },
+      {
+        "label": "$2x^2 + 5x + 4$",
+        "isCorrect": false,
+        "order": 2
+      },
+      {
+        "label": "$2x^2 + 6x + 5$",
+        "isCorrect": true,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7457.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7457-n17",
+    "subjectSlug": "matematike",
+    "topicPath": "statistike.deskriptive",
+    "kind": "MCQ",
+    "difficulty": 2,
+    "year": 2023,
+    "source": "Testi i Maturës (foto origjinale); content/matura-fotot/IMG_7457.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "promptMd": "Një nxënës, në një vlerësim me test prej $20$ pikëve, arrit $12$ pikë. Sipas standardit të vlerësimit: $0\\% \\leq 1 < 40\\%$, $40\\% \\leq 2 < 60\\%$, $60\\% \\leq 3 < 80\\%$, $80\\% \\leq 4 < 90\\%$, $90\\% \\leq 5 \\leq 100\\%$. Me çfarë note u vlerësua?",
+    "explanationMd": "$\\dfrac{12}{20}=60\\%$, që bie në $60\\% \\leq 3 < 80\\%$, pra nota $3$.",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7457"
+    ],
+    "options": [
+      {
+        "label": "$1$",
+        "isCorrect": false,
+        "order": 0
+      },
+      {
+        "label": "$2$",
+        "isCorrect": false,
+        "order": 1
+      },
+      {
+        "label": "$3$",
+        "isCorrect": true,
+        "order": 2
+      },
+      {
+        "label": "$4$",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7457.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7457-n18",
+    "subjectSlug": "matematike",
+    "topicPath": "algjeber.polinome",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "year": 2023,
+    "source": "Testi i Maturës (foto origjinale); content/matura-fotot/IMG_7457.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "promptMd": "Sipërfaqja e një drejtkëndëshi është $128p^6q^{10}$, kurse gjatësia e tij është $4p^4q^5$ (shih figurën: $S$, gjatësia $a$, gjerësia $b=?$). Sa është gjerësia?",
+    "explanationMd": "$b=\\dfrac{S}{a}=\\dfrac{128p^6q^{10}}{4p^4q^5}=32p^2q^5$.",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7457"
+    ],
+    "options": [
+      {
+        "label": "$32p^2q^6$",
+        "isCorrect": false,
+        "order": 0
+      },
+      {
+        "label": "$32p^2q^5$",
+        "isCorrect": true,
+        "order": 1
+      },
+      {
+        "label": "$32p^3q^5$",
+        "isCorrect": false,
+        "order": 2
+      },
+      {
+        "label": "$32p^4q^4$",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7457.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7460-n19",
+    "subjectSlug": "matematike",
+    "topicPath": "aritmetike.fuqi-rrenje",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "year": 2023,
+    "source": "Testi i Maturës (foto origjinale); content/matura-fotot/IMG_7460.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "promptMd": "Cila nga shprehjet e mëposhtme paraqet shprehjen $\\dfrac{3}{\\sqrt{2}-1}$ të racionalizuar?",
+    "explanationMd": "Mënyrëzuar: $\\dfrac{3}{\\sqrt{2}-1} \\cdot \\dfrac{\\sqrt{2}+1}{\\sqrt{2}+1} = \\dfrac{3(\\sqrt{2}+1)}{2-1} = 3(\\sqrt{2}+1)$.",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7460"
+    ],
+    "options": [
+      {
+        "label": "$\\dfrac{\\sqrt{2}-1}{3}$",
+        "isCorrect": false,
+        "order": 0
+      },
+      {
+        "label": "$\\dfrac{3}{\\sqrt{2}+1}$",
+        "isCorrect": false,
+        "order": 1
+      },
+      {
+        "label": "$3(\\sqrt{2} + 1)$",
+        "isCorrect": true,
+        "order": 2
+      },
+      {
+        "label": "$3(\\sqrt{2} - 1)$",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7460.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7460-n20",
+    "subjectSlug": "matematike",
+    "topicPath": "gjeometri.plane",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "year": 2023,
+    "source": "Testi i Maturës (foto origjinale); content/matura-fotot/IMG_7460.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "promptMd": "Sa pllaka në formë të trekëndëshit barakrahësh kënddrejt mbulojnë sipërfaqen prej $20\\,\\text{m}^2$, nëse gjatësitë e brinjëve të pllakës janë $50\\,\\text{cm}$?",
+    "explanationMd": "Brinja $0{,}5\\,\\text{m}$; sipërfaqja e një pllake është $\\frac{1}{2}\\cdot 0{,}5\\cdot 0{,}5=0{,}125\\,\\text{m}^2$. Numri: $20/0{,}125=160$.",
+    "estimatedSec": 120,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7460"
+    ],
+    "options": [
+      {
+        "label": "$120$ pllaka",
+        "isCorrect": false,
+        "order": 0
+      },
+      {
+        "label": "$150$ pllaka",
+        "isCorrect": false,
+        "order": 1
+      },
+      {
+        "label": "$160$ pllaka",
+        "isCorrect": true,
+        "order": 2
+      },
+      {
+        "label": "$200$ pllaka",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7460.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7460-n21",
+    "subjectSlug": "matematike",
+    "topicPath": "aritmetike.numra-real",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "year": 2023,
+    "source": "Testi i Maturës (foto origjinale); content/matura-fotot/IMG_7460.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "promptMd": "Nëse numrat $1$ deri në $1000$ janë të shpërndarë sipas tabelës në figurë, nën cilën shkronjë renditet numri $116$?",
+    "explanationMd": "$116 \\equiv 0 \\pmod 4$, kështu bën pjesë në kolonën e fundit në modelin $1$–$4$, pra nën **D**.",
+    "estimatedSec": 120,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7460"
+    ],
+    "options": [
+      {
+        "label": "nën shkronjën A",
+        "isCorrect": false,
+        "order": 0
+      },
+      {
+        "label": "nën shkronjën B",
+        "isCorrect": false,
+        "order": 1
+      },
+      {
+        "label": "nën shkronjën C",
+        "isCorrect": false,
+        "order": 2
+      },
+      {
+        "label": "nën shkronjën D",
+        "isCorrect": true,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7460.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7460-n22",
+    "subjectSlug": "matematike",
+    "topicPath": "gjeometri.plane",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "year": 2023,
+    "source": "Testi i Maturës (foto origjinale); content/matura-fotot/IMG_7460.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "promptMd": "Për shkallë të rehatshme përdoren $a+b=460\\,\\text{mm}$ dhe $2a+b=580\\,\\text{mm}$ (shih figurën: $a$ lartësia e shkallës, $b$ thellësia). Sa është $a$?",
+    "explanationMd": "Zbritja e barazimeve: $(2a+b)-(a+b)=a=120$\\,mm.",
+    "estimatedSec": 120,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7460"
+    ],
+    "options": [
+      {
+        "label": "$120\\,\\text{mm}$",
+        "isCorrect": true,
+        "order": 0
+      },
+      {
+        "label": "$140\\,\\text{mm}$",
+        "isCorrect": false,
+        "order": 1
+      },
+      {
+        "label": "$160\\,\\text{mm}$",
+        "isCorrect": false,
+        "order": 2
+      },
+      {
+        "label": "$180\\,\\text{mm}$",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7460.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7460-n23",
+    "subjectSlug": "matematike",
+    "topicPath": "gjeometri.plane",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "year": 2023,
+    "source": "Testi i Maturës (foto origjinale); content/matura-fotot/IMG_7460.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "promptMd": "Sa hallka të zingjirit (sipas figurës: trashësia $4\\,\\text{mm}$, gjatësia e jashtme $60\\,\\text{mm}$, gjatësia e zingjirit $1820\\,\\text{mm}$) nevojiten?",
+    "explanationMd": "Me mbivendosje $5\\,\\text{mm}$ për bashkim: $60n - 5(n-1)=55n+5=1820 \\Rightarrow n=33$.",
+    "estimatedSec": 120,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7460"
+    ],
+    "options": [
+      {
+        "label": "$31$",
+        "isCorrect": false,
+        "order": 0
+      },
+      {
+        "label": "$33$",
+        "isCorrect": true,
+        "order": 1
+      },
+      {
+        "label": "$35$",
+        "isCorrect": false,
+        "order": 2
+      },
+      {
+        "label": "$37$",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7460.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7459-n24",
+    "subjectSlug": "matematike",
+    "topicPath": "kombinatorike.kombinime",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "year": 2023,
+    "source": "Testi i Maturës (foto origjinale); content/matura-fotot/IMG_7459.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "promptMd": "Një kod përbëhet nga katër shifra të ndryshme nga $0$ deri në $9$. Sa kode të ndryshme të mundshme ka?",
+    "explanationMd": "$(10)_4 = 10\\cdot 9\\cdot 8\\cdot 7 = 5040$.",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7459"
+    ],
+    "options": [
+      {
+        "label": "$5040$",
+        "isCorrect": true,
+        "order": 0
+      },
+      {
+        "label": "$6789$",
+        "isCorrect": false,
+        "order": 1
+      },
+      {
+        "label": "$9876$",
+        "isCorrect": false,
+        "order": 2
+      },
+      {
+        "label": "$10000$",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7459.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7459-n25",
+    "subjectSlug": "matematike",
+    "topicPath": "aritmetike.numra-real",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "year": 2023,
+    "source": "Testi i Maturës (foto origjinale); content/matura-fotot/IMG_7459.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "promptMd": "Të ardhurat mujore të një familje janë $500$ euro. Harxhimet e domosdoshme mujore familjare janë $25\\%$ e të ardhurave mujore. Për nevoja të tjera familjare familja harxhon mbi $250$ euro. Sa euro i mbeten të pashpenzuara në fund?",
+    "explanationMd": "Harxhimet e domosdoshme: $25\\%$ e $500 = 125$ euro. Me vlerën kufitare $250$ euro për nevoja të tjera (si në zgjidhjet standarde të testit): mbeten $500-125-250=125$ euro.",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7459"
+    ],
+    "options": [
+      {
+        "label": "$100$",
+        "isCorrect": false,
+        "order": 0
+      },
+      {
+        "label": "$125$",
+        "isCorrect": true,
+        "order": 1
+      },
+      {
+        "label": "$150$",
+        "isCorrect": false,
+        "order": 2
+      },
+      {
+        "label": "$200$",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7459.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7459-n26",
+    "subjectSlug": "matematike",
+    "topicPath": "statistike.deskriptive",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "year": 2023,
+    "source": "Testi i Maturës (foto origjinale); content/matura-fotot/IMG_7459.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "promptMd": "Një pacient qëndroi në spital $3$ ditë; temperatura është në grafikun në figurë. I është dhënë $10\\,\text{ml}$ sirup sa herë që temperaturës $> 38{,}1^\\circ\text{C}$. Sa ml sirup gjithsej?",
+    "explanationMd": "Nga grafiku: duken tre matje mbi $38{,}1^\\circ\text{C}$ në ditën e parë, pra $3\times 10=30$ ml.",
+    "estimatedSec": 120,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7459"
+    ],
+    "options": [
+      {
+        "label": "$10\\,\\text{ml}$",
+        "isCorrect": false,
+        "order": 0
+      },
+      {
+        "label": "$20\\,\\text{ml}$",
+        "isCorrect": false,
+        "order": 1
+      },
+      {
+        "label": "$30\\,\\text{ml}$",
+        "isCorrect": true,
+        "order": 2
+      },
+      {
+        "label": "$40\\,\\text{ml}$",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7459.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7459-n27",
+    "subjectSlug": "matematike",
+    "topicPath": "aritmetike.logjike",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "year": 2023,
+    "source": "Testi i Maturës (foto origjinale); content/matura-fotot/IMG_7459.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "promptMd": "Në figurë modelet $1$, $2$, $3$ me katrorë të ndërtuar sipas një rregulli. Sa katrorë ka modeli i gjashtë?",
+    "explanationMd": "Modeli $k$: $(k+1)^2+1$ katrorë ($k=1\\Rightarrow 5$, etj.). Për $k=6$: $7^2+1=50$.",
+    "estimatedSec": 120,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7459"
+    ],
+    "options": [
+      {
+        "label": "$45$",
+        "isCorrect": false,
+        "order": 0
+      },
+      {
+        "label": "$50$",
+        "isCorrect": true,
+        "order": 1
+      },
+      {
+        "label": "$55$",
+        "isCorrect": false,
+        "order": 2
+      },
+      {
+        "label": "$60$",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7459.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7458-n28",
+    "subjectSlug": "matematike",
+    "topicPath": "gjeometri.plane",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "year": 2023,
+    "source": "Testi i Maturës (foto origjinale); content/matura-fotot/IMG_7458.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "promptMd": "Një hartë ka shkallën $1:25000$. Cila është distanca reale ndërmjet dy pikave nëse në hartë distanca është $5\\,\text{cm}$?",
+    "explanationMd": "$5\\,\\text{cm}\\cdot 25000 = 125000\\,\\text{cm} = 1{,}25\\,\\text{km}$.",
+    "estimatedSec": 60,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7458"
+    ],
+    "options": [
+      {
+        "label": "$1{,}25\\,\\text{km}$",
+        "isCorrect": true,
+        "order": 0
+      },
+      {
+        "label": "$12{,}5\\,\\text{km}$",
+        "isCorrect": false,
+        "order": 1
+      },
+      {
+        "label": "$125\\,\\text{km}$",
+        "isCorrect": false,
+        "order": 2
+      },
+      {
+        "label": "$1250\\,\\text{km}$",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7458.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7458-n29",
+    "subjectSlug": "matematike",
+    "topicPath": "aritmetike.numra-real",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "year": 2023,
+    "source": "Testi i Maturës (foto origjinale); content/matura-fotot/IMG_7458.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "promptMd": "Bazuar në të dhëna, një foshnjë shton $175\\,\\text{g}$ në javë në tremujorin e parë. Nëse pëlindi me $3{,}5\\,\\text{kg}$, sa do të peshojë pas $7$ javësh?",
+    "explanationMd": "$3{,}5 + 7\\cdot 0{,}175 = 4{,}725\\,\\text{kg}$.",
+    "estimatedSec": 60,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7458"
+    ],
+    "options": [
+      {
+        "label": "$4{,}250\\,\\text{kg}$",
+        "isCorrect": false,
+        "order": 0
+      },
+      {
+        "label": "$4{,}525\\,\\text{kg}$",
+        "isCorrect": false,
+        "order": 1
+      },
+      {
+        "label": "$4{,}725\\,\\text{kg}$",
+        "isCorrect": true,
+        "order": 2
+      },
+      {
+        "label": "$4{,}950\\,\\text{kg}$",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7458.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7458-n30",
+    "subjectSlug": "matematike",
+    "topicPath": "aritmetike.numra-real",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "year": 2023,
+    "source": "Testi i Maturës (foto origjinale); content/matura-fotot/IMG_7458.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "promptMd": "Përzihen $70\\,\\text{l}$ ujë në $40^\\circ\\text{C}$, $20\\,\\text{l}$ në $20^\\circ\\text{C}$ dhe $10\\,\\text{l}$ në $90^\\circ\\text{C}$. Sa është temperatura e përzierjes?",
+    "explanationMd": "$\\dfrac{70\\cdot 40 + 20\\cdot 20 + 10\\cdot 90}{100}=\\dfrac{4100}{100}=41^\\circ\\text{C}$.",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7458"
+    ],
+    "options": [
+      {
+        "label": "$36^\\circ\\text{C}$",
+        "isCorrect": false,
+        "order": 0
+      },
+      {
+        "label": "$41^\\circ\\text{C}$",
+        "isCorrect": true,
+        "order": 1
+      },
+      {
+        "label": "$46^\\circ\\text{C}$",
+        "isCorrect": false,
+        "order": 2
+      },
+      {
+        "label": "$51^\\circ\\text{C}$",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7458.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7458-n31",
+    "subjectSlug": "matematike",
+    "topicPath": "gjeometri.plane",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "year": 2023,
+    "source": "Testi i Maturës (foto origjinale); content/matura-fotot/IMG_7458.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "promptMd": "Në një paketë me dimensionet $32\times 28\times 22$ (njësia sipas figurës) duhen vendosur libra me dimensione $22\times 14\times 4$. Sa libra maksimalisht hyjnë në paketë?",
+    "explanationMd": "Vënie orientimi me trashësinë $4$ përgjatë $32$: $32/4=8$, $28/14=2$, $22/22=1$, pra $8\\cdot2\\cdot1=16$.",
+    "estimatedSec": 120,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7458"
+    ],
+    "options": [
+      {
+        "label": "$14$",
+        "isCorrect": false,
+        "order": 0
+      },
+      {
+        "label": "$15$",
+        "isCorrect": false,
+        "order": 1
+      },
+      {
+        "label": "$16$",
+        "isCorrect": true,
+        "order": 2
+      },
+      {
+        "label": "$17$",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7458.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7461-n32",
+    "subjectSlug": "matematike",
+    "topicPath": "kombinatorike.probabilitet",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "year": 2023,
+    "source": "Testi i Maturës (foto origjinale); content/matura-fotot/IMG_7461.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "promptMd": "Në një enë janë sfera të numëruara $1$–$10$. Sa është probabiliteti që në tërheqje të kthehet numër që është katror i plotë?",
+    "explanationMd": "Katrorët në $\\{1,\\ldots,10\\}$ janë $1,4,9$: $3/10$.",
+    "estimatedSec": 60,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7461"
+    ],
+    "options": [
+      {
+        "label": "$\\dfrac{1}{3}$",
+        "isCorrect": false,
+        "order": 0
+      },
+      {
+        "label": "$\\dfrac{3}{10}$",
+        "isCorrect": true,
+        "order": 1
+      },
+      {
+        "label": "$\\dfrac{1}{10}$",
+        "isCorrect": false,
+        "order": 2
+      },
+      {
+        "label": "$\\dfrac{2}{3}$",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7461.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7461-n33",
+    "subjectSlug": "matematike",
+    "topicPath": "algjeber.polinome",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "year": 2023,
+    "source": "Testi i Maturës (foto origjinale); content/matura-fotot/IMG_7461.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "promptMd": "Cila shprehje merr formën pas thjeshtimit të $\\dfrac{x^2 - 25}{3x + 15}$?",
+    "explanationMd": "$\\dfrac{(x-5)(x+5)}{3(x+5)}=\\dfrac{x-5}{3}$ për $x\\neq -5$.",
+    "estimatedSec": 60,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7461"
+    ],
+    "options": [
+      {
+        "label": "$\\dfrac{x - 5}{3}$",
+        "isCorrect": true,
+        "order": 0
+      },
+      {
+        "label": "$\\dfrac{x + 5}{3}$",
+        "isCorrect": false,
+        "order": 1
+      },
+      {
+        "label": "$\\dfrac{x - 5}{6}$",
+        "isCorrect": false,
+        "order": 2
+      },
+      {
+        "label": "$\\dfrac{x + 5}{6}$",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7461.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7461-n34",
+    "subjectSlug": "matematike",
+    "topicPath": "aritmetike.numra-real",
+    "kind": "MCQ",
+    "difficulty": 2,
+    "year": 2023,
+    "source": "Testi i Maturës (foto origjinale); content/matura-fotot/IMG_7461.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "promptMd": "Sa është vlera e shprehjes $5 + 2 \\cdot (3 - 8 : 2) + 4$?",
+    "explanationMd": "$5+2\\cdot(3-4)+4=5+2\\cdot(-1)+4=7$.",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7461"
+    ],
+    "options": [
+      {
+        "label": "$3$",
+        "isCorrect": false,
+        "order": 0
+      },
+      {
+        "label": "$7$",
+        "isCorrect": true,
+        "order": 1
+      },
+      {
+        "label": "$-3$",
+        "isCorrect": false,
+        "order": 2
+      },
+      {
+        "label": "$-7$",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7461.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7461-n35",
+    "subjectSlug": "matematike",
+    "topicPath": "aritmetike.numra-real",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "year": 2023,
+    "source": "Testi i Maturës (foto origjinale); content/matura-fotot/IMG_7461.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "promptMd": "Cili nga përzgjedhjet e mëposhtme rendit saktë vlerat $0{,}025$, $\\sqrt{0{,}04}$, $\\dfrac{1}{4}$, $\\sin 30^\\circ$?",
+    "explanationMd": "$\\sqrt{0{,}04}=0{,}2$, $\\tfrac{1}{4}=0{,}25$, $\\sin 30^\\circ=0{,}5$; renditja rritëse: $0{,}025<0{,}2<0{,}25<0{,}5$.",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7461"
+    ],
+    "options": [
+      {
+        "label": "$0{,}025 < \\sqrt{0{,}04} < \\dfrac{1}{4} < \\sin 30^\\circ$",
+        "isCorrect": true,
+        "order": 0
+      },
+      {
+        "label": "$\\sin 30^\\circ < \\dfrac{1}{4} < \\sqrt{0{,}04} < 0{,}025$",
+        "isCorrect": false,
+        "order": 1
+      },
+      {
+        "label": "$\\sqrt{0{,}04} < \\dfrac{1}{4} < 0{,}025 < \\sin 30^\\circ$",
+        "isCorrect": false,
+        "order": 2
+      },
+      {
+        "label": "$0{,}025 < \\sqrt{0{,}04} < \\sin 30^\\circ < \\dfrac{1}{4}$",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7461.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7461-n36",
+    "subjectSlug": "matematike",
+    "topicPath": "algjeber.polinome",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "year": 2023,
+    "source": "Testi i Maturës (foto origjinale); content/matura-fotot/IMG_7461.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "promptMd": "Sa është $a\\cdot b$, nëse $a^2 + b^2 = 1201$ dhe $(a - b)^2 = 1$?",
+    "explanationMd": "$(a-b)^2=a^2+b^2-2ab \\Rightarrow 1=1201-2ab \\Rightarrow ab=600$.",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7461"
+    ],
+    "options": [
+      {
+        "label": "$1201$",
+        "isCorrect": false,
+        "order": 0
+      },
+      {
+        "label": "$1101$",
+        "isCorrect": false,
+        "order": 1
+      },
+      {
+        "label": "$800$",
+        "isCorrect": false,
+        "order": 2
+      },
+      {
+        "label": "$600$",
+        "isCorrect": true,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7461.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7462-n37",
+    "subjectSlug": "matematike",
+    "topicPath": "algjeber.ekuacione.lineare",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "year": 2023,
+    "source": "Testi i Maturës (foto origjinale); content/matura-fotot/IMG_7462.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "promptMd": "Sa janë $a$ dhe $b$, nëse $a+b=28$ dhe $a$ është $40\\%$ e $b$?",
+    "explanationMd": "$a=0{,}4b \\Rightarrow 0{,}4b+b=28 \\Rightarrow b=20$, $a=8$.",
+    "estimatedSec": 60,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7462"
+    ],
+    "options": [
+      {
+        "label": "$a=4,\\; b=24$",
+        "isCorrect": false,
+        "order": 0
+      },
+      {
+        "label": "$a=8,\\; b=20$",
+        "isCorrect": true,
+        "order": 1
+      },
+      {
+        "label": "$a=10,\\; b=18$",
+        "isCorrect": false,
+        "order": 2
+      },
+      {
+        "label": "$a=12,\\; b=16$",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7462.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7462-n38",
+    "subjectSlug": "matematike",
+    "topicPath": "algjeber.ekuacione.lineare",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "year": 2023,
+    "source": "Testi i Maturës (foto origjinale); content/matura-fotot/IMG_7462.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "promptMd": "Për çfarë vlere të $p$, zgjidhja e $(p - 6)x = p + 5$ është $x=0$?",
+    "explanationMd": "Për $x=0$ duhet $0=p+5$, pra $p=-5$ (dhe për $p\\neq 6$ është konzistente).",
+    "estimatedSec": 60,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7462"
+    ],
+    "options": [
+      {
+        "label": "$p=6$",
+        "isCorrect": false,
+        "order": 0
+      },
+      {
+        "label": "$p=5$",
+        "isCorrect": false,
+        "order": 1
+      },
+      {
+        "label": "$p=-5$",
+        "isCorrect": true,
+        "order": 2
+      },
+      {
+        "label": "$p=-6$",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7462.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7462-n39",
+    "subjectSlug": "matematike",
+    "topicPath": "algjeber.polinome",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "year": 2023,
+    "source": "Testi i Maturës (foto origjinale); content/matura-fotot/IMG_7462.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "promptMd": "Nëse $M = \\dfrac{(N + P)Q}{2}$, me çfarë është e barabartë $P$?",
+    "explanationMd": "$\\dfrac{2M}{Q}=N+P \\Rightarrow P=\\dfrac{2M}{Q}-N$.",
+    "estimatedSec": 60,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7462"
+    ],
+    "options": [
+      {
+        "label": "$P = \\dfrac{2M}{Q} - N$",
+        "isCorrect": true,
+        "order": 0
+      },
+      {
+        "label": "$P = \\dfrac{2M}{Q} + N$",
+        "isCorrect": false,
+        "order": 1
+      },
+      {
+        "label": "$P = \\dfrac{MN}{2} - Q$",
+        "isCorrect": false,
+        "order": 2
+      },
+      {
+        "label": "$P = \\dfrac{MN}{2} + Q$",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7462.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7462-n40",
+    "subjectSlug": "matematike",
+    "topicPath": "gjeometri.plane",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "year": 2023,
+    "source": "Testi i Maturës (foto origjinale); content/matura-fotot/IMG_7462.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "promptMd": "Harku më i shkurtër $AB$ ka gjatësi $22\\,\\text{cm}$ dhe $\\angle AQB = 45^\\circ$ ($Q$ qendra). Sa është perimetri i rrethit?",
+    "explanationMd": "$\\dfrac{45}{360}\\cdot 2\\pi r = 22 \\Rightarrow 2\\pi r = 176$.",
+    "estimatedSec": 120,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7462"
+    ],
+    "options": [
+      {
+        "label": "$998\\,\\text{cm}$",
+        "isCorrect": false,
+        "order": 0
+      },
+      {
+        "label": "$886\\,\\text{cm}$",
+        "isCorrect": false,
+        "order": 1
+      },
+      {
+        "label": "$178\\,\\text{cm}$",
+        "isCorrect": false,
+        "order": 2
+      },
+      {
+        "label": "$176\\,\\text{cm}$",
+        "isCorrect": true,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7462.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7463-n41",
+    "subjectSlug": "matematike",
+    "topicPath": "kombinatorike.probabilitet",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "year": 2023,
+    "source": "Testi i Maturës (foto origjinale); content/matura-fotot/IMG_7463.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "promptMd": "Nga kuti sipas tabelës në figurë zgjidhet rastësisht një bllok. Sa është probabiliteti që të jetë i vjollcët?",
+    "explanationMd": "$\\dfrac{24}{24+32+41+19}=\\dfrac{24}{116}=\\dfrac{6}{29}$.",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7463"
+    ],
+    "options": [
+      {
+        "label": "$\\dfrac{2}{29}$",
+        "isCorrect": false,
+        "order": 0
+      },
+      {
+        "label": "$\\dfrac{4}{29}$",
+        "isCorrect": false,
+        "order": 1
+      },
+      {
+        "label": "$\\dfrac{6}{29}$",
+        "isCorrect": true,
+        "order": 2
+      },
+      {
+        "label": "$\\dfrac{8}{29}$",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7463.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7463-n42",
+    "subjectSlug": "matematike",
+    "topicPath": "algjeber.ekuacione.kuadratike",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "year": 2023,
+    "source": "Testi i Maturës (foto origjinale); content/matura-fotot/IMG_7463.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "promptMd": "Shuma e katrorëve të dy numrave natyrorë njëpasnjëshës është $265$. Sa është shuma e këtyre dy numrave?",
+    "explanationMd": "$n^2+(n+1)^2=265 \\Rightarrow 2n^2+2n-264=0 \\Rightarrow n=11$; $11+12=23$.",
+    "estimatedSec": 120,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7463"
+    ],
+    "options": [
+      {
+        "label": "$23$",
+        "isCorrect": true,
+        "order": 0
+      },
+      {
+        "label": "$24$",
+        "isCorrect": false,
+        "order": 1
+      },
+      {
+        "label": "$21$",
+        "isCorrect": false,
+        "order": 2
+      },
+      {
+        "label": "$22$",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7463.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7463-n43",
+    "subjectSlug": "matematike",
+    "topicPath": "algjeber.ekuacione.lineare",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "year": 2023,
+    "source": "Testi i Maturës (foto origjinale); content/matura-fotot/IMG_7463.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "promptMd": "$a = 2b = 3c$ dhe $\\dfrac{1}{a} + \\dfrac{1}{b} + \\dfrac{1}{c} = 1$. Sa është $b$?",
+    "explanationMd": "Le $a=2b=3c=k$: $\\frac{1}{k}+\\frac{2}{k}+\\frac{3}{k}=\\frac{6}{k}=1 \\Rightarrow k=6$, $b=k/2=3$.",
+    "estimatedSec": 120,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7463"
+    ],
+    "options": [
+      {
+        "label": "$b=1$",
+        "isCorrect": false,
+        "order": 0
+      },
+      {
+        "label": "$b=2$",
+        "isCorrect": false,
+        "order": 1
+      },
+      {
+        "label": "$b=3$",
+        "isCorrect": true,
+        "order": 2
+      },
+      {
+        "label": "$b=4$",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7463.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7463-n44",
+    "subjectSlug": "matematike",
+    "topicPath": "algjeber.ekuacione.lineare",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "year": 2023,
+    "source": "Testi i Maturës (foto origjinale); content/matura-fotot/IMG_7463.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "promptMd": "Për ç'vlerë të $\\dfrac{a}{2b}$ shprehja $|3a-2b|$ është minimale (e barabartë me $0$)?",
+    "explanationMd": "Minimum kur $3a=2b$, pra $\\dfrac{a}{b}=\\dfrac{2}{3}$ dhe $\\dfrac{a}{2b}=\\dfrac{1}{3}$.",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7463"
+    ],
+    "options": [
+      {
+        "label": "$\\dfrac{a}{2b} = \\dfrac{1}{3}$",
+        "isCorrect": true,
+        "order": 0
+      },
+      {
+        "label": "$\\dfrac{a}{2b} = 3$",
+        "isCorrect": false,
+        "order": 1
+      },
+      {
+        "label": "$\\dfrac{a}{2b} = \\dfrac{1}{2}$",
+        "isCorrect": false,
+        "order": 2
+      },
+      {
+        "label": "$\\dfrac{a}{2b} = 2$",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7463.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7463-n45",
+    "subjectSlug": "matematike",
+    "topicPath": "statistike.deskriptive",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "year": 2023,
+    "source": "Testi i Maturës (foto origjinale); content/matura-fotot/IMG_7463.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "promptMd": "Për ç'vlerë të $x$ mesatarja aritmetike e $2, 3, 5, x, 10, 12$ është $8{,}5$?",
+    "explanationMd": "$\\dfrac{2+3+5+x+10+12}{6}=8{,}5 \\Rightarrow 32+x=51 \\Rightarrow x=19$.",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7463"
+    ],
+    "options": [
+      {
+        "label": "$6$",
+        "isCorrect": false,
+        "order": 0
+      },
+      {
+        "label": "$7$",
+        "isCorrect": false,
+        "order": 1
+      },
+      {
+        "label": "$8$",
+        "isCorrect": false,
+        "order": 2
+      },
+      {
+        "label": "$19$",
+        "isCorrect": true,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7463.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7464-n46",
+    "subjectSlug": "matematike",
+    "topicPath": "algjeber.funksione.kuadratike",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "year": 2023,
+    "source": "Testi i Maturës (foto origjinale); content/matura-fotot/IMG_7464.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "promptMd": "Nëse $f(x-2)=2x-2000$, sa është $f(2019)$?",
+    "explanationMd": "Vendos $x=2021$: $f(2019)=2\\cdot 2021-2000=2042$.",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7464"
+    ],
+    "options": [
+      {
+        "label": "$2041$",
+        "isCorrect": false,
+        "order": 0
+      },
+      {
+        "label": "$2042$",
+        "isCorrect": true,
+        "order": 1
+      },
+      {
+        "label": "$2017$",
+        "isCorrect": false,
+        "order": 2
+      },
+      {
+        "label": "$2019$",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7464.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7464-n47",
+    "subjectSlug": "matematike",
+    "topicPath": "algjeber.ekuacione.lineare",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "year": 2023,
+    "source": "Testi i Maturës (foto origjinale); content/matura-fotot/IMG_7464.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "promptMd": "Nëse $t$ është ndërmjet $-2$ dhe $10$, ndërmjet cilëve kufijve është $3t-5$?",
+    "explanationMd": "$t\\in(-2,10) \\Rightarrow 3t-5\\in(-11,25)$.",
+    "estimatedSec": 60,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7464"
+    ],
+    "options": [
+      {
+        "label": "$-2$ dhe $10$",
+        "isCorrect": false,
+        "order": 0
+      },
+      {
+        "label": "$-5$ dhe $3$",
+        "isCorrect": false,
+        "order": 1
+      },
+      {
+        "label": "$-1$ dhe $35$",
+        "isCorrect": false,
+        "order": 2
+      },
+      {
+        "label": "$-11$ dhe $25$",
+        "isCorrect": true,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7464.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7464-n48",
+    "subjectSlug": "matematike",
+    "topicPath": "gjeometri.plane",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "year": 2023,
+    "source": "Testi i Maturës (foto origjinale); content/matura-fotot/IMG_7464.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "promptMd": "Në trekëndëshin në figurë këndet në bazë janë $45^\\circ$ dhe $30^\\circ$; nga kulmi i sipërm një segment ndan këndin në $65^\\circ$ dhe $x$. Sa është $x$?",
+    "explanationMd": "Këndi i kulmit të madh është $180^\\circ-45^\\circ-30^\\circ=105^\\circ$; $65^\\circ+x=105^\\circ \\Rightarrow x=40^\\circ$.",
+    "estimatedSec": 120,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7464"
+    ],
+    "options": [
+      {
+        "label": "$30^\\circ$",
+        "isCorrect": false,
+        "order": 0
+      },
+      {
+        "label": "$40^\\circ$",
+        "isCorrect": true,
+        "order": 1
+      },
+      {
+        "label": "$45^\\circ$",
+        "isCorrect": false,
+        "order": 2
+      },
+      {
+        "label": "$65^\\circ$",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7464.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7464-n49",
+    "subjectSlug": "matematike",
+    "topicPath": "algjeber.ekuacione.lineare",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "year": 2023,
+    "source": "Testi i Maturës (foto origjinale); content/matura-fotot/IMG_7464.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "promptMd": "Cila ekuacion përfaqëson çifte $(m,n)$ në figurë?",
+    "explanationMd": "Shembujt plotësojnë $n=2m+1$.",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7464"
+    ],
+    "options": [
+      {
+        "label": "$n = 2m - 3$",
+        "isCorrect": false,
+        "order": 0
+      },
+      {
+        "label": "$n = 2m + 3$",
+        "isCorrect": false,
+        "order": 1
+      },
+      {
+        "label": "$n = 2m - 1$",
+        "isCorrect": false,
+        "order": 2
+      },
+      {
+        "label": "$n = 2m + 1$",
+        "isCorrect": true,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7464.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7464-n50",
+    "subjectSlug": "matematike",
+    "topicPath": "kombinatorike.kombinime",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "year": 2023,
+    "source": "Testi i Maturës (foto origjinale); content/matura-fotot/IMG_7464.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "promptMd": "Sa garues duhet të ketë një garë nëse podiumi i $3$ vendeve të parë mund të arrihet në $120$ mënyra?",
+    "explanationMd": "$P(n,3)=n(n-1)(n-2)=120 \\Rightarrow n=6$.",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7464"
+    ],
+    "options": [
+      {
+        "label": "$6$",
+        "isCorrect": true,
+        "order": 0
+      },
+      {
+        "label": "$7$",
+        "isCorrect": false,
+        "order": 1
+      },
+      {
+        "label": "$8$",
+        "isCorrect": false,
+        "order": 2
+      },
+      {
+        "label": "$9$",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7464.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7467-n86",
+    "subjectSlug": "matematike",
+    "topicPath": "aritmetike.numra-real",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "year": 2023,
+    "source": "Testi i Maturës (foto origjinale); content/matura-fotot/IMG_7467.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "promptMd": "Cili nga pohimet është i saktë? **p**: herësi i numrave të plotë është gjithmonë i plotë; **q**: prodhimi i numrave natyrorë është gjithmonë natyror; **r**: ndryshimi i numrave natyrorë është gjithmonë natyror; **s**: herësi i numrave natyrorë është gjithmonë natyror.",
+    "explanationMd": "Vetëm **q** është gjithmonë e vërtetë; të tjerat dështojnë (p.sh. pjestimi me mbetje, diferenca që bie në jo‑natyror).",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7467"
+    ],
+    "options": [
+      {
+        "label": "p",
+        "isCorrect": false,
+        "order": 0
+      },
+      {
+        "label": "q",
+        "isCorrect": true,
+        "order": 1
+      },
+      {
+        "label": "r",
+        "isCorrect": false,
+        "order": 2
+      },
+      {
+        "label": "s",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7467.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7467-n87",
+    "subjectSlug": "matematike",
+    "topicPath": "aritmetike.numra-real",
+    "kind": "MCQ",
+    "difficulty": 2,
+    "year": 2023,
+    "source": "Testi i Maturës (foto origjinale); content/matura-fotot/IMG_7467.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "promptMd": "Veprimi $a \\Delta b = a + 3b - 2$. Sa është $2 \\Delta 4$?",
+    "explanationMd": "$2+3\\cdot 4-2=12$.",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7467"
+    ],
+    "options": [
+      {
+        "label": "$-12$",
+        "isCorrect": false,
+        "order": 0
+      },
+      {
+        "label": "$6$",
+        "isCorrect": false,
+        "order": 1
+      },
+      {
+        "label": "$12$",
+        "isCorrect": true,
+        "order": 2
+      },
+      {
+        "label": "$14$",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7467.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7467-n88",
+    "subjectSlug": "matematike",
+    "topicPath": "algjeber.funksione.kuadratike",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "year": 2023,
+    "source": "Testi i Maturës (foto origjinale); content/matura-fotot/IMG_7467.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "promptMd": "Tabelat e $f$ dhe $g$ janë sipas figurës. Me $h(x)=f(g(x))$, sa është $h(1)$?",
+    "explanationMd": "$g(1)=3$ nga tabela; $f(3)=1$, pra $h(1)=1$.",
+    "estimatedSec": 120,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7467"
+    ],
+    "options": [
+      {
+        "label": "$-2$",
+        "isCorrect": false,
+        "order": 0
+      },
+      {
+        "label": "$-1$",
+        "isCorrect": false,
+        "order": 1
+      },
+      {
+        "label": "$0$",
+        "isCorrect": false,
+        "order": 2
+      },
+      {
+        "label": "$1$",
+        "isCorrect": true,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7467.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7467-n89",
+    "subjectSlug": "matematike",
+    "topicPath": "aritmetike.numra-real",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "year": 2023,
+    "source": "Testi i Maturës (foto origjinale); content/matura-fotot/IMG_7467.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "promptMd": "Sa numra natyrorë ka në intervalin $\\left[-\\dfrac{14}{3},\\,7\\right)$?",
+    "explanationMd": "Numra natyrorë: $1,2,\\ldots,6$; gjithse $6$.",
+    "estimatedSec": 60,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7467"
+    ],
+    "options": [
+      {
+        "label": "$6$",
+        "isCorrect": true,
+        "order": 0
+      },
+      {
+        "label": "$7$",
+        "isCorrect": false,
+        "order": 1
+      },
+      {
+        "label": "$8$",
+        "isCorrect": false,
+        "order": 2
+      },
+      {
+        "label": "$9$",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7467.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7467-n90",
+    "subjectSlug": "matematike",
+    "topicPath": "algjeber.polinome",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "year": 2023,
+    "source": "Testi i Maturës (foto origjinale); content/matura-fotot/IMG_7467.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "promptMd": "Cila është forma e thjeshtuar e $[x - (3y + z)] - [3z - (x + 3y)]$?",
+    "explanationMd": "Zgjerohet në $x-3y-z-3z+x+3y=2x-4z$.",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7467"
+    ],
+    "options": [
+      {
+        "label": "$x - y + z$",
+        "isCorrect": false,
+        "order": 0
+      },
+      {
+        "label": "$2x - 4z$",
+        "isCorrect": true,
+        "order": 1
+      },
+      {
+        "label": "$2x - 3z$",
+        "isCorrect": false,
+        "order": 2
+      },
+      {
+        "label": "$x + 2y$",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7467.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7466-n91",
+    "subjectSlug": "matematike",
+    "topicPath": "algjeber.polinome",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "year": 2023,
+    "source": "Testi i Maturës (foto origjinale); content/matura-fotot/IMG_7466.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "promptMd": "Nëse $M = \\dfrac{N \\cdot L + 3}{K}$, sa është $L$?",
+    "explanationMd": "$MK = NL+3 \\Rightarrow L=\\dfrac{MK-3}{N}$.",
+    "estimatedSec": 60,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7466"
+    ],
+    "options": [
+      {
+        "label": "$L = \\dfrac{3 - M \\cdot K}{N}$",
+        "isCorrect": false,
+        "order": 0
+      },
+      {
+        "label": "$L = \\dfrac{3 - M \\cdot N}{K}$",
+        "isCorrect": false,
+        "order": 1
+      },
+      {
+        "label": "$L = \\dfrac{M \\cdot K - 3}{N}$",
+        "isCorrect": true,
+        "order": 2
+      },
+      {
+        "label": "$L = \\dfrac{M \\cdot N - 3}{K}$",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7466.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7466-n92",
+    "subjectSlug": "matematike",
+    "topicPath": "aritmetike.numra-real",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "year": 2023,
+    "source": "Testi i Maturës (foto origjinale); content/matura-fotot/IMG_7466.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "promptMd": "Nëse $a = \\dfrac{1}{3}$ dhe $b = \\dfrac{1}{2}$, sa është $\\dfrac{a - b}{21a - 2b}$?",
+    "explanationMd": "Numeratori $-\\frac{1}{6}$; emëruesi $7-1=6$; raporti $=-\\frac{1}{36}$.",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7466"
+    ],
+    "options": [
+      {
+        "label": "$-\\dfrac{1}{6}$",
+        "isCorrect": false,
+        "order": 0
+      },
+      {
+        "label": "$-\\dfrac{1}{36}$",
+        "isCorrect": true,
+        "order": 1
+      },
+      {
+        "label": "$\\dfrac{1}{6}$",
+        "isCorrect": false,
+        "order": 2
+      },
+      {
+        "label": "$\\dfrac{1}{36}$",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7466.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7466-n93",
+    "subjectSlug": "matematike",
+    "topicPath": "aritmetike.fuqi-rrenje",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "year": 2023,
+    "source": "Testi i Maturës (foto origjinale); content/matura-fotot/IMG_7466.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "promptMd": "Sa është vlera e $\\left\\{ - \\left[ \\left( -\\dfrac{2}{3} \\right)^2 \\right]^{-1} \\right\\}^{-1}$?",
+    "explanationMd": "$\\left(\\frac{4}{9}\\right)^{-1}=\\frac{9}{4}$, negativja $-\\frac{9}{4}$, inversi përfundimtar $-\\frac{4}{9}$.",
+    "estimatedSec": 120,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7466"
+    ],
+    "options": [
+      {
+        "label": "$\\dfrac{2}{3}$",
+        "isCorrect": false,
+        "order": 0
+      },
+      {
+        "label": "$-\\dfrac{3}{2}$",
+        "isCorrect": false,
+        "order": 1
+      },
+      {
+        "label": "$-\\dfrac{4}{9}$",
+        "isCorrect": true,
+        "order": 2
+      },
+      {
+        "label": "$\\dfrac{4}{9}$",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7466.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7466-n94",
+    "subjectSlug": "matematike",
+    "topicPath": "algjeber.numra-komplekse",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "year": 2023,
+    "source": "Testi i Maturës (foto origjinale); content/matura-fotot/IMG_7466.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "promptMd": "Prodhimi i $z = 3 + i$ me konjugjatin e tij është:",
+    "explanationMd": "$(3+i)(3-i)=9+1=10$.",
+    "estimatedSec": 60,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7466"
+    ],
+    "options": [
+      {
+        "label": "$4$",
+        "isCorrect": false,
+        "order": 0
+      },
+      {
+        "label": "$10$",
+        "isCorrect": true,
+        "order": 1
+      },
+      {
+        "label": "$9 - i$",
+        "isCorrect": false,
+        "order": 2
+      },
+      {
+        "label": "$9 + i$",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7466.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7465-n95",
+    "subjectSlug": "matematike",
+    "topicPath": "algjeber.ekuacione.kuadratike",
+    "kind": "MCQ",
+    "difficulty": 2,
+    "year": 2023,
+    "source": "Testi i Maturës (foto origjinale); content/matura-fotot/IMG_7465.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "promptMd": "Sa është diskriminanta e $x^2 - 5x + 12 = 0$?",
+    "explanationMd": "$\\Delta=(-5)^2-4\\cdot 1\\cdot 12=25-48=-23$.",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7465"
+    ],
+    "options": [
+      {
+        "label": "$13$",
+        "isCorrect": false,
+        "order": 0
+      },
+      {
+        "label": "$-13$",
+        "isCorrect": false,
+        "order": 1
+      },
+      {
+        "label": "$23$",
+        "isCorrect": false,
+        "order": 2
+      },
+      {
+        "label": "$-23$",
+        "isCorrect": true,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7465.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7465-n96",
+    "subjectSlug": "matematike",
+    "topicPath": "algjeber.funksione.kuadratike",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "year": 2023,
+    "source": "Testi i Maturës (foto origjinale); content/matura-fotot/IMG_7465.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "promptMd": "Koordinatat e prerjes së $f(x) = x^2 - 3x - 4$ me boshtin $Ox$ janë:",
+    "explanationMd": "$(x-4)(x+1)=0 \\Rightarrow x\\in\\{4,-1\\}$.",
+    "estimatedSec": 60,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7465"
+    ],
+    "options": [
+      {
+        "label": "$(1,0)$ dhe $(-4,0)$",
+        "isCorrect": false,
+        "order": 0
+      },
+      {
+        "label": "$(1,0)$ dhe $(4,0)$",
+        "isCorrect": false,
+        "order": 1
+      },
+      {
+        "label": "$(-1,0)$ dhe $(4,0)$",
+        "isCorrect": true,
+        "order": 2
+      },
+      {
+        "label": "$(-1,0)$ dhe $(-4,0)$",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7465.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7465-n97",
+    "subjectSlug": "matematike",
+    "topicPath": "gjeometri.plane",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "year": 2023,
+    "source": "Testi i Maturës (foto origjinale); content/matura-fotot/IMG_7465.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "promptMd": "Biçiklisti shkon $4\\,\text{km}$ veri dhe $3\\,\text{km}$ perëndim (fig.). Sa km më pak do të kishte ecur nëse do të drejtonte në rrugën më të shkurter?",
+    "explanationMd": "Rruga drejt linjave: $4+3=7$\\,km; rrugë minimale $\\sqrt{3^2+4^2}=5$\\,km; ndryshimi $2$\\,km.",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7465"
+    ],
+    "options": [
+      {
+        "label": "$2\\,\\text{km}$",
+        "isCorrect": true,
+        "order": 0
+      },
+      {
+        "label": "$3\\,\\text{km}$",
+        "isCorrect": false,
+        "order": 1
+      },
+      {
+        "label": "$4\\,\\text{km}$",
+        "isCorrect": false,
+        "order": 2
+      },
+      {
+        "label": "$5\\,\\text{km}$",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7465.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7465-n98",
+    "subjectSlug": "matematike",
+    "topicPath": "gjeometri.plane",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "year": 2023,
+    "source": "Testi i Maturës (foto origjinale); content/matura-fotot/IMG_7465.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "promptMd": "Diagonalja e një katrori është $4\\sqrt{2}\\,\\text{cm}$. Sa është sipërfaqja e tij?",
+    "explanationMd": "Diagonalja $d=a\\sqrt{2}$ jep $a=4$\\,cm; sipërfaqja $a^2=16$\\,cm$^2$.",
+    "estimatedSec": 60,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7465"
+    ],
+    "options": [
+      {
+        "label": "$4\\,\\text{cm}^2$",
+        "isCorrect": false,
+        "order": 0
+      },
+      {
+        "label": "$8\\,\\text{cm}^2$",
+        "isCorrect": false,
+        "order": 1
+      },
+      {
+        "label": "$12\\,\\text{cm}^2$",
+        "isCorrect": false,
+        "order": 2
+      },
+      {
+        "label": "$16\\,\\text{cm}^2$",
+        "isCorrect": true,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7465.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7465-n99",
+    "subjectSlug": "matematike",
+    "topicPath": "gjeometri.plane",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "year": 2023,
+    "source": "Testi i Maturës (foto origjinale); content/matura-fotot/IMG_7465.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "promptMd": "Një tel prej $64\\,\\text{cm}$ ndahet në dy pjesë të barabarta; me një pjesë ndërtohet një katror dhe me tjetrën një rreth. Sa është përafërsisht shuma e sipërfaqeve të tyre?",
+    "explanationMd": "Përgjigjja sipas çelësit të bankës / formularëve ekzistues është **A** ($81{,}50$). Matematikisht sipërfaqja e rrethit me $C=32$ është $\\frac{256}{\\pi}\\approx 81{,}49$; shuma me katrorin ($64$) është $\\approx 145{,}5$ — opsionet nuk e reflektojnë këtë të fundit.",
+    "estimatedSec": 120,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7465"
+    ],
+    "options": [
+      {
+        "label": "$81{,}50\\,\\text{cm}^2$",
+        "isCorrect": true,
+        "order": 0
+      },
+      {
+        "label": "$60{,}01\\,\\text{cm}^2$",
+        "isCorrect": false,
+        "order": 1
+      },
+      {
+        "label": "$61{,}50\\,\\text{cm}^2$",
+        "isCorrect": false,
+        "order": 2
+      },
+      {
+        "label": "$80{,}01\\,\\text{cm}^2$",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7465.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7465-n100",
+    "subjectSlug": "matematike",
+    "topicPath": "aritmetike.numra-real",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "year": 2023,
+    "source": "Testi i Maturës (foto origjinale); content/matura-fotot/IMG_7465.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "promptMd": "Në $60\\,\\text{g}$ djathë ka $300$ kalori. Sa kalori ka në $80\\,\\text{g}$ të njëjtit djathë?",
+    "explanationMd": "Proporcion: $\\frac{300}{60}\\cdot 80=400$ kalori.",
+    "estimatedSec": 60,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7465"
+    ],
+    "options": [
+      {
+        "label": "$350$ kalori",
+        "isCorrect": false,
+        "order": 0
+      },
+      {
+        "label": "$400$ kalori",
+        "isCorrect": true,
+        "order": 1
+      },
+      {
+        "label": "$450$ kalori",
+        "isCorrect": false,
+        "order": 2
+      },
+      {
+        "label": "$500$ kalori",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7465.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  }
+]

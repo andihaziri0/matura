@@ -1,4 +1,4 @@
-import { readFileSync, existsSync } from 'node:fs';
+import { readFileSync, existsSync, readdirSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, resolve } from 'node:path';
 import { prisma } from '../client.js';
@@ -6,13 +6,27 @@ import { prisma } from '../client.js';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
-// Order matters: later files win on duplicate externalId. The hand-curated
-// `questions.json` is the source of truth for canonical phrasing, so it
-// loads last. The bulk import from AkademiaAS loads first and acts as the
-// large-but-overwritable baseline.
+const MATURA_FOTO_PARTS_DIR = resolve(
+  __dirname,
+  '../../../../content/seed/math/matura-foto-parts',
+);
+
+function maturaFotoPartSeedPaths(): string[] {
+  if (!existsSync(MATURA_FOTO_PARTS_DIR)) return [];
+  return readdirSync(MATURA_FOTO_PARTS_DIR)
+    .filter((f) => /^batch-\d+\.json$/.test(f))
+    .sort()
+    .map((f) => resolve(MATURA_FOTO_PARTS_DIR, f));
+}
+
+// Order matters: later files win on duplicate externalId. AkademiaAS bank
+// loads first; `questions.json` is hand-curated; optional `matura-foto-parts/batch-*.json`
+// (transkripte në parti); `matura-foto.json` loads last (mbivendos pjesët).
 const SEED_FILES = [
   resolve(__dirname, '../../../../content/seed/math/akademiaas-bank.json'),
   resolve(__dirname, '../../../../content/seed/math/questions.json'),
+  ...maturaFotoPartSeedPaths(),
+  resolve(__dirname, '../../../../content/seed/math/matura-foto.json'),
 ];
 const SEED_USER_EMAIL = 'seed@akademiaas.com';
 const SEED_USER_FIREBASE_UID = '__seed__';

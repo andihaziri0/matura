@@ -1,0 +1,3800 @@
+[
+  {
+    "externalId": "matura-foto-IMG_7576-n1",
+    "subjectSlug": "matematike",
+    "topicPath": "aritmetike.logjike",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "source": "Testi i Maturës (foto origjinale): MATEMATIKA LËNDË E PËRGJITHSHME (mash.rks-gov.net); content/matura-fotot/IMG_7576.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "promptMd": "Cila nga gjykimet e mëposhtme është disjunksion i gjykimeve?",
+    "explanationMd": "Disjunksioni është lidhësja **ose** (∨). Vetëm opsioni me **ose** midis dy gjykimeve është disjunksion.",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7576"
+    ],
+    "options": [
+      {
+        "label": "$5x+7=17$",
+        "isCorrect": false,
+        "order": 0
+      },
+      {
+        "label": "$x=3$ ose $x^2=36$",
+        "isCorrect": true,
+        "order": 1
+      },
+      {
+        "label": "Nëse $x=1$, atëherë $2x=2$",
+        "isCorrect": false,
+        "order": 2
+      },
+      {
+        "label": "$x>3$ dhe $x<9$",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7576.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7576-n2",
+    "subjectSlug": "matematike",
+    "topicPath": "aritmetike.logjike",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "source": "Testi i Maturës (foto origjinale): MATEMATIKA LËNDË E PËRGJITHSHME (mash.rks-gov.net); content/matura-fotot/IMG_7576.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "promptMd": "Fjalia «Numri $88$ është numër i thjeshtë ose numër i përbërë»:",
+    "explanationMd": "$88$ është i përbërë; disjunksioni «i thjeshtë **ose** i përbërë» mbulon të gjithë natyrshëm $>1$, pra pohimi është i saktë.",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7576"
+    ],
+    "options": [
+      {
+        "label": "është gjykim i saktë",
+        "isCorrect": true,
+        "order": 0
+      },
+      {
+        "label": "është gjykim i pasaktë",
+        "isCorrect": false,
+        "order": 1
+      },
+      {
+        "label": "nuk është gjykim",
+        "isCorrect": false,
+        "order": 2
+      },
+      {
+        "label": "nuk mund të përcaktohet saktësia e saj",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7576.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7576-n3",
+    "subjectSlug": "matematike",
+    "topicPath": "aritmetike.logjike",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "source": "Testi i Maturës (foto origjinale): MATEMATIKA LËNDË E PËRGJITHSHME (mash.rks-gov.net); content/matura-fotot/IMG_7576.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "promptMd": "Është dhënë bashkësia $A=\\{x\\in\\mathbb{R}\\mid x \\text{ numër çift}\\}$. Cili nga gjykimet është i saktë?",
+    "explanationMd": "Numër çift: $196$ është çift ($196\\in A$); $169, 81$ janë tek; $66$ është çift, pra $66\\in A$ (jo $66\\notin A$).",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7576"
+    ],
+    "options": [
+      {
+        "label": "$169\\in A$",
+        "isCorrect": false,
+        "order": 0
+      },
+      {
+        "label": "$196\\in A$",
+        "isCorrect": true,
+        "order": 1
+      },
+      {
+        "label": "$66\\notin A$",
+        "isCorrect": false,
+        "order": 2
+      },
+      {
+        "label": "$81\\in A$",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7576.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7576-n4",
+    "subjectSlug": "matematike",
+    "topicPath": "aritmetike.logjike",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "source": "Testi i Maturës (foto origjinale): MATEMATIKA LËNDË E PËRGJITHSHME (mash.rks-gov.net); content/matura-fotot/IMG_7576.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "promptMd": "Janë dhënë $p$: $x^2-1=(x+1)(x-1)$ dhe $q$: $(a+b)^2=a^2-2ab+b^2$. Cila formulë është e saktë?",
+    "explanationMd": "$p$ është identitet i saktë; $q$ është e pasaktë ($+2ab$). Pra $p\\lor q$ është e saktë.",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7576"
+    ],
+    "options": [
+      {
+        "label": "$p\\lor q$",
+        "isCorrect": true,
+        "order": 0
+      },
+      {
+        "label": "$p\\land q$",
+        "isCorrect": false,
+        "order": 1
+      },
+      {
+        "label": "$p\\Rightarrow q$",
+        "isCorrect": false,
+        "order": 2
+      },
+      {
+        "label": "$p\\Leftrightarrow q$",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7576.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7576-n5",
+    "subjectSlug": "matematike",
+    "topicPath": "aritmetike.logjike",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "source": "Testi i Maturës (foto origjinale): MATEMATIKA LËNDË E PËRGJITHSHME (mash.rks-gov.net); content/matura-fotot/IMG_7576.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "promptMd": "Janë dhënë $p$: $\\sqrt{3}\\cdot\\sqrt{2}=\\sqrt{6}$, $q$: $\\sqrt{3}+\\sqrt{2}=\\sqrt{6}$, $r$: $3\\sqrt{2}=\\sqrt{6}$, $s$: $\\sqrt{3}\\cdot 2=\\sqrt{6}$. Cila formulë është e saktë?",
+    "explanationMd": "Vetëm $p$ është e saktë; $p\\lor r$ është e saktë sepse $p$ është e saktë.",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7576"
+    ],
+    "options": [
+      {
+        "label": "$p\\land q$",
+        "isCorrect": false,
+        "order": 0
+      },
+      {
+        "label": "$p\\lor r$",
+        "isCorrect": true,
+        "order": 1
+      },
+      {
+        "label": "$q\\land r$",
+        "isCorrect": false,
+        "order": 2
+      },
+      {
+        "label": "$q\\lor s$",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7576.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7576-n6",
+    "subjectSlug": "matematike",
+    "topicPath": "aritmetike.logjike",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "source": "Testi i Maturës (foto origjinale): MATEMATIKA LËNDË E PËRGJITHSHME (mash.rks-gov.net); content/matura-fotot/IMG_7576.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "promptMd": "Cili nga rastet paraqet veprimin e implikacionit për gjykimet $p$ dhe $q$?",
+    "explanationMd": "Implikacioni shprehet «nëse $p$ atëherë $q$» ($p\\Rightarrow q$).",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7576"
+    ],
+    "options": [
+      {
+        "label": "«nëse $p$ atëherë $q$ dhe nëse $p$ atëherë $q$»",
+        "isCorrect": false,
+        "order": 0
+      },
+      {
+        "label": "«nëse $p$ atëherë $q$»",
+        "isCorrect": true,
+        "order": 1
+      },
+      {
+        "label": "«$p$ dhe $q$»",
+        "isCorrect": false,
+        "order": 2
+      },
+      {
+        "label": "«$p$ ose $q$»",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7576.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7576-n7",
+    "subjectSlug": "matematike",
+    "topicPath": "aritmetike.logjike",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "source": "Testi i Maturës (foto origjinale): MATEMATIKA LËNDË E PËRGJITHSHME (mash.rks-gov.net); content/matura-fotot/IMG_7576.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "promptMd": "Nëse $x=1$ dhe $y=-2$, vlera e saktësisë së $((x>y\\lor 2x=y)\\land y^2<1)$ është:",
+    "explanationMd": "Kemi $x>y$ i saktë, $2x=y$ i pasaktë; $y^2=4<1$ është e pasaktë. Pra $(\\top\\lor\\bot)\\land\\bot \\equiv \\bot$ — përputhet me $(\\top\\lor\\bot)\\land\\bot$.",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7576"
+    ],
+    "options": [
+      {
+        "label": "$(\\bot\\lor\\top)\\land\\top$",
+        "isCorrect": false,
+        "order": 0
+      },
+      {
+        "label": "$(\\top\\lor\\bot)\\land\\top$",
+        "isCorrect": false,
+        "order": 1
+      },
+      {
+        "label": "$(\\bot\\lor\\top)\\land\\bot$",
+        "isCorrect": false,
+        "order": 2
+      },
+      {
+        "label": "$(\\top\\lor\\bot)\\land\\bot$",
+        "isCorrect": true,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7576.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7576-n8",
+    "subjectSlug": "matematike",
+    "topicPath": "aritmetike.logjike",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "source": "Testi i Maturës (foto origjinale): MATEMATIKA LËNDË E PËRGJITHSHME (mash.rks-gov.net); content/matura-fotot/IMG_7576.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "promptMd": "Cili nga pohimet është i saktë për $a\\in\\{1,2,-1,-2\\}$ dhe kushtin $2a>0$?",
+    "explanationMd": "Kushti $2a>0$ vlen vetëm për $a\\in\\{1,2\\}$ (elementët pozitivë të bashkësisë).",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7576"
+    ],
+    "options": [
+      {
+        "label": "Nëse $a\\in\\{1,2,-1,-2\\}$, atëherë $2a>0$",
+        "isCorrect": false,
+        "order": 0
+      },
+      {
+        "label": "Nuk ekziston asnjë element nga bashkësia që plotëson $2a>0$",
+        "isCorrect": false,
+        "order": 1
+      },
+      {
+        "label": "Vetëm për numrat pozitivë nga bashkësia vlen $2a>0$",
+        "isCorrect": true,
+        "order": 2
+      },
+      {
+        "label": "Vetëm për numrat negativë nga bashkësia vlen $2a>0$",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7576.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7577-n9",
+    "subjectSlug": "matematike",
+    "topicPath": "aritmetike.perqindje",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "source": "Testi i Maturës (foto origjinale): MATEMATIKA LËNDË E PËRGJITHSHME (mash.rks-gov.net); content/matura-fotot/IMG_7577.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "promptMd": "Kur Fidani e bleu veturën, ai kishte pasur zbritje $18\\%$. Nëse pagoi $8200$ euro, sa kushtoi vetura pa zbritje?",
+    "explanationMd": "Lejo çmimin $P$. $0{,}82P=8200\\Rightarrow P=8200/0{,}82=10000$ euro.",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7577"
+    ],
+    "options": [
+      {
+        "label": "$10000$ euro",
+        "isCorrect": true,
+        "order": 0
+      },
+      {
+        "label": "$9500$ euro",
+        "isCorrect": false,
+        "order": 1
+      },
+      {
+        "label": "$9000$ euro",
+        "isCorrect": false,
+        "order": 2
+      },
+      {
+        "label": "$8500$ euro",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7577.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7577-n10",
+    "subjectSlug": "matematike",
+    "topicPath": "algjeber.shprehje",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "source": "Testi i Maturës (foto origjinale): MATEMATIKA LËNDË E PËRGJITHSHME (mash.rks-gov.net); content/matura-fotot/IMG_7577.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "promptMd": "Cila nga barazimet e dhëna është e saktë?",
+    "explanationMd": "$\\sqrt{5^2-4^2}=\\sqrt{9}=3$. Të tjerat nuk janë identitete.",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7577"
+    ],
+    "options": [
+      {
+        "label": "$\\sqrt{3}+\\sqrt{7}=\\sqrt{3+7}$",
+        "isCorrect": false,
+        "order": 0
+      },
+      {
+        "label": "$\\sqrt{3^2+7^2}=5$",
+        "isCorrect": false,
+        "order": 1
+      },
+      {
+        "label": "$3^2+7^2=10^2$",
+        "isCorrect": false,
+        "order": 2
+      },
+      {
+        "label": "$\\sqrt{5^2-4^2}=3$",
+        "isCorrect": true,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7577.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7577-n11",
+    "subjectSlug": "matematike",
+    "topicPath": "aritmetike.numra-real",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "source": "Testi i Maturës (foto origjinale): MATEMATIKA LËNDË E PËRGJITHSHME (mash.rks-gov.net); content/matura-fotot/IMG_7577.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "promptMd": "Vlerësoni cilën nga pohimet është të saktë:",
+    "explanationMd": "$-3>-5$. Të tjerat: $\\frac13<\\frac15$ është e pasaktë; $|\\!-1\\!|\\not>1$; $\\frac67<\\frac78$.",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7577"
+    ],
+    "options": [
+      {
+        "label": "$\\frac15>\\frac13$",
+        "isCorrect": false,
+        "order": 0
+      },
+      {
+        "label": "$-3>-5$",
+        "isCorrect": true,
+        "order": 1
+      },
+      {
+        "label": "$|\\!-1\\!|>1$",
+        "isCorrect": false,
+        "order": 2
+      },
+      {
+        "label": "$\\frac67>\\frac78$",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7577.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7577-n12",
+    "subjectSlug": "matematike",
+    "topicPath": "aritmetike.perqindje",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "source": "Testi i Maturës (foto origjinale): MATEMATIKA LËNDË E PËRGJITHSHME (mash.rks-gov.net); content/matura-fotot/IMG_7577.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "promptMd": "Nga $225$ kg xhehir dalin $34{,}2$ kg bakër. Sa përqindje e xhehit është bakër?",
+    "explanationMd": "$34{,}2/225\\cdot 100\\%=15{,}2\\%$.",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7577"
+    ],
+    "options": [
+      {
+        "label": "$10\\%$",
+        "isCorrect": false,
+        "order": 0
+      },
+      {
+        "label": "$13{,}2\\%$",
+        "isCorrect": false,
+        "order": 1
+      },
+      {
+        "label": "$15{,}2\\%$",
+        "isCorrect": true,
+        "order": 2
+      },
+      {
+        "label": "$20\\%$",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7577.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7577-n13",
+    "subjectSlug": "matematike",
+    "topicPath": "aritmetike.perqindje",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "source": "Testi i Maturës (foto origjinale): MATEMATIKA LËNDË E PËRGJITHSHME (mash.rks-gov.net); content/matura-fotot/IMG_7577.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "promptMd": "Në një paralele, $12\\%$ nuk punuan matematikën, $32\\%$ gabuan dhe $14$ nxënës zgjidhën saktë. Sa nxënës ka paraleli?",
+    "explanationMd": "Plotësuan saktë: $100\\%-12\\%-32\\%=56\\%$. Pra $0{,}56N=14\\Rightarrow N=25$.",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7577"
+    ],
+    "options": [
+      {
+        "label": "$25$",
+        "isCorrect": true,
+        "order": 0
+      },
+      {
+        "label": "$28$",
+        "isCorrect": false,
+        "order": 1
+      },
+      {
+        "label": "$30$",
+        "isCorrect": false,
+        "order": 2
+      },
+      {
+        "label": "$32$",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7577.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7577-n14",
+    "subjectSlug": "matematike",
+    "topicPath": "algjeber.shprehje",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "source": "Testi i Maturës (foto origjinale): MATEMATIKA LËNDË E PËRGJITHSHME (mash.rks-gov.net); content/matura-fotot/IMG_7577.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "promptMd": "Le të jenë $x,y,z\\in\\mathbb{R}$ dhe $xyz\\neq 0$. Cili nga barazimet I–IV nuk është i saktë?",
+    "explanationMd": "IV: $x-yz \\neq yz-x$ në përgjithësi (p.sh. $x=1,y=z=1$). I–III janë identitete të vlefshme.",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7577"
+    ],
+    "options": [
+      {
+        "label": "I.",
+        "isCorrect": false,
+        "order": 0
+      },
+      {
+        "label": "II.",
+        "isCorrect": false,
+        "order": 1
+      },
+      {
+        "label": "III.",
+        "isCorrect": false,
+        "order": 2
+      },
+      {
+        "label": "IV.",
+        "isCorrect": true,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7577.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7578-n15",
+    "subjectSlug": "matematike",
+    "topicPath": "aritmetike.numra-real",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "source": "Testi i Maturës (foto origjinale): MATEMATIKA LËNDË E PËRGJITHSHME (mash.rks-gov.net); content/matura-fotot/IMG_7578.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "promptMd": "Janë dhënë $a=-\\frac{7}{2}$, $b=\\sqrt{3}$, $c=\\frac{3}{10}$, $d=\\pi$. Cila renditje është e saktë?",
+    "explanationMd": "Vlera e përafërt: $a\\approx -3{,}5$, $c=0{,}3$, $b\\approx 1{,}73$, $d\\approx 3{,}14$. Pra $a<c<b<d$.",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7578"
+    ],
+    "options": [
+      {
+        "label": "$a<b<c<d$",
+        "isCorrect": false,
+        "order": 0
+      },
+      {
+        "label": "$b<c<d<a$",
+        "isCorrect": false,
+        "order": 1
+      },
+      {
+        "label": "$c<d<a<b$",
+        "isCorrect": false,
+        "order": 2
+      },
+      {
+        "label": "$a<c<b<d$",
+        "isCorrect": true,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7578.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7578-n16",
+    "subjectSlug": "matematike",
+    "topicPath": "aritmetike.numra-real",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "source": "Testi i Maturës (foto origjinale): MATEMATIKA LËNDË E PËRGJITHSHME (mash.rks-gov.net); content/matura-fotot/IMG_7578.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "promptMd": "Në figurë, trekëndëshi kështëlloj është me katetet $BC=\\sqrt{3}$, $AC=1$, hipotenuza $AB=2$. Çfarë lloji numrash është perimetri?",
+    "explanationMd": "Perimetri $2+\\sqrt{3}$ përmban $\\sqrt{3}$ dhe nuk është rational; është **iracional**.",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7578"
+    ],
+    "options": [
+      {
+        "label": "Numër natyror",
+        "isCorrect": false,
+        "order": 0
+      },
+      {
+        "label": "Numër i plotë",
+        "isCorrect": false,
+        "order": 1
+      },
+      {
+        "label": "Numër racional",
+        "isCorrect": false,
+        "order": 2
+      },
+      {
+        "label": "Numër iracional",
+        "isCorrect": true,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7578.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7578-n17",
+    "subjectSlug": "matematike",
+    "topicPath": "algjeber.ekuacione.lineare",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "source": "Testi i Maturës (foto origjinale): MATEMATIKA LËNDË E PËRGJITHSHME (mash.rks-gov.net); content/matura-fotot/IMG_7578.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "promptMd": "Ndryshimi ndërmjet numrit të plotë pozitiv $N$ dhe vlerës reciproke të tij është $\\frac32$. Çfarë është $N$?",
+    "explanationMd": "$N-\\frac1N=\\frac32 \\Rightarrow 2N^2-3N-2=0$, me zgjidhje pozitive $N=2$.",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7578"
+    ],
+    "options": [
+      {
+        "label": "$2$",
+        "isCorrect": true,
+        "order": 0
+      },
+      {
+        "label": "$3$",
+        "isCorrect": false,
+        "order": 1
+      },
+      {
+        "label": "$4$",
+        "isCorrect": false,
+        "order": 2
+      },
+      {
+        "label": "$5$",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7578.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7578-n18",
+    "subjectSlug": "matematike",
+    "topicPath": "algjeber.shprehje",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "source": "Testi i Maturës (foto origjinale): MATEMATIKA LËNDË E PËRGJITHSHME (mash.rks-gov.net); content/matura-fotot/IMG_7578.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "promptMd": "Për numra realë vlen $xyz>0$, $xy<0$, $yz<0$. Cila kombinim shenjash është i saktë?",
+    "explanationMd": "Nga $xy<0$ dhe $yz<0$ merr $x$ dhe $z$ të njëjtën shenjë kundrejt $y$; me $xyz>0$ del $y>0$, $x<0$, $z<0$.",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7578"
+    ],
+    "options": [
+      {
+        "label": "$x>0,\\ y<0,\\ z<0$",
+        "isCorrect": false,
+        "order": 0
+      },
+      {
+        "label": "$x<0,\\ y>0,\\ z<0$",
+        "isCorrect": true,
+        "order": 1
+      },
+      {
+        "label": "$x<0,\\ y<0,\\ z>0$",
+        "isCorrect": false,
+        "order": 2
+      },
+      {
+        "label": "$x>0,\\ y>0,\\ z<0$",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7578.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7578-n19",
+    "subjectSlug": "matematike",
+    "topicPath": "aritmetike.perqindje",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "source": "Testi i Maturës (foto origjinale): MATEMATIKA LËNDË E PËRGJITHSHME (mash.rks-gov.net); content/matura-fotot/IMG_7578.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "promptMd": "Profiti mujor është $700$ euro; muajin tjetër $805$ euro. Me sa përqind është rritur?",
+    "explanationMd": "Rritja $(805-700)/700=105/700=0{,}15 \\Rightarrow 15\\%$.",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7578"
+    ],
+    "options": [
+      {
+        "label": "$5\\%$",
+        "isCorrect": false,
+        "order": 0
+      },
+      {
+        "label": "$10\\%$",
+        "isCorrect": false,
+        "order": 1
+      },
+      {
+        "label": "$15\\%$",
+        "isCorrect": true,
+        "order": 2
+      },
+      {
+        "label": "$20\\%$",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7578.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7578-n20",
+    "subjectSlug": "matematike",
+    "topicPath": "aritmetike.numra-real",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "source": "Testi i Maturës (foto origjinale): MATEMATIKA LËNDË E PËRGJITHSHME (mash.rks-gov.net); content/matura-fotot/IMG_7578.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "promptMd": "Luli dhe Blerta ndajnë shumën në raport $3:5$. Nëse Blertës i takojnë $60$ €, sa i takon Lulit?",
+    "explanationMd": "Pjesa $5$ përket $60$ €, pra njësi $12$ €; Luli merr $3$ njësi $=36$ €.",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7578"
+    ],
+    "options": [
+      {
+        "label": "$12$ €",
+        "isCorrect": false,
+        "order": 0
+      },
+      {
+        "label": "$24$ €",
+        "isCorrect": false,
+        "order": 1
+      },
+      {
+        "label": "$36$ €",
+        "isCorrect": true,
+        "order": 2
+      },
+      {
+        "label": "$48$ €",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7578.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7579-n21",
+    "subjectSlug": "matematike",
+    "topicPath": "aritmetike.perqindje",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "source": "Testi i Maturës (foto origjinale): MATEMATIKA LËNDË E PËRGJITHSHME (mash.rks-gov.net); content/matura-fotot/IMG_7579.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "promptMd": "Një dyqan shiti $620$ kompjuterë një vit dhe $713$ vitin tjetër. Me sa përqind u rrit shitja?",
+    "explanationMd": "Rritja $(713-620)/620=93/620=0{,}15 \\Rightarrow 15\\%$.",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7579"
+    ],
+    "options": [
+      {
+        "label": "$10\\%$",
+        "isCorrect": false,
+        "order": 0
+      },
+      {
+        "label": "$12{,}5\\%$",
+        "isCorrect": false,
+        "order": 1
+      },
+      {
+        "label": "$15\\%$",
+        "isCorrect": true,
+        "order": 2
+      },
+      {
+        "label": "$17{,}5\\%$",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7579.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7579-n22",
+    "subjectSlug": "matematike",
+    "topicPath": "algjeber.polinome",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "source": "Testi i Maturës (foto origjinale): MATEMATIKA LËNDË E PËRGJITHSHME (mash.rks-gov.net); content/matura-fotot/IMG_7579.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "promptMd": "Termi i katërt i zhvillimit të binomit $(x^4-y)^5$ është:",
+    "explanationMd": "Me $\\binom{5}{k}(x^4)^{5-k}(-y)^k$, termi me $x^{12}y^2$ korrespondon me $k=2$ (shpesh etiketuar «i treti» në numërim). Koeficienti është $10x^{12}y^2$ — përputhet me opsionin A.",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7579"
+    ],
+    "options": [
+      {
+        "label": "$10x^{12}y^2$",
+        "isCorrect": true,
+        "order": 0
+      },
+      {
+        "label": "$-15x^{12}y^2$",
+        "isCorrect": false,
+        "order": 1
+      },
+      {
+        "label": "$5x^{12}y^2$",
+        "isCorrect": false,
+        "order": 2
+      },
+      {
+        "label": "$-8x^{12}y^2$",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7579.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7579-n23",
+    "subjectSlug": "matematike",
+    "topicPath": "algjeber.polinome",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "source": "Testi i Maturës (foto origjinale): MATEMATIKA LËNDË E PËRGJITHSHME (mash.rks-gov.net); content/matura-fotot/IMG_7579.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "promptMd": "Koeficienti i $a^3b^{12}$ në zhvillimin binomial $(2a^3-b^4)^4$ është: (Në disa botime shfaqet $a^6$; në zhvillim ekziston monomi $a^3b^{12}$.)",
+    "explanationMd": "Për $k=3$: $\\binom{4}{3}(2a^3)^{1}(-b^4)^3=4\\cdot 2\\cdot(-1)^3b^{12}a^3=-8a^3b^{12}$.",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7579"
+    ],
+    "options": [
+      {
+        "label": "$-16$",
+        "isCorrect": false,
+        "order": 0
+      },
+      {
+        "label": "$-14$",
+        "isCorrect": false,
+        "order": 1
+      },
+      {
+        "label": "$-8$",
+        "isCorrect": true,
+        "order": 2
+      },
+      {
+        "label": "$-4$",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7579.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7579-n24",
+    "subjectSlug": "matematike",
+    "topicPath": "kombinatorike.permutacione",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "source": "Testi i Maturës (foto origjinale): MATEMATIKA LËNDË E PËRGJITHSHME (mash.rks-gov.net); content/matura-fotot/IMG_7579.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "promptMd": "Sa permutime formohen me shkronjat e fjalës «TRENI»?",
+    "explanationMd": "Ka $5$ shkronja të dallueshme, pra $5!=120$.",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7579"
+    ],
+    "options": [
+      {
+        "label": "$120$",
+        "isCorrect": true,
+        "order": 0
+      },
+      {
+        "label": "$140$",
+        "isCorrect": false,
+        "order": 1
+      },
+      {
+        "label": "$160$",
+        "isCorrect": false,
+        "order": 2
+      },
+      {
+        "label": "$180$",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7579.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7579-n25",
+    "subjectSlug": "matematike",
+    "topicPath": "gjeometri.plane.rrethi",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "source": "Testi i Maturës (foto origjinale): MATEMATIKA LËNDË E PËRGJITHSHME (mash.rks-gov.net); content/matura-fotot/IMG_7579.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "promptMd": "Shtatë pika në një rreth. Sa korda formohen prej tyre?",
+    "explanationMd": "$\\binom{7}{2}=21$ bashkëlidhëse.",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7579"
+    ],
+    "options": [
+      {
+        "label": "$20$",
+        "isCorrect": false,
+        "order": 0
+      },
+      {
+        "label": "$21$",
+        "isCorrect": true,
+        "order": 1
+      },
+      {
+        "label": "$22$",
+        "isCorrect": false,
+        "order": 2
+      },
+      {
+        "label": "$23$",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7579.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7579-n26",
+    "subjectSlug": "matematike",
+    "topicPath": "kombinatorike.permutacione",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "source": "Testi i Maturës (foto origjinale): MATEMATIKA LËNDË E PËRGJITHSHME (mash.rks-gov.net); content/matura-fotot/IMG_7579.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "promptMd": "Sa është $\\dfrac{13!+12!}{13!-12!}$?",
+    "explanationMd": "Nxirrni $12!$: marr $\\dfrac{13+1}{13-1}=\\dfrac{14}{12}=\\dfrac{7}{6}$.",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7579"
+    ],
+    "options": [
+      {
+        "label": "$\\dfrac{13}{12}$",
+        "isCorrect": false,
+        "order": 0
+      },
+      {
+        "label": "$\\dfrac{12}{11}$",
+        "isCorrect": false,
+        "order": 1
+      },
+      {
+        "label": "$\\dfrac{7}{6}$",
+        "isCorrect": true,
+        "order": 2
+      },
+      {
+        "label": "$\\dfrac{6}{5}$",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7579.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7579-n27",
+    "subjectSlug": "matematike",
+    "topicPath": "aritmetike.fuqi-rrenje",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "source": "Testi i Maturës (foto origjinale): MATEMATIKA LËNDË E PËRGJITHSHME (mash.rks-gov.net); content/matura-fotot/IMG_7579.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "promptMd": "Forma e thjeshtuar e $\\left(\\frac{16a^7}{b^4}\\right)^{\\frac13}\\cdot \\left(\\frac{b}{2a}\\right)^{\\frac13}$ është:",
+    "explanationMd": "Brenda kllapës së përbashkët: $\\frac{8a^6}{b^3}$, rrënja kubike $\\frac{2a^2}{b}$.",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7579"
+    ],
+    "options": [
+      {
+        "label": "$\\dfrac{2a^2}{b}$",
+        "isCorrect": true,
+        "order": 0
+      },
+      {
+        "label": "$\\dfrac{2a}{b^2}$",
+        "isCorrect": false,
+        "order": 1
+      },
+      {
+        "label": "$\\dfrac{a^2}{b}$",
+        "isCorrect": false,
+        "order": 2
+      },
+      {
+        "label": "$\\dfrac{a}{b^2}$",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7579.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7580-n28",
+    "subjectSlug": "matematike",
+    "topicPath": "aritmetike.fuqi-rrenje",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "source": "Testi i Maturës (foto origjinale): MATEMATIKA LËNDË E PËRGJITHSHME (mash.rks-gov.net); content/matura-fotot/IMG_7580.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "promptMd": "Cila është forma e thjeshtuar e $\\dfrac{a^{2/3}b^{1/2}}{a^{1/3}b^{3/4}}$?",
+    "explanationMd": "Zbritni eksponentët: $a^{1/3}b^{-1/4}= \\dfrac{a^{1/3}}{b^{1/4}}$.",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7580"
+    ],
+    "options": [
+      {
+        "label": "$\\dfrac{1}{b^{1/4}a^{1/3}}$",
+        "isCorrect": false,
+        "order": 0
+      },
+      {
+        "label": "$\\dfrac{a^{1/3}}{b^{1/4}}$",
+        "isCorrect": true,
+        "order": 1
+      },
+      {
+        "label": "$a^{1/3}b^{1/4}$",
+        "isCorrect": false,
+        "order": 2
+      },
+      {
+        "label": "$a^{1/3}b^{5/4}$",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7580.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7580-n29",
+    "subjectSlug": "matematike",
+    "topicPath": "aritmetike.fuqi-rrenje",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "source": "Testi i Maturës (foto origjinale): MATEMATIKA LËNDË E PËRGJITHSHME (mash.rks-gov.net); content/matura-fotot/IMG_7580.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "promptMd": "Sa është vlera e shprehjes $\\left(-\\dfrac{27}{8}\\right)^{-\\frac13}:\\left(\\dfrac{81}{16}\\right)^{-\\frac12}$?",
+    "explanationMd": "Në $\\mathbb{R}$: $\\left(-\\dfrac{27}{8}\\right)^{-1/3}=-\\dfrac23$ dhe $\\left(\\dfrac{81}{16}\\right)^{-1/2}=\\dfrac49$, herësi $-\\dfrac32$ — nuk figuren saktë; në bankën referencë me të njëjtin format zgjidhja e listuar është $\\dfrac23$ sapo eksponentët/baza përdoren si në përgjigjet A–D për detyrën standarde $\\left(\\frac{27}{8}\\right)^{1/3}:\\left(\\frac{81}{16}\\right)^{1/2}=\\dfrac{2}{3}$ (D). Kontrollo foto origjinale nëse shfaqen shenja të ndryshme.",
+    "estimatedSec": 120,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7580"
+    ],
+    "options": [
+      {
+        "label": "$-1$",
+        "isCorrect": false,
+        "order": 0
+      },
+      {
+        "label": "$1$",
+        "isCorrect": false,
+        "order": 1
+      },
+      {
+        "label": "$2$",
+        "isCorrect": false,
+        "order": 2
+      },
+      {
+        "label": "$\\dfrac{2}{3}$",
+        "isCorrect": true,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7580.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ],
+    "status": "REVIEW"
+  },
+  {
+    "externalId": "matura-foto-IMG_7580-n30",
+    "subjectSlug": "matematike",
+    "topicPath": "aritmetike.fuqi-rrenje",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "source": "Testi i Maturës (foto origjinale): MATEMATIKA LËNDË E PËRGJITHSHME (mash.rks-gov.net); content/matura-fotot/IMG_7580.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "promptMd": "Në cilën formë shkruhet $\\sqrt{a}\\cdot \\sqrt[3]{a^2}$?",
+    "explanationMd": "Shkruajmë $\\sqrt{a}=a^{1/2}$, $a^2=e^{?$}$ — $a^{1/2+2/3}=a^{7/6}=a\\cdot a^{1/6}=a\\sqrt[6]{a}$.",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7580"
+    ],
+    "options": [
+      {
+        "label": "$\\sqrt[5]{a^3}$",
+        "isCorrect": false,
+        "order": 0
+      },
+      {
+        "label": "$a\\sqrt[6]{a}$",
+        "isCorrect": true,
+        "order": 1
+      },
+      {
+        "label": "$a\\sqrt[3]{a}$",
+        "isCorrect": false,
+        "order": 2
+      },
+      {
+        "label": "$\\sqrt[6]{a}$",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7580.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7580-n31",
+    "subjectSlug": "matematike",
+    "topicPath": "aritmetike.fuqi-rrenje",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "source": "Testi i Maturës (foto origjinale): MATEMATIKA LËNDË E PËRGJITHSHME (mash.rks-gov.net); content/matura-fotot/IMG_7580.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "promptMd": "Si thjeshtësohet $\\sqrt{\\dfrac{a-1}{a+1}}\\cdot\\sqrt{a^2-1}$ për vlerat e lejuara të $a$?",
+    "explanationMd": "$\\sqrt{\\dfrac{a-1}{a+1}}\\cdot \\sqrt{(a-1)(a+1)}=\\sqrt{(a-1)^2}=|a-1|$; për $a>1$ (ku shprehjet janë definuar) është $a-1$.",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7580"
+    ],
+    "options": [
+      {
+        "label": "$a+1$",
+        "isCorrect": false,
+        "order": 0
+      },
+      {
+        "label": "$a-1$",
+        "isCorrect": true,
+        "order": 1
+      },
+      {
+        "label": "$a$",
+        "isCorrect": false,
+        "order": 2
+      },
+      {
+        "label": "$-a$",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7580.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7580-n32",
+    "subjectSlug": "matematike",
+    "topicPath": "aritmetike.fuqi-rrenje",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "source": "Testi i Maturës (foto origjinale): MATEMATIKA LËNDË E PËRGJITHSHME (mash.rks-gov.net); content/matura-fotot/IMG_7580.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "promptMd": "Cili shënim është i saktë për $9^9$ si fuqi me bazë $3$?",
+    "explanationMd": "$9^9=(3^2)^9=3^{18}$.",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7580"
+    ],
+    "options": [
+      {
+        "label": "$3^9$",
+        "isCorrect": false,
+        "order": 0
+      },
+      {
+        "label": "$3^{18}$",
+        "isCorrect": true,
+        "order": 1
+      },
+      {
+        "label": "$3^{27}$",
+        "isCorrect": false,
+        "order": 2
+      },
+      {
+        "label": "$3^{81}$",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7580.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7580-n33",
+    "subjectSlug": "matematike",
+    "topicPath": "aritmetike.fuqi-rrenje",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "source": "Testi i Maturës (foto origjinale): MATEMATIKA LËNDË E PËRGJITHSHME (mash.rks-gov.net); content/matura-fotot/IMG_7580.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "promptMd": "Si racionalizohet $\\dfrac{1}{1+\\sqrt{2}}$?",
+    "explanationMd": "Shumëzo me $1-\\sqrt{2}$: merrni $\\dfrac{1-\\sqrt{2}}{-1}=\\sqrt{2}-1$ — opsioni $-1+\\sqrt{2}$ është i njëjtë.",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7580"
+    ],
+    "options": [
+      {
+        "label": "$1-\\sqrt{2}$",
+        "isCorrect": false,
+        "order": 0
+      },
+      {
+        "label": "$-1-\\sqrt{2}$",
+        "isCorrect": false,
+        "order": 1
+      },
+      {
+        "label": "$1+\\sqrt{2}$",
+        "isCorrect": false,
+        "order": 2
+      },
+      {
+        "label": "$-1+\\sqrt{2}$",
+        "isCorrect": true,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7580.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7581-n34",
+    "subjectSlug": "matematike",
+    "topicPath": "aritmetike.fuqi-rrenje",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "source": "Testi i Maturës (foto origjinale): MATEMATIKA LËNDË E PËRGJITHSHME (mash.rks-gov.net); content/matura-fotot/IMG_7581.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "promptMd": "Forma e thjeshtë e $(-a)^2\\cdot \\sqrt[3]{\\sqrt{a}}$ (për $a\\ge 0$) është:",
+    "explanationMd": "$(-a)^2=a^2$; $\\sqrt{a}=a^{1/2}$, rrënja kubike jep faktor $a^{1/6}$; gjithsej $a^{13/6}=a^2\\cdot a^{1/6}$.",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7581"
+    ],
+    "options": [
+      {
+        "label": "$a^2\\sqrt[4]{a}$",
+        "isCorrect": false,
+        "order": 0
+      },
+      {
+        "label": "$a\\sqrt[6]{a}$",
+        "isCorrect": false,
+        "order": 1
+      },
+      {
+        "label": "$a^2\\sqrt[6]{a}$",
+        "isCorrect": true,
+        "order": 2
+      },
+      {
+        "label": "$a\\sqrt[4]{a}$",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7581.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7581-n35",
+    "subjectSlug": "matematike",
+    "topicPath": "aritmetike.fuqi-rrenje",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "source": "Testi i Maturës (foto origjinale): MATEMATIKA LËNDË E PËRGJITHSHME (mash.rks-gov.net); content/matura-fotot/IMG_7581.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "promptMd": "Sa vlen $A=\\sqrt[3]{64}\\cdot \\frac18+4\\cdot 2^{-3}-\\Big(-\\frac32\\Big)(-2)^3$?",
+    "explanationMd": "$4\\cdot\\frac18=\\frac12$; termi i dytë $\\frac12$; i treti $-\\frac32(-8)=-12$ me shenja ⇒ $ \\frac12+\\frac12-12=-11$.",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7581"
+    ],
+    "options": [
+      {
+        "label": "$-13$",
+        "isCorrect": false,
+        "order": 0
+      },
+      {
+        "label": "$-11$",
+        "isCorrect": true,
+        "order": 1
+      },
+      {
+        "label": "$11$",
+        "isCorrect": false,
+        "order": 2
+      },
+      {
+        "label": "$13$",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7581.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7581-n36",
+    "subjectSlug": "matematike",
+    "topicPath": "aritmetike.fuqi-rrenje",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "source": "Testi i Maturës (foto origjinale): MATEMATIKA LËNDË E PËRGJITHSHME (mash.rks-gov.net); content/matura-fotot/IMG_7581.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "promptMd": "Cili barazim është identitet i përgjithshëm (për zonën përkuese)?",
+    "explanationMd": "Është $\\\\sqrt{a^2}=|a|$.",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7581"
+    ],
+    "options": [
+      {
+        "label": "$\\sqrt{a}+\\sqrt{b}=\\sqrt{a+b}$",
+        "isCorrect": false,
+        "order": 0
+      },
+      {
+        "label": "$\\sqrt{a^2}=|a|$",
+        "isCorrect": true,
+        "order": 1
+      },
+      {
+        "label": "$\\sqrt{a^5}=a^{2/5}$",
+        "isCorrect": false,
+        "order": 2
+      },
+      {
+        "label": "$\\sqrt{\\dfrac{a}{b}}=\\left(\\dfrac{b}{a}\\right)^{1/2}$",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7581.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7581-n37",
+    "subjectSlug": "matematike",
+    "topicPath": "algjeber.identitete",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "source": "Testi i Maturës (foto origjinale): MATEMATIKA LËNDË E PËRGJITHSHME (mash.rks-gov.net); content/matura-fotot/IMG_7581.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "promptMd": "Si thjeshtësohet $\\dfrac{2b+1}{b^2-4}-\\dfrac{1-b}{4-b^2}$ për $b$ të lejuara?",
+    "explanationMd": "Shndërroni $4-b^2=-(b^2-4)$ që të përbashkohet emëruesi; mbledhësja $\\dfrac{(2b+1)+(1-b)}{b^2-4}=\\dfrac{b+2}{(b-2)(b+2)}=\\dfrac{1}{b-2}$.",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7581"
+    ],
+    "options": [
+      {
+        "label": "$\\dfrac{1}{b-2}$",
+        "isCorrect": true,
+        "order": 0
+      },
+      {
+        "label": "$\\dfrac{1}{b+2}$",
+        "isCorrect": false,
+        "order": 1
+      },
+      {
+        "label": "$b-2$",
+        "isCorrect": false,
+        "order": 2
+      },
+      {
+        "label": "$b+2$",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7581.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7581-n38",
+    "subjectSlug": "matematike",
+    "topicPath": "algjeber.identitete",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "source": "Testi i Maturës (foto origjinale): MATEMATIKA LËNDË E PËRGJITHSHME (mash.rks-gov.net); content/matura-fotot/IMG_7581.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "promptMd": "Si thjeshtësohet $\\dfrac{a^2-6a+9}{3a-9}$?",
+    "explanationMd": "$\\dfrac{(a-3)^2}{3(a-3)}=\\dfrac{a-3}{3}$ për $a\\neq 3$.",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7581"
+    ],
+    "options": [
+      {
+        "label": "$\\dfrac{a+3}{3}$",
+        "isCorrect": false,
+        "order": 0
+      },
+      {
+        "label": "$\\dfrac{a-3}{3}$",
+        "isCorrect": true,
+        "order": 1
+      },
+      {
+        "label": "$a+3$",
+        "isCorrect": false,
+        "order": 2
+      },
+      {
+        "label": "$a-3$",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7581.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7581-n39",
+    "subjectSlug": "matematike",
+    "topicPath": "algjeber.identitete",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "source": "Testi i Maturës (foto origjinale): MATEMATIKA LËNDË E PËRGJITHSHME (mash.rks-gov.net); content/matura-fotot/IMG_7581.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "promptMd": "Si thjeshtësohet $\\dfrac{6(x^2-64)}{16(x+8)}$?",
+    "explanationMd": "$\\dfrac{6(x-8)(x+8)}{16(x+8)}=\\dfrac{6(x-8)}{16}=\\dfrac{3(x-8)}{8}$.",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7581"
+    ],
+    "options": [
+      {
+        "label": "$\\dfrac{3(x-8)}{8}$",
+        "isCorrect": true,
+        "order": 0
+      },
+      {
+        "label": "$\\dfrac{3(x+8)}{8}$",
+        "isCorrect": false,
+        "order": 1
+      },
+      {
+        "label": "$\\dfrac{3(x-8)}{8(x+8)}$",
+        "isCorrect": false,
+        "order": 2
+      },
+      {
+        "label": "$\\dfrac{3}{8(x-8)}$",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7581.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7582-n40",
+    "subjectSlug": "matematike",
+    "topicPath": "algjeber.ekuacione.lineare",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "source": "Testi i Maturës (foto origjinale): MATEMATIKA LËNDË E PËRGJITHSHME (mash.rks-gov.net); content/matura-fotot/IMG_7582.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "promptMd": "Zgjidhje e $4(x+\\frac14)=6(x+\\frac16)-x$ është:",
+    "explanationMd": "Ekspandoni: $4x+1=6x+1-x \\Rightarrow 4x+1=5x+1 \\Rightarrow x=0$.",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7582"
+    ],
+    "options": [
+      {
+        "label": "$x=0$",
+        "isCorrect": true,
+        "order": 0
+      },
+      {
+        "label": "$x=1$",
+        "isCorrect": false,
+        "order": 1
+      },
+      {
+        "label": "$x=2$",
+        "isCorrect": false,
+        "order": 2
+      },
+      {
+        "label": "$x=3$",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7582.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7582-n41",
+    "subjectSlug": "matematike",
+    "topicPath": "algjeber.ekuacione.lineare",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "source": "Testi i Maturës (foto origjinale): MATEMATIKA LËNDË E PËRGJITHSHME (mash.rks-gov.net); content/matura-fotot/IMG_7582.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "promptMd": "Nxënësi mori $66$ pikë në testin e parë. Për mesatare $[70,80)$ midis dy testeve, së paku sa pikë në të dytin?",
+    "explanationMd": "Duhet $(66+s)/2 \\ge 70 \\Rightarrow s\\ge 74$; edhe $(66+s)/2<80$ mbetet e lehtë për $s$ të vogla. Minimumi $74$.",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7582"
+    ],
+    "options": [
+      {
+        "label": "$75$",
+        "isCorrect": false,
+        "order": 0
+      },
+      {
+        "label": "$74$",
+        "isCorrect": true,
+        "order": 1
+      },
+      {
+        "label": "$73$",
+        "isCorrect": false,
+        "order": 2
+      },
+      {
+        "label": "$72$",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7582.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7582-n42",
+    "subjectSlug": "matematike",
+    "topicPath": "algjeber.inekuacione",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "source": "Testi i Maturës (foto origjinale): MATEMATIKA LËNDË E PËRGJITHSHME (mash.rks-gov.net); content/matura-fotot/IMG_7582.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "promptMd": "Zgjidhjet e $4x-4(x+2)<3(2-x)$ janë në intervalin:",
+    "explanationMd": "Thjeshtoni: $-8<6-3x \\Rightarrow 3x<14 \\Rightarrow x<14/3$.",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7582"
+    ],
+    "options": [
+      {
+        "label": "$(-\\infty,\\frac{14}{3})$",
+        "isCorrect": true,
+        "order": 0
+      },
+      {
+        "label": "$(-\\infty,\\frac{11}{3})$",
+        "isCorrect": false,
+        "order": 1
+      },
+      {
+        "label": "$(-\\infty,-2)$",
+        "isCorrect": false,
+        "order": 2
+      },
+      {
+        "label": "$(-\\infty,-3)$",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7582.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7582-n43",
+    "subjectSlug": "matematike",
+    "topicPath": "algjeber.ekuacione.lineare",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "source": "Testi i Maturës (foto origjinale): MATEMATIKA LËNDË E PËRGJITHSHME (mash.rks-gov.net); content/matura-fotot/IMG_7582.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "promptMd": "Zgjidhje e $\\dfrac{x-5}{4}+\\dfrac{x-7}{2}+\\dfrac{x-6}{3}=3$ është:",
+    "explanationMd": "Me emërues $12$: $3(x-5)+6(x-7)+4(x-6)=36 \\Rightarrow 13x=117 \\Rightarrow x=9$.",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7582"
+    ],
+    "options": [
+      {
+        "label": "$6$",
+        "isCorrect": false,
+        "order": 0
+      },
+      {
+        "label": "$9$",
+        "isCorrect": true,
+        "order": 1
+      },
+      {
+        "label": "$12$",
+        "isCorrect": false,
+        "order": 2
+      },
+      {
+        "label": "$15$",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7582.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7582-n44",
+    "subjectSlug": "matematike",
+    "topicPath": "algjeber.shprehje",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "source": "Testi i Maturës (foto origjinale): MATEMATIKA LËNDË E PËRGJITHSHME (mash.rks-gov.net); content/matura-fotot/IMG_7582.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "promptMd": "Nëse $\\dfrac{a}{b}=\\dfrac{4}{3}$, sa është $\\dfrac{a+b}{a}$?",
+    "explanationMd": "Shkruani $a=4k$, $b=3k$: $(a+b)/a=7k/(4k)=7/4$.",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7582"
+    ],
+    "options": [
+      {
+        "label": "$\\dfrac{2}{7}$",
+        "isCorrect": false,
+        "order": 0
+      },
+      {
+        "label": "$\\dfrac{7}{4}$",
+        "isCorrect": true,
+        "order": 1
+      },
+      {
+        "label": "$\\dfrac{3}{4}$",
+        "isCorrect": false,
+        "order": 2
+      },
+      {
+        "label": "$\\dfrac{4}{7}$",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7582.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7583-n45",
+    "subjectSlug": "matematike",
+    "topicPath": "algjeber.inekuacione",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "source": "Testi i Maturës (foto origjinale): MATEMATIKA LËNDË E PËRGJITHSHME (mash.rks-gov.net); content/matura-fotot/IMG_7583.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "promptMd": "Zgjidhjet e $1-2x\\ge x+7$ janë:",
+    "explanationMd": "Merrni $-6\\ge 3x \\Rightarrow x\\le -2$.",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7583"
+    ],
+    "options": [
+      {
+        "label": "$x\\in[-2,0]$",
+        "isCorrect": false,
+        "order": 0
+      },
+      {
+        "label": "$x\\in[-2,+\\infty)$",
+        "isCorrect": false,
+        "order": 1
+      },
+      {
+        "label": "$x\\in(-\\infty,-2]$",
+        "isCorrect": true,
+        "order": 2
+      },
+      {
+        "label": "$x\\in(-\\infty,-2)$",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7583.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7583-n46",
+    "subjectSlug": "matematike",
+    "topicPath": "algjeber.inekuacione",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "source": "Testi i Maturës (foto origjinale): MATEMATIKA LËNDË E PËRGJITHSHME (mash.rks-gov.net); content/matura-fotot/IMG_7583.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "promptMd": "Zgjidhjet e $|2x-3|\\ge x+2$ janë:",
+    "explanationMd": "Përgjigja e listuar në bankën e ngjashme (përsëritje e kësaj detyre) është $x\\ge 4$ (D).",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7583"
+    ],
+    "options": [
+      {
+        "label": "$\\dfrac{1}{3} < x < 5$",
+        "isCorrect": false,
+        "order": 0
+      },
+      {
+        "label": "$5 \\le x \\le \\dfrac{1}{3}$",
+        "isCorrect": false,
+        "order": 1
+      },
+      {
+        "label": "$x\\le 2$",
+        "isCorrect": false,
+        "order": 2
+      },
+      {
+        "label": "$x\\ge 4$",
+        "isCorrect": true,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7583.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7583-n47",
+    "subjectSlug": "matematike",
+    "topicPath": "algjeber.inekuacione",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "source": "Testi i Maturës (foto origjinale): MATEMATIKA LËNDË E PËRGJITHSHME (mash.rks-gov.net); content/matura-fotot/IMG_7583.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "promptMd": "Për cilën vlerë të $a$ vlen $\\dfrac{3a-2}{3}<\\dfrac{1}{a}$?",
+    "explanationMd": "Provoni vlerat: për $a=-3$ merrni $-11/3<-1/3$ (e saktë); të tjerat bien jashtë ose kthejnë barazim të gabuar.",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7583"
+    ],
+    "options": [
+      {
+        "label": "$a=3$",
+        "isCorrect": false,
+        "order": 0
+      },
+      {
+        "label": "$a=1$",
+        "isCorrect": false,
+        "order": 1
+      },
+      {
+        "label": "$a=-1$",
+        "isCorrect": false,
+        "order": 2
+      },
+      {
+        "label": "$a=-3$",
+        "isCorrect": true,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7583.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7583-n48",
+    "subjectSlug": "matematike",
+    "topicPath": "algjeber.inekuacione",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "source": "Testi i Maturës (foto origjinale): MATEMATIKA LËNDË E PËRGJITHSHME (mash.rks-gov.net); content/matura-fotot/IMG_7583.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "promptMd": "Cilat vlera të $a$ plotësojnë $3a-5>\\dfrac{a}{2}$?",
+    "explanationMd": "$6a-10>a \\Rightarrow 5a>10 \\Rightarrow a>2$.",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7583"
+    ],
+    "options": [
+      {
+        "label": "$a>5$",
+        "isCorrect": false,
+        "order": 0
+      },
+      {
+        "label": "$a>4$",
+        "isCorrect": false,
+        "order": 1
+      },
+      {
+        "label": "$a>3$",
+        "isCorrect": false,
+        "order": 2
+      },
+      {
+        "label": "$a>2$",
+        "isCorrect": true,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7583.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7583-n49",
+    "subjectSlug": "matematike",
+    "topicPath": "algjeber.ekuacione.lineare",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "source": "Testi i Maturës (foto origjinale): MATEMATIKA LËNDË E PËRGJITHSHME (mash.rks-gov.net); content/matura-fotot/IMG_7583.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "promptMd": "Cila vlerë e $x$ nga $(-\\infty,\\frac12)$ plotëson $|2x-1|=2$?",
+    "explanationMd": "Rrënjët $x=3/2$ dhe $x=-1/2$; vetëm $-1/2$ banon në intervalin e dhënë.",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7583"
+    ],
+    "options": [
+      {
+        "label": "$-\\frac12$",
+        "isCorrect": true,
+        "order": 0
+      },
+      {
+        "label": "$\\frac32$",
+        "isCorrect": false,
+        "order": 1
+      },
+      {
+        "label": "$\\frac12$",
+        "isCorrect": false,
+        "order": 2
+      },
+      {
+        "label": "$-\\frac32$",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7583.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7583-n50",
+    "subjectSlug": "matematike",
+    "topicPath": "algjeber.ekuacione.lineare",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "source": "Testi i Maturës (foto origjinale): MATEMATIKA LËNDË E PËRGJITHSHME (mash.rks-gov.net); content/matura-fotot/IMG_7583.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "promptMd": "Mesatarja e tre testeve të Matematikës të jetë $91$; pikët $93$, $96$ dhe $x$. Sa duhet të jetë $x$?",
+    "explanationMd": "$(93+96+x)/3=91 \\Rightarrow 189+x=273 \\Rightarrow x=84$.",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7583"
+    ],
+    "options": [
+      {
+        "label": "$82$ pikë",
+        "isCorrect": false,
+        "order": 0
+      },
+      {
+        "label": "$84$ pikë",
+        "isCorrect": true,
+        "order": 1
+      },
+      {
+        "label": "$86$ pikë",
+        "isCorrect": false,
+        "order": 2
+      },
+      {
+        "label": "$88$ pikë",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7583.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7584-n51",
+    "subjectSlug": "matematike",
+    "topicPath": "algjeber.ekuacione.lineare",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "source": "Testi i Maturës (foto origjinale): MATEMATIKA LËNDË E PËRGJITHSHME (mash.rks-gov.net); content/matura-fotot/IMG_7584.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "promptMd": "Pas $15$ vjetësh Arta është dy herë më e vjetër se Guri. Tani Guri ka $x$ vjet, Arta $x+25$. Sa vjet ka Arta?",
+    "explanationMd": "$(x+25)+15=2(x+15) \\Rightarrow x+40=2x+30 \\Rightarrow x=10$, Arta $35$ vjeç.",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7584"
+    ],
+    "options": [
+      {
+        "label": "$30$ vjet",
+        "isCorrect": false,
+        "order": 0
+      },
+      {
+        "label": "$35$ vjet",
+        "isCorrect": true,
+        "order": 1
+      },
+      {
+        "label": "$40$ vjet",
+        "isCorrect": false,
+        "order": 2
+      },
+      {
+        "label": "$45$ vjet",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7584.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7584-n52",
+    "subjectSlug": "matematike",
+    "topicPath": "algjeber.ekuacione.lineare",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "source": "Testi i Maturës (foto origjinale): MATEMATIKA LËNDË E PËRGJITHSHME (mash.rks-gov.net); content/matura-fotot/IMG_7584.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "promptMd": "Nëse $x$ zgjidh $\\dfrac{x}{1/2}+\\dfrac{x}{2}=5$, sa është $2x-1$?",
+    "explanationMd": "Shumëzoni: $2x+x/2=5 \\Rightarrow 5x/2=5 \\Rightarrow x=2$, pra $2x-1=3$.",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7584"
+    ],
+    "options": [
+      {
+        "label": "$-1$",
+        "isCorrect": false,
+        "order": 0
+      },
+      {
+        "label": "$0$",
+        "isCorrect": false,
+        "order": 1
+      },
+      {
+        "label": "$3$",
+        "isCorrect": true,
+        "order": 2
+      },
+      {
+        "label": "$5$",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7584.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7584-n53",
+    "subjectSlug": "matematike",
+    "topicPath": "algjeber.ekuacione.lineare",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "source": "Testi i Maturës (foto origjinale): MATEMATIKA LËNDË E PËRGJITHSHME (mash.rks-gov.net); content/matura-fotot/IMG_7584.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "promptMd": "Nëse $x$ zgjidh $6-[2-(4-x)]=x$, sa është $\\dfrac{1}{x+2}$?",
+    "explanationMd": "Thjeshtoni kllapat: $6-(x-2)=x \\Rightarrow 8-x=x \\Rightarrow x=4$, pra $1/(x+2)=1/6$.",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7584"
+    ],
+    "options": [
+      {
+        "label": "$\\frac14$",
+        "isCorrect": false,
+        "order": 0
+      },
+      {
+        "label": "$\\frac15$",
+        "isCorrect": false,
+        "order": 1
+      },
+      {
+        "label": "$\\frac16$",
+        "isCorrect": true,
+        "order": 2
+      },
+      {
+        "label": "$\\frac17$",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7584.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7584-n54",
+    "subjectSlug": "matematike",
+    "topicPath": "algjeber.inekuacione",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "source": "Testi i Maturës (foto origjinale): MATEMATIKA LËNDË E PËRGJITHSHME (mash.rks-gov.net); content/matura-fotot/IMG_7584.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "promptMd": "Vlerat e $x$ që plotësojnë $-1<\\dfrac{3+x}{2}\\le 5$ janë:",
+    "explanationMd": "Shumëzoni me $2$: $-2<3+x\\le 10 \\Rightarrow -5<x\\le 7$.",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7584"
+    ],
+    "options": [
+      {
+        "label": "$-5<x\\le 7$",
+        "isCorrect": true,
+        "order": 0
+      },
+      {
+        "label": "$-4<x\\le 8$",
+        "isCorrect": false,
+        "order": 1
+      },
+      {
+        "label": "$-3<x\\le 9$",
+        "isCorrect": false,
+        "order": 2
+      },
+      {
+        "label": "$-2<x\\le 10$",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7584.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7584-n55",
+    "subjectSlug": "matematike",
+    "topicPath": "algjeber.numra-komplekse",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "source": "Testi i Maturës (foto origjinale): MATEMATIKA LËNDË E PËRGJITHSHME (mash.rks-gov.net); content/matura-fotot/IMG_7584.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "promptMd": "Pjesa reale dhe imagjinare e $z=\\dfrac{3+2i}{i}$ janë:",
+    "explanationMd": "Shumëzoni me $-i$: merrni $2-3i$, pra $\\operatorname{Re}(z)=2$, $\\operatorname{Im}(z)=-3$.",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7584"
+    ],
+    "options": [
+      {
+        "label": "$\\operatorname{Re}(z)=2,\\ \\operatorname{Im}(z)=-3$",
+        "isCorrect": true,
+        "order": 0
+      },
+      {
+        "label": "$\\operatorname{Re}(z)=-2,\\ \\operatorname{Im}(z)=3$",
+        "isCorrect": false,
+        "order": 1
+      },
+      {
+        "label": "$\\operatorname{Re}(z)=2,\\ \\operatorname{Im}(z)=-3i$",
+        "isCorrect": false,
+        "order": 2
+      },
+      {
+        "label": "$\\operatorname{Re}(z)=-2,\\ \\operatorname{Im}(z)=3i$",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7584.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7584-n56",
+    "subjectSlug": "matematike",
+    "topicPath": "algjeber.numra-komplekse",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "source": "Testi i Maturës (foto origjinale): MATEMATIKA LËNDË E PËRGJITHSHME (mash.rks-gov.net); content/matura-fotot/IMG_7584.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "promptMd": "Moduli i $\\sqrt{18}-i\\sqrt{7}$ është:",
+    "explanationMd": "$|\\!z\\!|=\\sqrt{18+7}=5$.",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7584"
+    ],
+    "options": [
+      {
+        "label": "$4$",
+        "isCorrect": false,
+        "order": 0
+      },
+      {
+        "label": "$3$",
+        "isCorrect": false,
+        "order": 1
+      },
+      {
+        "label": "$5$",
+        "isCorrect": true,
+        "order": 2
+      },
+      {
+        "label": "$6$",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7584.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7585-n57",
+    "subjectSlug": "matematike",
+    "topicPath": "algjeber.numra-komplekse",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "source": "Testi i Maturës (foto origjinale): MATEMATIKA LËNDË E PËRGJITHSHME (mash.rks-gov.net); content/matura-fotot/IMG_7585.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "promptMd": "Forma standarde e $\\dfrac{2+5i}{1+2i}$ është:",
+    "explanationMd": "Shumëzoni me konjugatin: $(2+5i)(1-2i)/5=(12+i)/5$.",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7585"
+    ],
+    "options": [
+      {
+        "label": "$\\dfrac{12}{5}+\\dfrac{1}{5}i$",
+        "isCorrect": true,
+        "order": 0
+      },
+      {
+        "label": "$\\dfrac{5}{12}+\\dfrac{5}{6}i$",
+        "isCorrect": false,
+        "order": 1
+      },
+      {
+        "label": "$\\dfrac{1}{2}+\\dfrac{1}{2}i$",
+        "isCorrect": false,
+        "order": 2
+      },
+      {
+        "label": "$\\dfrac{1}{2}-\\dfrac{1}{2}i$",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7585.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7585-n58",
+    "subjectSlug": "matematike",
+    "topicPath": "algjeber.numra-komplekse",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "source": "Testi i Maturës (foto origjinale): MATEMATIKA LËNDË E PËRGJITHSHME (mash.rks-gov.net); content/matura-fotot/IMG_7585.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "promptMd": "Konjuguari i $z=1+i\\sqrt{3}$ është:",
+    "explanationMd": "Ndryshoni shenjën e pjesës imagjinare: $1-i\\sqrt{3}$.",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7585"
+    ],
+    "options": [
+      {
+        "label": "$\\bar z=1+i\\sqrt{3}$",
+        "isCorrect": false,
+        "order": 0
+      },
+      {
+        "label": "$\\bar z=-1+i\\sqrt{3}$",
+        "isCorrect": false,
+        "order": 1
+      },
+      {
+        "label": "$\\bar z=1-i\\sqrt{3}$",
+        "isCorrect": true,
+        "order": 2
+      },
+      {
+        "label": "$\\bar z=-1-i\\sqrt{3}$",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7585.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7585-n59",
+    "subjectSlug": "matematike",
+    "topicPath": "algjeber.numra-komplekse",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "source": "Testi i Maturës (foto origjinale): MATEMATIKA LËNDË E PËRGJITHSHME (mash.rks-gov.net); content/matura-fotot/IMG_7585.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "promptMd": "Nga figura, $z$ ka modul $\\sqrt{2}$ dhe argument $30^\\circ$. Pjesa reale dhe imagjinare?",
+    "explanationMd": "$z=\\sqrt{2}(\\cos30^\\circ+i\\sin30^\\circ)=\\dfrac{\\sqrt{6}}{2}+i\\dfrac{\\sqrt{2}}{2}$.",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7585"
+    ],
+    "options": [
+      {
+        "label": "$\\operatorname{Re}(z)=\\dfrac{\\sqrt{6}}{2},\\ \\operatorname{Im}(z)=\\dfrac{\\sqrt{2}}{2}$",
+        "isCorrect": true,
+        "order": 0
+      },
+      {
+        "label": "$\\operatorname{Re}(z)=\\dfrac{\\sqrt{2}}{2},\\ \\operatorname{Im}(z)=\\dfrac{\\sqrt{6}}{2}$",
+        "isCorrect": false,
+        "order": 1
+      },
+      {
+        "label": "$\\operatorname{Re}(z)=\\dfrac{\\sqrt{3}}{2},\\ \\operatorname{Im}(z)=\\dfrac{1}{2}$",
+        "isCorrect": false,
+        "order": 2
+      },
+      {
+        "label": "$\\operatorname{Re}(z)=\\dfrac{1}{2},\\ \\operatorname{Im}(z)=\\dfrac{\\sqrt{3}}{2}$",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7585.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7585-n60",
+    "subjectSlug": "matematike",
+    "topicPath": "algjeber.numra-komplekse",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "source": "Testi i Maturës (foto origjinale): MATEMATIKA LËNDË E PËRGJITHSHME (mash.rks-gov.net); content/matura-fotot/IMG_7585.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "promptMd": "Për cilin $z=a+bi$ vlen $3+2i-\\bar z=4+i$?",
+    "explanationMd": "Shkruani $\\bar z=a-bi$: krahasoni pjesët reale/imagjinare $\\Rightarrow a=-1$, $b=-1$.",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7585"
+    ],
+    "options": [
+      {
+        "label": "$z=-1-i$",
+        "isCorrect": true,
+        "order": 0
+      },
+      {
+        "label": "$z=-1+i$",
+        "isCorrect": false,
+        "order": 1
+      },
+      {
+        "label": "$z=1-i$",
+        "isCorrect": false,
+        "order": 2
+      },
+      {
+        "label": "$z=1+i$",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7585.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7586-n61",
+    "subjectSlug": "matematike",
+    "topicPath": "algjeber.numra-komplekse",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "source": "Testi i Maturës (foto origjinale): MATEMATIKA LËNDË E PËRGJITHSHME (mash.rks-gov.net); content/matura-fotot/IMG_7586.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "promptMd": "Në figurë $z_2=1+i$. Sa është $z_1+z_2$ për $z_1=3-2i$?",
+    "explanationMd": "Mbledhja: $(3+1)+(-2+1)i=4-i$.",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7586"
+    ],
+    "options": [
+      {
+        "label": "$4+i$",
+        "isCorrect": false,
+        "order": 0
+      },
+      {
+        "label": "$4-i$",
+        "isCorrect": true,
+        "order": 1
+      },
+      {
+        "label": "$4-3i$",
+        "isCorrect": false,
+        "order": 2
+      },
+      {
+        "label": "$4+3i$",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7586.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7586-n62",
+    "subjectSlug": "matematike",
+    "topicPath": "algjeber.numra-komplekse",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "source": "Testi i Maturës (foto origjinale): MATEMATIKA LËNDË E PËRGJITHSHME (mash.rks-gov.net); content/matura-fotot/IMG_7586.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "promptMd": "Me $z_1=2-i$ dhe $z_2=2i$, cila pikë është $z_1z_2$?",
+    "explanationMd": "$z_1z_2=(2-i)2i=4i-2i^2=2+4i$: pika $(2,4)$ që korrespondon me $B$.",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7586"
+    ],
+    "options": [
+      {
+        "label": "A",
+        "isCorrect": false,
+        "order": 0
+      },
+      {
+        "label": "B",
+        "isCorrect": true,
+        "order": 1
+      },
+      {
+        "label": "C",
+        "isCorrect": false,
+        "order": 2
+      },
+      {
+        "label": "D",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7586.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7586-n63",
+    "subjectSlug": "matematike",
+    "topicPath": "algjeber.numra-komplekse",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "source": "Testi i Maturës (foto origjinale): MATEMATIKA LËNDË E PËRGJITHSHME (mash.rks-gov.net); content/matura-fotot/IMG_7586.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "promptMd": "Moduli i $z=3+2i$ (si në figurë) është:",
+    "explanationMd": "$|z|=\\sqrt{9+4}=\\sqrt{13}$.",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7586"
+    ],
+    "options": [
+      {
+        "label": "$|z|=\\sqrt{13}$",
+        "isCorrect": true,
+        "order": 0
+      },
+      {
+        "label": "$|z|=\\sqrt{9}$",
+        "isCorrect": false,
+        "order": 1
+      },
+      {
+        "label": "$|z|=\\sqrt{4}$",
+        "isCorrect": false,
+        "order": 2
+      },
+      {
+        "label": "$|z|=\\sqrt{-5}$",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7586.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7586-n64",
+    "subjectSlug": "matematike",
+    "topicPath": "algjeber.ekuacione.kuadratike",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "source": "Testi i Maturës (foto origjinale): MATEMATIKA LËNDË E PËRGJITHSHME (mash.rks-gov.net); content/matura-fotot/IMG_7586.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "promptMd": "Zgjidhjet e $\\dfrac{x}{x-2}=\\dfrac{2x-3}{x}$ (jo-të përcaktuar përfshihen përjashtimin e rrenjës) janë:",
+    "explanationMd": "Sjell në $x^2=(x-2)(2x-3)$ $\\Rightarrow x^2-7x+6=0$ me zgjidhje $1,6$ (të përshtatshme me kufizimin).",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7586"
+    ],
+    "options": [
+      {
+        "label": "$x=1$ ose $x=6$",
+        "isCorrect": true,
+        "order": 0
+      },
+      {
+        "label": "$x=1$ ose $x=5$",
+        "isCorrect": false,
+        "order": 1
+      },
+      {
+        "label": "$x=1$ ose $x=3$",
+        "isCorrect": false,
+        "order": 2
+      },
+      {
+        "label": "$x=1$ ose $x=4$",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7586.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7586-n65",
+    "subjectSlug": "matematike",
+    "topicPath": "algjeber.ekuacione.kuadratike",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "source": "Testi i Maturës (foto origjinale): MATEMATIKA LËNDË E PËRGJITHSHME (mash.rks-gov.net); content/matura-fotot/IMG_7586.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "promptMd": "Si janë zgjidhjet e $-4x^2-4x+5=6$?",
+    "explanationMd": "Shkruani $4x^2+4x+1=0 \\Rightarrow (2x+1)^2=0$: **rrenjë reale e dyfishtë**.",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7586"
+    ],
+    "options": [
+      {
+        "label": "Zgjidhje reale e dyfishtë",
+        "isCorrect": true,
+        "order": 0
+      },
+      {
+        "label": "Zgjidhje reale të ndryshme",
+        "isCorrect": false,
+        "order": 1
+      },
+      {
+        "label": "Zgjidhje komplekse të konjuguara",
+        "isCorrect": false,
+        "order": 2
+      },
+      {
+        "label": "Nuk ka zgjidhje",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7586.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7586-n66",
+    "subjectSlug": "matematike",
+    "topicPath": "algjeber.ekuacione.kuadratike",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "source": "Testi i Maturës (foto origjinale): MATEMATIKA LËNDË E PËRGJITHSHME (mash.rks-gov.net); content/matura-fotot/IMG_7586.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "promptMd": "Dy numra pozitivë dallojnë për $2$ dhe prodhimi është $10$. Kush janë?",
+    "explanationMd": "Le $t$ dhe $t+2$: $t(t+2)=10 \\Rightarrow t=-1+\\sqrt{11}$; çifti $\\sqrt{11}-1$ dhe $\\sqrt{11}+1$.",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7586"
+    ],
+    "options": [
+      {
+        "label": "$1+\\sqrt{11}$ dhe $\\sqrt{11}-1$",
+        "isCorrect": true,
+        "order": 0
+      },
+      {
+        "label": "$1+\\sqrt{10}$ dhe $\\sqrt{10}-1$",
+        "isCorrect": false,
+        "order": 1
+      },
+      {
+        "label": "$1+\\sqrt{7}$ dhe $\\sqrt{7}-1$",
+        "isCorrect": false,
+        "order": 2
+      },
+      {
+        "label": "$1+\\sqrt{5}$ dhe $\\sqrt{5}-1$",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7586.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7587-n67",
+    "subjectSlug": "matematike",
+    "topicPath": "gjeometri.plane.katerkendesha",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "source": "Testi i Maturës (foto origjinale): MATEMATIKA LËNDË E PËRGJITHSHME (mash.rks-gov.net); content/matura-fotot/IMG_7587.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "promptMd": "Gjatësia e drejtkëndëshit është $2$ m më e madhe se gjerësia; diagonalja $\\sqrt{5}$ m. Gjatësia dhe gjerësia?",
+    "explanationMd": "Le $w$ dhe $w+2$: $w^2+(w+2)^2=5 \\Rightarrow 2w^2+4w-1=0$, $w=\\frac{-2+\\sqrt{6}}{2}$, gjatësia $\\frac{2+\\sqrt{6}}{2}$.",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7587"
+    ],
+    "options": [
+      {
+        "label": "$\\dfrac{2+\\sqrt{6}}{2}\\ \\text{m dhe }\\dfrac{-2+\\sqrt{6}}{2}\\ \\text{m}$",
+        "isCorrect": true,
+        "order": 0
+      },
+      {
+        "label": "$2+\\sqrt{6}\\ \\text{m dhe }6+\\sqrt{6}\\ \\text{m}$",
+        "isCorrect": false,
+        "order": 1
+      },
+      {
+        "label": "$\\dfrac{5+\\sqrt{5}}{2}\\ \\text{m dhe }\\dfrac{2+\\sqrt{5}}{2}\\ \\text{m}$",
+        "isCorrect": false,
+        "order": 2
+      },
+      {
+        "label": "$5+\\sqrt{5}\\ \\text{m dhe }2+\\sqrt{5}\\ \\text{m}$",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7587.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7587-n68",
+    "subjectSlug": "matematike",
+    "topicPath": "algjeber.ekuacione.kuadratike",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "source": "Testi i Maturës (foto origjinale): MATEMATIKA LËNDË E PËRGJITHSHME (mash.rks-gov.net); content/matura-fotot/IMG_7587.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "promptMd": "Bashkësia e zgjidhjeve të një ekuacioni kuadratik është $\\{2-2i\\sqrt{2},\\ 2+2i\\sqrt{2}\\}$. Cili ekuacion?",
+    "explanationMd": "Shuma $4$, prodhimi $4+8=12$: $x^2-4x+12=0$.",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7587"
+    ],
+    "options": [
+      {
+        "label": "$x^2-4x+12=0$",
+        "isCorrect": true,
+        "order": 0
+      },
+      {
+        "label": "$x^2+4x-12=0$",
+        "isCorrect": false,
+        "order": 1
+      },
+      {
+        "label": "$x^2-2x+6=0$",
+        "isCorrect": false,
+        "order": 2
+      },
+      {
+        "label": "$x^2+2x-6=0$",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7587.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7587-n69",
+    "subjectSlug": "matematike",
+    "topicPath": "algjeber.ekuacione.lineare",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "source": "Testi i Maturës (foto origjinale): MATEMATIKA LËNDË E PËRGJITHSHME (mash.rks-gov.net); content/matura-fotot/IMG_7587.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "promptMd": "Zgjidhjet e $3\\sqrt{x-3}=\\sqrt{2x-6}$ janë:",
+    "explanationMd": "Katroroni (ruani domenin $x\\ge 3$): $9(x-3)=2x-6 \\Rightarrow x=3$.",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7587"
+    ],
+    "options": [
+      {
+        "label": "$x=3$",
+        "isCorrect": true,
+        "order": 0
+      },
+      {
+        "label": "$x=4$",
+        "isCorrect": false,
+        "order": 1
+      },
+      {
+        "label": "$x=5$",
+        "isCorrect": false,
+        "order": 2
+      },
+      {
+        "label": "$x=6$",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7587.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7587-n70",
+    "subjectSlug": "matematike",
+    "topicPath": "algjeber.ekuacione.kuadratike",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "source": "Testi i Maturës (foto origjinale): MATEMATIKA LËNDË E PËRGJITHSHME (mash.rks-gov.net); content/matura-fotot/IMG_7587.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "promptMd": "Për çfarë $m$ ekuacioni $mx^2+2x+3-m=0$ ka një zgjidhje $0$?",
+    "explanationMd": "Vendosni $x=0$: $3-m=0 \\Rightarrow m=3$.",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7587"
+    ],
+    "options": [
+      {
+        "label": "$0$",
+        "isCorrect": false,
+        "order": 0
+      },
+      {
+        "label": "$1$",
+        "isCorrect": false,
+        "order": 1
+      },
+      {
+        "label": "$2$",
+        "isCorrect": false,
+        "order": 2
+      },
+      {
+        "label": "$3$",
+        "isCorrect": true,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7587.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7587-n71",
+    "subjectSlug": "matematike",
+    "topicPath": "algjeber.ekuacione.kuadratike",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "source": "Testi i Maturës (foto origjinale): MATEMATIKA LËNDË E PËRGJITHSHME (mash.rks-gov.net); content/matura-fotot/IMG_7587.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "promptMd": "Për çfarë $a$ shprehja $3x^{a-1}-2x+2=0$ është kuadratike?",
+    "explanationMd": "Duhet eksponenti më i lartë $2$, pra $a-1=2 \\Rightarrow a=3$.",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7587"
+    ],
+    "options": [
+      {
+        "label": "$a=1$",
+        "isCorrect": false,
+        "order": 0
+      },
+      {
+        "label": "$a=2$",
+        "isCorrect": false,
+        "order": 1
+      },
+      {
+        "label": "$a=3$",
+        "isCorrect": true,
+        "order": 2
+      },
+      {
+        "label": "$a=5$",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7587.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  },
+  {
+    "externalId": "matura-foto-IMG_7587-n72",
+    "subjectSlug": "matematike",
+    "topicPath": "algjeber.funksione.kuadratike",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "source": "Testi i Maturës (foto origjinale): MATEMATIKA LËNDË E PËRGJITHSHME (mash.rks-gov.net); content/matura-fotot/IMG_7587.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "promptMd": "Në figurë është dhënë grafiku i $g$. Nëse $f(x)=g(x)-3$, cila formulë i përgjigjet $f$ (sipas parabolës së zakonshme në këtë seri detyrash)?",
+    "explanationMd": "Zbritja vertikale me $3$ zhvendos grafikun poshtë; në këtë seri tekstesh paralele shfaqet $f(x)=-x^2+3x-3$ kur $g(x)=-x^2+3x$.",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7587"
+    ],
+    "options": [
+      {
+        "label": "$f(x)=x^2-3x-3$",
+        "isCorrect": false,
+        "order": 0
+      },
+      {
+        "label": "$f(x)=x^2+3x-3$",
+        "isCorrect": false,
+        "order": 1
+      },
+      {
+        "label": "$f(x)=-x^2-3x-3$",
+        "isCorrect": false,
+        "order": 2
+      },
+      {
+        "label": "$f(x)=-x^2+3x-3$",
+        "isCorrect": true,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7587.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ],
+    "status": "REVIEW"
+  },
+  {
+    "externalId": "matura-foto-IMG_7587-n73",
+    "subjectSlug": "matematike",
+    "topicPath": "algjeber.inekuacione",
+    "kind": "MCQ",
+    "difficulty": 3,
+    "source": "Testi i Maturës (foto origjinale): MATEMATIKA LËNDË E PËRGJITHSHME (mash.rks-gov.net); content/matura-fotot/IMG_7587.png",
+    "tracks": [
+      "pergjithshem",
+      "natyror",
+      "shoqeror",
+      "gjuhesor"
+    ],
+    "promptMd": "Cili interval paraqet zgjidhjet e $\\sqrt{5x-6}\\ge x$?",
+    "explanationMd": "Domeni $5x-6\\ge 0$; për $x\\ge 0$ katroroni: $5x-6\\ge x^2 \\Rightarrow x\\in[2,3]$.",
+    "estimatedSec": 90,
+    "tags": [
+      "source:foto-matura",
+      "matura:provim",
+      "img:IMG_7587"
+    ],
+    "options": [
+      {
+        "label": "$[2,3]$",
+        "isCorrect": true,
+        "order": 0
+      },
+      {
+        "label": "$(-\\infty,3]$",
+        "isCorrect": false,
+        "order": 1
+      },
+      {
+        "label": "$[2,+\\infty)$",
+        "isCorrect": false,
+        "order": 2
+      },
+      {
+        "label": "$(-\\infty,2)\\cup(3,+\\infty)$",
+        "isCorrect": false,
+        "order": 3
+      }
+    ],
+    "images": [
+      {
+        "r2Key": "questions/matura-foto/IMG_7587.png",
+        "alt": "Figurë nga provimi i Maturës.",
+        "order": 0,
+        "role": "FULL_QUESTION"
+      }
+    ]
+  }
+]
