@@ -17,6 +17,7 @@ import { readFileSync, writeFileSync, existsSync } from 'node:fs';
 import { resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { S3Client, PutObjectCommand } from '@aws-sdk/client-s3';
+import { contentTypeForBuffer } from './image-content-type.js';
 import { prisma } from '../client.js';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
@@ -129,7 +130,7 @@ async function main(): Promise<void> {
           Bucket: bucket,
           Key: r2Key,
           Body: body,
-          ContentType: 'image/png',
+          ContentType: contentTypeForBuffer(body),
         }),
       );
       console.log(`[upload] ${r2Key}`);

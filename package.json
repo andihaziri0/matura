@@ -30,6 +30,7 @@
     "sdk:build": "turbo run sdk:build --filter=@matura/sdk",
     "content:import": "pnpm --filter @matura/api content:import",
     "seed:questions": "pnpm --filter @matura/db seed:questions",
+    "sync:matura-fotot-r2": "pnpm --filter @matura/db sync:matura-fotot-r2",
     "diag:foto-counts": "pnpm --filter @matura/db diag:foto-counts",
     "clean": "turbo run clean && rimraf node_modules"
   },
