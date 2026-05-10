@@ -18,8 +18,14 @@ restartPolicyMaxRetries = 3
 # Railway pings this on every deploy. /api/health/ready returns 200 once the
 # DB connection is open. Migration failures during boot will keep this 5xx
 # and Railway will roll back the deploy.
+#
+# Timeout is generous because:
+#   - Neon serverless can cold-start in 3-15s on first connection
+#   - prisma migrate deploy runs every boot (idempotent, but adds latency)
+#   - NestJS module graph + Swagger doc gen adds ~2-5s
+# 120s gives Railway ~4-8 retry attempts which is comfortable.
 healthcheckPath = "/api/health/ready"
-healthcheckTimeout = 30
+healthcheckTimeout = 120
 
 # Number of replicas. Stays at 1 — see ADR-0010 (boot-time migrations are only
 # safe at single-instance scale).
