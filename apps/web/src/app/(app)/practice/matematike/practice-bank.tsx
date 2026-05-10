@@ -194,7 +194,7 @@ export function PracticeBank(): React.ReactElement {
             <span>{Sq.sq.practice.examMode}</span>
           </label>
         </div>
-        <p className="mt-2 text-xs text-[var(--color-fg-muted)]">{Sq.sq.practice.examModeHint}</p>
+        <p className="mt-2 text-xs text-[var(--color-fg-muted)]">{Sq.sq.practice.examModeHintBank}</p>
 
         <p className="mt-4 text-sm text-[var(--color-fg-muted)]">
           {items.length} {Sq.sq.practice.bankLoadedCount}

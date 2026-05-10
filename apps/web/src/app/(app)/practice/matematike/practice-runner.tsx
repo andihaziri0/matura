@@ -315,7 +315,7 @@ export function PracticeRunner(): React.ReactElement {
               <span>{Sq.sq.practice.sessionExamMode}</span>
             </label>
             <p className="mt-1 max-w-xl text-xs text-[var(--color-fg-muted)]">
-              {Sq.sq.practice.examModeHint}
+              {Sq.sq.practice.examModeHintSession}
             </p>
             <button
               type="button"
@@ -453,7 +453,7 @@ export function PracticeRunner(): React.ReactElement {
               />
             ) : sessionExamMode && !revealedFeedback[phase.index] ? (
               <div className="rounded-lg border border-amber-200 bg-amber-50 p-4 text-amber-950 dark:border-amber-800 dark:bg-amber-950/35 dark:text-amber-100">
-                <p className="text-sm">{Sq.sq.practice.examModeHint}</p>
+                <p className="text-sm">{Sq.sq.practice.examModeRevealPrompt}</p>
                 <button
                   type="button"
                   onClick={revealCurrentFeedback}
