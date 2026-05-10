@@ -1,9 +1,24 @@
 import { withSentryConfig } from '@sentry/nextjs';
 
+/** Bust CDN/browser cache for question images after each Vercel deploy (optional manual override: NEXT_PUBLIC_MEDIA_CACHE_BUST). */
+function mediaCacheBust() {
+  return (
+    process.env.NEXT_PUBLIC_MEDIA_CACHE_BUST?.trim() ||
+    process.env.VERCEL_DEPLOYMENT_ID?.trim() ||
+    (process.env.VERCEL_GIT_COMMIT_SHA
+      ? process.env.VERCEL_GIT_COMMIT_SHA.trim().slice(0, 8)
+      : '') ||
+    ''
+  );
+}
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
   transpilePackages: ['@matura/shared', '@matura/sdk', '@matura/ui'],
+  env: {
+    NEXT_PUBLIC_MEDIA_CACHE_BUST: mediaCacheBust(),
+  },
   experimental: {
     typedRoutes: true,
   },
