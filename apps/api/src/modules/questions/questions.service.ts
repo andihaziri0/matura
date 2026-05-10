@@ -17,6 +17,8 @@ export class QuestionsService {
       ...(query.topicPath && { topicPath: { startsWith: query.topicPath } }),
       ...(query.status && { status: query.status }),
       ...(query.difficulty && { difficulty: query.difficulty }),
+      ...(query.tag && { tags: { has: query.tag } }),
+      ...(query.hasImages === true && { images: { some: {} } }),
       ...(query.search && {
         OR: [
           { promptMd: { contains: query.search, mode: 'insensitive' } },

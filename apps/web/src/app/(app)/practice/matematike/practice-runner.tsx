@@ -1,10 +1,11 @@
 'use client';
 
-import React, { useCallback, useMemo, useState } from 'react';
+import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import Link from 'next/link';
 import { Markdown } from '@matura/ui';
 import { MatematikeChapters, MathTaxonomy, Sq } from '@matura/shared';
 import { useAuth } from '@/lib/auth/auth-provider';
+import { PracticeMatematikeHeader } from './practice-matematike-header';
 
 const API_BASE = process.env.NEXT_PUBLIC_API_URL ?? 'http://localhost:4000';
 
@@ -16,6 +17,13 @@ function topicDisplay(path: string): string {
 
 function mcqLetter(sortIndex: number): string {
   return MCQ_LETTERS[sortIndex] ?? String(sortIndex + 1);
+}
+
+function isTextInputFocused(): boolean {
+  const el = document.activeElement;
+  if (!el || !(el instanceof HTMLElement)) return false;
+  const tag = el.tagName;
+  return tag === 'INPUT' || tag === 'TEXTAREA' || el.isContentEditable;
 }
 
 type QuestionKind = 'MCQ' | 'SHORT' | 'LONG';
@@ -65,6 +73,10 @@ interface AttemptRecord {
   result: AttemptResult;
 }
 
+function hasValidAnswer(q: PracticeQuestion, pending: string): boolean {
+  return pending.trim().length > 0;
+}
+
 type Phase =
   | { kind: 'pick' }
   | { kind: 'loading' }
@@ -78,6 +90,9 @@ export function PracticeRunner(): React.ReactElement {
   const { getIdToken } = useAuth();
   const [phase, setPhase] = useState<Phase>({ kind: 'pick' });
   const [topicPathFilter, setTopicPathFilter] = useState<string | undefined>(undefined);
+  const [sessionQuestionCount, setSessionQuestionCount] = useState(10);
+  const [sessionExamMode, setSessionExamMode] = useState(false);
+  const [revealedFeedback, setRevealedFeedback] = useState<Record<number, boolean>>({});
   const [records, setRecords] = useState<AttemptRecord[]>([]);
   const [questionStartedAt, setQuestionStartedAt] = useState<number>(() => Date.now());
   const [pendingAnswer, setPendingAnswer] = useState<string>('');
@@ -87,6 +102,7 @@ export function PracticeRunner(): React.ReactElement {
       setPhase({ kind: 'loading' });
       setRecords([]);
       setPendingAnswer('');
+      setRevealedFeedback({});
       try {
         const token = await getIdToken();
         const res = await fetch(`${API_BASE}/api/sessions/practice`, {
@@ -97,7 +113,7 @@ export function PracticeRunner(): React.ReactElement {
           },
           body: JSON.stringify({
             subjectSlug: 'matematike',
-            count: 10,
+            count: sessionQuestionCount,
             ...(topicPath ? { topicPath } : {}),
           }),
         });
@@ -116,17 +132,20 @@ export function PracticeRunner(): React.ReactElement {
         setPhase({ kind: 'error', message: Sq.sq.errors.network });
       }
     },
-    [getIdToken],
+    [getIdToken, sessionQuestionCount],
   );
 
-  const submit = useCallback(async () => {
+  const postCurrentAnswerOrSkip = useCallback(async () => {
     if (phase.kind !== 'answering') return;
-    if (!pendingAnswer.trim()) return;
-
     const q = phase.payload.questions[phase.index];
     if (!q) return;
+
+    const valid = hasValidAnswer(q, pendingAnswer);
+    const skipped = !valid;
     const token = await getIdToken();
-    const timeMs = Date.now() - questionStartedAt;
+    const timeMs = skipped ? 0 : Date.now() - questionStartedAt;
+    const answer = valid ? pendingAnswer : '';
+
     try {
       const res = await fetch(`${API_BASE}/api/attempts`, {
         method: 'POST',
@@ -137,8 +156,9 @@ export function PracticeRunner(): React.ReactElement {
         body: JSON.stringify({
           questionId: q.id,
           sessionId: phase.payload.session.id,
-          answer: pendingAnswer,
+          answer,
           timeMs,
+          ...(skipped ? { skipped: true } : {}),
         }),
       });
       if (!res.ok) {
@@ -146,7 +166,7 @@ export function PracticeRunner(): React.ReactElement {
         return;
       }
       const result = (await res.json()) as AttemptResult;
-      const record: AttemptRecord = { question: q, answer: pendingAnswer, result };
+      const record: AttemptRecord = { question: q, answer, result };
       setRecords((prev) => [...prev, record]);
       setPhase({ kind: 'feedback', payload: phase.payload, index: phase.index, record });
     } catch {
@@ -154,7 +174,7 @@ export function PracticeRunner(): React.ReactElement {
     }
   }, [phase, pendingAnswer, questionStartedAt, getIdToken]);
 
-  const next = useCallback(async () => {
+  const advanceAfterFeedback = useCallback(async () => {
     if (phase.kind !== 'feedback') return;
     const total = phase.payload.questions.length;
     const nextIdx = phase.index + 1;
@@ -183,6 +203,71 @@ export function PracticeRunner(): React.ReactElement {
     }
   }, [phase, records, getIdToken]);
 
+  const goPrev = useCallback(() => {
+    if (phase.kind === 'answering') {
+      const i = phase.index;
+      if (i <= 0) return;
+      const prevRecord = records[i - 1];
+      if (!prevRecord) return;
+      setPhase({ kind: 'feedback', payload: phase.payload, index: i - 1, record: prevRecord });
+      return;
+    }
+    if (phase.kind === 'feedback') {
+      const i = phase.index;
+      if (i <= 0) return;
+      const prevRecord = records[i - 1];
+      if (!prevRecord) return;
+      setPhase({ kind: 'feedback', payload: phase.payload, index: i - 1, record: prevRecord });
+    }
+  }, [phase, records]);
+
+  const revealCurrentFeedback = useCallback(() => {
+    if (phase.kind !== 'feedback') return;
+    setRevealedFeedback((r) => ({ ...r, [phase.index]: true }));
+  }, [phase]);
+
+  const goNext = useCallback(async () => {
+    if (phase.kind === 'answering') {
+      await postCurrentAnswerOrSkip();
+      return;
+    }
+    if (phase.kind === 'feedback') {
+      if (sessionExamMode && !revealedFeedback[phase.index]) return;
+      await advanceAfterFeedback();
+    }
+  }, [
+    phase,
+    postCurrentAnswerOrSkip,
+    advanceAfterFeedback,
+    sessionExamMode,
+    revealedFeedback,
+  ]);
+
+  useEffect(() => {
+    if (phase.kind !== 'answering' && phase.kind !== 'feedback') return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') return;
+      if (isTextInputFocused()) return;
+      e.preventDefault();
+      if (e.key === 'ArrowLeft') {
+        const atFirst = phase.index <= 0;
+        if (!atFirst) goPrev();
+        return;
+      }
+      if (
+        phase.kind === 'feedback' &&
+        sessionExamMode &&
+        !revealedFeedback[phase.index]
+      ) {
+        setRevealedFeedback((r) => ({ ...r, [phase.index]: true }));
+        return;
+      }
+      void goNext();
+    };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, [phase, goPrev, goNext, sessionExamMode, revealedFeedback]);
+
   if (phase.kind === 'pick') {
     return (
       <>
@@ -208,6 +293,30 @@ export function PracticeRunner(): React.ReactElement {
                 </option>
               ))}
             </select>
+            <label className="mt-4 block text-sm font-medium text-[var(--color-fg)]" htmlFor="practice-size">
+              {Sq.sq.practice.sessionSize}
+            </label>
+            <select
+              id="practice-size"
+              className="mt-1 w-full max-w-xl rounded-lg border border-[var(--color-border)] bg-[var(--color-bg)] px-3 py-2.5 text-sm text-[var(--color-fg)]"
+              value={sessionQuestionCount}
+              onChange={(e) => setSessionQuestionCount(Number(e.target.value))}
+            >
+              <option value={10}>{Sq.sq.practice.questionsCount10}</option>
+              <option value={25}>{Sq.sq.practice.questionsCount25}</option>
+            </select>
+            <label className="mt-4 flex cursor-pointer items-center gap-2 text-sm text-[var(--color-fg)]">
+              <input
+                type="checkbox"
+                checked={sessionExamMode}
+                onChange={(e) => setSessionExamMode(e.target.checked)}
+                className="rounded border-[var(--color-border)]"
+              />
+              <span>{Sq.sq.practice.sessionExamMode}</span>
+            </label>
+            <p className="mt-1 max-w-xl text-xs text-[var(--color-fg-muted)]">
+              {Sq.sq.practice.examModeHint}
+            </p>
             <button
               type="button"
               className="mt-6 w-full max-w-xl rounded-lg bg-[var(--color-brand)] px-4 py-3 text-sm font-semibold text-[var(--color-brand-fg)] shadow-md transition hover:bg-[var(--color-brand-strong)] sm:w-auto"
@@ -304,6 +413,18 @@ export function PracticeRunner(): React.ReactElement {
           <ProgressBar current={phase.index + (phase.kind === 'feedback' ? 1 : 0)} total={total} />
         </div>
 
+        <QuestionNavBar
+          phase={phase}
+          total={total}
+          onPrev={goPrev}
+          onNext={() => void goNext()}
+          nextDisabled={
+            phase.kind === 'feedback' &&
+            sessionExamMode &&
+            !revealedFeedback[phase.index]
+          }
+        />
+
         <div className="mt-6 rounded-xl border border-[var(--color-border)] bg-[var(--color-bg-elevated)] p-5 sm:p-6 shadow-sm">
           <div className="text-xs uppercase tracking-wide text-[var(--color-fg-muted)]">
             {topicDisplay(q.topicPath)} • {Sq.sq.question.difficulty}: {q.difficulty} •{' '}
@@ -328,15 +449,21 @@ export function PracticeRunner(): React.ReactElement {
                 q={q}
                 value={pendingAnswer}
                 onChange={setPendingAnswer}
-                onSubmit={() => void submit()}
+                onSubmit={() => void postCurrentAnswerOrSkip()}
               />
+            ) : sessionExamMode && !revealedFeedback[phase.index] ? (
+              <div className="rounded-lg border border-amber-200 bg-amber-50 p-4 text-amber-950 dark:border-amber-800 dark:bg-amber-950/35 dark:text-amber-100">
+                <p className="text-sm">{Sq.sq.practice.examModeHint}</p>
+                <button
+                  type="button"
+                  onClick={revealCurrentFeedback}
+                  className="mt-3 rounded-md bg-[var(--color-brand)] px-4 py-2 text-sm font-semibold text-[var(--color-brand-fg)] shadow-sm transition hover:bg-[var(--color-brand-strong)]"
+                >
+                  {Sq.sq.practice.revealResult}
+                </button>
+              </div>
             ) : (
-              <Feedback
-                record={phase.record}
-                q={q}
-                onNext={() => void next()}
-                isLast={phase.index === total - 1}
-              />
+              <Feedback record={phase.record} q={q} />
             )}
           </div>
         </div>
@@ -345,19 +472,44 @@ export function PracticeRunner(): React.ReactElement {
   );
 }
 
-function PracticeMatematikeHeader(): React.ReactElement {
+function QuestionNavBar({
+  phase,
+  total,
+  onPrev,
+  onNext,
+  nextDisabled = false,
+}: {
+  phase: Extract<Phase, { kind: 'answering' } | { kind: 'feedback' }>;
+  total: number;
+  onPrev: () => void;
+  onNext: () => void;
+  nextDisabled?: boolean;
+}): React.ReactElement {
+  const atFirst = phase.index <= 0;
   return (
-    <header className="sticky top-0 z-20 shadow-[0_2px_14px_rgba(46,46,140,0.2)]">
-      <div className="bg-gradient-to-br from-[#2E2E8C] via-[#1e1f6e] to-[#4545b8] px-4 py-5 sm:px-8 sm:py-6 text-white">
-        <div className="mx-auto max-w-3xl">
-          <h1 className="text-lg font-bold tracking-wide sm:text-xl">
-            {Sq.sq.practice.matematikeHeaderTitle}
-          </h1>
-          <p className="mt-1 max-w-2xl text-sm text-white/90">{Sq.sq.practice.matematikeHeaderSubtitle}</p>
-          <p className="mt-0.5 text-xs text-white/80">{Sq.sq.app.brandTagline}</p>
-        </div>
-      </div>
-    </header>
+    <div className="mt-4 flex flex-wrap items-center justify-between gap-3 rounded-lg border border-[var(--color-border)] bg-[var(--color-bg-elevated)] px-3 py-2.5 shadow-sm">
+      <button
+        type="button"
+        disabled={atFirst}
+        aria-label={Sq.sq.practice.navPrevious}
+        onClick={onPrev}
+        className="rounded-lg border border-[var(--color-border)] bg-[var(--color-bg)] px-3 py-2 text-sm font-medium text-[var(--color-fg)] transition hover:bg-[var(--color-brand-soft)] hover:border-[var(--color-brand)]/30 disabled:cursor-not-allowed disabled:opacity-40"
+      >
+        ‹ {Sq.sq.practice.navPrevious}
+      </button>
+      <span className="text-sm font-medium tabular-nums text-[var(--color-fg-muted)]">
+        {phase.index + 1} / {total}
+      </span>
+      <button
+        type="button"
+        disabled={nextDisabled}
+        aria-label={Sq.sq.practice.navNext}
+        onClick={onNext}
+        className="rounded-lg border border-[var(--color-brand)] bg-[var(--color-brand)] px-3 py-2 text-sm font-semibold text-[var(--color-brand-fg)] shadow-sm transition hover:bg-[var(--color-brand-strong)] disabled:cursor-not-allowed disabled:opacity-40"
+      >
+        {Sq.sq.practice.navNext} ›
+      </button>
+    </div>
   );
 }
 
@@ -492,13 +644,9 @@ function SubmitButton({
 function Feedback({
   record,
   q,
-  onNext,
-  isLast,
 }: {
   record: AttemptRecord;
   q: PracticeQuestion;
-  onNext: () => void;
-  isLast: boolean;
 }): React.ReactElement {
   const correctOption =
     q.kind === 'MCQ' && record.result.correctAnswer
@@ -525,7 +673,7 @@ function Feedback({
         {!record.result.isCorrect && q.kind !== 'MCQ' && record.result.correctAnswer && (
           <div className="mt-2 text-sm">
             <span className="text-[var(--color-fg-muted)]">{Sq.sq.practice.yourAnswer}: </span>
-            <code className="font-mono">{record.answer}</code>
+            <code className="font-mono">{record.answer || '—'}</code>
             <div className="mt-1">
               <span className="text-[var(--color-fg-muted)]">→ </span>
               <code className="font-mono">{record.result.correctAnswer}</code>
@@ -542,14 +690,6 @@ function Feedback({
           <Markdown content={record.result.explanationMd} />
         </div>
       </div>
-
-      <button
-        type="button"
-        onClick={onNext}
-        className="self-end rounded-md bg-[var(--color-brand)] px-4 py-2 text-sm font-semibold text-[var(--color-brand-fg)] shadow-sm transition hover:bg-[var(--color-brand-strong)]"
-      >
-        {isLast ? Sq.sq.practice.finish : Sq.sq.practice.next}
-      </button>
     </div>
   );
 }

@@ -127,6 +127,18 @@ export const ListQuestionsQuerySchema = z.object({
   status: QuestionStatusSchema.optional(),
   difficulty: z.coerce.number().int().min(1).max(5).optional(),
   search: z.string().min(1).optional(),
+  /** Exact tag match on `Question.tags` (e.g. `source:foto`). */
+  tag: z.string().min(1).max(120).optional(),
+  /** When true, only questions with at least one image. */
+  hasImages: z.preprocess(
+    (val) => {
+      if (val === undefined || val === '') return undefined;
+      if (val === true || val === 'true') return true;
+      if (val === false || val === 'false') return false;
+      return undefined;
+    },
+    z.boolean().optional(),
+  ),
   cursor: z.string().cuid().optional(),
   limit: z.coerce.number().int().min(1).max(100).default(20),
 });

@@ -13,16 +13,18 @@ export class AttemptsService {
     });
     if (!question) throw new NotFoundException('Question not found');
 
-    const isCorrect = this.evaluate(question, input.answer);
+    const skipped = input.skipped === true;
+    const answerStored = skipped ? '' : input.answer;
+    const isCorrect = skipped ? false : this.evaluate(question, input.answer);
 
     const attempt = await this.prisma.attempt.create({
       data: {
         userId,
         questionId: input.questionId,
         sessionId: input.sessionId ?? null,
-        answer: input.answer,
+        answer: answerStored,
         isCorrect,
-        timeMs: input.timeMs,
+        timeMs: skipped ? 0 : input.timeMs,
       },
     });
 
