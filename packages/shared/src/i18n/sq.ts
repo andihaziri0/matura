@@ -84,7 +84,7 @@ export const sq = {
     pickChapterAgain: 'Zgjidh kapitull tjetër',
     navPrevious: 'Mëparshme',
     navNext: 'Tjetër',
-    tabSession: 'Ushtro me radhë',
+    tabSession: 'Test i rastit',
     tabBank: 'Shfleto pyetjet',
     sidebarNavLabel: 'Menyja',
     bankSidebarFiltersTitle: 'Kërko & filtro',
