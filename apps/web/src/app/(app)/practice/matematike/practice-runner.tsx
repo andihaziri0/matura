@@ -316,7 +316,7 @@ export function PracticeRunner(): React.ReactElement {
             </p>
             <button
               type="button"
-              className="mt-6 w-full min-h-[48px] rounded-lg bg-[var(--color-brand)] px-4 py-3.5 text-base font-semibold text-[var(--color-brand-fg)] shadow-md transition hover:bg-[var(--color-brand-strong)] sm:w-auto sm:py-3 sm:text-sm"
+              className="mt-8 w-full min-h-[56px] rounded-xl bg-[var(--color-brand)] px-5 py-4 text-lg font-bold tracking-wide text-[var(--color-brand-fg)] shadow-lg transition hover:bg-[var(--color-brand-strong)] active:scale-[0.99] sm:mt-6 sm:min-h-[52px] sm:text-base sm:font-semibold sm:tracking-normal"
               onClick={() => void startSession(topicPathFilter)}
             >
               {Sq.sq.practice.start}
