@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { Markdown } from '@matura/ui';
 import { MatematikeChapters, MathTaxonomy, Sq } from '@matura/shared';
 import { useAuth } from '@/lib/auth/auth-provider';
+import { maturaQuestionImageHref } from '@/lib/matura-question-image-base';
 
 const API_BASE = process.env.NEXT_PUBLIC_API_URL ?? 'http://localhost:4000';
 
@@ -859,8 +860,7 @@ function ImageBlock({
   alt: string;
   variant?: 'hero' | 'inline' | 'thumb';
 }): React.ReactElement {
-  const publicBase = process.env.NEXT_PUBLIC_R2_PUBLIC_URL ?? 'http://localhost:9000/matura-content';
-  const src = useMemo(() => `${publicBase.replace(/\/$/, '')}/${r2Key}`, [publicBase, r2Key]);
+  const src = useMemo(() => maturaQuestionImageHref(r2Key), [r2Key]);
   const cls =
     variant === 'hero'
       ? 'w-full rounded-lg border border-[var(--color-border)] bg-black/[0.04] object-contain max-h-[min(85vh,1400px)]'

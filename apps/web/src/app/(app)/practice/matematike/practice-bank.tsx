@@ -3,6 +3,7 @@
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import { Markdown } from '@matura/ui';
 import { MathTaxonomy, Sq } from '@matura/shared';
+import { maturaQuestionImageHref } from '@/lib/matura-question-image-base';
 import type { PracticeBankSourceFilter } from './practice-bank-sidebar-filters';
 
 const API_BASE = process.env.NEXT_PUBLIC_API_URL ?? 'http://localhost:4000';
@@ -10,11 +11,6 @@ const MCQ_LETTERS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
 function topicDisplay(path: string): string {
   return MathTaxonomy.topicLabel(path) ?? path;
-}
-
-function imagePublicUrl(r2Key: string): string {
-  const publicBase = process.env.NEXT_PUBLIC_R2_PUBLIC_URL ?? 'http://localhost:9000/matura-content';
-  return `${publicBase.replace(/\/$/, '')}/${r2Key}`;
 }
 
 interface BankOption {
@@ -144,7 +140,7 @@ export function PracticeBank({
       const img =
         q.images.find((i) => i.role === 'FULL_QUESTION') ??
         q.images[0];
-      if (img) slides.push({ key: `${q.id}-${img.id}`, src: imagePublicUrl(img.r2Key), alt: img.alt });
+      if (img) slides.push({ key: `${q.id}-${img.id}`, src: maturaQuestionImageHref(img.r2Key), alt: img.alt });
     }
     return slides;
   }, [gallery]);
@@ -229,13 +225,7 @@ export function PracticeBank({
   );
 }
 
-function QuestionScanOrPrompt({
-  q,
-  imagePublicUrl,
-}: {
-  q: BankQuestion;
-  imagePublicUrl: (r2Key: string) => string;
-}): React.ReactElement {
+function QuestionScanOrPrompt({ q }: { q: BankQuestion }): React.ReactElement {
   const fullScan = q.images.filter((i) => i.role === 'FULL_QUESTION');
   const other = q.images.filter((i) => i.role !== 'FULL_QUESTION');
   const hasScan = fullScan.length > 0;
@@ -250,13 +240,13 @@ function QuestionScanOrPrompt({
           {fullScan.map((img) => (
             <a
               key={img.id}
-              href={imagePublicUrl(img.r2Key)}
+              href={maturaQuestionImageHref(img.r2Key)}
               target="_blank"
               rel="noreferrer"
               className="block outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-brand)]"
             >
               <img
-                src={imagePublicUrl(img.r2Key)}
+                src={maturaQuestionImageHref(img.r2Key)}
                 alt={img.alt}
                 className="w-full rounded-lg border border-[var(--color-border)] bg-black/[0.04] object-contain max-h-[min(88vh,1600px)]"
               />
@@ -283,7 +273,7 @@ function QuestionScanOrPrompt({
           {other.map((img) => (
             <img
               key={img.id}
-              src={imagePublicUrl(img.r2Key)}
+              src={maturaQuestionImageHref(img.r2Key)}
               alt={img.alt}
               className="w-full rounded-lg border border-[var(--color-border)] object-contain"
             />
@@ -321,7 +311,7 @@ function BankCard({
           </span>
           <span>{topicDisplay(q.topicPath)}</span>
         </div>
-        <QuestionScanOrPrompt q={q} imagePublicUrl={imagePublicUrl} />
+        <QuestionScanOrPrompt q={q} />
         {!revealed ? (
           <button
             type="button"
@@ -351,7 +341,7 @@ function BankCard({
         </span>
         <span>{topicDisplay(q.topicPath)}</span>
       </div>
-      <QuestionScanOrPrompt q={q} imagePublicUrl={imagePublicUrl} />
+      <QuestionScanOrPrompt q={q} />
       <div className="mt-4 flex flex-col gap-2">
         {sorted.map((o, idx) => {
           const letter = MCQ_LETTERS[idx] ?? String(idx + 1);

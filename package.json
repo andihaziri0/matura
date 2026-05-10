@@ -22,6 +22,7 @@
     "format:check": "prettier --check .",
     "db:generate": "turbo run db:generate --filter=@matura/db",
     "db:migrate": "pnpm --filter @matura/db db:migrate",
+    "db:migrate:deploy": "pnpm --filter @matura/db db:migrate:deploy",
     "db:reset": "pnpm --filter @matura/db db:reset",
     "db:seed": "pnpm --filter @matura/db db:seed",
     "db:studio": "pnpm --filter @matura/db db:studio",
@@ -29,6 +30,7 @@
     "sdk:build": "turbo run sdk:build --filter=@matura/sdk",
     "content:import": "pnpm --filter @matura/api content:import",
     "seed:questions": "pnpm --filter @matura/db seed:questions",
+    "diag:foto-counts": "pnpm --filter @matura/db diag:foto-counts",
     "clean": "turbo run clean && rimraf node_modules"
   },
   "devDependencies": {

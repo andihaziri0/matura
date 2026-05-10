@@ -112,6 +112,14 @@ export async function seedQuestions(): Promise<void> {
   }
 
   const authorId = await ensureSeedAuthor();
+  const total = questions.length;
+  const progressEvery = 50;
+  console.log(
+    `[seed:questions] duke shkruar në DB (${total} pyetje unike pas bashkimit të skedarëve)…`,
+  );
+  console.log(
+    `[seed:questions] (mund të zgjasë disa minuta me Neon — një transaksion për pyetje)`,
+  );
 
   let upserted = 0;
   for (const q of questions) {
@@ -180,6 +188,9 @@ export async function seedQuestions(): Promise<void> {
       }
     });
     upserted += 1;
+    if (upserted % progressEvery === 0 || upserted === total) {
+      console.log(`[seed:questions] … ${upserted} / ${total}`);
+    }
   }
 
   console.log(`[seed:questions] upserted ${upserted} questions`);
